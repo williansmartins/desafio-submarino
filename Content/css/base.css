@@ -1,0 +1,89 @@
+﻿/* VERDES */
+/* AZUIS */
+/* CINZAS */
+/* Vermelhos */
+.filter {
+  background-color: #ffffff;
+  padding: 20px 8.33%;
+}
+/* FLIGHT */
+.recommended-flight {
+  height: 100px;
+}
+.recommended-flight .info {
+  background-color: #d71326;
+  height: 160px;
+  width: 74%;
+}
+.recommended-flight .price {
+  background-color: #ffffff;
+  height: 160px;
+  width: 26%;
+}
+/* FORM */
+.form-box {
+  border-left: 1px solid #c9d0d2;
+  border-top: 1px solid #c9d0d2;
+}
+.form-box .row {
+  border-bottom: 1px solid #c9d0d2;
+}
+.form-box .form-control {
+  background-color: #ffffff;
+  border: none;
+  border-right: 1px solid #c9d0d2;
+  border-radius: 0;
+  color: #333333;
+  font-size: 13px;
+  height: 78px;
+  padding: 29px 10px;
+}
+.form-box .form-control:focus {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.form-box .form-control::-moz-placeholder {
+  color: #7da5b8;
+}
+.form-box .form-control:-ms-input-placeholder {
+  color: #7da5b8;
+}
+.form-box .form-control::-webkit-input-placeholder {
+  color: #7da5b8;
+}
+.form-box .form-group {
+  position: relative;
+  margin: 0;
+}
+.form-box .form-group.required:before {
+  color: #7da5b8;
+  content: '*';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.form-box .has-error .form-group:before {
+  color: #ed1a3b;
+}
+.form-box .has-error .form-control {
+  color: #ed1a3b;
+  -webkit-box-shadow: 0px 0px 0px 2px #ed1a3b;
+  -moz-box-shadow: 0px 0px 0px 2px #ed1a3b;
+  box-shadow: 0px 0px 0px 2px #ed1a3b;
+}
+.form-box .has-error .form-control::-moz-placeholder {
+  color: #ed1a3b;
+}
+.form-box .has-error .form-control:-ms-input-placeholder {
+  color: #ed1a3b;
+}
+.form-box .has-error .form-control::-webkit-input-placeholder {
+  color: #ed1a3b;
+}
+/*# sourceMappingURL=module.css.map */
+.filter-container {
+  background: #F00;
+}
+/*# sourceMappingURL=module.css.map */
+/*# sourceMappingURL=module.css.map */

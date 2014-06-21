@@ -1,0 +1,124 @@
+﻿@{
+    ViewBag.Title = "/Flight";
+}
+
+<div class="flight home">
+    <div class="promos-banner">
+        <div class="promos-banner-container"></div>
+    </div>
+    <div class="container-fluid top">
+        <div class="row">
+            <div class="booking-widget col-sm-8 col-offset-1">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#passagens" data-toggle="tab">Passagens</a></li>
+                    <li><a href="#hoteis" data-toggle="tab">Hotéis</a></li>
+                    <li><a href="#pacotes" data-toggle="tab">Pacotes</a></li>
+                    <li><a href="#carros" data-toggle="tab">Carros</a></li>
+                    <li><a href="#atracoes" data-toggle="tab">Atrações</a></li>
+                    <li><a href="#cruzeiros" data-toggle="tab">Cruzeiros</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="passagens">
+                        <div class="quadrante1">
+                            <div class="radio trip dark-theme steps">
+                                <div class="item">
+                                    <input id="ida-volta" type="radio" name="typeTrip" value="ida-volta" checked>
+                                    <label for="ida-volta">Ida e volta</label>
+                                </div>
+                                <div class="item">
+                                    <input id="somente-ida" type="radio" name="typeTrip" value="somente-ida">
+                                    <label for="somente-ida">Somente ida</label>
+                                </div>
+                                <div class="item">
+                                    <input id="varios-destinos" type="radio" name="typeTrip" value="varios-destinos">
+                                    <label for="varios-destinos">Vários destinos </label>
+                                </div>
+                            </div>
+                            <div class="menor-preco">
+                                <div class="checkbox">
+                                    <input type="checkbox" value="" id="cheapestPrice">
+                                    <label for="cheapestPrice">
+                                        Menor Preço
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="round-trip">
+                            <div class="form-box">
+                                <form role="form">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-group ">
+                                                <label for="txtRoundTripFrom">De</label>
+                                                <input type="text" class="form-control" id="txtRoundTripFrom" placeholder="Selecione origem">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-group ">
+                                                <label for="txtRoundTripTo">Para</label>
+                                                <input type="text" class="form-control" id="txtRoundTripTo" placeholder="Selecione destino">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="form-group">
+                                                <label for="txtRoundTripDepart">Ida</label>
+                                                <input type="text" class="form-control" id="txtRoundTripDepart" placeholder="Escolha a data">
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="form-group">
+                                                <label for="txtRoundTripReturn">Volta</label>
+                                                <input type="text" class="form-control" id="txtRoundTripReturn" placeholder="Escolha a data">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <input class="spinner" id="txtRoundTripAdult" name="value">
+                                            <label for="txtRoundTripAdult">Adulto</label>
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="spinner" id="txtRoundTripChildren" name="value">
+                                            <label for="txtRoundTripChildren">Criança</label>
+                                        </div>
+                                        <div class="col-3">
+                                            <input class="spinner" id="txtRoundTripInfants" name="value">
+                                            <label for="txtRoundTripInfants">Bebê</label>
+                                        </div>
+                                        <div class="col-3">
+                                            <label for="cbRoundClass" class="sr-only"></label>
+                                            <span class="custom-select">
+                                                <select id="cbRoundClass">
+                                                    <option>Econômica</option>
+                                                    <option>Executiva</option>
+                                                </select>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <button type="button" class="btn btn-xlg btn-default btn-block">
+                                                <span class="glyphicon glyphicon-search"></span>
+                                                Pesquisar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="hoteis">...</div>
+                    <div class="tab-pane" id="pacotes">...</div>
+                    <div class="tab-pane" id="carros">...</div>
+                    <div class="tab-pane" id="atracoes">...</div>
+                    <div class="tab-pane" id="cruzeiros">...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@Html.Partial("_FooterFull")

@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "/Examples/Form";
+}
+
+<div class="container-fluid top">
+
+    <br /><br /><br />
+    <h2>Input texto</h2>
+    <input type="text" name="name" value="" placeholder="Texto"/>
+    <br /><br />
+    <h2>Input password</h2>
+    <input type="password" name="name" value="" placeholder="Password" />
+    <br /><br />
+    <h2>Input email</h2>
+    <input type="email" name="name" value="" placeholder="Email" />
+    <br /><br />
+
+    <div class="form-box">
+        <form role="form">
+            <div class="row">
+                <div class="col-sm-10">
+                    <div class="form-group required">
+                        <label class="sr-only" for="contact-name">Nome</label>
+                        <input type="text" class="form-control" id="contact-name" placeholder="Nome">
+                    </div>
+                </div>
+                <div class="col-sm-11">
+                    <div class="form-group required">
+                        <label class="sr-only" for="contact-last-name">Último Sobrenome</label>
+                        <input type="text" class="form-control" id="contact-last-name" placeholder="Último Sobrenome">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group required">
+                        <label class="sr-only" for="contact-phone">Telefone</label>
+                        <input type="text" class="form-control" id="contact-phone" placeholder="Telefone">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <span class="custom-select">
+                            <select>
+                                <option>Residencial</option>
+                                <option>Comercial</option>
+                                <option>Celular</option>
+                            </select>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-sm-11">
+                    <div class="form-group required">
+                        <label class="sr-only" for="contact-email">Email</label>
+                        <input type="email" class="form-control" id="contact-email" placeholder="Email">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

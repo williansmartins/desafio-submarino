@@ -1,0 +1,1650 @@
+﻿@{
+    ViewBag.Title = "/Packages/Booking";
+    ViewBag.BodyClass = "flux-collapsed";
+}
+@section head
+{
+    <script src="~/Content/js/booking.js"></script>
+}
+<div class="package booking">
+    <!-- Login modal -->
+    <button class="btn btn-primary sr-only" data-toggle="modal" data-target="#modal-login" style="position: absolute; z-index: 9999;">Login modal</button>
+    <div class="modal fade login" id="modal-login">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">:) Identificação</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <h2>Já tenho cadastro</h2>
+                            <p>Se você já é nosso cliente, não perca tempo! Faça seu login e escolha sua próxima viagem.</p>
+                            <p>*Campos Obrigatórios</p>
+                            <div class="form-box">
+                                <form role="form">
+                                    <div class="row">
+                                        <div class="col-lg-21">
+                                            <div class="form-group required">
+                                                <label class="sr-only" for="txrLoginEmail">Email</label>
+                                                <input type="text" class="form-control" id="txrLoginEmail" placeholder="Email">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-21">
+                                            <div class="form-group required">
+                                                <label class="sr-only" for="txrLoginPassword">Senha (6-15 Letras e Números)</label>
+                                                <input type="text" class="form-control" id="txrLoginPassword" placeholder="Senha (6-15 Letras e Números)">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <p>
+                                <a href="#">Esqueci minha senha</a>
+                            </p>
+                            <p>
+                                <a href="#">Ainda não é cadastrado? Cadastre-se já!</a>
+                            </p>
+                            <div class="btn btn-block btn-default btn-lg">Entrar</div>
+                        </div>
+                        <div class="col-6">
+                            <h2>Não quero me cadastrar agora</h2>
+                            <p>Não quer criar uma conta agora? Sem problemas. Continue sua compra como visitante.</p>
+                            <p>Você pode salvar seus dados para criar uma conta em sua proxima visita.</p>
+                            <div class="btn btn-block btn-secondary btn-lg">Entre como visitante</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Back navigation -->
+    <div class="flow-navigation">
+        <div class="container-fluid">
+            <ul class="pager">
+                <li class="previous"><a href="#"><span class="glyphicon glyphicon-arrow-navigation"></span>Escolha outro hotel</a></li>
+                <li class="section-back"><button type="button" data-behavior="goto" data-goto="#step1" data-show-after="true" data-show-after-target="#step2" class="bnt btn-sm btn-primary">Voltar / Informações do hóspede</button></li>
+                <li class="section-back"><button type="button" data-behavior="goto" data-goto="#step2" data-show-after="true" data-show-after-target="#step3" class="bnt btn-sm btn-primary">Voltar / Informação de contato</button></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Back navigation - end -->
+    <div class="container-fluid top">
+        <div class="row">
+            <aside class="col-sm-4 main-aside pull-right aside-wrapper">
+                <!-- Booking Details Aside -->
+                <div class="aside-details">
+                    <!-- Scroll area -->
+                    <div class="scroll-list scroll-package">
+                        <button type="button" class="btn-block btn-sm btn-black" data-aside="top">
+                            Hotel
+                            <span class="glyphicon glyphicon-arrow-opacity"></span>
+                        </button>
+                        <!-- Show-Hide area -->
+                        <div class="dropdown-list hotel-list">
+                            <!-- Check-in / Check-out info -->
+                            <div class="box-info">
+                                <p class="classification">
+                                    Hotel
+                                    <span class="stars">
+                                        <span class="glyphicon glyphicon-star-on"></span>
+                                        <span class="glyphicon glyphicon-star-on"></span>
+                                        <span class="glyphicon glyphicon-star-on"></span>
+                                        <span class="glyphicon glyphicon-star-on"></span>
+                                        <span class="glyphicon glyphicon-star-off"></span>
+                                    </span>
+                                </p>
+                                <h1>Hotel Americano</h1>
+                                <p class="auxiliar-info">Rio de Janeiro / RJ Brasil</p>
+                                <hr />
+                                <p class="depart-arrive">
+                                    Entrada
+                                    <span class="time">14, Abril, 2014</span>
+                                </p>
+                                <p class="depart-arrive">
+                                    Saída
+                                    <span class="time">24, Abril, 2014</span>
+                                </p>
+                                <div class="more-info">
+                                    <table>
+                                        <tr>
+                                            <th>Check in</th>
+                                            <td>12:00</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Check Out</th>
+                                            <td>18:00</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Noites</th>
+                                            <td>7 noites</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Quartos</th>
+                                            <td>2 quartos</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Hóspedes</th>
+                                            <td>5 hóspedes</td>
+                                        </tr>
+                                    </table>
+                                    <hr />
+                                    <table class="table-address">
+                                        <tr>
+                                            <th>Endereço</th>
+                                            <td>
+                                                Rua Juanquao Silva 69-Centro <br />
+                                                202411-11 <br />
+                                                Rio De Janeiro <br />
+                                                RJ Brasil
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <button type="button" class="more-info-link">Mais informações</button>
+                            </div>
+                            <!-- Outbound info - End -->
+                        </div>
+                        <!-- Show-Hide area - end -->
+                        <button type="button" class="btn-block btn-sm btn-black" data-aside="bottom">
+                            Voo
+                            <span class="glyphicon glyphicon-arrow-opacity"></span>
+                        </button>
+                        <!-- Show-Hide area -->
+                        <div class="dropdown-list list-bottom">
+                            <!-- Outbound info -->
+                            <div class="box-info">
+                                <p class="outbound"><span class="glyphicon glyphicon-airplane-blue"></span>Ida</p>
+                                <p class="date">Quinta-feira, 14 Abril, 2014</p>
+                                <p class="depart-arrive">
+                                    Saída: São Paulo, BR <b>(CCG)</b>
+                                    <span class="time">02:30</span>
+                                </p>
+                                <p class="depart-arrive">
+                                    Saída: São Paulo, BR <b>(CCG)</b>
+                                    <span class="time">02:30</span>
+                                </p>
+                                <div class="more-info">
+                                    <table>
+                                        <tr>
+                                            <th>Duração</th>
+                                            <td>7h 30min</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Classe</th>
+                                            <td>Econômica</td>
+                                        </tr>
+                                        <tr>
+                                            <th>nº do voo</th>
+                                            <td>5058</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Avião</th>
+                                            <td>Airbus A320</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <button type="button" class="more-info-link">Mais informações</button>
+                            </div>
+                            <!-- Outbound info - End -->
+                            <!-- Inbound info -->
+                            <div class="box-info">
+                                <p class="inbound">
+                                    <span class="glyphicon glyphicon-airplane-green"></span>
+                                    Volta
+                                </p>
+                                <p class="date">Quinta-feira, 14 Abril, 2014</p>
+                                <p class="depart-arrive">
+                                    Saída: São Paulo, BR <b>(CCG)</b>
+                                    <span class="time">02:30</span>
+                                </p>
+                                <p class="depart-arrive">
+                                    Saída: São Paulo, BR <b>(CCG)</b>
+                                    <span class="time">02:30</span>
+                                </p>
+                                <div class="more-info">
+                                    <table>
+                                        <tr>
+                                            <th>Duração</th>
+                                            <td>7h 30min</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Classe</th>
+                                            <td>Econômica</td>
+                                        </tr>
+                                        <tr>
+                                            <th>nº do voo</th>
+                                            <td>5058</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Avião</th>
+                                            <td>Airbus A320</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <button type="button" class="more-info-link">Mais informações</button>
+                            </div>
+                            <!-- Inbound info - End -->
+                            <div class="description-price">
+                                <table class="table-price">
+                                    <tr>
+                                        <th><span id="spn-passenger-1">Passageiro 1</span> (R$)</th>
+                                        <td class="value">2.502,00</td>
+                                    </tr>
+                                    <tr>
+                                        <th><span>Taxa de embarque</span> (R$)</th>
+                                        <td>87,00</td>
+                                    </tr>
+                                    <tr>
+                                        <th><span>Encargos</span> (R$)</th>
+                                        <td class="value">102,00</td>
+                                    </tr>
+                                </table>
+                                <table class="table-price">
+                                    <tr>
+                                        <th><span id="spn-passenger-2">Passageiro 2</span> (R$)</th>
+                                        <td class="value">2.502,00</td>
+                                    </tr>
+                                    <tr>
+                                        <th><span>Taxa de embarque</span> (R$)</th>
+                                        <td>87,00</td>
+                                    </tr>
+                                    <tr>
+                                        <th><span>Encargos</span> (R$)</th>
+                                        <td class="value">102,00</td>
+                                    </tr>
+                                </table>
+                                <table class="table-price">
+                                    <tr>
+                                        <th><span id="spn-passenger-3">Passageiro 3</span> (R$)</th>
+                                        <td class="value">2.502,00</td>
+                                    </tr>
+                                    <tr>
+                                        <th><span>Taxa de embarque</span> (R$)</th>
+                                        <td>87,00</td>
+                                    </tr>
+                                    <tr>
+                                        <th><span>Encargos</span> (R$)</th>
+                                        <td class="value">102,00</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- Show-Hide area - end -->
+                    </div>
+                    <!-- Scroll area - end -->
+                    <div class="total-price-box">
+                        <div class="block-price-box">
+                            <table class="table-price">
+                                <tr>
+                                    <th>
+                                        <span>
+                                            7 noites, 5 hóspedes <br />
+                                            Valor da reserva
+                                        </span> (R$)
+                                    </th>
+                                    <td class="value">
+                                        2.502,00
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <span>Impostos</span> (R$)
+                                    </th>
+                                    <td>
+                                        87,00
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <span>Taxas</span> (R$)
+                                    </th>
+                                    <td class="value">
+                                        102,00
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="table-price-final">
+                                <tr>
+                                    <th>
+                                        <span>Total</span> (R$)
+                                    </th>
+                                    <td class="value">
+                                        2.502,00
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- Booking Details Aside - End -->
+            </aside>
+            <!-- Step 1 -->
+            <section class="col-sm-17 step-1" id="step1">
+                <div class="row">
+                    <!-- Steps count -->
+                    <div class="col cont-steps">
+                        <p class="step">
+                            <span class="float-step" data-wrapper="#step1">
+                                <b>1</b>
+                                / 3
+                                <span class="glyphicon glyphicon-user-yellow"></span>
+                            </span>
+                        </p>
+                    </div>
+                    <!-- Steps count - end -->
+                    <!-- Center content -->
+                    <div class="col content clearfix">
+                        <h1>Informações do Viajante</h1>
+                        <p class="center-text">Documentos necessários <span class="glyphicon glyphicon-exclamation-blue popover-toggler" data-container="#container-popover-medium-01" data-target-selector=".popover-required-documentation" data-width="360" data-placement="bottom" data-title="Documentos Necessários" data-original-title="" title=""></span></p>
+                        <!-- Tooltip Required Documentation -->
+                        <div class="container-popover-medium" id="container-popover-medium-01">
+                            <div class="popover-required-documentation hidden">
+                                <p>Ipsum dolor sit amet,consectetur adipiscing elit. Proin lacinia porttitor sapien sit amet lobortis. Quisque posuere porttitor diam in malesuada. Lorem ipsum sit dolor amet.</p>
+                            </div>
+                        </div>
+                        <!-- Tooltip Required Documentation - End -->
+                        <!-- Room 1 Information -->
+                        <div class="room-info">
+                            <div class="title-room">
+                                <p>Quarto 1</p>
+                                <p class="conditions">
+                                    Condições de Reserva <span class="glyphicon glyphicon-exclamation-blue popover-toggler" data-container=".container-popover-medium.conditions-1" data-target-selector=".popover-conditions-booking.conditions-1" data-placement="left" data-title="Condições de Reserva" data-original-title="" title=""></span>
+                                </p>
+                                <div class="container-popover-medium conditions-1">
+                                    <div class="popover-conditions-booking conditions-1 hidden">
+                                        <p>Você pode cancelar sua reserva sem multas até 10/04/14. Depois desta data ou em caso de não comparecimento será cobrada uma multa de R$ 40</p>
+                                    </div>
+                                </div>
+                                <h2>Quarto Duplo</h2>
+                            </div>
+                            <!-- Guest Info -->
+                            <h3 class="h2">Adulto 1</h3>
+                            <div class="form-box">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group required">
+                                            <label class="sr-only" for="name-passenger-1">Nome</label>
+                                            <input type="text" class="form-control" id="name-passenger-1" placeholder="Nome" onblur="Site.PassengerName(1);">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 has-error">
+                                        <div class="form-group required">
+                                            <label class="sr-only" for="lastName-passenger-1">Último Sobrenome</label>
+                                            <input type="text" class="form-control" id="lastName-passenger-1" placeholder="Último Sobrenome" onblur="Site.PassengerName(1);">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-5 has-error">
+                                        <div class="form-group required">
+                                            <label class="sr-only" for="birthday">Data de Nascimento</label>
+                                            <input type="text" class="form-control" id="birthday" data-mask="passengerDate" placeholder="Data de Nascimento">
+                                        </div>
+                                    </div>
+                                    <!-- Exemplo de tooltip de erro - necessário executar a chamada javascript -->
+                                    <div class="col-sm-4 has-error" data-toggle="tooltip" data-placement="left" title="Selecione o sexo do passageiro">
+                                        <div class="form-group required">
+                                            <span class="custom-select">
+                                                <select>
+                                                    <option value="" disabled selected>Sexo</option>
+                                                    <option value="F">Feminino</option>
+                                                    <option value="M">Masculino</option>
+                                                </select>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-sm btn-secondary" data-toggle-visibility=".btn-earn-miles"><span class="glyphicon glyphicon-airplane-plus-grey"></span>Acumule Milhas</button>
+                            <div class="form-box form-box-inline btn-earn-miles hidden">
+                                <div class="row">
+                                    <div class="col-sm-10">
+                                        <div class="form-group ">
+                                            <span class="custom-select">
+                                                <select>
+                                                    <option value="" disabled selected>Companhia Aérea</option>
+                                                    <option>Opção 1</option>
+                                                    <option>Opção 2</option>
+                                                </select>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-11">
+                                        <div class="form-group">
+                                            <label class="sr-only" for="cardNumber">Número do Cartão</label>
+                                            <input type="text" class="form-control" id="cardNumber" placeholder="Número do Cartão">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Guest Info - End -->
+                            <!-- Guest Info -->
+                            <h3 class="h2">Criança 1 <small>/ 15 anos</small></h3>
+                            <div class="form-box">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group required">
+                                            <label class="sr-only" for="name-passenger-2">Nome</label>
+                                            <input type="text" class="form-control" id="name-passenger-2" placeholder="Nome" onblur="Site.PassengerName(2);">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group required">
+                                            <label class="sr-only" for="lastName-passenger-2">Último Sobrenome</label>
+                                            <input type="text" class="form-control" id="lastName-passenger-2" placeholder="Último Sobrenome" onblur="Site.PassengerName(2);">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <div class="form-group required">
+                                            <label class="sr-only" for="birthday">Data de Nascimento</label>
+                                            <input type="text" class="form-control" id="birthday" data-mask="passengerDate" placeholder="Data de Nascimento">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group required">
+                                            <span class="custom-select">
+                                                <select>
+                                                    <option value="" disabled selected>Sexo</option>
+                                                    <option value="F">Feminino</option>
+                                                    <option value="M">Masculino</option>
+                                                </select>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-sm btn-secondary" data-toggle-visibility=".btn-earn-miles"><span class="glyphicon glyphicon-airplane-plus-grey"></span>Acumule Milhas</button>
+                            <div class="form-box form-box-inline btn-earn-miles hidden">
+                                <div class="row">
+                                    <div class="col-sm-10">
+                                        <div class="form-group ">
+                                            <span class="custom-select">
+                                                <select>
+                                                    <option value="" disabled selected>Companhia Aérea</option>
+                                                    <option>Opção 1</option>
+                                                    <option>Opção 2</option>
+                                                </select>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-11">
+                                        <div class="form-group">
+                                            <label class="sr-only" for="cardNumber">Número do Cartão</label>
+                                            <input type="text" class="form-control" id="cardNumber" placeholder="Número do Cartão">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Guest Info -->
+                        </div>
+                        <!-- Room 1 Information - end -->
+                        <!-- Room 2 Information -->
+                        <div class="room-info">
+                            <div class="title-room">
+                                <p>Quarto 2</p>
+
+                                <p class="conditions">
+                                    Condições de Reserva <span class="glyphicon glyphicon-exclamation-blue popover-toggler" data-container=".container-popover-medium.conditions-2" data-target-selector=".popover-conditions-booking.conditions-2" data-placement="left" data-title="Condições de Reserva" data-original-title="" title=""></span>
+                                </p>
+                                <div class="container-popover-medium conditions-2">
+                                    <div class="popover-conditions-booking conditions-2 hidden">
+                                        <p>Você pode cancelar sua reserva sem multas até 10/04/14. Depois desta data ou em caso de não comparecimento será cobrada uma multa de R$ 40</p>
+                                    </div>
+                                </div>
+
+
+                                <h2>Quarto Triplo</h2>
+                            </div>
+                            <!-- Guest Information -->
+                            <h3 class="h2">Adulto 1</h3>
+                            <div class="form-box">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group required">
+                                            <label class="sr-only" for="name">Nome</label>
+                                            <input type="text" class="form-control" id="name-passenger-3" placeholder="Nome" >
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group required">
+                                            <label class="sr-only" for="lastName-passenger-1">Último Sobrenome</label>
+                                            <input type="text" class="form-control" id="lastName-passenger-3" placeholder="Último Sobrenome">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <div class="form-group required">
+                                            <label class="sr-only" for="birthday">Data de Nascimento</label>
+                                            <input type="text" class="form-control" id="birthday" data-mask="passengerDate" placeholder="Data de Nascimento">
+                                        </div>
+                                    </div>
+                                    <!-- Exemplo de tooltip de erro - necessário executar a chamada javascript -->
+                                    <div class="col-sm-4">
+                                        <div class="form-group required">
+                                            <span class="custom-select">
+                                                <select>
+                                                    <option value="" disabled selected>Sexo</option>
+                                                    <option value="F">Feminino</option>
+                                                    <option value="M">Masculino</option>
+                                                </select>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-sm btn-secondary" data-toggle-visibility=".btn-earn-miles"><span class="glyphicon glyphicon-airplane-plus-grey"></span>Acumule Milhas</button>
+                            <div class="form-box form-box-inline btn-earn-miles hidden">
+                                <div class="row">
+                                    <div class="col-sm-10">
+                                        <div class="form-group ">
+                                            <span class="custom-select">
+                                                <select>
+                                                    <option value="" disabled selected>Companhia Aérea</option>
+                                                    <option>Opção 1</option>
+                                                    <option>Opção 2</option>
+                                                </select>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-11">
+                                        <div class="form-group">
+                                            <label class="sr-only" for="cardNumber">Número do Cartão</label>
+                                            <input type="text" class="form-control" id="cardNumber" placeholder="Número do Cartão">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Guest Information - End -->
+                            <!-- Guest Information -->
+                            <h3 class="h2">Adulto 2</h3>
+                            <div class="form-box">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group required">
+                                            <label class="sr-only" for="name">Nome</label>
+                                            <input type="text" class="form-control" id="name" placeholder="Nome">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group required">
+                                            <label class="sr-only" for="lastName">Último Sobrenome</label>
+                                            <input type="text" class="form-control" id="lastName" placeholder="Último Sobrenome">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <div class="form-group required">
+                                            <label class="sr-only" for="birthday">Data de Nascimento</label>
+                                            <input type="text" class="form-control" id="birthday" data-mask="passengerDate" placeholder="Data de Nascimento">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group required">
+                                            <span class="custom-select">
+                                                <select>
+                                                    <option value="" disabled selected>Sexo</option>
+                                                    <option value="F">Feminino</option>
+                                                    <option value="M">Masculino</option>
+                                                </select>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-sm btn-secondary" data-toggle-visibility=".btn-earn-miles"><span class="glyphicon glyphicon-airplane-plus-grey"></span>Acumule Milhas</button>
+                            <div class="form-box form-box-inline btn-earn-miles hidden">
+                                <div class="row">
+                                    <div class="col-sm-10">
+                                        <div class="form-group ">
+                                            <span class="custom-select">
+                                                <select>
+                                                    <option value="" disabled selected>Companhia Aérea</option>
+                                                    <option>Opção 1</option>
+                                                    <option>Opção 2</option>
+                                                </select>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-11">
+                                        <div class="form-group">
+                                            <label class="sr-only" for="cardNumber">Número do Cartão</label>
+                                            <input type="text" class="form-control" id="cardNumber" placeholder="Número do Cartão">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Guest Information - End -->
+                            <!-- Guest Information -->
+                            <h3 class="h2">Criança 1 <small>/ 9 anos</small></h3>
+                            <div class="form-box">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group required">
+                                            <label class="sr-only" for="name">Nome</label>
+                                            <input type="text" class="form-control" id="name" placeholder="Nome">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group required">
+                                            <label class="sr-only" for="lastName">Último Sobrenome</label>
+                                            <input type="text" class="form-control" id="lastName" placeholder="Último Sobrenome">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <div class="form-group required">
+                                            <label class="sr-only" for="birthday">Data de Nascimento</label>
+                                            <input type="text" class="form-control" id="birthday" data-mask="passengerDate" placeholder="Data de Nascimento">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group required">
+                                            <span class="custom-select">
+                                                <select>
+                                                    <option value="" disabled selected>Sexo</option>
+                                                    <option value="F">Feminino</option>
+                                                    <option value="M">Masculino</option>
+                                                </select>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-sm btn-secondary" data-toggle-visibility=".btn-earn-miles"><span class="glyphicon glyphicon-airplane-plus-grey"></span>Acumule Milhas</button>
+                            <div class="form-box form-box-inline btn-earn-miles hidden">
+                                <div class="row">
+                                    <div class="col-sm-10">
+                                        <div class="form-group ">
+                                            <span class="custom-select">
+                                                <select>
+                                                    <option value="" disabled selected>Companhia Aérea</option>
+                                                    <option>Opção 1</option>
+                                                    <option>Opção 2</option>
+                                                </select>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-11">
+                                        <div class="form-group">
+                                            <label class="sr-only" for="cardNumber">Número do Cartão</label>
+                                            <input type="text" class="form-control" id="cardNumber" placeholder="Número do Cartão">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Room 2 Information - end -->
+                        <!-- Seguro Viagem -->
+                        <h2>Seguro-Viagem</h2>
+                        <div class="insurance-box">
+                            <div class="row">
+                                <div class="col-sm-13 description">
+                                    <h4>Quer viajar tranquilo?</h4>
+                                    <p>Com o seguro-viagem do Submarino Viagens você fica protegido contra despesas médicas e hospitalares, acidentes pessoais e extravio de de bagagem.</p>
+                                    <p><a href="#">Clique aqui e conheça mais vantagens</a></p>
+                                </div>
+                                <div class="col-sm-8 insurance-choice">
+                                    <div class="top">
+                                        <!--<p>Adicione o Seguro-Viagem</p> -->
+                                        <div class="checkbox">
+                                            <input type="checkbox" value="" id="insurePassagerAll">
+                                            <label for="insurePassagerAll">
+                                                Todos os passageiros
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="choice-box">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <div class="checkbox dark-theme">
+                                                        <input type="checkbox" value="" id="insurePassager1">
+                                                        <label for="insurePassager1" id="for-insurePassager-1">Passageiro 1</label>
+                                                    </div>
+                                                </td>
+                                                <td class="price">130,00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="checkbox dark-theme">
+                                                        <input type="checkbox" value="" id="insurePassager2">
+                                                        <label for="insurePassager2" id="for-insurePassager-2">Passageiro 2</label>
+                                                    </div>
+                                                </td>
+                                                <td class="price">130,00</td>
+                                            </tr>
+                                            <tr class="disabled">
+                                                <td>
+                                                    <div class="checkbox dark-theme popover-toggler" data-container=".container-important-insurance-notice" data-target-selector=".popover-important-insurance-notice" data-width="360" data-placement="left" data-title="Aviso Importante">
+                                                        <input type="checkbox" value="" id="insurePassager3" disabled>
+                                                        <label for="insurePassager3" id="for-insurePassager-3">Passageiro 3</label>
+                                                    </div>
+                                                </td>
+                                                <td class="price">130,00</td>
+                                            </tr>
+                                        </table>
+                                        <div class="container-important-insurance-notice important-insurance-notice">
+                                            <div class="popover-important-insurance-notice hidden">
+                                                <p>Ipsum dolor sit amet,consectetur adipiscing elit. Proin lacinia porttitor sapien sit amet lobortis. Quisque posuere porttitor diam in malesuada. Lorem ipsum sit dolor amet.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Seguro Viagem - end -->
+                        <div class="nav-button">
+                            <button type="button" class="btn-default btn btn-sm" data-behavior="goto" data-goto="#step2">Continuar</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Step 1 -->
+        </div>
+    </div>
+
+    <!-- Step 2-->
+    <section class="container-fluid">
+        <div class="row">
+            <div class="col-sm-17 step-2" id="step2">
+                <div class="row">
+                    <!-- Steps count -->
+                    <div class="col cont-steps">
+                        <p class="step">
+                            <span class="float-step" data-wrapper="#step2">
+                                <b>2</b>
+                                / 3
+                                <span class="glyphicon glyphicon-contact-yellow"></span>
+                            </span>
+                        </p>
+                    </div>
+                    <!-- Steps count - end -->
+                    <!-- Center content -->
+                    <div class="col content clearfix ">
+                        <h1>Informações de Contato</h1>
+                        <p class="text-description">Para continuar sua compra, preencha as informações de contato do hóspede titular. Você pode selecionar o nome do titular abaixo e os campos serão preenchidos automaticamente.</p>
+                        <div class="checkbox-inline">
+                            <div class="radio">
+                                <input type="radio" value="" name="payment-type" id="contactGuest1">
+                                <label for="contactGuest1">
+                                    Hóspede 1
+                                </label>
+
+                                <input type="radio" value="" name="payment-type" id="contactGuest2">
+                                <label for="contactGuest2">
+                                    Hóspede 2
+                                </label>
+
+                                <input type="radio" value="" name="payment-type" id="contactGuest3">
+                                <label for="contactGuest3">
+                                    Hóspede 3
+                                </label>
+                            </div>
+                        </div>
+                        <!-- Passenger Information -->
+                        <div class="form-box">
+                            <form role="form">
+                                <div class="row">
+                                    <div class="col-sm-10">
+                                        <div class="form-group required">
+                                            <label class="sr-only" for="contactName">Nome</label>
+                                            <input type="text" class="form-control" id="contactName" placeholder="Nome">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-11">
+                                        <div class="form-group required">
+                                            <label class="sr-only" for="contactLastName">Último Sobrenome</label>
+                                            <input type="text" class="form-control" id="contactLastName" placeholder="Último Sobrenome">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group required">
+                                            <label class="sr-only" for="contactPhone">Telefone</label>
+                                            <input type="text" class="form-control" id="contactPhone" data-mask="phone" placeholder="Telefone">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <span class="custom-select">
+                                                <select>
+                                                    <option>Residencial</option>
+                                                    <option>Comercial</option>
+                                                    <option>Celular</option>
+                                                </select>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-11">
+                                        <div class="form-group required">
+                                            <label class="sr-only" for="contactEmail">Email</label>
+                                            <input type="email" class="form-control" id="contactEmail" placeholder="Email">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="add-phone" id="itemsPhone"></div>
+                        <script type="text/x-handlebars-template" id="tmplPhones">
+                            <div id="item_{{Index}}">
+                                <div class="form-box form-box-inline">
+                                    <div class="row">
+                                        <div class="col phone">
+                                            <div class="form-group">
+                                                <label class="sr-only" for="contactPhone">Telefone</label>
+                                                <input type="text" class="form-control" id="contactPhone" data-mask="phone" placeholder="Telefone">
+                                            </div>
+                                        </div>
+                                        <div class="col phone-type">
+                                            <div class="form-group">
+                                                <span class="custom-select">
+                                                    <select>
+                                                        <option>Residencial</option>
+                                                        <option>Comercial</option>
+                                                        <option>Celular</option>
+                                                    </select>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-nofill" onclick="itemsRemove('{{Index}}')"><span class="glyphicon glyphicon-remove"></span></button>
+                            </div>
+                        </script>
+                        <button type="button" class="btn btn-sm btn-tertiary more-phone" id="buttomAdd"><span class="glyphicon glyphicon-phone-plus-grey"></span>Adicione mais um telefone</button>
+                        <div class="checkbox email-offer">
+                            <input type="checkbox" value="" id="emailOffer">
+                            <label for="emailOffer">
+                                Quero receber ofertas por e-mail
+                            </label>
+                        </div>
+
+                        <!-- Passenger Information - end -->
+                        <div class="nav-button">
+                            <button class="btn-default btn btn-sm" data-behavior="goto" data-goto="#step3">Escolha a forma de pagamento</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Step 2 - end -->
+    <!-- Step 3-->
+    <section class="container-fluid">
+        <div class="row">
+            <div class="col-sm-17 step-3" id="step3">
+                <div class="row">
+                    <!-- Steps count -->
+                    <div class="col cont-steps">
+                        <p class="step">
+                            <span class="float-step" data-wrapper="#step3">
+                                <b>3</b>
+                                / 3
+                                <span class="glyphicon glyphicon-payment-yellow"></span>
+                            </span>
+                        </p>
+                    </div>
+                    <!-- Steps count - end -->
+                    <!-- Center content -->
+                    <div class="col content clearfix ">
+                        <h1>Informações de Pagamento</h1>
+                        <p class="text-description">
+                            Para casos de parcelamento, a taxa de embarque, taxa de serviço e seguro viagem, se contratado, serão debitados na primeira parcela, exceto para cartões Aura, Hipercard e Submarino Mastercard, que serão debitados em parcelas iguais. Aceitamos cartões emitidos fora do Brasil. <br />
+                            Você pode escolher sua forma de pagemento preferida selecionando uma das opções abaixo.
+                        </p>
+                        <div class="payment-type">
+                            <div class="radio">
+                                <input type="radio" value="card-1" name="payment-type" id="paymentType1">
+                                <label for="paymentType1">
+                                    1 Cartão
+                                </label>
+                                <input type="radio" value="card-2" name="payment-type" id="paymentType2">
+                                <label for="paymentType2">
+                                    2 Cartões
+                                </label>
+                                <input type="radio" value="paypal" name="payment-type" id="paymentType3">
+                                <label for="paymentType3">
+                                    Paypal
+                                </label>
+                            </div>
+                        </div>
+                        <!-- Card 1 - Information -->
+                        <div class="card-information-box">
+                            <!-- Card Information -->
+                            <div class="card-information">
+                                <h2>Escolha seu cartão e insira os dados</h2>
+                                <ul class="radio">
+                                    <li>
+                                        <input type="radio" value="Submarino Master" name="card-type" id="submarinoMaster">
+                                        <label for="submarinoMaster">
+                                            <span class="glyphicon glyphicon-submarino-master"></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" value="Submarino Aura" name="card-type" id="submarinoAura">
+                                        <label for="submarinoAura">
+                                            <span class="glyphicon glyphicon-submarino-aura"></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" value="Visa" name="card-type" id="visa">
+                                        <label for="visa">
+                                            <span class="glyphicon glyphicon-visa"></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" value="mastercard" name="card-type" id="mastercard">
+                                        <label for="mastercard">
+                                            <span class="glyphicon glyphicon-mastercard"></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" value="amex" name="card-type" id="amex">
+                                        <label for="amex">
+                                            <span class="glyphicon glyphicon-amex"></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" value="Diners Club" name="card-type" id="dinersClub">
+                                        <label for="dinersClub">
+                                            <span class="glyphicon glyphicon-diners-club"></span>
+                                        </label>
+                                    </li>
+                                </ul>
+                                <div class="card-number">
+                                    <label class="card-number-1">
+                                        <span class="sr-only">Número do cartão 1</span>
+                                        <input type="text" value="" maxlength="4" id="card-1-number-1" data-mask="card-number" onkeyup="Site._validNumber(this); Site._fieldChange(this, 'card-1-number-2');" />
+                                    </label>
+                                    <label class="card-number-2">
+                                        <span class="sr-only">Número do cartão 2</span>
+                                        <input type="text" value="" maxlength="4" id="card-1-number-2" data-mask="card-number" onkeyup="Site._validNumber(this); Site._fieldChange(this, 'card-1-number-3');" />
+                                    </label>
+                                    <label class="card-number-3">
+                                        <span class="sr-only">Número do cartão 3</span>
+                                        <input type="text" value="" maxlength="4" id="card-1-number-3" data-mask="card-number" onkeyup="Site._validNumber(this); Site._fieldChange(this, 'card-1-number-4');" />
+                                    </label>
+                                    <label class="card-number-4">
+                                        <span class="sr-only">Número do cartão 4</span>
+                                        <input type="text" value="" maxlength="4" id="card-1-number-4" data-mask="card-number" onkeyup="Site._validNumber(this); Site._fieldChange(this, 'card-1-date');" />
+                                    </label>
+                                    <label class="card-date">
+                                        <span>Válido <br /> até</span>
+                                        <input type="text" value="" maxlength="4" id="card-1-date" data-mask="card-date" onkeyup="Site._fieldChange(this, 'card-1-code');" />
+                                    </label>
+                                    <label class="card-name">
+                                        <span class="sr-only">Nome como está no cartão</span>
+                                        <input type="text" value="" id="card-1-name" />
+                                    </label>
+                                    <label class="card-code">
+                                        <span class="sr-only">Código de segurançav</span>
+                                        <input type="text" value="" class="card-code" maxlength="3" id="card-1-code" onkeyup="Site._validNumber(this); Site._fieldChange(this, 'card-1-name');" />
+                                    </label>
+                                    <span class="glyphicon glyphicon-mastercard"></span>
+                                </div>
+                                <p class="ssl-seal"><span class="glyphicon glyphicon-ssl-seal"></span>100% Seguro</p>
+                            </div>
+                            <!-- Card Information - End -->
+
+                            <div class="installment-plan">
+                                <p class="instructions">Selecione a forma de parcelamento:</p>
+                                <table class="installment-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Nº de <br /> parcelas</th>
+                                            <th>Primeira <br /> Parcela</th>
+                                            <th>Demais <br /> Parcelas</th>
+                                            <th>Taxa de <br />Juros</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="radio">
+                                                <input type="radio" value="1" name="installment-plan" id="installment1">
+                                                <label for="installment1">
+                                                    1x
+                                                </label>
+                                            </td>
+                                            <td>
+                                                R$ <b>3897,00</b>
+                                            </td>
+                                            <td>
+                                                R$ <b>0,00</b> 
+                                            </td>
+                                            <td>
+                                                <b>0,00</b> %
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="radio">
+                                                <input type="radio" value="2" name="installment-plan" id="installment2">
+                                                <label for="installment2">
+                                                    2x
+                                                </label>
+                                            </td>
+                                            <td>
+                                                R$ <b>3897,00</b>
+                                            </td>
+                                            <td>
+                                                R$ <b>1700,00</b>
+                                            </td>
+                                            <td>
+                                                <b>0,00</b> %
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="radio">
+                                                <input type="radio" value="3" name="installment-plan" id="installment3">
+                                                <label for="installment3">
+                                                    3x
+                                                </label>
+                                            </td>
+                                            <td>
+                                                R$ <b>3897,00</b>
+                                            </td>
+                                            <td>
+                                                R$ <b>500,00</b>
+                                            </td>
+                                            <td>
+                                                <b>0,00</b> %
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="radio">
+                                                <input type="radio" value="4" name="installment-plan" id="installment4">
+                                                <label for="installment4">
+                                                    4x
+                                                </label>
+                                            </td>
+                                            <td>
+                                                R$ <b>3897,00</b>
+                                            </td>
+                                            <td>
+                                                R$ <b>3897,00</b>
+                                            </td>
+                                            <td>
+                                                <b>0,00</b> %
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="radio">
+                                                <input type="radio" value="5" name="installment-plan" id="installment5">
+                                                <label for="installment5">
+                                                    5x
+                                                </label>
+                                            </td>
+                                            <td>
+                                                R$ <b>3897,00</b>
+                                            </td>
+                                            <td>
+                                                R$ <b>3897,00</b>
+                                            </td>
+                                            <td>
+                                                <b>0,00</b> %
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="radio">
+                                                <input type="radio" value="6" name="installment-plan" id="installment6">
+                                                <label for="installment6">
+                                                    6x
+                                                </label>
+                                            </td>
+                                            <td>
+                                                R$ <b>3897,00</b>
+                                            </td>
+                                            <td>
+                                                R$ <b>3897,00</b>
+                                            </td>
+                                            <td>
+                                                <b>0,00</b> %
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="radio">
+                                                <input type="radio" value="7" name="installment-plan" id="installment7">
+                                                <label for="installment7">
+                                                    7x
+                                                </label>
+                                            </td>
+                                            <td>
+                                                R$ <b>3897,00</b>
+                                            </td>
+                                            <td>
+                                                R$ <b>3897,00</b>
+                                            </td>
+                                            <td>
+                                                <b>0,00</b> %
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="radio">
+                                                <input type="radio" value="8" name="installment-plan" id="installment8">
+                                                <label for="installment8">
+                                                    8x
+                                                </label>
+                                            </td>
+                                            <td>
+                                                R$ <b>3897,00</b>
+                                            </td>
+                                            <td>
+                                                R$ <b>3897,00</b>
+                                            </td>
+                                            <td>
+                                                <b>0,00</b> %
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="radio">
+                                                <input type="radio" value="9" name="installment-plan" id="installment9">
+                                                <label for="installment9">
+                                                    9x
+                                                </label>
+                                            </td>
+                                            <td>
+                                                R$ <b>3897,00</b>
+                                            </td>
+                                            <td>
+                                                R$ <b>3897,00</b>
+                                            </td>
+                                            <td>
+                                                <b>27,00</b> %
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="radio">
+                                                <input type="radio" value="10" name="installment-plan" id="installment10">
+                                                <label for="installment10">
+                                                    10x
+                                                </label>
+                                            </td>
+                                            <td>
+                                                R$ <b>3897,00</b>
+                                            </td>
+                                            <td>
+                                                R$ <b>3897,00</b>
+                                            </td>
+                                            <td>
+                                                <b>3,75</b> %
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                            <!-- Billing Information -->
+                            <h2>Insira endereço de cobrança</h2>
+                            <div class="form-box">
+                                <form role="form">
+                                    <div class="row">
+                                        <div class="col-sm-11">
+                                            <div class="form-group required">
+                                                <label class="sr-only" for="billingCPF">CPF</label>
+                                                <input type="text" class="form-control" data-mask="cpf" id="billingCPF" placeholder="CPF (Ex. 000.000.000-00)">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-5">
+                                            <div class="form-group required">
+                                                <label class="sr-only" for="billingPhone">Telefone</label>
+                                                <input type="text" class="form-control" data-mask="phone" id="billingPhone" placeholder="Telefone">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-5">
+                                            <div class="form-group required">
+                                                <span class="custom-select">
+                                                    <select>
+                                                        <option>Residencial</option>
+                                                        <option>Comercial</option>
+                                                        <option>Celular</option>
+                                                    </select>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-5">
+                                            <div class="form-group required">
+                                                <label class="sr-only" for="billingCEP">CEP</label>
+                                                <input type="text" class="form-control" data-mask="cep" id="billingCEP" placeholder="CEP">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group required">
+                                                <label class="sr-only" for="billingAddress">Endereço</label>
+                                                <input type="text" class="form-control" id="billingAddress" placeholder="Endereço">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-5">
+                                            <div class="form-group required">
+                                                <label class="sr-only" for="billingAddressNumber">Número</label>
+                                                <input type="text" class="form-control" id="billingAddressNumber" placeholder="Número" data-mask="only-number">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-5">
+                                            <div class="form-group required">
+                                                <label class="sr-only" for="billingAddressDetails">Complemento</label>
+                                                <input type="text" class="form-control" id="billingAddressDetails" placeholder="Complemento">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-11">
+                                            <div class="form-group required">
+                                                <label class="sr-only" for="billingCity">Cidade</label>
+                                                <input type="text" class="form-control" id="billingCity" placeholder="Cidade">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-5">
+                                            <div class="form-group required">
+                                                <span class="custom-select">
+                                                    <select>
+                                                        <option>Estado</option>
+                                                    </select>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-5">
+                                            <div class="form-group required">
+                                                <span class="custom-select">
+                                                    <select>
+                                                        <option>País</option>
+                                                    </select>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <p class="observation">(Por favor, confirme se o endereço da conta é o mesmo endereço de cobrança)</p>
+                        </div>
+                        <!-- Card 1 - Information -->
+                        <!-- Card 2 - Information -->
+                        <div class="card-information-box" id="secondCard">
+                            <button type="button" class="btn btn-tertiary btn-sm card-remove" id="buttomRemoveCard">
+                                <span class="glyphicon glyphicon-card-remove"></span>
+                                Remova este cartão
+                            </button>
+                            <!-- Card Information -->
+                            <div class="card-information">
+                                <h2>Escolha seu cartão e insira os dados</h2>
+                                <ul class="radio">
+                                    <li>
+                                        <input type="radio" value="Submarino Master" name="card-type-2" id="submarinoMaster-2">
+                                        <label for="submarinoMaster-2">
+                                            <span class="glyphicon glyphicon-submarino-master"></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" value="Submarino Aura" name="card-type-2" id="submarinoAura-2">
+                                        <label for="submarinoAura-2">
+                                            <span class="glyphicon glyphicon-submarino-aura"></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" value="Visa" name="card-type-2" id="visa-2">
+                                        <label for="visa-2">
+                                            <span class="glyphicon glyphicon-visa"></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" value="mastercard" name="card-type-2" id="mastercard-2">
+                                        <label for="mastercard-2">
+                                            <span class="glyphicon glyphicon-mastercard"></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" value="amex" name="card-type-2" id="amex-2">
+                                        <label for="amex-2">
+                                            <span class="glyphicon glyphicon-amex"></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" value="Diners Club" name="card-type-2" id="dinersClub-2">
+                                        <label for="dinersClub-2">
+                                            <span class="glyphicon glyphicon-diners-club"></span>
+                                        </label>
+                                    </li>
+                                </ul>
+                                <div class="card-number">
+                                    <label class="card-number-1">
+                                        <span class="sr-only">Número do cartão 1</span>
+                                        <input type="text" value="" maxlength="4" id="card-2-number-1" data-mask="card-number" onkeyup="Site._validNumber(this); Site._fieldChange(this, 'card-2-number-2');" />
+                                    </label>
+                                    <label class="card-number-2">
+                                        <span class="sr-only">Número do cartão 2</span>
+                                        <input type="text" value="" maxlength="4" id="card-2-number-2" data-mask="card-number" onkeyup="Site._validNumber(this); Site._fieldChange(this, 'card-2-number-3');" />
+                                    </label>
+                                    <label class="card-number-3">
+                                        <span class="sr-only">Número do cartão 3</span>
+                                        <input type="text" value="" maxlength="4" id="card-2-number-3" data-mask="card-number" onkeyup="Site._validNumber(this); Site._fieldChange(this, 'card-2-number-4');" />
+                                    </label>
+                                    <label class="card-number-4">
+                                        <span class="sr-only">Número do cartão 4</span>
+                                        <input type="text" value="" maxlength="4" id="card-2-number-4" data-mask="card-number" onkeyup="Site._validNumber(this); Site._fieldChange(this, 'card-2-date');" />
+                                    </label>
+                                    <label class="card-date">
+                                        <span>Válido <br /> até</span>
+                                        <input type="text" value="" maxlength="4" id="card-2-date" data-mask="card-date" onkeyup="Site._fieldChange(this, 'card-2-code');" />
+                                    </label>
+                                    <label class="card-name">
+                                        <span class="sr-only">Nome como está no cartão</span>
+                                        <input type="text" value="" id="card-2-name" />
+                                    </label>
+                                    <label class="card-code">
+                                        <span class="sr-only">Código de segurançav</span>
+                                        <input type="text" value="" class="card-code" maxlength="3" id="card-2-code" onkeyup="Site._validNumber(this); Site._fieldChange(this, 'card-2-name');" />
+                                    </label>
+                                    <span class="glyphicon glyphicon-mastercard"></span>
+                                </div>
+                                <div class="sencond-card-value">
+                                    <label for="secondCardVal">Valor (R$):</label>
+                                    <input type="text" value="" data-mask="card-monetary" id="secondCardVal" />
+                                </div>
+                                <p class="ssl-seal"><span class="glyphicon glyphicon-ssl-seal"></span>100% Seguro</p>
+                            </div>
+                            <!-- Card Information - End -->
+
+                            <div class="installment-plan">
+                                <p class="instructions">Selecione a forma de parcelamento:</p>
+                                <table class="installment-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Nº de <br /> parcelas</th>
+                                            <th>Primeira <br /> Parcela</th>
+                                            <th>Demais <br /> Parcelas</th>
+                                            <th>Taxa de <br />Juros</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="radio">
+                                                <input type="radio" value="1" name="installment-plan-2" id="installment1-2">
+                                                <label for="installment1-2">
+                                                    1x
+                                                </label>
+                                            </td>
+                                            <td>
+                                                R$ <b>3897,00</b>
+                                            </td>
+                                            <td>
+                                                R$ <b>0,00</b>
+                                            </td>
+                                            <td>
+                                                <b>0,00</b> %
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="radio">
+                                                <input type="radio" value="2" name="installment-plan-2" id="installment2-2">
+                                                <label for="installment2-2">
+                                                    2x
+                                                </label>
+                                            </td>
+                                            <td>
+                                                R$ <b>3897,00</b>
+                                            </td>
+                                            <td>
+                                                R$ <b>1700,00</b>
+                                            </td>
+                                            <td>
+                                                <b>0,00</b> %
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="radio">
+                                                <input type="radio" value="3" name="installment-plan-2" id="installment3-2">
+                                                <label for="installment3-2">
+                                                    3x
+                                                </label>
+                                            </td>
+                                            <td>
+                                                R$ <b>3897,00</b>
+                                            </td>
+                                            <td>
+                                                R$ <b>500,00</b>
+                                            </td>
+                                            <td>
+                                                <b>0,00</b> %
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="radio">
+                                                <input type="radio" value="4" name="installment-plan-2" id="installment4-2">
+                                                <label for="installment4-2">
+                                                    4x
+                                                </label>
+                                            </td>
+                                            <td>
+                                                R$ <b>3897,00</b>
+                                            </td>
+                                            <td>
+                                                R$ <b>3897,00</b>
+                                            </td>
+                                            <td>
+                                                <b>0,00</b> %
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="radio">
+                                                <input type="radio" value="5" name="installment-plan-2" id="installment5-2">
+                                                <label for="installment5-2">
+                                                    5x
+                                                </label>
+                                            </td>
+                                            <td>
+                                                R$ <b>3897,00</b>
+                                            </td>
+                                            <td>
+                                                R$ <b>3897,00</b>
+                                            </td>
+                                            <td>
+                                                <b>0,00</b> %
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="radio">
+                                                <input type="radio" value="6" name="installment-plan-2" id="installment6-2">
+                                                <label for="installment6-2">
+                                                    6x
+                                                </label>
+                                            </td>
+                                            <td>
+                                                R$ <b>3897,00</b>
+                                            </td>
+                                            <td>
+                                                R$ <b>3897,00</b>
+                                            </td>
+                                            <td>
+                                                <b>0,00</b> %
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="radio">
+                                                <input type="radio" value="7" name="installment-plan-2" id="installment7-2">
+                                                <label for="installment7-2">
+                                                    7x
+                                                </label>
+                                            </td>
+                                            <td>
+                                                R$ <b>3897,00</b>
+                                            </td>
+                                            <td>
+                                                R$ <b>3897,00</b>
+                                            </td>
+                                            <td>
+                                                <b>0,00</b> %
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="radio">
+                                                <input type="radio" value="8" name="installment-plan-2" id="installment8-2">
+                                                <label for="installment8-2">
+                                                    8x
+                                                </label>
+                                            </td>
+                                            <td>
+                                                R$ <b>3897,00</b>
+                                            </td>
+                                            <td>
+                                                R$ <b>3897,00</b>
+                                            </td>
+                                            <td>
+                                                <b>0,00</b> %
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="radio">
+                                                <input type="radio" value="9" name="installment-plan-2" id="installment9-2">
+                                                <label for="installment9-2">
+                                                    9x
+                                                </label>
+                                            </td>
+                                            <td>
+                                                R$ <b>3897,00</b>
+                                            </td>
+                                            <td>
+                                                R$ <b>3897,00</b>
+                                            </td>
+                                            <td>
+                                                <b>27,00</b> %
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="radio">
+                                                <input type="radio" value="10" name="installment-plan-2" id="installment10-2">
+                                                <label for="installment10-2">
+                                                    10x
+                                                </label>
+                                            </td>
+                                            <td>
+                                                R$ <b>3897,00</b>
+                                            </td>
+                                            <td>
+                                                R$ <b>3897,00</b>
+                                            </td>
+                                            <td>
+                                                <b>3,75</b> %
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                            <!-- Billing Information -->
+                            <div class="second-title">
+                                <h2>Insira endereço de cobrança</h2>
+                                <div class="checkbox">
+                                    <input type="checkbox" value="" id="copyBillingAddress">
+                                    <label for="copyBillingAddress">
+                                        Copiar informação do primeiro cartão
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-box">
+                                <form role="form">
+                                    <div class="row">
+                                        <div class="col-sm-11">
+                                            <div class="form-group required">
+                                                <label class="sr-only" for="billingCPF">CPF</label>
+                                                <input type="text" class="form-control" data-mask="cpf" id="billingCPF" placeholder="CPF (Ex. 000.000.000-00)">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-5">
+                                            <div class="form-group required">
+                                                <label class="sr-only" for="billingPhone">Telefone</label>
+                                                <input type="text" class="form-control" id="billingPhone" data-mask="phone" placeholder="Telefone">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-5">
+                                            <div class="form-group required">
+                                                <span class="custom-select">
+                                                    <select>
+                                                        <option>Residencial</option>
+                                                        <option>Comercial</option>
+                                                        <option>Celular</option>
+                                                    </select>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-5">
+                                            <div class="form-group required">
+                                                <label class="sr-only" for="billingCEP">CEP</label>
+                                                <input type="text" class="form-control" data-mask="cep" id="billingCEP" placeholder="CEP">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group required">
+                                                <label class="sr-only" for="billingAddress">Endereço</label>
+                                                <input type="text" class="form-control" id="billingAddress" placeholder="Endereço">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-5">
+                                            <div class="form-group required">
+                                                <label class="sr-only" for="billingAddressNumber">Número</label>
+                                                <input type="text" class="form-control" id="billingAddressNumber" placeholder="Número" data-mask="only-number">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-5">
+                                            <div class="form-group required">
+                                                <label class="sr-only" for="billingAddressDetails">Complemento</label>
+                                                <input type="text" class="form-control" id="billingAddressDetails" placeholder="Complemento">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-11">
+                                            <div class="form-group required">
+                                                <label class="sr-only" for="billingCity">Cidade</label>
+                                                <input type="text" class="form-control" id="billingCity" placeholder="Cidade">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-5">
+                                            <div class="form-group required">
+                                                <span class="custom-select">
+                                                    <select>
+                                                        <option>Estado</option>
+                                                    </select>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-5">
+                                            <div class="form-group required">
+                                                <span class="custom-select">
+                                                    <select>
+                                                        <option>País</option>
+                                                    </select>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <p class="observation">(Por favor, confirme se o endereço da conta é o mesmo endereço de cobrança)</p>
+                        </div>
+                        <!-- Card 2 - Information -->
+
+
+                        <div class="checkbox accept-conditions">
+                            <input type="checkbox" value="" id="acceptConditions">
+                            <label for="acceptConditions">
+                                Li e aceito as <a href="#">condições de compra e politicas de cancelamento</a> e declaro que conferi meus dados e todos estão corretamente indicados nos campos acima.
+                            </label>
+                        </div>
+
+                        <!-- Billing Information - end -->
+                        <div class="nav-button">
+                            <button class="btn-default btn btn-sm">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Step 3 - end -->
+</div>

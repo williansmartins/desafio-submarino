@@ -1,0 +1,176 @@
+﻿@{
+    ViewBag.Title = "/Examples";
+}
+
+<div class="container">
+    <br /><br /><br /><br /><br /><br />
+    <h1>B2W-Submarino-Desktop-StyleGuide-InteractiveElements-050814</h1>
+    <div class="container-fluid">
+        <div class="page-header">
+            <h1>Spinner</h1>
+            <label class="spinner-wrapper">
+                Adulto
+                <input class="spinner spinner-simple" name="value" value="0" type="text">
+            </label>
+        </div>
+        <div class="page-header">
+            <h1>Spinner Faixa etária</h1>
+            <div class="spinner-wrapper spinner-box">
+                <input class="spinner spinner-age" name="value" placeholder="(1-11)">
+            </div>
+        </div>
+        <div class="page-header">
+            <h1>Radio Button Trip</h1>
+            <div class="radio trip dark-theme">
+                <div>
+                    <input id="roundTrip" type="radio" name="typeTrip" value="roundTrip" checked>
+                    <label for="roundTrip">Ida e volta</label>
+                </div>
+                <div>
+                    <input id="onwWayTrip" type="radio" name="typeTrip" value="onwWayTrip">
+                    <label for="onwWayTrip">Somente ida</label>
+                </div>
+        </div>
+        <div class="page-header">
+            <h1>Checkbox e Radio Button</h1>
+        </div>
+        <div class="checkbox">
+            <input type="checkbox" value="" id="checkbox-teste">
+            <label for="checkbox-teste">
+                Option one is this and that&mdash;be sure to include why it's great
+            </label>
+        </div>
+        <div class="checkbox dark-theme">
+            <input type="checkbox" value="" id="checkbox-teste-2">
+            <label for="checkbox-teste-2">
+                Option one is this and that&mdash;be sure to include why it's great
+            </label>
+        </div>
+
+        <div class="radio">
+            <input id="male" type="radio" name="gender" value="male">
+            <label for="male">Male</label>
+            <input id="female" type="radio" name="gender" value="female">
+            <label for="female">Female</label>
+        </div>
+        <div class="radio dark-theme">
+            <input id="male2" type="radio" name="gender2" value="male">
+            <label for="male2">Male</label>
+            <input id="female2" type="radio" name="gender2" value="female">
+            <label for="female2">Female</label>
+        </div>
+
+        <div class="page-header">
+            <h1>Paginação</h1>
+        </div>
+        <ul class="pagination">
+            <li class="nav-pag"><a href="#"><span class="glyphicon glyphicon-arrow-blue-left"></span></a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li class="active"><a href="#">3</a></li>
+            <li><a href="#">43</a></li>
+            <li><a href="#">50</a></li>
+            <li><a href="#">850</a></li>
+            <li class="nav-pag"><a href="#"><span class="glyphicon glyphicon-arrow-blue-right"></span></a></li>
+        </ul>
+
+        <div class="page-header">
+            <h1>Text Navigation</h1>
+        </div>
+        <ul class="pager">
+            <li class="previous"><a href="#"><span class="glyphicon glyphicon-arrow-navigation"></span>Back to search</a></li>
+        </ul>
+        <br>
+        <h1>Text CTA</h1>
+        <button type="button" class="btn btn-sm btn-text-cta"><span class="glyphicon glyphicon-chevron-right"></span>View Room</button>
+        <br />
+
+        <h1>Filter Expand</h1>
+        <button type="button" class="btn btn-sm btn-filter">Class<span class="glyphicon icon-filter-arrow"></span></button>
+        <br />
+        <button type="button" class="btn btn-sm btn-filter selected">Class<span class="glyphicon icon-filter-arrow"></span></button>
+        <br />
+
+
+        <div class="page-header">
+            <h1>Select</h1>
+        </div>
+        <div class="row">
+            <div class="col-lg-5">
+                <span class="custom-select">
+                    <select>
+                        <option>Sushi</option>
+                        <option>Blue cheese with crackers</option>
+                        <option>Steak</option>
+                        <option>Beef</option>
+                        <option>Rice</option>
+                        <option>Chilli</option>
+                        <option>Other</option>
+                    </select>
+                </span>
+            </div>
+        </div>
+
+
+
+
+        <div class="page-header">
+            <h1>Botões</h1>
+        </div>
+        <p>
+            <button type="button" class="btn btn-xlg btn-default">Default</button>
+            <button type="button" class="btn btn-xlg btn-primary">Primary</button>
+            <button type="button" class="btn btn-xlg btn-secondary">Secondary</button>
+            <button type="button" class="btn btn-xlg btn-tertiary"><span class="glyphicon glyphicon-star"></span>Tertiary</button>
+        </p>
+        <p>
+            <button type="button" class="btn btn-xlg btn-default" disabled>Default</button>
+            <button type="button" class="btn btn-xlg btn-primary" disabled>Primary</button>
+            <button type="button" class="btn btn-xlg btn-secondary" disabled>Secondary</button>
+            <button type="button" class="btn btn-xlg btn-tertiary" disabled>Tertiary</button>
+        </p>
+        <p>
+            <button type="button" class="btn btn-lg btn-default">Default</button>
+            <button type="button" class="btn btn-lg btn-primary">Primary</button>
+            <button type="button" class="btn btn-lg btn-secondary">Secondary</button>
+            <button type="button" class="btn btn-lg btn-tertiary">Tertiary</button>
+        </p>
+        <p>
+            <button type="button" class="btn btn-default">Default</button>
+            <button type="button" class="btn btn-primary">Primary</button>
+            <button type="button" class="btn btn-secondary">Secondary</button>
+            <button type="button" class="btn btn-tertiary">Tertiary</button>
+        </p>
+        <p>
+            <button type="button" class="btn btn-sm btn-default">Default</button>
+            <button type="button" class="btn btn-sm btn-primary">Primary</button>
+            <button type="button" class="btn btn-sm btn-secondary">Secondary</button>
+            <button type="button" class="btn btn-sm btn-tertiary">Tertiary</button>
+        </p>
+    </div>
+
+    <div class="page-header">
+        <h1>Toggle Switch</h1>
+    </div>
+
+    <div class="toggle-switch">
+        <button type="button">Cheapest</button>
+        <input type="checkbox" class="switch" checked>
+        <button type="button">Fastest</button>
+    </div>
+    <br />
+    <br />
+    <br />
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />

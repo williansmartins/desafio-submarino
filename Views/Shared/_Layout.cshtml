@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/css/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/css/bootstrap/bootstrap-switch.css" rel="stylesheet" />
+    <link href="~/Content/css/jquery-ui/jquery-ui-1.10.4.custom.css" rel="stylesheet" />
+    <link href="~/Content/css/Site.css" rel="stylesheet" />
+    <script src="~/Content/js/lib/modernizr-2.7.2.js"></script>
+    <script src="~/Content/js/plugin/respond.min.js"></script>
+    <script src="~/Content/js/lib/jquery-2.1.0.min.js"></script>
+    @RenderSection("head", false)
+</head>
+<body class="@ViewBag.BodyClass">
+    <header class="main-header">
+        <!-- TOP MENU -->
+        <div class="contact-menu-wrapper">
+            <div class="wrapper">
+                <ul class="contact-menu">
+                    <li>
+                        <a href="#">Está com dúvidas</a>
+                    </li>
+                    <li>
+                        <a href="#">Ajuda Online</a>
+                    </li>
+                    <li><span class="glyphicon glyphicon-phone-white"></span><span>4003-9888</span></li>
+                    <li class="spacer-logo"><a href="">Receba notícias</a></li>
+                    <li>
+                        <ul class="social-menu">
+                            <li>
+                                <a href="#"><span class="glyphicon glyphicon-twitter-green"></span><span class="text-hide">Twitter</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><span class="glyphicon glyphicon-facebook-green"></span><span class="text-hide">Facebook</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><span class="glyphicon glyphicon-google-plus-green"></span><span class="text-hide">Google+</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Meus pedidos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- TOP MENU - FIM -->
+        <!-- MAIN MENU -->
+        <div class="main-menu-wrapper">
+            <div class="wrapper">
+                <nav>
+                    <ul class="main-menu">
+                        <li class="menu-item">
+                            <a href="/Flight/">Passagens Aéreas</a>
+                            <!-- SUBMENU FLIGHT -->
+                            <div class="submenu flight-menu">
+                                <ul class="wrapper">
+                                    <li><a href="/Flight/SearchResult"><span class="glyphicon glyphicon-ticket"></span>Book a flight</a></li>
+                                    <li><a href="#"><span class="glyphicon glyphicon-map"></span>Destinos</a></li>
+                                    <li><a href="#"><span class="glyphicon glyphicon-directions"></span>Atrações</a></li>
+                                    <li><a href="#"><span class="glyphicon glyphicon-airplane"></span>Linhas aéreas</a></li>
+                                </ul>
+                            </div>
+                            <!-- SUBMENU - FIM -->
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">Pacotes</a>
+                            <!-- SUBMENU PACKAGE -->
+                            <div class="submenu package-menu">
+                                <ul class="wrapper">
+                                    <li><a href="#"><span class="glyphicon glyphicon-luggage"></span>Book a package</a></li>
+                                    <li><a href="#"><span class="glyphicon glyphicon-map"></span>Destinos</a></li>
+                                    <li><a href="#"><span class="glyphicon glyphicon-directions"></span>Atrações</a></li>
+                                </ul>
+                            </div>
+                            <!-- SUBMENU - FIM -->
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">Hotéis</a>
+                            <!-- SUBMENU HOTEL -->
+                            <div class="submenu hotel-menu">
+                                <ul class="wrapper">
+                                    <li><a href="#"><span class="glyphicon glyphicon-doorknob"></span>Book a hotel</a></li>
+                                    <li><a href="#"><span class="glyphicon glyphicon-map"></span>Destinos</a></li>
+                                    <li><a href="#"><span class="glyphicon glyphicon-directions"></span>Atrações</a></li>
+                                </ul>
+                            </div>
+                            <!-- SUBMENU - FIM -->
+                        </li>
+                        <li class="menu-item logo-prev">
+                            <a href="#">Carros</a>
+                        </li>
+                        <li class="menu-logo">
+                            <h1 class="logo-header"><a href="">Submarino Viagens<span>4003 - 9888</span></a></h1>
+                        </li>
+                        <li class="menu-item ">
+                            <a href="#">Cruzeiros</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">Seguros</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">Especiais</a>
+                            <!-- SUBMENU SPECIALS -->
+                            <div class="submenu flight-menu">
+                                <ul class="wrapper">
+                                    <li><a href="#"><span class="glyphicon glyphicon-football"></span>Worldcup</a></li>
+                                    <li><a href="#"><span class="glyphicon glyphicon-calendar-sheet"></span>Holidays</a></li>
+                                    <li><a href="#"><span class="glyphicon glyphicon-family"></span>Family Travel</a></li>
+                                    <li><a href="#"><span class="glyphicon glyphicon-compass"></span>Adventure</a></li>
+                                </ul>
+                            </div>
+                            <!-- SUBMENU - FIM -->
+                        </li>
+                        <li class="menu-item promotion">
+                            <a href="#"><span>Promoções</span></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <!-- MAIN MENU - FIM -->
+    </header>
+    @RenderBody()
+    <footer class="main-footer"></footer>
+    <script src="~/Content/js/lib/jquery-2.1.0.min.js"></script>
+    <script src="~/Content/js/plugin/jquery-ui-1.10.4.custom.js"></script>
+    <script src="~/Content/js/bootstrap/bootstrap.min.js"></script>
+    <script src="~/Content/js/bootstrap/bootstrap-switch.min.js"></script>
+    <script src="~/Content/js/bootstrap/jquery.bootstrap-touchspin.js"></script>
+    <script src="~/Content/js/lib/handlebars-v1.3.0.js"></script>
+    <script src="~/Content/js/site.js" charset="utf-8"></script>
+    <script src="~/Content/js/module.js" charset="utf-8"></script>
+    <script src="~/Content/js/plugin/jquery.mask.min.js"></script>
+    <script src="~/Content/js/plugin/jquery.mask.min.js"></script>
+</body>
+</html>

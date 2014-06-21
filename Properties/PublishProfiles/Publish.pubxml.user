@@ -1,0 +1,1116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Deploy\B2W</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>06/18/2014 19:04:55</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>06/18/2014 19:04:13</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>06/18/2014 19:04:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Mvc.FixedDisplayModes.dll">
+      <publishTime>06/18/2014 19:04:29</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>06/18/2014 19:04:45</publishTime>
+    </File>
+    <File Include="bin/RouteDebugger.dll">
+      <publishTime>06/18/2014 19:15:48</publishTime>
+    </File>
+    <File Include="bin/SubViagens.dll">
+      <publishTime>06/20/2014 19:42:33</publishTime>
+    </File>
+    <File Include="bin/SubViagens.pdb">
+      <publishTime>06/20/2014 19:42:33</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>06/18/2014 19:04:35</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>06/18/2014 19:04:37</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>06/18/2014 19:04:38</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>06/18/2014 19:04:29</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>06/18/2014 19:04:35</publishTime>
+    </File>
+    <File Include="bin/System.Web.Providers.dll">
+      <publishTime>06/18/2014 19:04:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>06/18/2014 19:04:31</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>06/18/2014 19:04:39</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>06/18/2014 19:04:39</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>06/18/2014 19:04:39</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>06/18/2014 19:04:55</publishTime>
+    </File>
+    <File Include="Content/css/base.css">
+      <publishTime>06/18/2014 19:04:57</publishTime>
+    </File>
+    <File Include="Content/css/base.css.map">
+      <publishTime>06/18/2014 19:04:57</publishTime>
+    </File>
+    <File Include="Content/css/base.less">
+      <publishTime>06/18/2014 19:04:58</publishTime>
+    </File>
+    <File Include="Content/css/base.min.css">
+      <publishTime>06/18/2014 19:04:58</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap/bootstrap-switch.css">
+      <publishTime>06/18/2014 19:05:00</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap/bootstrap-switch.min.css">
+      <publishTime>06/18/2014 19:05:01</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap/bootstrap.css">
+      <publishTime>06/18/2014 19:05:00</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap/bootstrap.min.css">
+      <publishTime>06/18/2014 19:05:00</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap/config.json">
+      <publishTime>06/18/2014 19:05:01</publishTime>
+    </File>
+    <File Include="Content/css/fontawesome/font-awesome.css">
+      <publishTime>06/18/2014 19:05:01</publishTime>
+    </File>
+    <File Include="Content/css/fontawesome/font-awesome.min.css">
+      <publishTime>06/18/2014 19:05:01</publishTime>
+    </File>
+    <File Include="Content/css/fonts.css">
+      <publishTime>06/20/2014 18:46:02</publishTime>
+    </File>
+    <File Include="Content/css/fonts.css.map">
+      <publishTime>06/20/2014 18:46:02</publishTime>
+    </File>
+    <File Include="Content/css/fonts.less">
+      <publishTime>06/18/2014 19:04:58</publishTime>
+    </File>
+    <File Include="Content/css/fonts.min.css">
+      <publishTime>06/18/2014 19:04:58</publishTime>
+    </File>
+    <File Include="Content/css/jquery-ui/images/animated-overlay.gif">
+      <publishTime>06/18/2014 19:05:02</publishTime>
+    </File>
+    <File Include="Content/css/jquery-ui/images/ui-bg_flat_0_aaaaaa_40x100.png">
+      <publishTime>06/18/2014 19:05:02</publishTime>
+    </File>
+    <File Include="Content/css/jquery-ui/images/ui-bg_flat_55_fbf9ee_40x100.png">
+      <publishTime>06/18/2014 19:05:03</publishTime>
+    </File>
+    <File Include="Content/css/jquery-ui/images/ui-bg_flat_65_ffffff_40x100.png">
+      <publishTime>06/18/2014 19:05:03</publishTime>
+    </File>
+    <File Include="Content/css/jquery-ui/images/ui-bg_flat_75_cccccc_40x100.png">
+      <publishTime>06/18/2014 19:05:02</publishTime>
+    </File>
+    <File Include="Content/css/jquery-ui/images/ui-bg_flat_75_dadada_40x100.png">
+      <publishTime>06/18/2014 19:05:02</publishTime>
+    </File>
+    <File Include="Content/css/jquery-ui/images/ui-bg_flat_75_e6e6e6_40x100.png">
+      <publishTime>06/18/2014 19:05:02</publishTime>
+    </File>
+    <File Include="Content/css/jquery-ui/images/ui-bg_flat_75_ffffff_40x100.png">
+      <publishTime>06/18/2014 19:05:03</publishTime>
+    </File>
+    <File Include="Content/css/jquery-ui/images/ui-bg_flat_95_fef1ec_40x100.png">
+      <publishTime>06/18/2014 19:05:03</publishTime>
+    </File>
+    <File Include="Content/css/jquery-ui/images/ui-icons_222222_256x240.png">
+      <publishTime>06/18/2014 19:05:03</publishTime>
+    </File>
+    <File Include="Content/css/jquery-ui/images/ui-icons_2e83ff_256x240.png">
+      <publishTime>06/18/2014 19:05:03</publishTime>
+    </File>
+    <File Include="Content/css/jquery-ui/images/ui-icons_454545_256x240.png">
+      <publishTime>06/18/2014 19:05:03</publishTime>
+    </File>
+    <File Include="Content/css/jquery-ui/images/ui-icons_888888_256x240.png">
+      <publishTime>06/18/2014 19:05:03</publishTime>
+    </File>
+    <File Include="Content/css/jquery-ui/images/ui-icons_cd0a0a_256x240.png">
+      <publishTime>06/18/2014 19:05:03</publishTime>
+    </File>
+    <File Include="Content/css/jquery-ui/jquery-ui-1.10.4.custom.css">
+      <publishTime>06/20/2014 19:40:15</publishTime>
+    </File>
+    <File Include="Content/css/jquery-ui/jquery-ui-1.10.4.custom.min.css">
+      <publishTime>06/20/2014 19:40:16</publishTime>
+    </File>
+    <File Include="Content/css/jquery-ui/jquery-ui-theme.css">
+      <publishTime>06/18/2014 19:05:01</publishTime>
+    </File>
+    <File Include="Content/css/jquery-ui/jquery-ui-theme.css.map">
+      <publishTime>06/18/2014 19:05:01</publishTime>
+    </File>
+    <File Include="Content/css/jquery-ui/jquery-ui-theme.less">
+      <publishTime>06/18/2014 19:05:02</publishTime>
+    </File>
+    <File Include="Content/css/jquery-ui/jquery-ui-theme.min.css">
+      <publishTime>06/18/2014 19:05:02</publishTime>
+    </File>
+    <File Include="Content/css/lib/mixins.css">
+      <publishTime>06/20/2014 18:46:02</publishTime>
+    </File>
+    <File Include="Content/css/lib/mixins.css.map">
+      <publishTime>06/20/2014 18:46:02</publishTime>
+    </File>
+    <File Include="Content/css/lib/mixins.less">
+      <publishTime>06/18/2014 19:05:04</publishTime>
+    </File>
+    <File Include="Content/css/lib/mixins.min.css">
+      <publishTime>06/18/2014 19:05:04</publishTime>
+    </File>
+    <File Include="Content/css/lib/variables.css">
+      <publishTime>06/20/2014 18:46:02</publishTime>
+    </File>
+    <File Include="Content/css/lib/variables.css.map">
+      <publishTime>06/20/2014 18:46:02</publishTime>
+    </File>
+    <File Include="Content/css/lib/variables.less">
+      <publishTime>06/18/2014 19:05:04</publishTime>
+    </File>
+    <File Include="Content/css/lib/variables.min.css">
+      <publishTime>06/18/2014 19:05:04</publishTime>
+    </File>
+    <File Include="Content/css/module.css">
+      <publishTime>06/20/2014 19:33:44</publishTime>
+    </File>
+    <File Include="Content/css/module.css.map">
+      <publishTime>06/20/2014 19:33:44</publishTime>
+    </File>
+    <File Include="Content/css/module.min.css">
+      <publishTime>06/20/2014 19:33:44</publishTime>
+    </File>
+    <File Include="Content/css/Site.css">
+      <publishTime>06/20/2014 19:33:47</publishTime>
+    </File>
+    <File Include="Content/css/Site.css.map">
+      <publishTime>06/20/2014 19:33:47</publishTime>
+    </File>
+    <File Include="Content/css/Site.less">
+      <publishTime>06/20/2014 16:56:15</publishTime>
+    </File>
+    <File Include="Content/css/Site.min.css">
+      <publishTime>06/20/2014 19:29:20</publishTime>
+    </File>
+    <File Include="Content/css/sprite.css">
+      <publishTime>06/20/2014 18:46:02</publishTime>
+    </File>
+    <File Include="Content/css/sprite.css.map">
+      <publishTime>06/20/2014 18:46:02</publishTime>
+    </File>
+    <File Include="Content/css/sprite.less">
+      <publishTime>06/18/2014 19:04:59</publishTime>
+    </File>
+    <File Include="Content/css/sprite.min.css">
+      <publishTime>06/18/2014 19:04:59</publishTime>
+    </File>
+    <File Include="Content/css/theme.css">
+      <publishTime>06/18/2014 19:05:00</publishTime>
+    </File>
+    <File Include="Content/css/theme.css.map">
+      <publishTime>06/18/2014 19:05:00</publishTime>
+    </File>
+    <File Include="Content/css/theme.less">
+      <publishTime>06/20/2014 18:58:55</publishTime>
+    </File>
+    <File Include="Content/css/theme.min.css">
+      <publishTime>06/18/2014 19:05:00</publishTime>
+    </File>
+    <File Include="Content/fonts/fontawesome/fontawesome-webfont.eot">
+      <publishTime>06/18/2014 19:05:04</publishTime>
+    </File>
+    <File Include="Content/fonts/fontawesome/fontawesome-webfont.svg">
+      <publishTime>06/18/2014 19:05:06</publishTime>
+    </File>
+    <File Include="Content/fonts/fontawesome/fontawesome-webfont.ttf">
+      <publishTime>06/18/2014 19:05:05</publishTime>
+    </File>
+    <File Include="Content/fonts/fontawesome/fontawesome-webfont.woff">
+      <publishTime>06/18/2014 19:05:05</publishTime>
+    </File>
+    <File Include="Content/fonts/fontawesome/FontAwesome.otf">
+      <publishTime>06/18/2014 19:05:05</publishTime>
+    </File>
+    <File Include="Content/fonts/glyphicons/glyphicons-halflings-regular.eot">
+      <publishTime>06/18/2014 19:05:06</publishTime>
+    </File>
+    <File Include="Content/fonts/glyphicons/glyphicons-halflings-regular.svg">
+      <publishTime>06/18/2014 19:05:05</publishTime>
+    </File>
+    <File Include="Content/fonts/glyphicons/glyphicons-halflings-regular.ttf">
+      <publishTime>06/18/2014 19:05:07</publishTime>
+    </File>
+    <File Include="Content/fonts/glyphicons/glyphicons-halflings-regular.woff">
+      <publishTime>06/18/2014 19:05:05</publishTime>
+    </File>
+    <File Include="Content/fonts/omnes/omnesmed-webfont.eot">
+      <publishTime>06/18/2014 19:05:05</publishTime>
+    </File>
+    <File Include="Content/fonts/omnes/omnesmed-webfont.svg">
+      <publishTime>06/18/2014 19:05:06</publishTime>
+    </File>
+    <File Include="Content/fonts/omnes/omnesmed-webfont.ttf">
+      <publishTime>06/18/2014 19:05:06</publishTime>
+    </File>
+    <File Include="Content/fonts/omnes/omnesmed-webfont.woff">
+      <publishTime>06/18/2014 19:05:07</publishTime>
+    </File>
+    <File Include="Content/fonts/omnes/omnesreg-webfont.eot">
+      <publishTime>06/18/2014 19:05:06</publishTime>
+    </File>
+    <File Include="Content/fonts/omnes/omnesreg-webfont.svg">
+      <publishTime>06/18/2014 19:05:06</publishTime>
+    </File>
+    <File Include="Content/fonts/omnes/omnesreg-webfont.ttf">
+      <publishTime>06/18/2014 19:05:06</publishTime>
+    </File>
+    <File Include="Content/fonts/omnes/omnesreg-webfont.woff">
+      <publishTime>06/18/2014 19:05:07</publishTime>
+    </File>
+    <File Include="Content/fonts/omnes/omnessem-webfont.eot">
+      <publishTime>06/18/2014 19:05:07</publishTime>
+    </File>
+    <File Include="Content/fonts/omnes/omnessem-webfont.svg">
+      <publishTime>06/18/2014 19:05:07</publishTime>
+    </File>
+    <File Include="Content/fonts/omnes/omnessem-webfont.ttf">
+      <publishTime>06/18/2014 19:05:08</publishTime>
+    </File>
+    <File Include="Content/fonts/omnes/omnessem-webfont.woff">
+      <publishTime>06/18/2014 19:05:07</publishTime>
+    </File>
+    <File Include="Content/images/banner/banner-submarino.jpg">
+      <publishTime>06/18/2014 19:05:10</publishTime>
+    </File>
+    <File Include="Content/images/banner/highlight-hotel-1.jpg">
+      <publishTime>06/18/2014 19:05:09</publishTime>
+    </File>
+    <File Include="Content/images/banner/highlight-hotel-2.jpg">
+      <publishTime>06/18/2014 19:05:10</publishTime>
+    </File>
+    <File Include="Content/images/banner/highlight-hotel-3.jpg">
+      <publishTime>06/18/2014 19:05:10</publishTime>
+    </File>
+    <File Include="Content/images/banner/hotel-checkout-1.jpg">
+      <publishTime>06/18/2014 19:05:10</publishTime>
+    </File>
+    <File Include="Content/images/banner/hotel-checkout-2.jpg">
+      <publishTime>06/18/2014 19:05:11</publishTime>
+    </File>
+    <File Include="Content/images/banner/hotel-checkout-3.jpg">
+      <publishTime>06/18/2014 19:05:10</publishTime>
+    </File>
+    <File Include="Content/images/banner/hotel-top-carousel.jpg">
+      <publishTime>06/18/2014 19:05:10</publishTime>
+    </File>
+    <File Include="Content/images/banner/multidestination-checkout-2.png">
+      <publishTime>06/18/2014 19:05:12</publishTime>
+    </File>
+    <File Include="Content/images/banner/rio-de-janeiro.jpg">
+      <publishTime>06/18/2014 19:05:13</publishTime>
+    </File>
+    <File Include="Content/images/bg/bg-arrow-table-back.png">
+      <publishTime>06/18/2014 19:05:14</publishTime>
+    </File>
+    <File Include="Content/images/bg/bg-arrow-table.png">
+      <publishTime>06/18/2014 19:05:11</publishTime>
+    </File>
+    <File Include="Content/images/bg/business-class-seats.png">
+      <publishTime>06/18/2014 19:05:12</publishTime>
+    </File>
+    <File Include="Content/images/bg/business-class-taken-seats.png">
+      <publishTime>06/18/2014 19:05:12</publishTime>
+    </File>
+    <File Include="Content/images/bg/chain.png">
+      <publishTime>06/18/2014 19:05:14</publishTime>
+    </File>
+    <File Include="Content/images/bg/dotted-grey-pale.png">
+      <publishTime>06/18/2014 19:05:12</publishTime>
+    </File>
+    <File Include="Content/images/bg/dotted-white.png">
+      <publishTime>06/18/2014 19:05:12</publishTime>
+    </File>
+    <File Include="Content/images/bg/hotel-detail.gif">
+      <publishTime>06/18/2014 19:05:13</publishTime>
+    </File>
+    <File Include="Content/images/bg/plane-diagram.png">
+      <publishTime>06/18/2014 19:05:14</publishTime>
+    </File>
+    <File Include="Content/images/bg/premium-seat.png">
+      <publishTime>06/18/2014 19:05:14</publishTime>
+    </File>
+    <File Include="Content/images/bg/seat.png">
+      <publishTime>06/18/2014 19:05:14</publishTime>
+    </File>
+    <File Include="Content/images/bg/selected-seat.png">
+      <publishTime>06/18/2014 19:05:15</publishTime>
+    </File>
+    <File Include="Content/images/bg/taken-seats.png">
+      <publishTime>06/18/2014 19:05:15</publishTime>
+    </File>
+    <File Include="Content/images/bg/ticket-tbl.png">
+      <publishTime>06/18/2014 19:05:15</publishTime>
+    </File>
+    <File Include="Content/images/bg/trace-white.png">
+      <publishTime>06/18/2014 19:05:15</publishTime>
+    </File>
+    <File Include="Content/images/bg/trace.png">
+      <publishTime>06/18/2014 19:05:15</publishTime>
+    </File>
+    <File Include="Content/images/bg/wavy.gif">
+      <publishTime>06/18/2014 19:05:15</publishTime>
+    </File>
+    <File Include="Content/images/credit-card-small.png">
+      <publishTime>06/18/2014 19:05:08</publishTime>
+    </File>
+    <File Include="Content/images/credit-card.png">
+      <publishTime>06/18/2014 19:05:07</publishTime>
+    </File>
+    <File Include="Content/images/how-to-add-insurance.png">
+      <publishTime>06/18/2014 19:05:07</publishTime>
+    </File>
+    <File Include="Content/images/how-to-select-dates.png">
+      <publishTime>06/18/2014 19:05:08</publishTime>
+    </File>
+    <File Include="Content/images/how-to-select-flights.png">
+      <publishTime>06/18/2014 19:05:08</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-10x.png">
+      <publishTime>06/18/2014 19:05:18</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-adult-big.png">
+      <publishTime>06/18/2014 19:05:16</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-adult.png">
+      <publishTime>06/18/2014 19:05:16</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-airplane-blue-light.png">
+      <publishTime>06/18/2014 19:05:18</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-airplane-blue.png">
+      <publishTime>06/18/2014 19:05:18</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-airplane-change.png">
+      <publishTime>06/18/2014 19:05:16</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-airplane-green.png">
+      <publishTime>06/18/2014 19:05:16</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-airplane-hover.png">
+      <publishTime>06/18/2014 19:05:17</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-airplane-plus-blue.png">
+      <publishTime>06/18/2014 19:05:17</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-airplane-plus-grey.png">
+      <publishTime>06/18/2014 19:05:17</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-airplane-white.png">
+      <publishTime>06/18/2014 19:05:17</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-airplane.png">
+      <publishTime>06/18/2014 19:05:18</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-airport.png">
+      <publishTime>06/18/2014 19:05:18</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-alert-date.png">
+      <publishTime>06/18/2014 19:05:18</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-amex-2.png">
+      <publishTime>06/18/2014 19:05:18</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-amex.png">
+      <publishTime>06/18/2014 19:05:18</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-arrow-blue-dark-right.png">
+      <publishTime>06/18/2014 19:05:18</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-arrow-blue-hover.png">
+      <publishTime>06/18/2014 19:05:18</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-arrow-blue-left-hover.png">
+      <publishTime>06/18/2014 19:05:19</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-arrow-blue-left-normal.png">
+      <publishTime>06/18/2014 19:05:19</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-arrow-blue-right-hover.png">
+      <publishTime>06/18/2014 19:05:19</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-arrow-blue-right-normal.png">
+      <publishTime>06/18/2014 19:05:19</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-arrow-circle-left.png">
+      <publishTime>06/18/2014 19:05:19</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-arrow-circle-right.png">
+      <publishTime>06/18/2014 19:05:19</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-arrow-circle-up.png">
+      <publishTime>06/18/2014 19:05:19</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-arrow-down.png">
+      <publishTime>06/18/2014 19:05:19</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-arrow-download.png">
+      <publishTime>06/18/2014 19:05:19</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-arrow-gray-left.png">
+      <publishTime>06/18/2014 19:05:19</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-arrow-gray-right.png">
+      <publishTime>06/18/2014 19:05:20</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-arrow-navigation-hover.png">
+      <publishTime>06/18/2014 19:05:20</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-arrow-navigation-normal.png">
+      <publishTime>06/18/2014 19:05:20</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-arrow-opacity-down.png">
+      <publishTime>06/18/2014 19:05:20</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-arrow-opacity-up.png">
+      <publishTime>06/18/2014 19:05:20</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-arrow-slider-left.png">
+      <publishTime>06/18/2014 19:05:20</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-arrow-slider-right.png">
+      <publishTime>06/18/2014 19:05:21</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-arrow-up-white.png">
+      <publishTime>06/18/2014 19:05:21</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-arrow-white-right.png">
+      <publishTime>06/18/2014 19:05:21</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-arrow.png">
+      <publishTime>06/18/2014 19:05:18</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-assistance-alert.png">
+      <publishTime>06/18/2014 19:05:21</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-available-seat.png">
+      <publishTime>06/18/2014 19:05:21</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-baloon.png">
+      <publishTime>06/18/2014 19:05:21</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-bathroom.png">
+      <publishTime>06/18/2014 19:05:21</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-booking-alert.png">
+      <publishTime>06/18/2014 19:05:21</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-bradesco.png">
+      <publishTime>06/18/2014 19:05:21</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-browsing-alert.png">
+      <publishTime>06/18/2014 19:05:21</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-calendar-sheet-hover.png">
+      <publishTime>06/18/2014 19:05:22</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-calendar-sheet.png">
+      <publishTime>06/18/2014 19:05:22</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-calendar.png">
+      <publishTime>06/18/2014 19:05:21</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-cancel.png">
+      <publishTime>06/18/2014 19:05:22</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-card-remove.png">
+      <publishTime>06/18/2014 19:05:22</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-center-city.png">
+      <publishTime>06/18/2014 19:05:22</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-checked-black.png">
+      <publishTime>06/18/2014 19:05:22</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-checked-blue.png">
+      <publishTime>06/18/2014 19:05:22</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-checked.png">
+      <publishTime>06/18/2014 19:05:22</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-children.png">
+      <publishTime>06/18/2014 19:05:22</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-clock.png">
+      <publishTime>06/18/2014 19:05:23</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-close-modal.png">
+      <publishTime>06/18/2014 19:05:23</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-close-white.png">
+      <publishTime>06/18/2014 19:05:23</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-close.png">
+      <publishTime>06/18/2014 19:05:23</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-compass-hover.png">
+      <publishTime>06/18/2014 19:05:23</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-compass.png">
+      <publishTime>06/18/2014 19:05:23</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-contact-yellow.png">
+      <publishTime>06/18/2014 19:05:23</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-date-back-hover.png">
+      <publishTime>06/20/2014 19:40:38</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-date-end-hover.png">
+      <publishTime>06/18/2014 19:05:24</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-date-end.png">
+      <publishTime>06/18/2014 19:05:23</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-date-first-hover.png">
+      <publishTime>06/18/2014 19:05:23</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-date-hover.png">
+      <publishTime>06/18/2014 19:05:24</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-date-init.png">
+      <publishTime>06/18/2014 19:05:24</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-diners-club-2.png">
+      <publishTime>06/18/2014 19:05:24</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-diners-club.png">
+      <publishTime>06/18/2014 19:05:24</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-directions-hover.png">
+      <publishTime>06/18/2014 19:05:24</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-directions.png">
+      <publishTime>06/18/2014 19:05:24</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-doorknob-hover.png">
+      <publishTime>06/18/2014 19:05:24</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-doorknob-straight.png">
+      <publishTime>06/18/2014 19:05:25</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-doorknob.png">
+      <publishTime>06/18/2014 19:05:24</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-emergency-exit.png">
+      <publishTime>06/18/2014 19:05:24</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-exclamation-blue.png">
+      <publishTime>06/18/2014 19:05:25</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-facebook-green.png">
+      <publishTime>06/18/2014 19:05:25</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-family-hover.png">
+      <publishTime>06/18/2014 19:05:25</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-family.png">
+      <publishTime>06/18/2014 19:05:25</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-filter-arrow-active-hover.png">
+      <publishTime>06/18/2014 19:05:25</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-filter-arrow-active.png">
+      <publishTime>06/18/2014 19:05:25</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-filter-arrow-down.png">
+      <publishTime>06/18/2014 19:05:25</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-filter-arrow-hover.png">
+      <publishTime>06/18/2014 19:05:25</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-filter-arrow-normal.png">
+      <publishTime>06/18/2014 19:05:25</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-filter-arrow-open.png">
+      <publishTime>06/18/2014 19:05:26</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-football-hover.png">
+      <publishTime>06/18/2014 19:05:26</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-football.png">
+      <publishTime>06/18/2014 19:05:26</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-from.png">
+      <publishTime>06/18/2014 19:05:26</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-google-plus-green.png">
+      <publishTime>06/18/2014 19:05:26</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-help.png">
+      <publishTime>06/18/2014 19:05:26</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-hotel-match.png">
+      <publishTime>06/18/2014 19:05:26</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-hotel-nomatch.png">
+      <publishTime>06/18/2014 19:05:26</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-hotel.png">
+      <publishTime>06/18/2014 19:05:26</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-house.png">
+      <publishTime>06/18/2014 19:05:26</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-info-white.png">
+      <publishTime>06/18/2014 19:05:27</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-itau.png">
+      <publishTime>06/18/2014 19:05:27</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-kitchen.png">
+      <publishTime>06/18/2014 19:05:27</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-logo-tripadvisor.png">
+      <publishTime>06/18/2014 19:05:27</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-luggage-airplane.png">
+      <publishTime>06/18/2014 19:05:27</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-luggage-hover.png">
+      <publishTime>06/18/2014 19:05:27</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-luggage-white.png">
+      <publishTime>06/18/2014 19:05:27</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-luggage.png">
+      <publishTime>06/18/2014 19:05:27</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-map-hover.png">
+      <publishTime>06/18/2014 19:05:27</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-map.png">
+      <publishTime>06/18/2014 19:05:28</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-maps.png">
+      <publishTime>06/18/2014 19:05:28</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-mastercard-2.png">
+      <publishTime>06/18/2014 19:05:28</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-mastercard.png">
+      <publishTime>06/18/2014 19:05:28</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-minus-white.png">
+      <publishTime>06/18/2014 19:05:28</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-minus.png">
+      <publishTime>06/18/2014 19:05:28</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-money.png">
+      <publishTime>06/18/2014 19:05:28</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-moon.png">
+      <publishTime>06/18/2014 19:05:28</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-nav-vertical-bottom-inactive.png">
+      <publishTime>06/18/2014 19:05:28</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-nav-vertical-bottom.png">
+      <publishTime>06/18/2014 19:05:29</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-nav-vertical-top-inactive.png">
+      <publishTime>06/18/2014 19:05:29</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-nav-vertical-top.png">
+      <publishTime>06/18/2014 19:05:29</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-no-results.png">
+      <publishTime>06/18/2014 19:05:29</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-options.png">
+      <publishTime>06/18/2014 19:05:29</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-package.png">
+      <publishTime>06/18/2014 19:05:30</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-partners.png">
+      <publishTime>06/18/2014 19:05:29</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-payment-yellow.png">
+      <publishTime>06/18/2014 19:05:30</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-phone-plus-grey.png">
+      <publishTime>06/18/2014 19:05:30</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-phone-white.png">
+      <publishTime>06/18/2014 19:05:30</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-phone.png">
+      <publishTime>06/18/2014 19:05:29</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-pin-map.png">
+      <publishTime>06/18/2014 19:05:30</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-plus-white.png">
+      <publishTime>06/18/2014 19:05:30</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-plus.png">
+      <publishTime>06/18/2014 19:05:30</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-recommended-hotel.png">
+      <publishTime>06/18/2014 19:05:30</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-reset.png">
+      <publishTime>06/18/2014 19:05:31</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-scroll-left.png">
+      <publishTime>06/18/2014 19:05:31</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-scroll-right.png">
+      <publishTime>06/18/2014 19:05:31</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-search.png">
+      <publishTime>06/18/2014 19:05:31</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-seat-occupied.png">
+      <publishTime>06/18/2014 19:05:31</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-seat-selected.png">
+      <publishTime>06/18/2014 19:05:31</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-share-blue.png">
+      <publishTime>06/18/2014 19:05:32</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-sorry.png">
+      <publishTime>06/18/2014 19:05:31</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-special-seat.png">
+      <publishTime>06/18/2014 19:05:32</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-ssl-seal.png">
+      <publishTime>06/18/2014 19:05:32</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-star-off.png">
+      <publishTime>06/18/2014 19:05:32</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-star-on.png">
+      <publishTime>06/18/2014 19:05:32</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-station.png">
+      <publishTime>06/18/2014 19:05:32</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-submarino-aura-2.png">
+      <publishTime>06/18/2014 19:05:32</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-submarino-aura.png">
+      <publishTime>06/18/2014 19:05:32</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-submarino-master-2.png">
+      <publishTime>06/18/2014 19:05:32</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-submarino-master.png">
+      <publishTime>06/18/2014 19:05:32</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-text-cta-click.png">
+      <publishTime>06/18/2014 19:05:33</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-text-cta-hover.png">
+      <publishTime>06/18/2014 19:05:33</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-text-cta-normal-white.png">
+      <publishTime>06/18/2014 19:05:33</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-text-cta-normal.png">
+      <publishTime>06/18/2014 19:05:33</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-ticket-hover.png">
+      <publishTime>06/18/2014 19:05:33</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-ticket.png">
+      <publishTime>06/18/2014 19:05:33</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-to.png">
+      <publishTime>06/18/2014 19:05:33</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-tripadvisor.png">
+      <publishTime>06/18/2014 19:05:33</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-twitter-green.png">
+      <publishTime>06/18/2014 19:05:33</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-user-yellow.png">
+      <publishTime>06/18/2014 19:05:34</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-visa-2.png">
+      <publishTime>06/18/2014 19:05:34</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon-visa.png">
+      <publishTime>06/18/2014 19:05:34</publishTime>
+    </File>
+    <File Include="Content/images/oferta-especial.png">
+      <publishTime>06/18/2014 19:05:08</publishTime>
+    </File>
+    <File Include="Content/images/placeholder/flights-promos.png">
+      <publishTime>06/18/2014 19:05:37</publishTime>
+    </File>
+    <File Include="Content/images/placeholder/marquee-1.jpg">
+      <publishTime>06/18/2014 19:05:35</publishTime>
+    </File>
+    <File Include="Content/images/placeholder/marquee-2.jpg">
+      <publishTime>06/18/2014 19:05:37</publishTime>
+    </File>
+    <File Include="Content/images/placeholder/marquee-3.jpg">
+      <publishTime>06/18/2014 19:05:36</publishTime>
+    </File>
+    <File Include="Content/images/placeholder/marquee-4.jpg">
+      <publishTime>06/18/2014 19:05:38</publishTime>
+    </File>
+    <File Include="Content/images/placeholder/marquee-5.jpg">
+      <publishTime>06/18/2014 19:05:38</publishTime>
+    </File>
+    <File Include="Content/images/placeholder/marquee-hotel.png">
+      <publishTime>06/18/2014 19:05:39</publishTime>
+    </File>
+    <File Include="Content/images/placeholder/praia.png">
+      <publishTime>06/18/2014 19:05:39</publishTime>
+    </File>
+    <File Include="Content/images/seats.png">
+      <publishTime>06/18/2014 19:05:08</publishTime>
+    </File>
+    <File Include="Content/images/security-certification.png">
+      <publishTime>06/18/2014 19:05:08</publishTime>
+    </File>
+    <File Include="Content/images/submarine-yellow.png">
+      <publishTime>06/18/2014 19:05:08</publishTime>
+    </File>
+    <File Include="Content/images/submarino-viagens-logo-full.png">
+      <publishTime>06/18/2014 19:05:09</publishTime>
+    </File>
+    <File Include="Content/images/submarino-viagens-logo.png">
+      <publishTime>06/18/2014 19:05:09</publishTime>
+    </File>
+    <File Include="Content/images/tam-lg.png">
+      <publishTime>06/18/2014 19:05:09</publishTime>
+    </File>
+    <File Include="Content/images/tam.png">
+      <publishTime>06/18/2014 19:05:09</publishTime>
+    </File>
+    <File Include="Content/js/booking.js">
+      <publishTime>06/18/2014 19:05:39</publishTime>
+    </File>
+    <File Include="Content/js/bootstrap/bootstrap-switch.js">
+      <publishTime>06/18/2014 19:05:40</publishTime>
+    </File>
+    <File Include="Content/js/bootstrap/bootstrap-switch.min.js">
+      <publishTime>06/18/2014 19:05:40</publishTime>
+    </File>
+    <File Include="Content/js/bootstrap/bootstrap-switch.min.js.map">
+      <publishTime>06/18/2014 19:05:40</publishTime>
+    </File>
+    <File Include="Content/js/bootstrap/bootstrap.min.js">
+      <publishTime>06/18/2014 19:05:39</publishTime>
+    </File>
+    <File Include="Content/js/bootstrap/jquery.bootstrap-touchspin.js">
+      <publishTime>06/18/2014 19:05:40</publishTime>
+    </File>
+    <File Include="Content/js/jquery.tmpl.js">
+      <publishTime>06/18/2014 19:05:40</publishTime>
+    </File>
+    <File Include="Content/js/lib/handlebars-v1.3.0.js">
+      <publishTime>06/18/2014 19:05:40</publishTime>
+    </File>
+    <File Include="Content/js/lib/handlebars-v1.3.0.min.js">
+      <publishTime>06/18/2014 19:05:40</publishTime>
+    </File>
+    <File Include="Content/js/lib/handlebars-v1.3.0.min.js.map">
+      <publishTime>06/18/2014 19:05:40</publishTime>
+    </File>
+    <File Include="Content/js/lib/jquery-2.1.0.js">
+      <publishTime>06/18/2014 19:05:43</publishTime>
+    </File>
+    <File Include="Content/js/lib/jquery-2.1.0.min.js">
+      <publishTime>06/18/2014 19:05:41</publishTime>
+    </File>
+    <File Include="Content/js/lib/jquery-2.1.0.min.js.map">
+      <publishTime>06/18/2014 19:05:44</publishTime>
+    </File>
+    <File Include="Content/js/lib/modernizr-2.7.2.js">
+      <publishTime>06/18/2014 19:05:44</publishTime>
+    </File>
+    <File Include="Content/js/lib/modernizr-2.7.2.min.js">
+      <publishTime>06/18/2014 19:05:42</publishTime>
+    </File>
+    <File Include="Content/js/lib/modernizr-2.7.2.min.js.map">
+      <publishTime>06/18/2014 19:05:45</publishTime>
+    </File>
+    <File Include="Content/js/module.js">
+      <publishTime>06/18/2014 19:05:38</publishTime>
+    </File>
+    <File Include="Content/js/module.min.js">
+      <publishTime>06/18/2014 19:05:38</publishTime>
+    </File>
+    <File Include="Content/js/module.min.js.map">
+      <publishTime>06/18/2014 19:05:38</publishTime>
+    </File>
+    <File Include="Content/js/plugin/jquery-ui-1.10.4.custom.js">
+      <publishTime>06/18/2014 19:05:45</publishTime>
+    </File>
+    <File Include="Content/js/plugin/jquery-ui-1.10.4.custom.min.js">
+      <publishTime>06/18/2014 19:05:45</publishTime>
+    </File>
+    <File Include="Content/js/plugin/jquery.mask.min.js">
+      <publishTime>06/18/2014 19:05:43</publishTime>
+    </File>
+    <File Include="Content/js/plugin/jquery.validate.js">
+      <publishTime>06/18/2014 19:05:43</publishTime>
+    </File>
+    <File Include="Content/js/plugin/jquery.validate.min.js">
+      <publishTime>06/18/2014 19:05:43</publishTime>
+    </File>
+    <File Include="Content/js/plugin/jquery.validate.min.js.map">
+      <publishTime>06/18/2014 19:05:43</publishTime>
+    </File>
+    <File Include="Content/js/plugin/jquery.validate.unobtrusive.js">
+      <publishTime>06/18/2014 19:05:44</publishTime>
+    </File>
+    <File Include="Content/js/plugin/jquery.validate.unobtrusive.min.js">
+      <publishTime>06/18/2014 19:05:44</publishTime>
+    </File>
+    <File Include="Content/js/plugin/respond.min.js">
+      <publishTime>06/18/2014 19:05:45</publishTime>
+    </File>
+    <File Include="Content/js/site.js">
+      <publishTime>06/20/2014 19:40:15</publishTime>
+    </File>
+    <File Include="Content/js/site.min.js">
+      <publishTime>06/20/2014 19:40:16</publishTime>
+    </File>
+    <File Include="Content/js/site.min.js.map">
+      <publishTime>06/20/2014 19:40:16</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>06/18/2014 19:04:55</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>06/18/2014 19:04:56</publishTime>
+    </File>
+    <File Include="Scripts/_references.js">
+      <publishTime>06/20/2014 14:27:25</publishTime>
+    </File>
+    <File Include="Views/Examples/Form.cshtml">
+      <publishTime>06/18/2014 19:05:46</publishTime>
+    </File>
+    <File Include="Views/Examples/Index.cshtml">
+      <publishTime>06/18/2014 19:05:46</publishTime>
+    </File>
+    <File Include="Views/Examples/Tooltips.cshtml">
+      <publishTime>06/18/2014 19:05:47</publishTime>
+    </File>
+    <File Include="Views/Flight/Booking.cshtml">
+      <publishTime>06/18/2014 19:05:47</publishTime>
+    </File>
+    <File Include="Views/Flight/Confirmation.cshtml">
+      <publishTime>06/18/2014 19:05:47</publishTime>
+    </File>
+    <File Include="Views/Flight/Index.cshtml">
+      <publishTime>06/20/2014 19:31:08</publishTime>
+    </File>
+    <File Include="Views/Flight/MultiDestination.cshtml">
+      <publishTime>06/18/2014 19:05:47</publishTime>
+    </File>
+    <File Include="Views/Flight/SearchResult.cshtml">
+      <publishTime>06/18/2014 19:05:47</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>06/18/2014 19:05:47</publishTime>
+    </File>
+    <File Include="Views/Hotel/Booking.cshtml">
+      <publishTime>06/18/2014 19:05:47</publishTime>
+    </File>
+    <File Include="Views/Hotel/Confirmation.cshtml">
+      <publishTime>06/18/2014 19:05:48</publishTime>
+    </File>
+    <File Include="Views/Hotel/Detail.cshtml">
+      <publishTime>06/18/2014 19:05:47</publishTime>
+    </File>
+    <File Include="Views/Hotel/Index.cshtml">
+      <publishTime>06/18/2014 19:05:48</publishTime>
+    </File>
+    <File Include="Views/Hotel/SearchResult.cshtml">
+      <publishTime>06/20/2014 16:56:15</publishTime>
+    </File>
+    <File Include="Views/MultiDestination/Booking.cshtml">
+      <publishTime>06/18/2014 19:05:48</publishTime>
+    </File>
+    <File Include="Views/MultiDestination/Confirmation.cshtml">
+      <publishTime>06/18/2014 19:05:48</publishTime>
+    </File>
+    <File Include="Views/MultiDestination/Index.cshtml">
+      <publishTime>06/18/2014 19:05:48</publishTime>
+    </File>
+    <File Include="Views/MultiDestination/SearchResult.cshtml">
+      <publishTime>06/18/2014 19:05:48</publishTime>
+    </File>
+    <File Include="Views/Packages/Booking.cshtml">
+      <publishTime>06/18/2014 19:05:48</publishTime>
+    </File>
+    <File Include="Views/Packages/Confirmation.cshtml">
+      <publishTime>06/18/2014 19:05:48</publishTime>
+    </File>
+    <File Include="Views/Packages/Detail.cshtml">
+      <publishTime>06/18/2014 19:05:48</publishTime>
+    </File>
+    <File Include="Views/Packages/FlightSearchResult.cshtml">
+      <publishTime>06/18/2014 19:05:48</publishTime>
+    </File>
+    <File Include="Views/Packages/HotelSearchResult.cshtml">
+      <publishTime>06/18/2014 19:05:49</publishTime>
+    </File>
+    <File Include="Views/Packages/Index.cshtml">
+      <publishTime>06/18/2014 19:05:49</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>06/18/2014 19:05:49</publishTime>
+    </File>
+    <File Include="Views/Shared/_FooterCompact.cshtml">
+      <publishTime>06/18/2014 19:05:49</publishTime>
+    </File>
+    <File Include="Views/Shared/_FooterFull.cshtml">
+      <publishTime>06/18/2014 19:05:49</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>06/18/2014 19:05:49</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>06/18/2014 19:05:46</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>06/18/2014 19:05:46</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>06/20/2014 14:28:24</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

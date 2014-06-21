@@ -1,0 +1,1704 @@
+﻿@{
+    ViewBag.Title = "/Package/FlightSearchResult";
+    ViewBag.BodyClass = "flux-collapsed";
+}
+
+
+<div class="container-fluid packages search-result top">
+    <!-- Busca -->
+    <form class="search clearfix package-search">
+        <div class="container-fluid">
+            <div class="checkin-checkout pull-left">
+                <div class="flight clearfix">
+                    <div class="wrapper-init">
+                        <div class="col destinys from">
+                            <input type="text" class="suggestions">
+                        </div>
+                        <div class="col destinys to">
+                            <input type="text" class="suggestions">
+                        </div>
+                    </div>
+                    <div class="col dates jrange">
+                        <div class="wrap-dates">
+                            <label>Voo</label>
+                            <div class="data date-init"></div>
+                            <i></i>
+                            <div class="data date-end"></div>
+                        </div>
+                        <div class="calendar"></div>
+                    </div>
+                </div>
+
+                <div class="accommodation">
+                    <div class="col hotel">
+                        <input type="text" class="suggestions">
+                    </div>
+                    <div class="col dates jrange">
+                        <div class="wrap-dates">
+                            <label>Hotel</label>
+                            <div class="data date-init">Entrada</div>
+                            <i></i>
+                            <div class="data date-end">Saída</div>
+                        </div>
+                        <div class="calendar"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="options hotel-option">
+                <button type="button" class="btn btn-md btn-text-cta btn-expand options options-button click">
+                    <i class="glyphicon glyphicon-icon-doorknob"></i>
+                    <span class="options-button"><span class="number">3</span> Quartos</span>
+                </button>
+                <div class="options-pop clearfix">
+                    <div class="top-fixed">
+                        <div class="add-room">
+                            <div class="border">
+                                <button type="button" class="btn btn-sm btn-text-icon"><span class="glyphicon glyphicon-plus-white"></span>Adicionar quarto</button>
+                            </div>
+                        </div>
+                        <table class="row-room">
+                            <tr>
+                                <td class="th-room" data-room="room-1">
+                                    <button type="button" class="btn">
+                                        <span class="text">Quarto 1</span>
+                                        <span class="glyphicon glyphicon-btn-close"></span>
+                                    </button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="scroll">
+                        <table class="room-people content-1">
+                            <tr>
+                                <td data-room="room-1">
+                                    <label class="spinner-wrapper">
+                                        Adulto
+                                        <input class="spinner spinner-simple" name="value" value="0">
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-room="room-1">
+                                    <label class="spinner-wrapper">
+                                        Criança
+                                        <input class="spinner spinner-simple spinner-child" name="childAge" value="0">
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr class="age hidden">
+                                <td data-room="room-1"></td>
+                            </tr>
+                        </table>
+                        <div class="options-flight">
+                            <div class="radio trip dark-theme">
+                                <div>
+                                    <input type="radio" checked="" value="roundTrip" name="typeTrip" id="roundTrip">
+                                    <label for="roundTrip">Ida e volta</label>
+                                </div>
+                                <div>
+                                    <input type="radio" value="onewWayTrip" name="typeTrip" id="onewWayTrip">
+                                    <label for="onewWayTrip">Somente ida</label>
+                                </div>
+                            </div>
+                            <ul class="flight-type">
+                                <li>
+                                    <div class="checkbox dark-theme">
+                                        <input type="checkbox" value="" id="classEconomy">
+                                        <label for="classEconomy">
+                                            Econômica
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox dark-theme">
+                                        <input type="checkbox" value="" id="classBusiness">
+                                        <label for="classBusiness">
+                                            Executiva
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox dark-theme">
+                                        <input type="checkbox" value="" id="classPremiumEconomy">
+                                        <label for="classPremiumEconomy">
+                                            Econômica Superior
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox dark-theme">
+                                        <input type="checkbox" value="" id="classMixed">
+                                        <label for="classMixed">
+                                            Mista
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-lg btn-default btn-search">Nova Busca</button>
+        </div>
+    </form>
+    <!-- / Busca -->
+    <!-- Passos -->
+    <ul class="steps clearfix">
+        <li><i class="glyphicon glyphicon-checked"></i>Escolha seu Hotel</li>
+        <li><i class="glyphicon glyphicon-checked"></i>Escolha seu Quarto</li>
+        <li><i class="selected">3</i>Escolha seu Voo</li>
+    </ul>
+    <!-- / Passos -->
+    <div class="row">
+
+        <aside class="col-sm-4 main-aside pull-left">
+            <div class="aside keepadjust">
+                <button type="button" class="btn btn-sm btn-tertiary btn-block text-left"><span class="glyphicon glyphicon-envelope"></span>Receba alerta de preço</button>
+                <button type="button" class="btn btn-sm btn-tertiary btn-block text-left fare-toogle"><span class="glyphicon glyphicon-calendar"></span>Calendário de preços</button>
+
+                <h3>Filtrar Resultados por:</h3>
+                <form role="form">
+                    <div class="filters">
+                        <h4>Companhia Aérea</h4>
+                        <ul class="opts">
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-company" id="opt-company-1">
+                                <label for="opt-company-1">Tam</label>
+                                <b>144 R$</b>
+                            </li>
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-company" id="opt-company-2">
+                                <label for="opt-company-2">Delta</label>
+                                <b>168 R$</b>
+                            </li>
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-company" id="opt-company-3">
+                                <label for="opt-company-3">American</label>
+                                <b>153 R$</b>
+                            </li>
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-company" id="opt-company-4">
+                                <label for="opt-company-4">Jet Blue</label>
+                                <b>157 R$</b>
+                            </li>
+                            <li class="checkbox dark-theme hidden-item">
+                                <input type="checkbox" name="opt-company" id="opt-company-5">
+                                <label for="opt-company-5">Jet Blue</label>
+                                <b>157 R$</b>
+                            </li>
+                            <li class="checkbox dark-theme hidden-item">
+                                <input type="checkbox" name="opt-company" id="opt-company-6">
+                                <label for="opt-company-6">Jet Blue</label>
+                                <b>157 R$</b>
+                            </li>
+                            <li class="checkbox dark-theme hidden-item">
+                                <input type="checkbox" name="opt-company" id="opt-company-7">
+                                <label for="opt-company-7">Jet Blue</label>
+                                <b>157 R$</b>
+                            </li>
+                        </ul>
+                        <a href="#" class="more" data-click="show-companies"><i class="glyphicon glyphicon-plus-white"></i> <span> Mostrar todas Cias Aéreas</span></a>
+                    </div>
+                    <div class="filters">
+                        <h4>Número de Paradas</h4>
+                        <ul class="opts">
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-paradas" id="opt-paradas-1">
+                                <label for="opt-paradas-1">Direto</label>
+                                <b>144 R$</b>
+                            </li>
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-paradas" id="opt-paradas-2">
+                                <label for="opt-paradas-2">1 Parada</label>
+                                <b>168 R$</b>
+                            </li>
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-paradas" id="opt-paradas-3">
+                                <label for="opt-paradas-3">2+ Parada</label>
+                                <b>153 R$</b>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="filters">
+                        <h4>Hora do Embarque</h4>
+                        <div class="group">
+                            <label>Ida</label>
+                            <span class="custom-select custom-select-btn">
+                                <select>
+                                    <option>Sushi</option>
+                                    <option>Blue cheese with crackers</option>
+                                    <option>Steak</option>
+                                    <option>Beef</option>
+                                    <option>Rice</option>
+                                    <option>Chilli</option>
+                                    <option>Other</option>
+                                </select>
+                            </span>
+                        </div>
+                        <div class="group">
+                            <label>Volta</label>
+                            <span class="custom-select custom-select-btn">
+                                <select>
+                                    <option>Sushi</option>
+                                    <option>Blue cheese with crackers</option>
+                                    <option>Steak</option>
+                                    <option>Beef</option>
+                                    <option>Rice</option>
+                                    <option>Chilli</option>
+                                    <option>Other</option>
+                                </select>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="filters">
+                        <h4>Hora da chegada</h4>
+                        <div class="group">
+                            <label>Ida</label>
+                            <span class="custom-select custom-select-btn">
+                                <select>
+                                    <option>Sushi</option>
+                                    <option>Blue cheese with crackers</option>
+                                    <option>Steak</option>
+                                    <option>Beef</option>
+                                    <option>Rice</option>
+                                    <option>Chilli</option>
+                                    <option>Other</option>
+                                </select>
+                            </span>
+                        </div>
+                        <div class="group">
+                            <label>Volta</label>
+                            <span class="custom-select custom-select-btn">
+                                <select>
+                                    <option>Sushi</option>
+                                    <option>Blue cheese with crackers</option>
+                                    <option>Steak</option>
+                                    <option>Beef</option>
+                                    <option>Rice</option>
+                                    <option>Chilli</option>
+                                    <option>Other</option>
+                                </select>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="filters">
+                        <h4>Duração do Voo</h4>
+                        <span class="custom-select custom-select-btn">
+                            <select>
+                                <option>Sushi</option>
+                                <option>Blue cheese with crackers</option>
+                                <option>Steak</option>
+                                <option>Beef</option>
+                                <option>Rice</option>
+                                <option>Chilli</option>
+                                <option>Other</option>
+                            </select>
+                        </span>
+                    </div>
+                    <div class="filters">
+                        <h4>Alianças <i class="glyphicon icon-filter-arrow"></i></h4>
+                        <ul class="opts" id="ulAliancas">
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-alianca" id="opt-alianca-1">
+                                <label for="opt-alianca-1">Star Alliance</label>
+                            </li>
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-alianca" id="opt-alianca-2">
+                                <label for="opt-alianca-2">One World</label>
+                            </li>
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-alianca" id="opt-alianca-3">
+                                <label for="opt-alianca-3">Sky Team</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="filters">
+                        <h4>Classe <i class="glyphicon icon-filter-arrow"></i></h4>
+                        <ul class="opts" id="ulClasse">
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-classe" id="opt-classe-1" class="optionClass">
+                                <label for="opt-classe-1">Executiva</label>
+                            </li>
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-classe" id="opt-classe-2" class="optionClass">
+                                <label for="opt-classe-2">Econômica</label>
+                            </li>
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-classe" id="opt-classe-3" class="optionClass">
+                                <label for="opt-classe-3">Econômica Superstar</label>
+                            </li>
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-classe" id="opt-classe-4" onclick="Site.CheckAll(this)">
+                                <label for="opt-classe-4">Todas</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="filters">
+                        <h4>Preço</h4>
+                        <span class="custom-select custom-select-btn">
+                            <select>
+                                <option>Sushi</option>
+                                <option>Blue cheese with crackers</option>
+                                <option>Steak</option>
+                                <option>Beef</option>
+                                <option>Rice</option>
+                                <option>Chilli</option>
+                                <option>Other</option>
+                            </select>
+                        </span>
+                    </div>
+                    <div class="filters">
+                        <h4>Aeroporto de origem <i class="glyphicon icon-filter-arrow"></i></h4>
+                        <ul class="opts" id="ulOrigem">
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-classe" id="opt-origem-1">
+                                <label for="opt-origem-1">Santos Dumont (SDU)</label>
+                            </li>
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-origem" id="opt-origem-2">
+                                <label for="opt-origem-2">Galeao Intenational (GIA)</label>
+                            </li>
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-origem" id="opt-origem-3">
+                                <label for="opt-origem-3">Santos Dumont (SDU)</label>
+                            </li>
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-origem" id="opt-origem-4">
+                                <label for="opt-origem-4">Galeao International (GIA)</label>
+                            </li>
+                            <li class="last checkbox dark-theme">
+                                <input type="checkbox" name="opt-origem" id="opt-origem-5">
+                                <label for="opt-origem-5" data-click="check-destiny-airport">Volta pelo mesmo aeroporto</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="filters">
+                        <h4>Aeroporto de parada <i class="glyphicon icon-filter-arrow"></i></h4>
+                        <ul class="opts" id="ulParada">
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-parada" id="opt-parada-1">
+                                <label for="opt-parada-1">Santos Dumont (SDU)</label>
+                            </li>
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-parada" id="opt-parada-2">
+                                <label for="opt-parada-2">Galeao Intenational (GIA)</label>
+                            </li>
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-parada" id="opt-parada-3">
+                                <label for="opt-parada-3">Santos Dumont (SDU)</label>
+                            </li>
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-parada" id="opt-parada-4">
+                                <label for="opt-parada-4">Galeao International (GIA)</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="filters">
+                        <h4>Aeroporto de destino <i class="glyphicon icon-filter-arrow"></i></h4>
+                        <ul class="opts" id="ulDestino">
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-destino" id="opt-destino-1">
+                                <label for="opt-destino-1">Santos Dumont (SDU)</label>
+                            </li>
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-destino" id="opt-destino-2">
+                                <label for="opt-destino-2">Galeao Intenational (GIA)</label>
+                            </li>
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-destino" id="opt-destino-3">
+                                <label for="opt-destino-3">Santos Dumont (SDU)</label>
+                            </li>
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-destino" id="opt-destino-4">
+                                <label for="opt-destino-4">Galeao International (GIA)</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <button type="reset" class="btn btn-sm btn-tertiary btn-block"><span class="glyphicon glyphicon-repeat"></span>Limpar os Filtros</button>
+                </form>
+                <a href="#" class="icon-back">Voltar para o topo</a>
+            </div>
+        </aside>
+
+        <section class="col-sm-15 col-sm-offset-1 content">
+            <!--- Popovers -->
+            <div class="container-how-to-select-flights">
+                <div class="popover-how-to-select-flights hidden">
+                    <p>Para continuar sua compra selecione o voo de Ida e Volta e depois clique no botão abaixo.</p>
+                    <img src="/Content/images/how-to-select-flights.png" alt="" />
+                </div>
+            </div>
+            <div class="container-send-email-confirmation">
+                <div class="popover-send-email-confirmation hidden">
+                    <div class="form-box">
+                        <form role="form">
+                            <div class="row">
+                                <div class="col-sm-10">
+                                    <div class="form-group required">
+                                        <label class="sr-only" for="txtFromEmailAddress">De</label>
+                                        <input type="text" class="form-control" id="txtFromEmailAddress" placeholder="De">
+                                    </div>
+                                </div>
+                                <div class="col-sm-11">
+                                    <div class="form-group required">
+                                        <label class="sr-only" for="txtToEmailAddress">Para</label>
+                                        <input type="text" class="form-control" id="txtToEmailAddress" placeholder="Para">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-21">
+                                    <div class="form-group">
+                                        <label class="sr-only" for="txtSubject">Assunto</label>
+                                        <input type="text" class="form-control" id="txtSubject" placeholder="Assunto">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-21">
+                                    <div class="form-group">
+                                        <label class="sr-only" for="txtMessage">Mensagem</label>
+                                        <textarea class="form-control" id="txtMessage" placeholder="Mensagem"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-21">
+                                    <button type="button" class="btn btn-sm btn-default btn-block">Enviar Email</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-installments-available">
+                <div class="popover-installments-available hidden">
+                    <ul class="clearfix">
+                        <li>
+                            <img src="/Content/images/icon/icon-submarino-master.png" alt="" />
+                            10x
+                        </li>
+                        <li>
+                            <img src="/Content/images/icon/icon-submarino-aura.png" alt="" />
+                            10x
+                        </li>
+                        <li>
+                            <img src="/Content/images/icon/icon-visa.png" alt="" />
+                            10x
+                        </li>
+                        <li>
+                            <img src="/Content/images/icon/icon-mastercard.png" alt="" />
+                            10x
+                        </li>
+                        <li>
+                            <img src="/Content/images/icon/icon-amex.png" alt="" />
+                            10x
+                        </li>
+                        <li>
+                            <img src="/Content/images/icon/icon-diners-club.png" alt="" />
+                            10x
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container-anac-punctuality">
+                <div class="popover-anac-punctuality hidden">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <td width="33%">
+                                    <strong>Airline</strong>
+                                    Tam
+                                </td>
+                                <td width="33%">
+                                    <strong>Flight No.</strong>
+                                    5058
+                                </td>
+                                <td width="33%">
+                                    <strong>Steps Planned</strong>
+                                    27
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <strong>Origin Airport</strong>
+                                    Campinas (SP, Brasil)
+                                </td>
+                                <td>
+                                    <strong>Destination Airport</strong>
+                                    Rio de Janeiro - Galleon (RJ, Brasil)
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <td width="33%">
+                                    <strong>% of Cancellations</strong>
+                                    0
+                                </td>
+                                <td width="33%">
+                                    <strong>% of Delays Over 30 mins</strong>
+                                    7
+                                </td>
+                                <td width="33%">
+                                    <strong>% of Delays Over 60 mins</strong>
+                                    7
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="disclaimer">
+                        <h4>DISCLAIMER:</h4>
+                        <ul>
+                            <li>I - the percentage of cancellations is calculated because the total planned stages;</li>
+                            <li>II - the percentage of arrears is calculated based on the date and time set for the arrival at the destination of the flight stage and calculated ratio of total steps taken, less the already canceled stages;</li>
+                            <li>III - the percentage of delays and cancellations of flights represent past performance, which may vary in the following months and</li>
+                            <li>IV - the percentage of delays and cancellations of all phases of flight scheduled public air transport in Brazil are available at the National Civil Aviation Agency page - ANAC on the internet.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert alert-info fade in assistance-alert clearfix">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <strong>Precisa de ajuda?</strong>
+                <span>Você pode ligar para 4003-9888.</span>
+            </div>
+            <!--- Popovers -->
+
+            <!-- Modal -->
+            <!--<button type="button" class="btn btn-sm btn-default" data-toggle="modal" data-target="#sorry">Modal</button>-->
+            <div class="modal fade sorry" id="sorry">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title">Desculpe-nos</h4>
+                        </div>
+                        <div class="modal-body">
+                            <i class="glyphicon glyphicon-sorry"></i>
+                            <p>O voo selecionado não está mais disponível. Por favor, escolha outro voo para o seu pacote.</p>
+                            <button type="button" class="btn btn-sm btn-default" data-toggle="modal">Atualize sua conta</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="list-flight-result">
+
+                <div class="box-result box-hotel box-selected">
+                    <div class="wrap-fixed clearfix">
+                        <div class="table-result pull-left">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td class="minspace" rowspan="2" width="200">
+                                            <img src="http://lorempixel.com/200/120/" width="200" height="120">
+                                        </td>
+                                        <td colspan="2" class="head">
+                                            <span>Você selecionou o Hotel</span>
+                                            <b>Ric Palace Hotel</b>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span>Hóspedes</span>
+                                            <b>5 Pessoas</b>
+                                        </td>
+                                        <td>
+                                            <span>Quartos</span>
+                                            <b>(1x) Quarto de Casal (2x) Quarto de Solteiro</b>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="price">
+                            <div class="valign">
+                                <div class="cell">
+                                    <div>
+
+                                        <button type="button" class="btn btn-sm btn-text-cta"><i class="glyphicon glyphicon-chevron-right"></i>Trocar de Hotel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recommended-flight">
+                    <h2>Voo recomendado</h2>
+
+                    <div class="box-result">
+                        <div class="wrap-fixed clearfix">
+                            <div class="table-result pull-left red">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td class="logo" rowspan="2" width="160">
+                                                <img src="~/Content/images/tam-lg.png" width="80" height="29">
+                                            </td>
+                                            <td class="hour out">
+                                                <span>Saída <b>(CGC)</b></span>
+                                                <time>06:52</time>
+                                            </td>
+                                            <td class="hour estimate">
+                                                <span>1h 20m <b>Direto</b></span>
+                                            </td>
+                                            <td class="hour">
+                                                <span>Chegada <b>(CGC)</b></span>
+                                                <time>08:12</time>
+                                            </td>
+                                        </tr>
+                                        <tr class="back">
+                                            <td class="hour out">
+                                                <span>Saída <b>(CGC)</b></span>
+                                                <time>06:52</time>
+                                            </td>
+                                            <td class="hour estimate">
+                                                <span>1h 20m <b>Direto</b></span>
+                                            </td>
+                                            <td class="hour">
+                                                <span>Chegada <b>(CGC)</b></span>
+                                                <time>08:12</time>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="price">
+                                <div class="valign">
+                                    <div class="cell">
+                                        <div>
+                                            <span class="people">R$ / Pessoa</span>
+                                            <span class="val">190,00</span>
+                                            <button type="button" class="btn btn-sm btn-default" data-toggle="modal" data-target="#sorry">Comprar</button>
+                                            <span class="tax">A incluir taxas + encargos</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fare-matrix">
+                    <h3 class="title-result">Datas Flexíveis</h3>
+                    <p>Os voos apresentados são as melhores opções encontradas e não seguem, necessariamente, os filtros selecionados.<br> As melhores tarifas encontradas por usuários nas últimas 48 horas. Sujeito à disponibilidade.</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td class="empty"></td>
+                                <td class="date"><span>Thu 4/21/14</span></td>
+                                <td class="date"><span>Thu 4/21/14</span></td>
+                                <td class="date"><span>Thu 4/21/14</span></td>
+                                <td class="date" combine="Volta"><span>Thu 4/21/14</span></td>
+                                <td class="date"><span>Thu 4/21/14</span></td>
+                                <td class="date"><span>Thu 4/21/14</span></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="date"><span>Thu 4/21/14</span></td>
+                                <td><span>143 <b>R$</b></span></td>
+                                <td><span>143 <b>R$</b></span></td>
+                                <td><span>143 <b>R$</b></span></td>
+                                <td><span>143 <b>R$</b></span></td>
+                                <td><span>143 <b>R$</b></span></td>
+                                <td><span>143 <b>R$</b></span></td>
+                            </tr>
+                            <tr>
+                                <td class="date" combine="Ida"><span>Thu 4/21/14</span></td>
+                                <td><span>143 <b>R$</b></span></td>
+                                <td><span>143 <b>R$</b></span></td>
+                                <td><span>143 <b>R$</b></span></td>
+                                <td class="combine"><span>143 <b>R$</b></span></td>
+                                <td><span>143 <b>R$</b></span></td>
+                                <td><span>143 <b>R$</b></span></td>
+                            </tr>
+                            <tr>
+                                <td class="date"><span>Thu 4/21/14</span></td>
+                                <td><span>143 <b>R$</b></span></td>
+                                <td><span>143 <b>R$</b></span></td>
+                                <td><span>143 <b>R$</b></span></td>
+                                <td><span>143 <b>R$</b></span></td>
+                                <td><span>143 <b>R$</b></span></td>
+                                <td><span>143 <b>R$</b></span></td>
+                            </tr>
+                            <tr>
+                                <td class="date"><span>Thu 4/21/14</span></td>
+                                <td><span>143 <b>R$</b></span></td>
+                                <td><span>143 <b>R$</b></span></td>
+                                <td><span>143 <b>R$</b></span></td>
+                                <td><span>143 <b>R$</b></span></td>
+                                <td><span>143 <b>R$</b></span></td>
+                                <td><span>143 <b>R$</b></span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="results">
+
+                    <div class="header-result">
+                        <div class="toggle-switch">
+                            <button type="button">Mais rápido</button>
+                            <input type="checkbox" class="switch" checked>
+                            <button type="button">Menor Preço</button>
+                        </div>
+                        <h2>Escolha seu voo</h2>
+                    </div>
+
+                    <div>
+                        <div class="box-result">
+                            <h3 class="title-result">Passagens por <b>144</b> <span>R$ / pessoa</span></h3>
+
+                            <div class="wrap-fixed clearfix">
+                                <div class="table-result pull-left">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th width="65" class="opc"><span>Ida</span></th>
+                                                <th colspan="3"><span>São Paulo, Brasil <i class="glyphicon glyphicon-airplane-blue"></i> Rio de Janero, Brasil</span></th>
+                                                <th colspan="2" width="140" class="opc"><span>Ter, 14 abril, 2014</span></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="radio">
+                                                    <input type="radio" name="ida" id="result-1" onclick="Site.ShowSelectButtom(this,'buttom-select-1')">
+                                                    <label for="result-1"></label>
+                                                </td>
+                                                <td class="hour out">
+                                                    <span>Saída <b>(CGC)</b></span>
+                                                    <time>06:52</time>
+                                                </td>
+                                                <td class="hour estimate">
+                                                    <span><i class="glyphicon glyphicon-icon-moon"></i> 1h 20m <b>Direto</b></span>
+                                                </td>
+                                                <td class="hour">
+                                                    <span>Chegada <b>(CGC)</b></span>
+                                                    <time>08:12</time>
+                                                </td>
+                                                <td class="company" width="70">
+                                                    <img src="~/Content/images/tam.png" width="40" height="15">
+                                                </td>
+                                                <td class="info" width="70">
+                                                    <span class="spanInfo"><i class="glyphicon glyphicon-icon-info"></i><b>info</b></span>
+                                                    <div>
+                                                        <div class="share">
+                                                            <a href="#"><i class="glyphicon glyphicon-print"></i>Imprimir</a>
+                                                            <a href="javascript:" class="popover-toggler" data-target-selector=".popover-send-email-confirmation" data-container=".container-send-email-confirmation" data-placement="bottom" data-title="Enviar oferta por email" data-width="300"><i class="glyphicon glyphicon-envelope"></i>Email</a>
+                                                            <a href="#"><i class="glyphicon glyphicon-share-blue"></i>Indicar</a>
+                                                        </div>
+                                                        <div class="info-ticket">
+                                                            <div class="ticket">
+                                                                <dl>
+                                                                    <dt>Saida</dt>
+                                                                    <dd>
+                                                                        <b>Ter, 14 Abril, 2014 08:35</b>
+                                                                        <b>São Paulo, Brasil (SP)</b>
+                                                                    </dd>
+                                                                    <dt>Chegada</dt>
+                                                                    <dd>
+                                                                        <b>Ter, 14 Abril, 2014 08:35</b>
+                                                                        <b>São Paulo, Brasil (SP)</b>
+                                                                    </dd>
+                                                                </dl>
+                                                                <ul>
+                                                                    <li>Tam #5058 <a href="javascript:" class="popover-toggler" data-container=".container-anac-punctuality" data-target-selector=".popover-anac-punctuality" data-css-class="anac-punctuality" data-placement="bottom" data-title="Percentual de atrasos e cancelamentos por etapa da viagem. Fonte ANAC">Pontualidade (Anac)</a></li>
+                                                                    <li>Economica</li>
+                                                                    <li>Airbus A320</li>
+                                                                    <li>320</li>
+                                                                    <li>4 Assentos restantes</li>
+                                                                </ul>
+                                                                <div class="msg">
+                                                                    <p><i class="glyphicon glyphicon-airplane-change"></i> Troca de avião em recife, Brasil (REC): 30 minutos</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="ticket">
+                                                                <dl>
+                                                                    <dt>Saida</dt>
+                                                                    <dd>
+                                                                        <b>Ter, 14 Abril, 2014 08:35</b>
+                                                                        <b>São Paulo, Brasil (SP)</b>
+                                                                    </dd>
+                                                                    <dt>Chegada</dt>
+                                                                    <dd>
+                                                                        <b>Ter, 14 Abril, 2014 08:35</b>
+                                                                        <b>São Paulo, Brasil (SP)</b>
+                                                                    </dd>
+                                                                </dl>
+                                                                <ul>
+                                                                    <li>Tam #5058 <a href="javascript:" class="popover-toggler" data-target-selector=".popover-anac-punctuality" data-placement="bottom" data-title="Percentual de atrasos e cancelamentos por etapa da viagem. Fonte ANAC">Pontualidade (Anac)</a></li>
+                                                                    <li>Economica</li>
+                                                                    <li>Airbus A320</li>
+                                                                    <li>320</li>
+                                                                    <li>4 Assentos restantes</li>
+                                                                </ul>
+                                                                <div class="msg">
+                                                                    <p><i class="glyphicon glyphicon-airplane-change"></i> Troca de avião em recife, Brasil (REC): 30 minutos</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="ticket">
+                                                                <dl>
+                                                                    <dt>Saida</dt>
+                                                                    <dd>
+                                                                        <b>Ter, 14, Abril</b>
+                                                                        <b>São Paulo, Brasil (SP)</b>
+                                                                    </dd>
+                                                                    <dt>Chegada</dt>
+                                                                    <dd>
+                                                                        <b>Ter, 14, Abril</b>
+                                                                        <b>São Paulo, Brasil (SP)</b>
+                                                                    </dd>
+                                                                </dl>
+                                                                <ul>
+                                                                    <li>Tam #5058 <a href="javascript:" class="popover-toggler" data-target-selector=".popover-anac-punctuality" data-placement="bottom" data-title="Percentual de atrasos e cancelamentos por etapa da viagem. Fonte ANAC">Pontualidade (Anac)</a></li>
+                                                                    <li>Economica</li>
+                                                                    <li>Airbus A320</li>
+                                                                    <li>320</li>
+                                                                    <li>4 Assentos restantes</li>
+                                                                </ul>
+                                                                <div class="msg msg-info">
+                                                                    <i class="glyphicon glyphicon-exclamation-blue"></i>
+                                                                    <div>
+                                                                        <h4>Importante</h4>
+                                                                        <p>
+                                                                            •  Os aeroportos de ida e volta são diferentes.<br>
+                                                                            •  Para voos com conexão no Canada é obrigatório o Visto de Trânsito Canadense
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="radio">
+                                                    <input type="radio" name="ida" id="result-2" onclick="Site.ShowSelectButtom(this,'buttom-select-1')">
+                                                    <label for="result-2"></label>
+                                                </td>
+                                                <td class="hour out">
+                                                    <span>Saída <b>(CGC)</b></span>
+                                                    <time>06:52</time>
+                                                </td>
+                                                <td class="hour estimate">
+                                                    <span>1h 20m <b>Direto</b></span>
+                                                </td>
+                                                <td class="hour">
+                                                    <span>Chegada <b>(CGC)</b></span>
+                                                    <time>08:12</time>
+                                                </td>
+                                                <td class="company" width="70">
+                                                    <img src="~/Content/images/tam.png" width="40" height="15">
+                                                </td>
+                                                <td class="info" width="70">
+                                                    <span class="spanInfo"><i class="glyphicon glyphicon-icon-info"></i><b>info</b></span>
+                                                    <div>
+                                                        <div class="share">
+
+                                                        </div>
+                                                        <div class="info-ticket">
+                                                            <div class="ticket">
+                                                                <dl>
+                                                                    <dt>Saida</dt>
+                                                                    <dd>
+                                                                        <b>Ter, 14 Abril, 2014 08:35</b>
+                                                                        <b>São Paulo, Brasil (SP)</b>
+                                                                    </dd>
+                                                                    <dt>Chegada</dt>
+                                                                    <dd>
+                                                                        <b>Ter, 14 Abril, 2014 08:35</b>
+                                                                        <b>São Paulo, Brasil (SP)</b>
+                                                                    </dd>
+                                                                </dl>
+                                                                <ul>
+                                                                    <li>Tam #5058 <a href="#">Pontualidade (Anac)</a></li>
+                                                                    <li>Economica</li>
+                                                                    <li>Airbus A320</li>
+                                                                    <li>320</li>
+                                                                    <li>4 Assentos restantes</li>
+                                                                </ul>
+                                                                <div class="msg">
+                                                                    <p><i class="glyphicon glyphicon-airplane-change"></i> Troca de avião em recife, Brasil (REC): 30 minutos</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="ticket">
+                                                                <dl>
+                                                                    <dt>Saida</dt>
+                                                                    <dd>
+                                                                        <b>Ter, 14 Abril, 2014 08:35</b>
+                                                                        <b>São Paulo, Brasil (SP)</b>
+                                                                    </dd>
+                                                                    <dt>Chegada</dt>
+                                                                    <dd>
+                                                                        <b>Ter, 14 Abril, 2014 08:35</b>
+                                                                        <b>São Paulo, Brasil (SP)</b>
+                                                                    </dd>
+                                                                </dl>
+                                                                <ul>
+                                                                    <li>Tam #5058 <a href="#">Pontualidade (Anac)</a></li>
+                                                                    <li>Economica</li>
+                                                                    <li>Airbus A320</li>
+                                                                    <li>320</li>
+                                                                    <li>4 Assentos restantes</li>
+                                                                </ul>
+                                                                <div class="msg">
+                                                                    <p><i class="glyphicon glyphicon-airplane-change"></i> Troca de avião em recife, Brasil (REC): 30 minutos</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="ticket">
+                                                                <dl>
+                                                                    <dt>Saida</dt>
+                                                                    <dd>
+                                                                        <b>Ter, 14, Abril</b>
+                                                                        <b>São Paulo, Brasil (SP)</b>
+                                                                    </dd>
+                                                                    <dt>Chegada</dt>
+                                                                    <dd>
+                                                                        <b>Ter, 14, Abril</b>
+                                                                        <b>São Paulo, Brasil (SP)</b>
+                                                                    </dd>
+                                                                </dl>
+                                                                <ul>
+                                                                    <li>Tam #5058 <a href="#">Pontualidade (Anac)</a></li>
+                                                                    <li>Economica</li>
+                                                                    <li>Airbus A320</li>
+                                                                    <li>320</li>
+                                                                    <li>4 Assentos restantes</li>
+                                                                </ul>
+                                                                <div class="msg msg-info">
+                                                                    <h4>Importante</h4>
+                                                                    <p>
+                                                                        •  Os aeroportos de ida e volta são diferentes.<br>
+                                                                        •  Para voos com conexão no Canada é obrigatório o Visto de Trânsito Canadense
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="radio">
+                                                    <input type="radio" name="ida" id="result-3" onclick="Site.ShowSelectButtom(this,'buttom-select-1')">
+                                                    <label for="result-3"></label>
+                                                </td>
+                                                <td class="hour out">
+                                                    <span>Saída <b>(CGC)</b></span>
+                                                    <time>06:52</time>
+                                                </td>
+                                                <td class="hour estimate">
+                                                    <span>1h 20m <b>Direto</b></span>
+                                                </td>
+                                                <td class="hour">
+                                                    <span>Chegada <b>(CGC)</b></span>
+                                                    <time>08:12</time>
+                                                </td>
+                                                <td class="company" width="70">
+                                                    <img src="~/Content/images/tam.png" width="40" height="15">
+                                                </td>
+                                                <td class="info" width="70">
+                                                    <span class="spanInfo"><i class="glyphicon glyphicon-icon-info"></i><b>info</b></span>
+                                                    <div>
+                                                        <div class="share">
+
+                                                        </div>
+                                                        <div class="info-ticket">
+                                                            <div class="ticket">
+                                                                <dl>
+                                                                    <dt>Saida</dt>
+                                                                    <dd>
+                                                                        <b>Ter, 14 Abril, 2014 08:35</b>
+                                                                        <b>São Paulo, Brasil (SP)</b>
+                                                                    </dd>
+                                                                    <dt>Chegada</dt>
+                                                                    <dd>
+                                                                        <b>Ter, 14 Abril, 2014 08:35</b>
+                                                                        <b>São Paulo, Brasil (SP)</b>
+                                                                    </dd>
+                                                                </dl>
+                                                                <ul>
+                                                                    <li>Tam #5058 <a href="#">Pontualidade (Anac)</a></li>
+                                                                    <li>Economica</li>
+                                                                    <li>Airbus A320</li>
+                                                                    <li>320</li>
+                                                                    <li>4 Assentos restantes</li>
+                                                                </ul>
+                                                                <div class="msg">
+                                                                    <p><i class="glyphicon glyphicon-airplane-change"></i> Troca de avião em recife, Brasil (REC): 30 minutos</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="ticket">
+                                                                <dl>
+                                                                    <dt>Saida</dt>
+                                                                    <dd>
+                                                                        <b>Ter, 14 Abril, 2014 08:35</b>
+                                                                        <b>São Paulo, Brasil (SP)</b>
+                                                                    </dd>
+                                                                    <dt>Chegada</dt>
+                                                                    <dd>
+                                                                        <b>Ter, 14 Abril, 2014 08:35</b>
+                                                                        <b>São Paulo, Brasil (SP)</b>
+                                                                    </dd>
+                                                                </dl>
+                                                                <ul>
+                                                                    <li>Tam #5058 <a href="#">Pontualidade (Anac)</a></li>
+                                                                    <li>Economica</li>
+                                                                    <li>Airbus A320</li>
+                                                                    <li>320</li>
+                                                                    <li>4 Assentos restantes</li>
+                                                                </ul>
+                                                                <div class="msg">
+                                                                    <p><i class="glyphicon glyphicon-airplane-change"></i> Troca de avião em recife, Brasil (REC): 30 minutos</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="ticket">
+                                                                <dl>
+                                                                    <dt>Saida</dt>
+                                                                    <dd>
+                                                                        <b>Ter, 14, Abril</b>
+                                                                        <b>São Paulo, Brasil (SP)</b>
+                                                                    </dd>
+                                                                    <dt>Chegada</dt>
+                                                                    <dd>
+                                                                        <b>Ter, 14, Abril</b>
+                                                                        <b>São Paulo, Brasil (SP)</b>
+                                                                    </dd>
+                                                                </dl>
+                                                                <ul>
+                                                                    <li>Tam #5058 <a href="#">Pontualidade (Anac)</a></li>
+                                                                    <li>Economica</li>
+                                                                    <li>Airbus A320</li>
+                                                                    <li>320</li>
+                                                                    <li>4 Assentos restantes</li>
+                                                                </ul>
+                                                                <div class="msg msg-info">
+                                                                    <h4>Importante</h4>
+                                                                    <p>
+                                                                        •  Os aeroportos de ida e volta são diferentes.<br>
+                                                                        •  Para voos com conexão no Canada é obrigatório o Visto de Trânsito Canadense
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="radio">
+                                                    <input type="radio" name="ida" id="result-4" onclick="Site.ShowSelectButtom(this,'buttom-select-1')">
+                                                    <label for="result-4"></label>
+                                                </td>
+                                                <td class="hour out">
+                                                    <span>Saída <b>(CGC)</b></span>
+                                                    <time>06:52</time>
+                                                </td>
+                                                <td class="hour estimate">
+                                                    <span>1h 20m <b>Direto</b></span>
+                                                </td>
+                                                <td class="hour">
+                                                    <span>Chegada <b>(CGC)</b></span>
+                                                    <time>08:12</time>
+                                                </td>
+                                                <td class="company" width="70">
+                                                    <img src="~/Content/images/tam.png" width="40" height="15">
+                                                </td>
+                                                <td class="info" width="70">
+                                                    <span class="spanInfo"><i class="glyphicon glyphicon-icon-info"></i><b>info</b></span>
+                                                    <div>
+                                                        <div class="share">
+
+                                                        </div>
+                                                        <div class="info-ticket">
+                                                            <div class="ticket">
+                                                                <dl>
+                                                                    <dt>Saida</dt>
+                                                                    <dd>
+                                                                        <b>Ter, 14 Abril, 2014 08:35</b>
+                                                                        <b>São Paulo, Brasil (SP)</b>
+                                                                    </dd>
+                                                                    <dt>Chegada</dt>
+                                                                    <dd>
+                                                                        <b>Ter, 14 Abril, 2014 08:35</b>
+                                                                        <b>São Paulo, Brasil (SP)</b>
+                                                                    </dd>
+                                                                </dl>
+                                                                <ul>
+                                                                    <li>Tam #5058 <a href="#">Pontualidade (Anac)</a></li>
+                                                                    <li>Economica</li>
+                                                                    <li>Airbus A320</li>
+                                                                    <li>320</li>
+                                                                    <li>4 Assentos restantes</li>
+                                                                </ul>
+                                                                <div class="msg">
+                                                                    <p><i class="glyphicon glyphicon-airplane-change"></i> Troca de avião em recife, Brasil (REC): 30 minutos</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="ticket">
+                                                                <dl>
+                                                                    <dt>Saida</dt>
+                                                                    <dd>
+                                                                        <b>Ter, 14 Abril, 2014 08:35</b>
+                                                                        <b>São Paulo, Brasil (SP)</b>
+                                                                    </dd>
+                                                                    <dt>Chegada</dt>
+                                                                    <dd>
+                                                                        <b>Ter, 14 Abril, 2014 08:35</b>
+                                                                        <b>São Paulo, Brasil (SP)</b>
+                                                                    </dd>
+                                                                </dl>
+                                                                <ul>
+                                                                    <li>Tam #5058 <a href="#">Pontualidade (Anac)</a></li>
+                                                                    <li>Economica</li>
+                                                                    <li>Airbus A320</li>
+                                                                    <li>320</li>
+                                                                    <li>4 Assentos restantes</li>
+                                                                </ul>
+                                                                <div class="msg">
+                                                                    <p><i class="glyphicon glyphicon-airplane-change"></i> Troca de avião em recife, Brasil (REC): 30 minutos</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="ticket">
+                                                                <dl>
+                                                                    <dt>Saida</dt>
+                                                                    <dd>
+                                                                        <b>Ter, 14, Abril</b>
+                                                                        <b>São Paulo, Brasil (SP)</b>
+                                                                    </dd>
+                                                                    <dt>Chegada</dt>
+                                                                    <dd>
+                                                                        <b>Ter, 14, Abril</b>
+                                                                        <b>São Paulo, Brasil (SP)</b>
+                                                                    </dd>
+                                                                </dl>
+                                                                <ul>
+                                                                    <li>Tam #5058 <a href="#">Pontualidade (Anac)</a></li>
+                                                                    <li>Economica</li>
+                                                                    <li>Airbus A320</li>
+                                                                    <li>320</li>
+                                                                    <li>4 Assentos restantes</li>
+                                                                </ul>
+                                                                <div class="msg msg-info">
+                                                                    <h4>Importante</h4>
+                                                                    <p>
+                                                                        •  Os aeroportos de ida e volta são diferentes.<br>
+                                                                        •  Para voos com conexão no Canada é obrigatório o Visto de Trânsito Canadense
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="back">
+                                        <thead>
+                                            <tr>
+                                                <th width="65" class="opc"><span>Volta</span></th>
+                                                <th colspan="3"><span>São Paulo, Brasil <i class="glyphicon glyphicon-airplane-green"></i> Rio de Janero, Brasil</span></th>
+                                                <th colspan="2" width="140" class="opc"><span>Ter, 14 abril, 2014</span></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="radio green-theme">
+                                                    <input type="radio" name="volta" id="result-5" onclick="Site.ShowSelectButtom(this,'buttom-select-1')">
+                                                    <label for="result-5"></label>
+                                                </td>
+                                                <td class="hour out">
+                                                    <span>Saída <b>(CGC)</b></span>
+                                                    <time>06:52</time>
+                                                </td>
+                                                <td class="hour estimate">
+                                                    <span>1h 20m <b>Direto</b></span>
+                                                </td>
+                                                <td class="hour">
+                                                    <span>Chegada <b>(CGC)</b></span>
+                                                    <time>08:12</time>
+                                                </td>
+                                                <td class="company" width="70">
+                                                    <img src="~/Content/images/tam.png" width="40" height="15">
+                                                </td>
+                                                <td class="info" width="70">
+                                                    <span class="spanInfo"><i class="glyphicon glyphicon-icon-info"></i><b>info</b></span>
+                                                    <div>
+                                                        <div class="share">
+
+                                                        </div>
+                                                        <div class="info-ticket">
+                                                            <div class="ticket">
+                                                                <dl>
+                                                                    <dt>Saida</dt>
+                                                                    <dd>
+                                                                        <b>Ter, 14 Abril, 2014 08:35</b>
+                                                                        <b>São Paulo, Brasil (SP)</b>
+                                                                    </dd>
+                                                                    <dt>Chegada</dt>
+                                                                    <dd>
+                                                                        <b>Ter, 14 Abril, 2014 08:35</b>
+                                                                        <b>São Paulo, Brasil (SP)</b>
+                                                                    </dd>
+                                                                </dl>
+                                                                <ul>
+                                                                    <li>Tam #5058 <a href="#">Pontualidade (Anac)</a></li>
+                                                                    <li>Economica</li>
+                                                                    <li>Airbus A320</li>
+                                                                    <li>320</li>
+                                                                    <li>4 Assentos restantes</li>
+                                                                </ul>
+                                                                <div class="msg">
+                                                                    <p><i class="glyphicon glyphicon-airplane-change"></i> Troca de avião em recife, Brasil (REC): 30 minutos</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="ticket">
+                                                                <dl>
+                                                                    <dt>Saida</dt>
+                                                                    <dd>
+                                                                        <b>Ter, 14 Abril, 2014 08:35</b>
+                                                                        <b>São Paulo, Brasil (SP)</b>
+                                                                    </dd>
+                                                                    <dt>Chegada</dt>
+                                                                    <dd>
+                                                                        <b>Ter, 14 Abril, 2014 08:35</b>
+                                                                        <b>São Paulo, Brasil (SP)</b>
+                                                                    </dd>
+                                                                </dl>
+                                                                <ul>
+                                                                    <li>Tam #5058 <a href="#">Pontualidade (Anac)</a></li>
+                                                                    <li>Economica</li>
+                                                                    <li>Airbus A320</li>
+                                                                    <li>320</li>
+                                                                    <li>4 Assentos restantes</li>
+                                                                </ul>
+                                                                <div class="msg">
+                                                                    <p><i class="glyphicon glyphicon-airplane-change"></i> Troca de avião em recife, Brasil (REC): 30 minutos</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="ticket">
+                                                                <dl>
+                                                                    <dt>Saida</dt>
+                                                                    <dd>
+                                                                        <b>Ter, 14, Abril</b>
+                                                                        <b>São Paulo, Brasil (SP)</b>
+                                                                    </dd>
+                                                                    <dt>Chegada</dt>
+                                                                    <dd>
+                                                                        <b>Ter, 14, Abril</b>
+                                                                        <b>São Paulo, Brasil (SP)</b>
+                                                                    </dd>
+                                                                </dl>
+                                                                <ul>
+                                                                    <li>Tam #5058 <a href="#">Pontualidade (Anac)</a></li>
+                                                                    <li>Economica</li>
+                                                                    <li>Airbus A320</li>
+                                                                    <li>320</li>
+                                                                    <li>4 Assentos restantes</li>
+                                                                </ul>
+                                                                <div class="msg msg-info">
+                                                                    <h4>Importante</h4>
+                                                                    <p>
+                                                                        •  Os aeroportos de ida e volta são diferentes.<br>
+                                                                        •  Para voos com conexão no Canada é obrigatório o Visto de Trânsito Canadense
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="radio  green-theme">
+                                                    <input type="radio" name="volta" id="result-6" onclick="Site.ShowSelectButtom(this,'buttom-select-1')">
+                                                    <label for="result-6"></label>
+                                                </td>
+                                                <td class="hour out">
+                                                    <span>Saída <b>(CGC)</b></span>
+                                                    <time>06:52</time>
+                                                </td>
+                                                <td class="hour estimate">
+                                                    <span>1h 20m <b>Direto</b></span>
+                                                </td>
+                                                <td class="hour">
+                                                    <span>Chegada <b>(CGC)</b></span>
+                                                    <time>08:12</time>
+                                                </td>
+                                                <td class="company" width="70">
+                                                    <img src="~/Content/images/tam.png" width="40" height="15">
+                                                </td>
+                                                <td class="info" width="70">
+                                                    <span class="spanInfo"><i class="glyphicon glyphicon-icon-info"></i><b>info</b></span>
+                                                    <div>
+                                                        <div class="share">
+
+                                                        </div>
+                                                        <div class="info-ticket">
+                                                            <div class="ticket">
+                                                                <dl>
+                                                                    <dt>Saida</dt>
+                                                                    <dd>
+                                                                        <b>Ter, 14 Abril, 2014 08:35</b>
+                                                                        <b>São Paulo, Brasil (SP)</b>
+                                                                    </dd>
+                                                                    <dt>Chegada</dt>
+                                                                    <dd>
+                                                                        <b>Ter, 14 Abril, 2014 08:35</b>
+                                                                        <b>São Paulo, Brasil (SP)</b>
+                                                                    </dd>
+                                                                </dl>
+                                                                <ul>
+                                                                    <li>Tam #5058 <a href="#">Pontualidade (Anac)</a></li>
+                                                                    <li>Economica</li>
+                                                                    <li>Airbus A320</li>
+                                                                    <li>320</li>
+                                                                    <li>4 Assentos restantes</li>
+                                                                </ul>
+                                                                <div class="msg">
+                                                                    <p><i class="glyphicon glyphicon-airplane-change"></i> Troca de avião em recife, Brasil (REC): 30 minutos</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="ticket">
+                                                                <dl>
+                                                                    <dt>Saida</dt>
+                                                                    <dd>
+                                                                        <b>Ter, 14 Abril, 2014 08:35</b>
+                                                                        <b>São Paulo, Brasil (SP)</b>
+                                                                    </dd>
+                                                                    <dt>Chegada</dt>
+                                                                    <dd>
+                                                                        <b>Ter, 14 Abril, 2014 08:35</b>
+                                                                        <b>São Paulo, Brasil (SP)</b>
+                                                                    </dd>
+                                                                </dl>
+                                                                <ul>
+                                                                    <li>Tam #5058 <a href="#">Pontualidade (Anac)</a></li>
+                                                                    <li>Economica</li>
+                                                                    <li>Airbus A320</li>
+                                                                    <li>320</li>
+                                                                    <li>4 Assentos restantes</li>
+                                                                </ul>
+                                                                <div class="msg">
+                                                                    <p><i class="glyphicon glyphicon-airplane-change"></i> Troca de avião em recife, Brasil (REC): 30 minutos</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="ticket">
+                                                                <dl>
+                                                                    <dt>Saida</dt>
+                                                                    <dd>
+                                                                        <b>Ter, 14, Abril</b>
+                                                                        <b>São Paulo, Brasil (SP)</b>
+                                                                    </dd>
+                                                                    <dt>Chegada</dt>
+                                                                    <dd>
+                                                                        <b>Ter, 14, Abril</b>
+                                                                        <b>São Paulo, Brasil (SP)</b>
+                                                                    </dd>
+                                                                </dl>
+                                                                <ul>
+                                                                    <li>Tam #5058 <a href="#">Pontualidade (Anac)</a></li>
+                                                                    <li>Economica</li>
+                                                                    <li>Airbus A320</li>
+                                                                    <li>320</li>
+                                                                    <li>4 Assentos restantes</li>
+                                                                </ul>
+                                                                <div class="msg msg-info">
+                                                                    <h4>Importante</h4>
+                                                                    <p>
+                                                                        •  Os aeroportos de ida e volta são diferentes.<br>
+                                                                        •  Para voos com conexão no Canada é obrigatório o Visto de Trânsito Canadense
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="radio green-theme">
+                                                    <input type="radio" name="volta" id="result-7" onclick="Site.ShowSelectButtom(this,'buttom-select-1')">
+                                                    <label for="result-7"></label>
+                                                </td>
+                                                <td class="hour out">
+                                                    <span>Saída <b>(CGC)</b></span>
+                                                    <time>06:52</time>
+                                                </td>
+                                                <td class="hour estimate">
+                                                    <span>1h 20m <b>Direto</b></span>
+                                                </td>
+                                                <td class="hour">
+                                                    <span>Chegada <b>(CGC)</b></span>
+                                                    <time>08:12</time>
+                                                </td>
+                                                <td class="company" width="70">
+                                                    <img src="~/Content/images/tam.png" width="40" height="15">
+                                                </td>
+                                                <td class="info" width="70">
+                                                    <span class="spanInfo"><i class="glyphicon glyphicon-icon-info"></i><b>info</b></span>
+                                                    <div>
+                                                        <div class="share">
+
+                                                        </div>
+                                                        <div class="info-ticket">
+                                                            <div class="ticket">
+                                                                <dl>
+                                                                    <dt>Saida</dt>
+                                                                    <dd>
+                                                                        <b>Ter, 14 Abril, 2014 08:35</b>
+                                                                        <b>São Paulo, Brasil (SP)</b>
+                                                                    </dd>
+                                                                    <dt>Chegada</dt>
+                                                                    <dd>
+                                                                        <b>Ter, 14 Abril, 2014 08:35</b>
+                                                                        <b>São Paulo, Brasil (SP)</b>
+                                                                    </dd>
+                                                                </dl>
+                                                                <ul>
+                                                                    <li>Tam #5058 <a href="#">Pontualidade (Anac)</a></li>
+                                                                    <li>Economica</li>
+                                                                    <li>Airbus A320</li>
+                                                                    <li>320</li>
+                                                                    <li>4 Assentos restantes</li>
+                                                                </ul>
+                                                                <div class="msg">
+                                                                    <p><i class="glyphicon glyphicon-airplane-change"></i> Troca de avião em recife, Brasil (REC): 30 minutos</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="ticket">
+                                                                <dl>
+                                                                    <dt>Saida</dt>
+                                                                    <dd>
+                                                                        <b>Ter, 14 Abril, 2014 08:35</b>
+                                                                        <b>São Paulo, Brasil (SP)</b>
+                                                                    </dd>
+                                                                    <dt>Chegada</dt>
+                                                                    <dd>
+                                                                        <b>Ter, 14 Abril, 2014 08:35</b>
+                                                                        <b>São Paulo, Brasil (SP)</b>
+                                                                    </dd>
+                                                                </dl>
+                                                                <ul>
+                                                                    <li>Tam #5058 <a href="#">Pontualidade (Anac)</a></li>
+                                                                    <li>Economica</li>
+                                                                    <li>Airbus A320</li>
+                                                                    <li>320</li>
+                                                                    <li>4 Assentos restantes</li>
+                                                                </ul>
+                                                                <div class="msg">
+                                                                    <p><i class="glyphicon glyphicon-airplane-change"></i> Troca de avião em recife, Brasil (REC): 30 minutos</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="ticket">
+                                                                <dl>
+                                                                    <dt>Saida</dt>
+                                                                    <dd>
+                                                                        <b>Ter, 14, Abril</b>
+                                                                        <b>São Paulo, Brasil (SP)</b>
+                                                                    </dd>
+                                                                    <dt>Chegada</dt>
+                                                                    <dd>
+                                                                        <b>Ter, 14, Abril</b>
+                                                                        <b>São Paulo, Brasil (SP)</b>
+                                                                    </dd>
+                                                                </dl>
+                                                                <ul>
+                                                                    <li>Tam #5058 <a href="#">Pontualidade (Anac)</a></li>
+                                                                    <li>Economica</li>
+                                                                    <li>Airbus A320</li>
+                                                                    <li>320</li>
+                                                                    <li>4 Assentos restantes</li>
+                                                                </ul>
+                                                                <div class="msg msg-info">
+                                                                    <h4>Importante</h4>
+                                                                    <p>
+                                                                        •  Os aeroportos de ida e volta são diferentes.<br>
+                                                                        •  Para voos com conexão no Canada é obrigatório o Visto de Trânsito Canadense
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="radio green-theme">
+                                                    <input type="radio" name="volta" id="result-8" onclick="Site.ShowSelectButtom(this,'buttom-select-1')">
+                                                    <label for="result-8"></label>
+                                                </td>
+                                                <td class="hour out">
+                                                    <span>Saída <b>(CGC)</b></span>
+                                                    <time>06:52</time>
+                                                </td>
+                                                <td class="hour estimate">
+                                                    <span>1h 20m <b>Direto</b></span>
+                                                </td>
+                                                <td class="hour">
+                                                    <span>Chegada <b>(CGC)</b></span>
+                                                    <time>08:12</time>
+                                                </td>
+                                                <td class="company" width="70">
+                                                    <img src="~/Content/images/tam.png" width="40" height="15">
+                                                </td>
+                                                <td class="info" width="70">
+                                                    <span class="spanInfo"><i class="glyphicon glyphicon-icon-info"></i><b>info</b></span>
+                                                    <div>
+                                                        <div class="share">
+
+                                                        </div>
+                                                        <div class="info-ticket">
+                                                            <div class="ticket">
+                                                                <dl>
+                                                                    <dt>Saida</dt>
+                                                                    <dd>
+                                                                        <b>Ter, 14 Abril, 2014 08:35</b>
+                                                                        <b>São Paulo, Brasil (SP)</b>
+                                                                    </dd>
+                                                                    <dt>Chegada</dt>
+                                                                    <dd>
+                                                                        <b>Ter, 14 Abril, 2014 08:35</b>
+                                                                        <b>São Paulo, Brasil (SP)</b>
+                                                                    </dd>
+                                                                </dl>
+                                                                <ul>
+                                                                    <li>Tam #5058 <a href="#">Pontualidade (Anac)</a></li>
+                                                                    <li>Economica</li>
+                                                                    <li>Airbus A320</li>
+                                                                    <li>320</li>
+                                                                    <li>4 Assentos restantes</li>
+                                                                </ul>
+                                                                <div class="msg">
+                                                                    <p><i class="glyphicon glyphicon-airplane-change"></i> Troca de avião em recife, Brasil (REC): 30 minutos</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="ticket">
+                                                                <dl>
+                                                                    <dt>Saida</dt>
+                                                                    <dd>
+                                                                        <b>Ter, 14 Abril, 2014 08:35</b>
+                                                                        <b>São Paulo, Brasil (SP)</b>
+                                                                    </dd>
+                                                                    <dt>Chegada</dt>
+                                                                    <dd>
+                                                                        <b>Ter, 14 Abril, 2014 08:35</b>
+                                                                        <b>São Paulo, Brasil (SP)</b>
+                                                                    </dd>
+                                                                </dl>
+                                                                <ul>
+                                                                    <li>Tam #5058 <a href="#">Pontualidade (Anac)</a></li>
+                                                                    <li>Economica</li>
+                                                                    <li>Airbus A320</li>
+                                                                    <li>320</li>
+                                                                    <li>4 Assentos restantes</li>
+                                                                </ul>
+                                                                <div class="msg">
+                                                                    <p><i class="glyphicon glyphicon-airplane-change"></i> Troca de avião em recife, Brasil (REC): 30 minutos</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="ticket">
+                                                                <dl>
+                                                                    <dt>Saida</dt>
+                                                                    <dd>
+                                                                        <b>Ter, 14, Abril</b>
+                                                                        <b>São Paulo, Brasil (SP)</b>
+                                                                    </dd>
+                                                                    <dt>Chegada</dt>
+                                                                    <dd>
+                                                                        <b>Ter, 14, Abril</b>
+                                                                        <b>São Paulo, Brasil (SP)</b>
+                                                                    </dd>
+                                                                </dl>
+                                                                <ul>
+                                                                    <li>Tam #5058 <a href="#">Pontualidade (Anac)</a></li>
+                                                                    <li>Economica</li>
+                                                                    <li>Airbus A320</li>
+                                                                    <li>320</li>
+                                                                    <li>4 Assentos restantes</li>
+                                                                </ul>
+                                                                <div class="msg msg-info">
+                                                                    <h4>Importante</h4>
+                                                                    <p>
+                                                                        •  Os aeroportos de ida e volta são diferentes.<br>
+                                                                        •  Para voos com conexão no Canada é obrigatório o Visto de Trânsito Canadense
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="price">
+                                    <div class="valign">
+                                        <div class="cell">
+                                            <div class="fixed">
+                                                <span class="people">R$ / Pessoa</span>
+                                                <span class="val">190,00</span>
+                                                <div class="popover-toggler popover-select-flights" data-target-selector=".popover-how-to-select-flights" data-container=".container-how-to-select-flights" data-placement="left" data-title="Escolha os voos para continuar">
+                                                    <button type="button" class="btn btn-sm btn-tertiary btn-tickets-flights" id="buttom-select-1" disabled>Selecione e compre</button>
+                                                </div>
+                                                <span class="tax">A incluir taxas + encargos</span>
+
+                                                <span class="pay popover-toggler" data-container=".container-installments-available" data-target-selector=".popover-installments-available" data-css-class="installments-available" data-placement="left" data-title="Opções de Pagamento">Pague em até 10x</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="paginav">
+                        <ul class="pagination">
+                            <li class="nav-pag"><a href="#"><span class="glyphicon glyphicon-arrow-blue-left"></span></a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li class="active"><a href="#">3</a></li>
+                            <li><a href="#">43</a></li>
+                            <li><a href="#">50</a></li>
+                            <li><a href="#">850</a></li>
+                            <li class="nav-pag"><a href="#"><span class="glyphicon glyphicon-arrow-blue-right"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+</div>
+@Html.Partial("_FooterCompact")
+<script id="option-room-button" type="text/x-handlebars-template">
+    <td class="th-room" data-room="room-{{number}}">
+        <button type="button" class="btn">
+            <span class="text">Quarto {{number-txt}}</span>
+            <span class="glyphicon glyphicon-btn-close"></span>
+        </button>
+    </td>
+</script>
+<script id="option-room-col" type="text/x-handlebars-template">
+    <td data-room="room-{{number}}">
+        <label class=" spinner-wrapper">
+            {{type}}
+            <input class="spinner spinner-simple {{classe}}" name="value" value="0">
+        </label>
+    </td>
+</script>
+<script id="option-child-age" type="text/x-handlebars-template">
+    <div class="spinner-wrapper spinner-box">
+        <input class="spinner spinner-age" name="value" placeholder="(1-11)">
+    </div>
+</script>

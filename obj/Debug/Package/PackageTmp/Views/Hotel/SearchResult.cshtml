@@ -1,0 +1,1334 @@
+﻿@{
+    ViewBag.Title = "/Hotel/SearchResult";
+    ViewBag.BodyClass = "flux-collapsed";
+}
+<div class="container-fluid pghotel search-result top">
+    <!-- Busca -->
+    <form class="search simple clearfix">
+        <div class="container-fluid">
+            <div class="checkin-checkout pull-left">
+                <div class="accommodation">
+                    <div class="col hotel">
+                        <input type="text" class="suggestions">
+                    </div>
+                    <div class="col dates jrange">
+                        <div class="wrap-dates">
+                            <div class="data date-init"></div>
+                            <i></i>
+                            <div class="data date-end"></div>
+                        </div>
+                        <div class="calendar"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="options hotel-option">
+                <button type="button" class="btn btn-md btn-text-cta btn-expand options options-button click">
+                    <i class="glyphicon glyphicon-icon-doorknob"></i>
+                    <span class="options-button"><span class="number">3</span> Quartos</span>
+                </button>
+                <div class="options-pop clearfix">
+                    <div class="top-fixed">
+                        <div class="add-room">
+                            <div class="border">
+                                <button type="button" class="btn btn-sm btn-text-icon"><span class="glyphicon glyphicon-plus-white"></span>Adicionar quarto</button>
+                            </div>
+                        </div>
+                        <table class="row-room">
+                            <tr>
+                                <td class="th-room" data-room="room-1">
+                                    <button type="button" class="btn">
+                                        <span class="text">Quarto 1</span>
+                                        <span class="glyphicon glyphicon-btn-close"></span>
+                                    </button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="scroll">
+                        <table class="room-people content-1">
+                            <tr>
+                                <td data-room="room-1">
+                                    <label class="spinner-wrapper">
+                                        Adulto
+                                        <input class="spinner spinner-simple" name="value" value="0" type="text">
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-room="room-1">
+                                    <label class="spinner-wrapper">
+                                        Criança
+                                        <input class="spinner spinner-simple spinner-child" name="childAge" value="0" type="text">
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr class="age hidden">
+                                <td data-room="room-1"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-md btn-default btn-search">Nova Busca</button>
+        </div>
+    </form>
+    <!-- / Busca -->
+    <div class="row">
+        <aside class="col-sm-4 main-aside pull-left">
+            <div class="aside keepadjust">
+                <button type="button" class="btn btn-sm btn-tertiary btn-block btn-see-map"><span class="glyphicon glyphicon-maps"></span>Ver no Mapa</button>
+                <button type="button" class="btn btn-sm btn-tertiary btn-block btn-recent-serches"><span class="glyphicon glyphicon-search"></span>Buscas Recentes</button>
+                <form>
+                    <div class="expanded">
+                        <div class="item">
+                            <a href="#" class="glyphicon glyphicon-btn-close"></a>
+                            <header>
+                                <h4>Hotel Casa Del Mar Rio de Janeiro</h4>
+                            </header>
+                            <div>
+                                <div>
+                                    <img src="http://lorempixel.com/55/55/">
+                                    <label for="opt-star-1">
+                                        <i class="glyphicon glyphicon-star-on"></i>
+                                        <i class="glyphicon glyphicon-star-on"></i>
+                                        <i class="glyphicon glyphicon-star-on"></i>
+                                        <i class="glyphicon glyphicon-star-on"></i>
+                                        <i class="glyphicon glyphicon-star-on"></i>
+                                    </label>
+                                    <span>Quartos disponíveis</span>
+                                </div>
+                                <div>
+                                    <div class="date">
+                                        <span class="label">Entrada</span>
+                                        <span class="day">14</span>
+                                        <span class="month">Abril, 2014</span>
+                                    </div>
+                                    <div class="date">
+                                        <span class="label">Saída</span>
+                                        <span class="day">24</span>
+                                        <span class="month">Abril, 2014</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a href="#" class="glyphicon glyphicon-btn-close"></a>
+                            <header>
+                                <h4>Hotel Casa Del Mar Rio de Janeiro</h4>
+                            </header>
+                            <div>
+                                <div>
+                                    <img src="http://lorempixel.com/55/55/?2">
+                                    <label for="opt-star-1">
+                                        <i class="glyphicon glyphicon-star-on"></i>
+                                        <i class="glyphicon glyphicon-star-on"></i>
+                                        <i class="glyphicon glyphicon-star-on"></i>
+                                        <i class="glyphicon glyphicon-star-on"></i>
+                                        <i class="glyphicon glyphicon-star-on"></i>
+                                    </label>
+                                    <span>Quartos disponíveis</span>
+                                </div>
+                                <div>
+                                    <div class="date">
+                                        <span class="label">Entrada</span>
+                                        <span class="day">14</span>
+                                        <span class="month">Abril, 2014</span>
+                                    </div>
+                                    <div class="date">
+                                        <span class="label">Saída</span>
+                                        <span class="day">24</span>
+                                        <span class="month">Abril, 2014</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Filtrar Resultados por:</h3>
+                    <div class="filters search-filter">
+                        <div class="group">
+                            <label>Nome do Hotel</label>
+                            <input type="text" class="form-control" placeholder="Digite o Hotel">
+                            <button type="submit" class="btn btn-sm btn-tertiary">Ir</button>
+                        </div>
+                    </div>
+                    <div class="filters">
+                        <h4>Preço</h4>
+                        <span class="custom-select custom-select-btn">
+                            <select>
+                                <option>Sushi</option>
+                                <option>Blue cheese with crackers</option>
+                                <option>Steak</option>
+                                <option>Beef</option>
+                                <option>Rice</option>
+                                <option>Chilli</option>
+                                <option>Other</option>
+                            </select>
+                        </span>
+                    </div>
+
+                    <div class="filters tripadvisor">
+                        <h4><i class="glyphicon glyphicon-logo-tripadvisor"></i>Pontos no Tripadvisor </h4>
+                        <ul class="opts">
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-advisor" id="opt-advisor-5">
+                                <label for="opt-advisor-5">
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                </label>
+                            </li>
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-advisor" id="opt-advisor-4">
+                                <label for="opt-advisor-4">
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                </label>
+                            </li>
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-advisor" id="opt-advisor-3">
+                                <label for="opt-advisor-3">
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                </label>
+                            </li>
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-advisor" id="opt-advisor-2">
+                                <label for="opt-advisor-2">
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                </label>
+                            </li>
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-advisor" id="opt-advisor-1">
+                                <label for="opt-advisor-1">
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="filters">
+                        <h4>Estrelas</h4>
+                        <ul class="opts">
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-star" id="opt-star-1">
+                                <label for="opt-star-1">
+                                    <i class="glyphicon glyphicon-star-on"></i>
+                                    <i class="glyphicon glyphicon-star-on"></i>
+                                    <i class="glyphicon glyphicon-star-on"></i>
+                                    <i class="glyphicon glyphicon-star-on"></i>
+                                    <i class="glyphicon glyphicon-star-on"></i>
+                                </label>
+                            </li>
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-star" id="opt-star-2">
+                                <label for="opt-star-2">
+                                    <i class="glyphicon glyphicon-star-on"></i>
+                                    <i class="glyphicon glyphicon-star-on"></i>
+                                    <i class="glyphicon glyphicon-star-on"></i>
+                                    <i class="glyphicon glyphicon-star-on"></i>
+                                </label>
+                            </li>
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-star" id="opt-star-3">
+                                <label for="opt-star-3">
+                                    <i class="glyphicon glyphicon-star-on"></i>
+                                    <i class="glyphicon glyphicon-star-on"></i>
+                                    <i class="glyphicon glyphicon-star-on"></i>
+                                </label>
+                            </li>
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-star" id="opt-star-4">
+                                <label for="opt-star-4">
+                                    <i class="glyphicon glyphicon-star-on"></i>
+                                    <i class="glyphicon glyphicon-star-on"></i>
+                                </label>
+                            </li>
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-star" id="opt-star-5">
+                                <label for="opt-star-5">
+                                    <i class="glyphicon glyphicon-star-on"></i>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="filters">
+                        <h4>Bairro</h4>
+                        <ul class="opts">
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-bairro" id="opt-bairro-1">
+                                <label for="opt-bairro-1">Copacaban</label>
+                            </li>
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-bairro" id="opt-bairro-2">
+                                <label for="opt-bairro-2">Botafogo</label>
+                            </li>
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-bairro" id="opt-bairro-3">
+                                <label for="opt-bairro-3">Flamengo</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="filters">
+                        <h4>Ponto Turístico<i class="glyphicon icon-filter-arrow"></i></h4>
+                        <ul class="opts">
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-ponto" id="opt-ponto-1">
+                                <label for="opt-ponto-1">Centro da Cidade</label>
+                            </li>
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-ponto" id="opt-ponto-2">
+                                <label for="opt-ponto-2">Botafogo</label>
+                            </li>
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-ponto" id="opt-ponto-3">
+                                <label for="opt-ponto-3">Estádio do Maracanã</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="filters">
+                        <h4>Tipo de Hotel<i class="glyphicon icon-filter-arrow"></i></h4>
+                        <ul class="opts">
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-tipo" id="opt-tipo-1">
+                                <label for="opt-tipo-1">Hotel</label>
+                            </li>
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-tipo" id="opt-tipo-2">
+                                <label for="opt-tipo-2">Pousada</label>
+                            </li>
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-tipo" id="opt-tipo-3">
+                                <label for="opt-tipo-3">Apart Hotel</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="filters">
+                        <h4>Facilidades<i class="glyphicon icon-filter-arrow"></i></h4>
+                        <ul class="opts">
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-facilidades" id="opt-facilidades-1">
+                                <label for="opt-facilidades-1">Traslado para o Aeroporto</label>
+                            </li>
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-facilidades" id="opt-facilidades-2">
+                                <label for="opt-facilidades-2">Bar</label>
+                            </li>
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-facilidades" id="opt-facilidades-3">
+                                <label for="opt-facilidades-3">Parque para Crianças</label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="filters">
+                        <h4>Refeições<i class="glyphicon icon-filter-arrow"></i></h4>
+                        <ul class="opts">
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-refeicoes" id="opt-refeicoes-1">
+                                <label for="opt-refeicoes-1">Pensão Completa</label>
+                            </li>
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-refeicoes" id="opt-refeicoes-2">
+                                <label for="opt-refeicoes-2">Café-da-manhã</label>
+                            </li>
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-refeicoes" id="opt-refeicoes-3">
+                                <label for="opt-refeicoes-3">Sem Refeição</label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="filters">
+                        <h4>Tema do Hotel<i class="glyphicon icon-filter-arrow"></i></h4>
+                        <ul class="opts">
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-tema" id="opt-tema-1">
+                                <label for="opt-tema-1">Aventura</label>
+                            </li>
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-tema" id="opt-tema-2">
+                                <label for="opt-tema-2">Histórico</label>
+                            </li>
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-tema" id="opt-tema-3">
+                                <label for="opt-tema-3">Romântico</label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="filters">
+                        <h4>Rede de Hotéis<i class="glyphicon icon-filter-arrow"></i></h4>
+                        <ul class="opts">
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-tema" id="opt-rede-1">
+                                <label for="opt-rede-1">Sheraton</label>
+                            </li>
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-rede" id="opt-rede-2">
+                                <label for="opt-rede-2">Ibis</label>
+                            </li>
+                            <li class="checkbox dark-theme">
+                                <input type="checkbox" name="opt-rede" id="opt-rede-3">
+                                <label for="opt-rede-3">Mercure</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="filters">
+                        <button type="button" class="btn btn-sm btn-tertiary btn-block text-left"><span class="glyphicon glyphicon-recommended-hotel"></span>Hotéis Recomendados</button>
+                    </div>
+                    <button type="reset" class="btn btn-sm btn-tertiary btn-block"><span class="glyphicon glyphicon-reset"></span>Limpar os Filtros</button>
+                    <a href="#" class="icon-back">Voltar para o topo</a>
+                </form>
+            </div>
+        </aside>
+
+        <section class="col-sm-15 col-sm-offset-1 content">
+            <div class="mapa">
+                <img src="https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=600x300&maptype=roadmap&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318&markers=color:red%7Clabel:C%7C40.718217,-73.998284&sensor=false&scale=2" />
+
+                <div class="popover tip-hotel top in" style="display:block;">
+                    <div class="arrow"></div>
+                    <h3 class="popover-title">Hotel Casa Del Mar<span class="close">×</span></h3>
+                    <div class="popover-content">
+                        <div class="box-result box-hotel">
+                            <div class="wrap-fixed clearfix">
+                                <table class="table-result">
+                                    <tbody>
+                                        <tr class="hotel">
+                                            <td colspan="5">
+                                                <div class="carousel slide">
+                                                    <div class="carousel-inner">
+                                                        <div class="item active">
+                                                            <img src="http://lorempixel.com/160/90/">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="info-hotel">
+                                                    <address>
+                                                        Rua Silva 69-Centro<br>
+                                                        202411-11 Rio De Janeiro<br>
+                                                        RJ Brasil
+                                                    </address>
+                                                    <div class="stars">
+                                                        <i class="glyphicon glyphicon-star-on"></i>
+                                                        <i class="glyphicon glyphicon-star-on"></i>
+                                                        <i class="glyphicon glyphicon-star-on"></i>
+                                                        <i class="glyphicon glyphicon-star-on"></i>
+                                                        <i class="glyphicon glyphicon-star-off"></i>
+                                                    </div>
+                                                    <div class="trip">
+                                                        <i class="glyphicon glyphicon-logo-tripadvisor"></i>
+                                                        <i class="glyphicon glyphicon-tripadvisor"></i>
+                                                        <i class="glyphicon glyphicon-tripadvisor"></i>
+                                                        <i class="glyphicon glyphicon-tripadvisor"></i>
+                                                        <i class="glyphicon glyphicon-tripadvisor"></i>
+                                                        <i class="glyphicon glyphicon-tripadvisor"></i>
+                                                        <i class="num">(328)</i>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span>Quarto</span>
+                                                <b>1x Quarto Duplo</b>
+                                                <em>Café-da-manhã | Cancelamento Grátis</em>
+                                            </td>
+                                            <td class="preco">
+                                                <span>R$ / Noite</span>
+                                                <b>75,00</b>
+                                            </td>
+                                            <td rowspan="2" width="155" class="cell">
+                                                <div class="fixed">
+                                                    <span class="people">A partir de R$ / Noite</span>
+                                                    <span class="val">190,00</span>
+                                                    <button type="button" class="btn btn-sm btn-default" data-click="room-detail">Ver detalhes</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="odd">
+                                            <td>
+                                                <span>Quarto</span>
+                                                <b>1x Quarto Duplo</b>
+                                                <em>Café-da-manhã | Cancelamento Grátis</em>
+                                            </td>
+                                            <td class="preco">
+                                                <span>R$ / Noite</span>
+                                                <b>75,00</b>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="legend">
+                    <h4 class="closed" onclick="Site._legendToggle(this)">Legenda <i class="glyphicon glyphicon-arrow-opacity"></i></h4>
+                    <ul>
+                        <li><i class="glyphicon glyphicon-hotel-match"></i> Hotéis encontrados pelos filtros</li>
+                        <li><i class="glyphicon glyphicon-hotel-nomatch"></i> Hotéis não encontrados pelos filtros</li>
+                        <li><i class="glyphicon glyphicon-center-city"></i> Centro da Cidade</li>
+                        <li><i class="glyphicon glyphicon-station"></i> Estação de Trem</li>
+                        <li><i class="glyphicon glyphicon-airport"></i> Aeroporto</li>
+                    </ul>
+                </div>
+                <a href="#" class="close" onclick="Site._closeMap(this)">&times;</a>
+            </div>
+
+            <div class="alert alert-info fade in assistance-alert clearfix">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <strong>Do you require assistance?</strong>
+                <span>Best check yo self, you're not looking too good.</span>
+            </div>
+
+            <div class="recommended-hotel">
+                <div class="no-results">
+                    <i class="glyphicon glyphicon-no-results"></i>
+                    <p>
+                        <b>Sua busca não retornou resultados.</b> <br>
+                        Veja nossas sugestões de hotéis próxmos ao bairro escolhido.
+                    </p>
+                </div>
+                <div class="cron clearfix">
+                    <div class="oferta">
+                        <b>Oferta Especial</b>
+                        <span>25% De Desconto / Tempo restante</span>
+                    </div>
+                    <div class="timer">
+                        <span class="hour">01</span>
+                        <span class="min">57</span>
+                        <span class="sec">18</span>
+                    </div>
+                </div>
+                <div class="box-result box-hotel">
+                    <div class="wrap-fixed clearfix">
+                        <div class="table-result pull-left">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th colspan="3">Ric Palace Hotel</th>
+                                        <th colspan="2">
+                                            <i class="glyphicon glyphicon-star-on"></i>
+                                            <i class="glyphicon glyphicon-star-on"></i>
+                                            <i class="glyphicon glyphicon-star-on"></i>
+                                            <i class="glyphicon glyphicon-star-on"></i>
+                                            <i class="glyphicon glyphicon-star-off"></i>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="hotel">
+                                        <td colspan="5">
+
+                                            <div id="carousel-3" class="carousel slide" data-ride="carousel">
+                                                <!-- Wrapper for slides -->
+                                                <div class="carousel-inner">
+                                                    <div class="item active">
+                                                        <img src="http://lorempixel.com/200/120/" width="100%" height="120">
+                                                    </div>
+                                                    <div class="item">
+                                                        <img src="http://lorempixel.com/200/120/" width="100%" height="120">
+                                                    </div>
+                                                </div>
+                                                <!-- Controls -->
+                                                <a class="left carousel-control" href="#carousel-3" data-slide="prev">
+                                                    <span class="glyphicon glyphicon-chevron-left glyphicon-slider-left"></span>
+                                                </a>
+                                                <a class="right carousel-control" href="#carousel-3" data-slide="next">
+                                                    <span class="glyphicon glyphicon-chevron-right glyphicon-slider-right"></span>
+                                                </a>
+                                                <div class="room"><span>Restam 3 quartos</span></div>
+                                            </div>
+                                            <div class="info-hotel">
+                                                <address>
+                                                    Rua Silva 69-Centro- 202411-11
+                                                    Rio De Janeiro / RJ Brasil
+                                                </address>
+                                                <div class="trip">
+                                                    <i class="glyphicon glyphicon-logo-tripadvisor"></i>
+                                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                                    <i class="num">(328)</i>
+                                                </div>
+                                                <div class="local">
+                                                    <p class="map">
+                                                        <b class="open-map" onclick="Site._openMap()"><i class="glyphicon glyphicon-pin-map"></i> Mapa</b> <i class="pipe"></i>
+                                                        <span>Centro da cidade 20km <i class="pipe"></i> Aeroporto mais próximo 10km</span>
+                                                    </p>
+                                                    <p>Com localização privilegiada, o Promenade Casa del Mar está localizado em frente à praia da Barra, a maior praia... <a href="#">mais</a></p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="price">
+                            <div class="valign">
+                                <div class="cell">
+                                    <div class="fixed">
+                                        <span class="people">A partir de R$ / Noite</span>
+                                        <span class="val">190,00</span>
+                                        <div class="form-group">
+                                            <div class="checkbox dark-theme">
+                                                <input type="checkbox" name="opt-comparar" id="opt-comparar-5">
+                                                <label for="opt-comparar-5">Compare</label>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="btn btn-sm btn-default">Reservar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="results">
+                <div class="header-result">
+                    <div class="toggle-switch">
+                        <button type="button">Preço por noite</button>
+                        <input type="checkbox" class="switch" checked>
+                        <button type="button">Preço pelo período</button>
+                    </div>
+
+                    <h2>Escolha seu hotel</h2>
+                </div>
+                <div class="order">
+                    <label>Ordenar:</label>
+                    <span class="custom-select custom-select-btn">
+                        <select>
+                            <option>Preço</option>
+                            <option>Blue cheese with crackers</option>
+                            <option>Steak</option>
+                            <option>Beef</option>
+                            <option>Rice</option>
+                            <option>Chilli</option>
+                            <option>Other</option>
+                        </select>
+                    </span>
+                    <span class="custom-select custom-select-btn">
+                        <select>
+                            <option>Avaliação TripAdvisor</option>
+                            <option>Blue cheese with crackers</option>
+                            <option>Steak</option>
+                            <option>Beef</option>
+                            <option>Rice</option>
+                            <option>Chilli</option>
+                            <option>Other</option>
+                        </select>
+                    </span>
+                    <span class="custom-select custom-select-btn">
+                        <select>
+                            <option>Estrelas</option>
+                            <option>Blue cheese with crackers</option>
+                            <option>Steak</option>
+                            <option>Beef</option>
+                            <option>Rice</option>
+                            <option>Chilli</option>
+                            <option>Other</option>
+                        </select>
+                    </span>
+                    <span class="custom-select custom-select-btn">
+                        <select>
+                            <option>Oredem alfabética</option>
+                            <option>Blue cheese with crackers</option>
+                            <option>Steak</option>
+                            <option>Beef</option>
+                            <option>Rice</option>
+                            <option>Chilli</option>
+                            <option>Other</option>
+                        </select>
+                    </span>
+                    <span class="custom-select custom-select-btn">
+                        <select>
+                            <option>Recomendações</option>
+                            <option>Blue cheese with crackers</option>
+                            <option>Steak</option>
+                            <option>Beef</option>
+                            <option>Rice</option>
+                            <option>Chilli</option>
+                            <option>Other</option>
+                        </select>
+                    </span>
+                </div>
+
+                <div>
+                    <div class="box-result box-hotel">
+                        <div class="wrap-fixed clearfix">
+                            <div class="table-result pull-left">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="3">Ric Palace Hotel</th>
+                                            <th colspan="2">
+                                                <i class="glyphicon glyphicon-star-on"></i>
+                                                <i class="glyphicon glyphicon-star-on"></i>
+                                                <i class="glyphicon glyphicon-star-on"></i>
+                                                <i class="glyphicon glyphicon-star-on"></i>
+                                                <i class="glyphicon glyphicon-star-off"></i>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="hotel">
+                                            <td colspan="5">
+                                                <div id="carousel-1" class="carousel slide" data-ride="carousel">
+                                                    <!-- Wrapper for slides -->
+                                                    <div class="carousel-inner">
+                                                        <div class="item active">
+                                                            <img src="http://lorempixel.com/200/120/" width="100%" height="120">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="http://lorempixel.com/200/120/" width="100%" height="120">
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Controls -->
+                                                    <a class="left carousel-control" href="#carousel-1" data-slide="prev">
+                                                        <span class="glyphicon glyphicon-chevron-left glyphicon-slider-left"></span>
+                                                    </a>
+                                                    <a class="right carousel-control" href="#carousel-1" data-slide="next">
+                                                        <span class="glyphicon glyphicon-chevron-right glyphicon-slider-right"></span>
+                                                    </a>
+                                                </div>
+                                                <div class="info-hotel">
+                                                    <address>
+                                                        Rua Silva 69-Centro- 202411-11
+                                                        Rio De Janeiro / RJ Brasil
+                                                    </address>
+                                                    <div class="trip">
+                                                        <i class="glyphicon glyphicon-logo-tripadvisor"></i>
+                                                        <i class="glyphicon glyphicon-tripadvisor"></i>
+                                                        <i class="glyphicon glyphicon-tripadvisor"></i>
+                                                        <i class="glyphicon glyphicon-tripadvisor"></i>
+                                                        <i class="glyphicon glyphicon-tripadvisor"></i>
+                                                        <i class="glyphicon glyphicon-tripadvisor"></i>
+                                                        <i class="num">(328)</i>
+                                                    </div>
+                                                    <div class="local">
+                                                        <p class="map">
+                                                            <b class="open-map" onclick="Site._openMap()"><i class="glyphicon glyphicon-pin-map"></i> Mapa</b> <i class="pipe"></i>
+                                                            <span>Centro da cidade 20km <i class="pipe"></i> Aeroporto mais próximo 10km</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span>Quarto</span>
+                                                <b>1x Quarto Duplo</b>
+                                                <em>Café-da-manhã | Cancelamento Grátis</em>
+                                            </td>
+                                            <td class="guess">
+                                                <span>Hóspedes</span>
+                                                <i class="glyphicon glyphicon-adult"></i>
+                                                <i class="glyphicon glyphicon-children"></i>
+                                                <i class="glyphicon glyphicon-children"></i>
+                                            </td>
+                                            <td class="room" width="150">
+                                                <span>Restam 3 quartos</span>
+                                            </td>
+                                            <td class="preco">
+                                                <span>R$ / Noite</span>
+                                                <b>75,00</b>
+                                            </td>
+                                            <td width="110">
+                                                <button type="button" class="btn btn-sm btn-text-cta" data-click="room-detail"><i class="glyphicon glyphicon-chevron-right"></i>Ver quarto</button>
+                                            </td>
+                                        </tr>
+                                        <tr class="odd">
+                                            <td>
+                                                <span>Quarto</span>
+                                                <b>1x Quarto Duplo</b>
+                                                <em>Café-da-manhã | Cancelamento Grátis</em>
+                                            </td>
+                                            <td class="guess">
+                                                <span>Hóspedes</span>
+                                                <i class="glyphicon glyphicon-adult"></i>
+                                                <i class="glyphicon glyphicon-children"></i>
+                                                <i class="glyphicon glyphicon-children"></i>
+                                            </td>
+                                            <td class="room" width="150">
+                                                <span>Restam 3 quartos</span>
+                                            </td>
+                                            <td class="preco">
+                                                <span>R$ / Noite</span>
+                                                <b>75,00</b>
+                                            </td>
+                                            <td width="110">
+                                                <button type="button" class="btn btn-sm btn-text-cta" data-click="room-detail"><i class="glyphicon glyphicon-chevron-right"></i>Ver quarto</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="price">
+                                <div class="valign">
+                                    <div class="cell">
+                                        <div class="fixed">
+                                            <span class="people">A partir de R$ / Noite</span>
+                                            <span class="val">190,00</span>
+                                            <div class="form-group">
+                                                <div class="checkbox dark-theme">
+                                                    <input type="checkbox" name="opt-comparar" id="opt-comparar-2">
+                                                    <label for="opt-comparar-2">Compare</label>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="btn btn-sm btn-default">Reservar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-result box-hotel">
+                        <div class="wrap-fixed clearfix">
+                            <div class="table-result pull-left">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="3">Ric Palace Hotel</th>
+                                            <th colspan="2">
+                                                <i class="glyphicon glyphicon-star-on"></i>
+                                                <i class="glyphicon glyphicon-star-on"></i>
+                                                <i class="glyphicon glyphicon-star-on"></i>
+                                                <i class="glyphicon glyphicon-star-on"></i>
+                                                <i class="glyphicon glyphicon-star-off"></i>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="hotel">
+                                            <td colspan="5">
+
+                                                <div id="carousel-2" class="carousel slide" data-ride="carousel">
+                                                    <!-- Wrapper for slides -->
+                                                    <div class="carousel-inner">
+                                                        <div class="item active">
+                                                            <img src="http://lorempixel.com/200/120/" width="100%" height="120">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="http://lorempixel.com/200/120/" width="100%" height="120">
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Controls -->
+                                                    <a class="left carousel-control" href="#carousel-2" data-slide="prev">
+                                                        <span class="glyphicon glyphicon-chevron-left glyphicon-slider-left"></span>
+                                                    </a>
+                                                    <a class="right carousel-control" href="#carousel-2" data-slide="next">
+                                                        <span class="glyphicon glyphicon-chevron-right glyphicon-slider-right"></span>
+                                                    </a>
+                                                </div>
+                                                <div class="info-hotel">
+                                                    <address>
+                                                        Rua Silva 69-Centro- 202411-11
+                                                        Rio De Janeiro / RJ Brasil
+                                                    </address>
+                                                    <div class="trip">
+                                                        <i class="glyphicon glyphicon-logo-tripadvisor"></i>
+                                                        <i class="glyphicon glyphicon-tripadvisor"></i>
+                                                        <i class="glyphicon glyphicon-tripadvisor"></i>
+                                                        <i class="glyphicon glyphicon-tripadvisor"></i>
+                                                        <i class="glyphicon glyphicon-tripadvisor"></i>
+                                                        <i class="glyphicon glyphicon-tripadvisor"></i>
+                                                        <i class="num">(328)</i>
+                                                    </div>
+                                                    <div class="local">
+                                                        <p class="map">
+                                                            <b class="open-map" onclick="Site._openMap()"><i class="glyphicon glyphicon-pin-map"></i> Mapa</b> <i class="pipe"></i>
+                                                            <span>Centro da cidade 20km <i class="pipe"></i> Aeroporto mais próximo 10km</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span>Quarto</span>
+                                                <b>1x Quarto Duplo</b>
+                                                <em>Café-da-manhã | Cancelamento Grátis</em>
+                                            </td>
+                                            <td class="guess">
+                                                <span>Hóspedes</span>
+                                                <i class="glyphicon glyphicon-adult"></i>
+                                                <i class="glyphicon glyphicon-children"></i>
+                                                <i class="glyphicon glyphicon-children"></i>
+                                            </td>
+                                            <td class="room" width="150">
+                                                <span>Restam 3 quartos</span>
+                                            </td>
+                                            <td class="preco">
+                                                <span>R$ / Noite</span>
+                                                <b>75,00</b>
+                                            </td>
+                                            <td width="110">
+                                                <button type="button" class="btn btn-sm btn-text-cta" data-click="room-detail"><i class="glyphicon glyphicon-chevron-right"></i>Ver quarto</button>
+                                            </td>
+                                        </tr>
+                                        <tr class="odd">
+                                            <td>
+                                                <span>Quarto</span>
+                                                <b>1x Quarto Duplo</b>
+                                                <em>Café-da-manhã | Cancelamento Grátis</em>
+                                            </td>
+                                            <td class="guess">
+                                                <span>Hóspedes</span>
+                                                <i class="glyphicon glyphicon-adult"></i>
+                                                <i class="glyphicon glyphicon-children"></i>
+                                                <i class="glyphicon glyphicon-children"></i>
+                                            </td>
+                                            <td class="room" width="150">
+                                                <span>Restam 3 quartos</span>
+                                            </td>
+                                            <td class="preco">
+                                                <span>R$ / Noite</span>
+                                                <b>75,00</b>
+                                            </td>
+                                            <td width="110">
+                                                <button type="button" class="btn btn-sm btn-text-cta" data-click="room-detail"><i class="glyphicon glyphicon-chevron-right"></i>Ver quarto</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="price">
+                                <div class="valign">
+                                    <div class="cell">
+                                        <div class="fixed">
+                                            <span class="people">A partir de R$ / Noite</span>
+                                            <span class="val">190,00</span>
+                                            <div class="form-group">
+                                                <div class="checkbox dark-theme">
+                                                    <input type="checkbox" name="opt-comparar" id="opt-comparar-3">
+                                                    <label for="opt-comparar-3">Compare</label>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="btn btn-sm btn-default">Reservar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-result box-hotel">
+                        <div class="wrap-fixed clearfix">
+                            <div class="table-result pull-left">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="3">Ric Palace Hotel</th>
+                                            <th colspan="2">
+                                                <i class="glyphicon glyphicon-star-on"></i>
+                                                <i class="glyphicon glyphicon-star-on"></i>
+                                                <i class="glyphicon glyphicon-star-on"></i>
+                                                <i class="glyphicon glyphicon-star-on"></i>
+                                                <i class="glyphicon glyphicon-star-off"></i>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="hotel">
+                                            <td colspan="5">
+                                                <div id="carousel-4" class="carousel slide" data-ride="carousel">
+                                                    <!-- Wrapper for slides -->
+                                                    <div class="carousel-inner">
+                                                        <div class="item active">
+                                                            <img src="http://lorempixel.com/200/120/" width="100%" height="120">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="http://lorempixel.com/200/120/" width="100%" height="120">
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Controls -->
+                                                    <a class="left carousel-control" href="#carousel-4" data-slide="prev">
+                                                        <span class="glyphicon glyphicon-chevron-left glyphicon-slider-left"></span>
+                                                    </a>
+                                                    <a class="right carousel-control" href="#carousel-4" data-slide="next">
+                                                        <span class="glyphicon glyphicon-chevron-right glyphicon-slider-right"></span>
+                                                    </a>
+                                                </div>
+                                                <div class="info-hotel">
+                                                    <address>
+                                                        Rua Silva 69-Centro- 202411-11
+                                                        Rio De Janeiro / RJ Brasil
+                                                    </address>
+                                                    <div class="trip">
+                                                        <i class="glyphicon glyphicon-logo-tripadvisor"></i>
+                                                        <i class="glyphicon glyphicon-tripadvisor"></i>
+                                                        <i class="glyphicon glyphicon-tripadvisor"></i>
+                                                        <i class="glyphicon glyphicon-tripadvisor"></i>
+                                                        <i class="glyphicon glyphicon-tripadvisor"></i>
+                                                        <i class="glyphicon glyphicon-tripadvisor"></i>
+                                                        <i class="num">(328)</i>
+                                                    </div>
+                                                    <div class="local">
+                                                        <p class="map">
+                                                            <b class="open-map" onclick="Site._openMap()"><i class="glyphicon glyphicon-pin-map"></i> Mapa</b> <i class="pipe"></i>
+                                                            <span>Centro da cidade 20km <i class="pipe"></i> Aeroporto mais próximo 10km</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span>Quarto</span>
+                                                <b>1x Quarto Duplo</b>
+                                                <em>Café-da-manhã | Cancelamento Grátis</em>
+                                            </td>
+                                            <td class="guess">
+                                                <span>Hóspedes</span>
+                                                <i class="glyphicon glyphicon-adult"></i>
+                                                <i class="glyphicon glyphicon-children"></i>
+                                                <i class="glyphicon glyphicon-children"></i>
+                                            </td>
+                                            <td class="room" width="150">
+                                                <span>Restam 3 quartos</span>
+                                            </td>
+                                            <td class="preco">
+                                                <span>R$ / Noite</span>
+                                                <b>75,00</b>
+                                            </td>
+                                            <td width="110">
+                                                <button type="button" class="btn btn-sm btn-text-cta" data-click="room-detail"><i class="glyphicon glyphicon-chevron-right"></i>Ver quarto</button>
+                                            </td>
+                                        </tr>
+                                        <tr class="odd">
+                                            <td>
+                                                <span>Quarto</span>
+                                                <b>1x Quarto Duplo</b>
+                                                <em>Café-da-manhã | Cancelamento Grátis</em>
+                                            </td>
+                                            <td class="guess">
+                                                <span>Hóspedes</span>
+                                                <i class="glyphicon glyphicon-adult"></i>
+                                                <i class="glyphicon glyphicon-children"></i>
+                                                <i class="glyphicon glyphicon-children"></i>
+                                            </td>
+                                            <td class="room" width="150">
+                                                <span>Restam 3 quartos</span>
+                                            </td>
+                                            <td class="preco">
+                                                <span>R$ / Noite</span>
+                                                <b>75,00</b>
+                                            </td>
+                                            <td width="110">
+                                                <button type="button" class="btn btn-sm btn-text-cta" data-click="room-detail"><i class="glyphicon glyphicon-chevron-right"></i>Ver quarto</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="price special">
+                                <div class="valign">
+                                    <div class="cell">
+                                        <div class="fixed">
+                                            <span class="people">A partir de R$ / Noite</span>
+                                            <span class="val">190,00</span>
+                                            <div class="form-group">
+                                                <div class="checkbox dark-theme">
+                                                    <input type="checkbox" name="opt-comparar" id="opt-comparar-4">
+                                                    <label for="opt-comparar-4">Compare</label>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="btn btn-sm btn-default">Reservar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paginav">
+                    <ul class="pagination">
+                        <li class="nav-pag"><a href="#"><span class="glyphicon glyphicon-arrow-blue-left"></span></a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li class="active"><a href="#">3</a></li>
+                        <li><a href="#">43</a></li>
+                        <li><a href="#">50</a></li>
+                        <li><a href="#">850</a></li>
+                        <li class="nav-pag"><a href="#"><span class="glyphicon glyphicon-arrow-blue-right"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="compare">
+                <div class="container-fluid">
+                    <span>Selecione 3 Hotéis para Comparar</span>
+                    <ul>
+                        <li class="on">Promenade Casa del Mar</li>
+                        <li>Selecione mais um hotel</li>
+                        <li>Selecione mais um hotel</li>
+                    </ul>
+                    <button type="button" class="btn btn-sm btn-default" data-toggle="modal" data-target="#compare-hotel">Comparar</button>
+                    <a href="#" onclick="Site.CloseCompare(); return false"><i class="glyphicon glyphicon-icon-cancel"></i> Cancelar</a>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade compare-hotel" id="compare-hotel">
+                <div class="modal-dialog container-fluid">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title">Compare Hotéis</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="map">
+                                <img src="https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=600x300&maptype=roadmap&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318&markers=color:red%7Clabel:C%7C40.718217,-73.998284&sensor=false&scale=2" />
+                            </div>
+                            <div class="header-result">
+                                <div class="toggle-switch">
+                                    <button type="button">Preço por noite</button>
+                                    <input type="checkbox" class="switch" checked>
+                                    <button type="button">Preço pelo período</button>
+                                </div>
+
+                                <h2>Hotéis Selecionados</h2>
+                            </div>
+                            <div class="box-result box-hotel">
+                                <div class="wrap-fixed clearfix">
+                                    <div class="table-result">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th colspan="6">Ric Palace Hotel</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td width="200" align="center">
+                                                        <i class="glyphicon glyphicon-star-on"></i>
+                                                        <i class="glyphicon glyphicon-star-on"></i>
+                                                        <i class="glyphicon glyphicon-star-on"></i>
+                                                        <i class="glyphicon glyphicon-star-on"></i>
+                                                        <i class="glyphicon glyphicon-star-off"></i>
+                                                    </td>
+                                                    <td>Localização</td>
+                                                    <td>200 Quartos</td>
+                                                    <td>Reserva</td>
+                                                    <td>Cancelamento</td>
+                                                    <td rowspan="3" width="185" class="cell">
+                                                        <div class="fixed">
+                                                            <span class="people">A partir de R$ / Noite</span>
+                                                            <span class="val">190,00</span>
+                                                            <button type="button" class="btn btn-sm btn-default" data-click="room-detail">Ver detalhes</button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center">
+                                                        <div class="trip">
+                                                            <i class="glyphicon glyphicon-logo-tripadvisor"></i>
+                                                            <i class="glyphicon glyphicon-tripadvisor"></i>
+                                                            <i class="glyphicon glyphicon-tripadvisor"></i>
+                                                            <i class="glyphicon glyphicon-tripadvisor"></i>
+                                                            <i class="glyphicon glyphicon-tripadvisor"></i>
+                                                            <i class="glyphicon glyphicon-tripadvisor"></i>
+                                                            <i class="num">(328)</i>
+                                                        </div>
+                                                    </td>
+                                                    <td rowspan="2">
+                                                        <address>Rua Silva 69-Centro <br>Rio de Janeiro, Brasil <br>202411-11</address>
+                                                        <div>
+                                                            <b>25 km</b>
+                                                            <span>Do aeroporto</span>
+                                                        </div>
+                                                        <div>
+                                                            <b>1 Km</b>
+                                                            <span>Do ponto turístico 1</span>
+                                                        </div>
+                                                        <div>
+                                                            <b>0.5 Km</b>
+                                                            <span>Do ponto turístico 1</span>
+                                                        </div>
+                                                    </td>
+                                                    <td rowspan="2">
+                                                        <ul>
+                                                            <li>• Wi-fi Gratuita</li>
+                                                            <li>• Estacionamento</li>
+                                                            <li>• Café-da-manhã</li>
+                                                            <li>• Piscina</li>
+                                                            <li>• Academia</li>
+                                                            <li>• Spa</li>
+                                                            <li>• Massagem</li>
+                                                            <li>• Escritório</li>
+                                                            <li>• Room Service</li>
+                                                            <li>• Lavanderia</li>
+                                                        </ul>
+                                                    </td>
+                                                    <td rowspan="2">
+                                                        <div>
+                                                            <span>Entrada</span>
+                                                            <b>15:00</b>
+                                                        </div>
+                                                        <div>
+                                                            <span>Saída</span>
+                                                            <b>11:00</b>
+                                                        </div>
+                                                        <p><i>Notificar a saída com 24h de antecedência</i></p>
+                                                        <div>
+                                                            <span>Crianças</span>
+                                                            <b class="obs">Crianças com até 1 ano não pagam a diária.</b>
+                                                        </div>
+                                                    </td>
+                                                    <td rowspan="2">
+                                                        <p>Cancelamento Gratuito</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="nospace">
+                                                        <img src="http://lorempixel.com/200/190/">
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-result box-hotel">
+                                <div class="wrap-fixed clearfix">
+                                    <div class="table-result">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th colspan="6">Ric Palace Hotel</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td width="200" align="center">
+                                                        <i class="glyphicon glyphicon-star-on"></i>
+                                                        <i class="glyphicon glyphicon-star-on"></i>
+                                                        <i class="glyphicon glyphicon-star-on"></i>
+                                                        <i class="glyphicon glyphicon-star-on"></i>
+                                                        <i class="glyphicon glyphicon-star-off"></i>
+                                                    </td>
+                                                    <td>Localização</td>
+                                                    <td>200 Quartos</td>
+                                                    <td>Reserva</td>
+                                                    <td>Cancelamento</td>
+                                                    <td rowspan="3" width="185" class="cell">
+                                                        <div class="fixed">
+                                                            <span class="people">A partir de R$ / Noite</span>
+                                                            <span class="val">190,00</span>
+                                                            <button type="button" class="btn btn-sm btn-default" data-click="room-detail">Ver detalhes</button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center">
+                                                        <div class="trip">
+                                                            <i class="glyphicon glyphicon-logo-tripadvisor"></i>
+                                                            <i class="glyphicon glyphicon-tripadvisor"></i>
+                                                            <i class="glyphicon glyphicon-tripadvisor"></i>
+                                                            <i class="glyphicon glyphicon-tripadvisor"></i>
+                                                            <i class="glyphicon glyphicon-tripadvisor"></i>
+                                                            <i class="glyphicon glyphicon-tripadvisor"></i>
+                                                            <i class="num">(328)</i>
+                                                        </div>
+                                                    </td>
+                                                    <td rowspan="2">
+                                                        <address>Rua Silva 69-Centro <br>Rio de Janeiro, Brasil <br>202411-11</address>
+                                                        <div>
+                                                            <b>25 km</b>
+                                                            <span>Do aeroporto</span>
+                                                        </div>
+                                                        <div>
+                                                            <b>1 Km</b>
+                                                            <span>Do ponto turístico 1</span>
+                                                        </div>
+                                                        <div>
+                                                            <b>0.5 Km</b>
+                                                            <span>Do ponto turístico 1</span>
+                                                        </div>
+                                                    </td>
+                                                    <td rowspan="2">
+                                                        <ul>
+                                                            <li>• Wi-fi Gratuita</li>
+                                                            <li>• Estacionamento</li>
+                                                            <li>• Café-da-manhã</li>
+                                                            <li>• Piscina</li>
+                                                            <li>• Academia</li>
+                                                            <li>• Spa</li>
+                                                            <li>• Massagem</li>
+                                                            <li>• Escritório</li>
+                                                            <li>• Room Service</li>
+                                                            <li>• Lavanderia</li>
+                                                        </ul>
+                                                    </td>
+                                                    <td rowspan="2">
+                                                        <div>
+                                                            <span>Entrada</span>
+                                                            <b>15:00</b>
+                                                        </div>
+                                                        <div>
+                                                            <span>Saída</span>
+                                                            <b>11:00</b>
+                                                        </div>
+                                                        <p><i>Notificar a saída com 24h de antecedência</i></p>
+                                                        <div>
+                                                            <span>Crianças</span>
+                                                            <b class="obs">Crianças com até 1 ano não pagam a diária.</b>
+                                                        </div>
+                                                    </td>
+                                                    <td rowspan="2">
+                                                        <p>Cancelamento Gratuito</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="nospace">
+                                                        <img src="http://lorempixel.com/200/190/">
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+@Html.Partial("_FooterCompact")
+<script id="option-room-button" type="text/x-handlebars-template">
+    <td class="th-room" data-room="room-{{number}}">
+        <button type="button" class="btn">
+            <span class="text">Quarto {{number-txt}}</span>
+            <span class="glyphicon glyphicon-btn-close"></span>
+        </button>
+    </td>
+</script>
+<script id="option-room-col" type="text/x-handlebars-template">
+    <td data-room="room-{{number}}">
+        <label class=" spinner-wrapper">
+            {{type}}
+            <input class="spinner spinner-simple {{classe}}" name="value" value="0" type="text">
+        </label>
+    </td>
+</script>
+<script id="option-child-age" type="text/x-handlebars-template">
+    <div class="spinner-wrapper spinner-box">
+        <input class="spinner spinner-age" name="value" placeholder="(1-11)" type="text">
+    </div>
+</script>

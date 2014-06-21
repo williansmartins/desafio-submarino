@@ -1,0 +1,23 @@
+﻿/* Calendário */
+.date-range-selected {
+	> .ui-state-active,
+	> .ui-state-default {
+	   background: none;
+	   background-color: lightsteelblue;
+	}
+}
+.ui-datepicker-header {
+	background-color: #ffffff;
+}
+.ui-datepicker {
+	font-size: 14px;
+}
+.ui-datepicker-inline {
+	padding: 0 20px;
+}
+.ui-datepicker-header {
+	background-color: #ffffff;
+    font-family: 'omnesmedium';
+    font-size: 20px;
+    height: 75px;
+}

@@ -1,0 +1,652 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F3FDA15B-E916-4884-A294-67C3F6B5F7E7}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SubViagens</RootNamespace>
+    <AssemblyName>SubViagens</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="RouteDebugger">
+      <HintPath>..\packages\routedebugger.2.1.4.0\lib\net40\RouteDebugger.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.30506.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.30506.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.30506.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.30506.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.2\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.30506.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.3.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.3.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ExamplesController.cs" />
+    <Compile Include="Controllers\FlightController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MultiDestinationController.cs" />
+    <Compile Include="Controllers\HotelController.cs" />
+    <Compile Include="Controllers\PackagesController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\css\jquery-ui\jquery-ui-theme.css">
+      <DependentUpon>jquery-ui-theme.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\jquery-ui\jquery-ui-theme.min.css">
+      <DependentUpon>jquery-ui-theme.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\bootstrap\bootstrap-switch.css" />
+    <Content Include="Content\css\bootstrap\bootstrap-switch.min.css">
+      <DependentUpon>bootstrap-switch.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\bootstrap\bootstrap.min.css">
+      <DependentUpon>bootstrap.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\fontawesome\font-awesome.min.css">
+      <DependentUpon>font-awesome.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\jquery-ui\jquery-ui-1.10.4.custom.min.css">
+      <DependentUpon>jquery-ui-1.10.4.custom.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\lib\mixins.css">
+      <DependentUpon>mixins.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\lib\mixins.min.css">
+      <DependentUpon>mixins.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\lib\variables.css">
+      <DependentUpon>variables.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\lib\variables.min.css">
+      <DependentUpon>variables.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\bootstrap\bootstrap.css" />
+    <Content Include="Content\css\fontawesome\font-awesome.css" />
+    <Content Include="Content\css\jquery-ui\images\animated-overlay.gif" />
+    <Content Include="Content\css\jquery-ui\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\css\jquery-ui\images\ui-bg_flat_55_fbf9ee_40x100.png" />
+    <Content Include="Content\css\jquery-ui\images\ui-bg_flat_65_ffffff_40x100.png" />
+    <Content Include="Content\css\jquery-ui\images\ui-bg_flat_75_cccccc_40x100.png" />
+    <Content Include="Content\css\jquery-ui\images\ui-bg_flat_75_dadada_40x100.png" />
+    <Content Include="Content\css\jquery-ui\images\ui-bg_flat_75_e6e6e6_40x100.png" />
+    <Content Include="Content\css\jquery-ui\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\css\jquery-ui\images\ui-bg_flat_95_fef1ec_40x100.png" />
+    <Content Include="Content\css\jquery-ui\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\css\jquery-ui\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\css\jquery-ui\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\css\jquery-ui\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\css\jquery-ui\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\css\jquery-ui\jquery-ui-1.10.4.custom.css" />
+    <Content Include="Content\css\base.css">
+      <DependentUpon>base.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\base.min.css">
+      <DependentUpon>base.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\fonts.css">
+      <DependentUpon>fonts.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\fonts.min.css">
+      <DependentUpon>fonts.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Site.css">
+      <DependentUpon>Site.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Site.min.css">
+      <DependentUpon>Site.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\sprite.css">
+      <DependentUpon>sprite.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\sprite.min.css">
+      <DependentUpon>sprite.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\theme.css">
+      <DependentUpon>theme.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\theme.min.css">
+      <DependentUpon>theme.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\module.css.map">
+      <DependentUpon>module.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\bootstrap\config.json" />
+    <Content Include="Content\css\theme.css.map">
+      <DependentUpon>theme.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\theme.less" />
+    <Content Include="Content\css\base.css.map">
+      <DependentUpon>base.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\base.less" />
+    <Content Include="Content\css\fonts.css.map">
+      <DependentUpon>fonts.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\fonts.less" />
+    <Content Include="Content\css\lib\variables.less" />
+    <Content Include="Content\css\lib\variables.css.map">
+      <DependentUpon>variables.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\lib\mixins.less" />
+    <Content Include="Content\css\lib\mixins.css.map">
+      <DependentUpon>mixins.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\jquery-ui\jquery-ui-theme.less" />
+    <Content Include="Content\css\jquery-ui\jquery-ui-theme.css.map">
+      <DependentUpon>jquery-ui-theme.css</DependentUpon>
+    </Content>
+    <None Include="Content\css\module.less" />
+    <Content Include="Content\css\module.css">
+      <DependentUpon>module.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\module.min.css">
+      <DependentUpon>module.css</DependentUpon>
+    </Content>
+    <Content Include="Content\fonts\fontawesome\fontawesome-webfont.svg" />
+    <Content Include="Content\fonts\glyphicons\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\fonts\omnes\omnesmed-webfont.svg" />
+    <Content Include="Content\fonts\omnes\omnesreg-webfont.svg" />
+    <Content Include="Content\fonts\omnes\omnessem-webfont.svg" />
+    <Content Include="Content\images\banner\banner-submarino.jpg" />
+    <Content Include="Content\images\banner\highlight-hotel-1.jpg" />
+    <Content Include="Content\images\banner\highlight-hotel-2.jpg" />
+    <Content Include="Content\images\banner\highlight-hotel-3.jpg" />
+    <Content Include="Content\images\banner\hotel-checkout-1.jpg" />
+    <Content Include="Content\images\banner\hotel-checkout-2.jpg" />
+    <Content Include="Content\images\banner\hotel-checkout-3.jpg" />
+    <Content Include="Content\images\banner\hotel-top-carousel.jpg" />
+    <Content Include="Content\images\banner\multidestination-checkout-2.png" />
+    <Content Include="Content\images\banner\rio-de-janeiro.jpg" />
+    <Content Include="Content\images\bg\bg-arrow-table-back.png" />
+    <Content Include="Content\images\bg\bg-arrow-table.png" />
+    <Content Include="Content\images\bg\business-class-seats.png" />
+    <Content Include="Content\images\bg\business-class-taken-seats.png" />
+    <Content Include="Content\images\bg\chain.png" />
+    <Content Include="Content\images\bg\dotted-grey-pale.png" />
+    <Content Include="Content\images\bg\dotted-white.png" />
+    <Content Include="Content\images\bg\hotel-detail.gif" />
+    <Content Include="Content\images\bg\plane-diagram.png" />
+    <Content Include="Content\images\bg\premium-seat.png" />
+    <Content Include="Content\images\bg\seat.png" />
+    <Content Include="Content\images\bg\selected-seat.png" />
+    <Content Include="Content\images\bg\taken-seats.png" />
+    <Content Include="Content\images\bg\ticket-tbl.png" />
+    <Content Include="Content\images\bg\trace-white.png" />
+    <Content Include="Content\images\bg\trace.png" />
+    <Content Include="Content\images\bg\wavy.gif" />
+    <Content Include="Content\images\credit-card-small.png" />
+    <Content Include="Content\images\credit-card.png" />
+    <Content Include="Content\images\how-to-add-insurance.png" />
+    <Content Include="Content\images\how-to-select-dates.png" />
+    <Content Include="Content\images\how-to-select-flights.png" />
+    <Content Include="Content\images\icon\icon-10x.png" />
+    <Content Include="Content\images\icon\icon-adult-big.png" />
+    <Content Include="Content\images\icon\icon-adult.png" />
+    <Content Include="Content\images\icon\icon-airplane-blue-light.png" />
+    <Content Include="Content\images\icon\icon-airplane-blue.png" />
+    <Content Include="Content\images\icon\icon-airplane-change.png" />
+    <Content Include="Content\images\icon\icon-airplane-green.png" />
+    <Content Include="Content\images\icon\icon-airplane-hover.png" />
+    <Content Include="Content\images\icon\icon-airplane-plus-blue.png" />
+    <Content Include="Content\images\icon\icon-airplane-plus-grey.png" />
+    <Content Include="Content\images\icon\icon-airplane-white.png" />
+    <Content Include="Content\images\icon\icon-airplane.png" />
+    <Content Include="Content\images\icon\icon-airport.png" />
+    <Content Include="Content\images\icon\icon-alert-date.png" />
+    <Content Include="Content\images\icon\icon-amex-2.png" />
+    <Content Include="Content\images\icon\icon-amex.png" />
+    <Content Include="Content\images\icon\icon-arrow-blue-dark-right.png" />
+    <Content Include="Content\images\icon\icon-arrow-blue-hover.png" />
+    <Content Include="Content\images\icon\icon-arrow-blue-left-hover.png" />
+    <Content Include="Content\images\icon\icon-arrow-blue-left-normal.png" />
+    <Content Include="Content\images\icon\icon-arrow-blue-right-hover.png" />
+    <Content Include="Content\images\icon\icon-arrow-blue-right-normal.png" />
+    <Content Include="Content\images\icon\icon-arrow-circle-left.png" />
+    <Content Include="Content\images\icon\icon-arrow-circle-right.png" />
+    <Content Include="Content\images\icon\icon-arrow-circle-up.png" />
+    <Content Include="Content\images\icon\icon-arrow-down.png" />
+    <Content Include="Content\images\icon\icon-arrow-download.png" />
+    <Content Include="Content\images\icon\icon-arrow-gray-left.png" />
+    <Content Include="Content\images\icon\icon-arrow-gray-right.png" />
+    <Content Include="Content\images\icon\icon-arrow-navigation-hover.png" />
+    <Content Include="Content\images\icon\icon-arrow-navigation-normal.png" />
+    <Content Include="Content\images\icon\icon-arrow-opacity-down.png" />
+    <Content Include="Content\images\icon\icon-arrow-opacity-up.png" />
+    <Content Include="Content\images\icon\icon-arrow-slider-left.png" />
+    <Content Include="Content\images\icon\icon-arrow-slider-right.png" />
+    <Content Include="Content\images\icon\icon-arrow-up-white.png" />
+    <Content Include="Content\images\icon\icon-arrow-white-right.png" />
+    <Content Include="Content\images\icon\icon-arrow.png" />
+    <Content Include="Content\images\icon\icon-assistance-alert.png" />
+    <Content Include="Content\images\icon\icon-available-seat.png" />
+    <Content Include="Content\images\icon\icon-baloon.png" />
+    <Content Include="Content\images\icon\icon-bathroom.png" />
+    <Content Include="Content\images\icon\icon-booking-alert.png" />
+    <Content Include="Content\images\icon\icon-bradesco.png" />
+    <Content Include="Content\images\icon\icon-browsing-alert.png" />
+    <Content Include="Content\images\icon\icon-calendar-sheet-hover.png" />
+    <Content Include="Content\images\icon\icon-calendar-sheet.png" />
+    <Content Include="Content\images\icon\icon-calendar.png" />
+    <Content Include="Content\images\icon\icon-cancel.png" />
+    <Content Include="Content\images\icon\icon-card-remove.png" />
+    <Content Include="Content\images\icon\icon-center-city.png" />
+    <Content Include="Content\images\icon\icon-checked-black.png" />
+    <Content Include="Content\images\icon\icon-checked-blue.png" />
+    <Content Include="Content\images\icon\icon-checked.png" />
+    <Content Include="Content\images\icon\icon-children.png" />
+    <Content Include="Content\images\icon\icon-clock.png" />
+    <Content Include="Content\images\icon\icon-close-modal.png" />
+    <Content Include="Content\images\icon\icon-close-white.png" />
+    <Content Include="Content\images\icon\icon-close.png" />
+    <Content Include="Content\images\icon\icon-compass-hover.png" />
+    <Content Include="Content\images\icon\icon-compass.png" />
+    <Content Include="Content\images\icon\icon-contact-yellow.png" />
+    <Content Include="Content\images\icon\icon-date-back-hover.png" />
+    <Content Include="Content\images\icon\icon-date-end-hover.png" />
+    <Content Include="Content\images\icon\icon-date-end.png" />
+    <Content Include="Content\images\icon\icon-date-first-hover.png" />
+    <Content Include="Content\images\icon\icon-date-hover.png" />
+    <Content Include="Content\images\icon\icon-date-init.png" />
+    <Content Include="Content\images\icon\icon-diners-club-2.png" />
+    <Content Include="Content\images\icon\icon-diners-club.png" />
+    <Content Include="Content\images\icon\icon-directions-hover.png" />
+    <Content Include="Content\images\icon\icon-doorknob-hover.png" />
+    <Content Include="Content\images\icon\icon-doorknob-straight.png" />
+    <Content Include="Content\images\icon\icon-doorknob.png" />
+    <Content Include="Content\images\icon\icon-emergency-exit.png" />
+    <Content Include="Content\images\icon\icon-exclamation-blue.png" />
+    <Content Include="Content\images\icon\icon-family-hover.png" />
+    <Content Include="Content\images\icon\icon-family.png" />
+    <Content Include="Content\images\icon\icon-filter-arrow-active-hover.png" />
+    <Content Include="Content\images\icon\icon-filter-arrow-down.png" />
+    <Content Include="Content\images\icon\icon-football-hover.png" />
+    <Content Include="Content\images\icon\icon-football.png" />
+    <Content Include="Content\images\icon\icon-from.png" />
+    <Content Include="Content\images\icon\icon-help.png" />
+    <Content Include="Content\images\icon\icon-hotel-match.png" />
+    <Content Include="Content\images\icon\icon-hotel-nomatch.png" />
+    <Content Include="Content\images\icon\icon-hotel.png" />
+    <Content Include="Content\images\icon\icon-house.png" />
+    <Content Include="Content\images\icon\icon-info-white.png" />
+    <Content Include="Content\images\icon\icon-itau.png" />
+    <Content Include="Content\images\icon\icon-kitchen.png" />
+    <Content Include="Content\images\icon\icon-logo-tripadvisor.png" />
+    <Content Include="Content\images\icon\icon-luggage-airplane.png" />
+    <Content Include="Content\images\icon\icon-luggage-hover.png" />
+    <Content Include="Content\images\icon\icon-luggage-white.png" />
+    <Content Include="Content\images\icon\icon-luggage.png" />
+    <Content Include="Content\images\icon\icon-map-hover.png" />
+    <Content Include="Content\images\icon\icon-maps.png" />
+    <Content Include="Content\images\icon\icon-mastercard-2.png" />
+    <Content Include="Content\images\icon\icon-mastercard.png" />
+    <Content Include="Content\images\icon\icon-minus-white.png" />
+    <Content Include="Content\images\icon\icon-minus.png" />
+    <Content Include="Content\images\icon\icon-money.png" />
+    <Content Include="Content\images\icon\icon-moon.png" />
+    <Content Include="Content\images\icon\icon-nav-vertical-bottom-inactive.png" />
+    <Content Include="Content\images\icon\icon-nav-vertical-bottom.png" />
+    <Content Include="Content\images\icon\icon-nav-vertical-top-inactive.png" />
+    <Content Include="Content\images\icon\icon-nav-vertical-top.png" />
+    <Content Include="Content\images\icon\icon-no-results.png" />
+    <Content Include="Content\images\icon\icon-options.png" />
+    <Content Include="Content\images\icon\icon-package.png" />
+    <Content Include="Content\images\icon\icon-partners.png" />
+    <Content Include="Content\images\icon\icon-payment-yellow.png" />
+    <Content Include="Content\images\icon\icon-phone-plus-grey.png" />
+    <Content Include="Content\images\icon\icon-phone.png" />
+    <Content Include="Content\images\icon\icon-pin-map.png" />
+    <Content Include="Content\images\icon\icon-plus-white.png" />
+    <Content Include="Content\images\icon\icon-plus.png" />
+    <Content Include="Content\images\icon\icon-recommended-hotel.png" />
+    <Content Include="Content\images\icon\icon-reset.png" />
+    <Content Include="Content\images\icon\icon-scroll-left.png" />
+    <Content Include="Content\images\icon\icon-scroll-right.png" />
+    <Content Include="Content\images\icon\icon-search.png" />
+    <Content Include="Content\images\icon\icon-seat-occupied.png" />
+    <Content Include="Content\images\icon\icon-seat-selected.png" />
+    <Content Include="Content\images\icon\icon-share-blue.png" />
+    <Content Include="Content\images\icon\icon-sorry.png" />
+    <Content Include="Content\images\icon\icon-special-seat.png" />
+    <Content Include="Content\images\icon\icon-ssl-seal.png" />
+    <Content Include="Content\images\icon\icon-star-off.png" />
+    <Content Include="Content\images\icon\icon-star-on.png" />
+    <Content Include="Content\images\icon\icon-station.png" />
+    <Content Include="Content\images\icon\icon-submarino-aura-2.png" />
+    <Content Include="Content\images\icon\icon-submarino-aura.png" />
+    <Content Include="Content\images\icon\icon-submarino-master-2.png" />
+    <Content Include="Content\images\icon\icon-submarino-master.png" />
+    <Content Include="Content\images\icon\icon-text-cta-normal-white.png" />
+    <Content Include="Content\images\icon\icon-ticket-hover.png" />
+    <Content Include="Content\images\icon\icon-ticket.png" />
+    <Content Include="Content\images\icon\icon-directions.png" />
+    <Content Include="Content\images\icon\icon-facebook-green.png" />
+    <Content Include="Content\images\icon\icon-filter-arrow-active.png" />
+    <Content Include="Content\images\icon\icon-filter-arrow-hover.png" />
+    <Content Include="Content\images\icon\icon-filter-arrow-normal.png" />
+    <Content Include="Content\images\icon\icon-filter-arrow-open.png" />
+    <Content Include="Content\images\icon\icon-google-plus-green.png" />
+    <Content Include="Content\images\icon\icon-map.png" />
+    <Content Include="Content\images\icon\icon-phone-white.png" />
+    <Content Include="Content\images\icon\icon-text-cta-click.png" />
+    <Content Include="Content\images\icon\icon-text-cta-hover.png" />
+    <Content Include="Content\images\icon\icon-text-cta-normal.png" />
+    <Content Include="Content\images\icon\icon-to.png" />
+    <Content Include="Content\images\icon\icon-tripadvisor.png" />
+    <Content Include="Content\images\icon\icon-twitter-green.png" />
+    <Content Include="Content\images\icon\icon-user-yellow.png" />
+    <Content Include="Content\images\icon\icon-visa-2.png" />
+    <Content Include="Content\images\icon\icon-visa.png" />
+    <Content Include="Content\images\oferta-especial.png" />
+    <Content Include="Content\images\placeholder\flights-promos.png" />
+    <Content Include="Content\images\placeholder\marquee-1.jpg" />
+    <Content Include="Content\images\placeholder\marquee-2.jpg" />
+    <Content Include="Content\images\placeholder\marquee-3.jpg" />
+    <Content Include="Content\images\placeholder\marquee-4.jpg" />
+    <Content Include="Content\images\placeholder\marquee-5.jpg" />
+    <Content Include="Content\images\placeholder\marquee-hotel.png" />
+    <Content Include="Content\images\placeholder\praia.png" />
+    <Content Include="Content\images\seats.png" />
+    <Content Include="Content\images\security-certification.png" />
+    <Content Include="Content\images\submarine-yellow.png" />
+    <Content Include="Content\images\submarino-viagens-logo-full.png" />
+    <Content Include="Content\images\submarino-viagens-logo.png" />
+    <Content Include="Content\images\tam-lg.png" />
+    <Content Include="Content\images\tam.png" />
+    <Content Include="Content\js\booking.js" />
+    <Content Include="Content\js\bootstrap\bootstrap-switch.js" />
+    <Content Include="Content\js\bootstrap\bootstrap-switch.min.js">
+      <DependentUpon>bootstrap-switch.js</DependentUpon>
+    </Content>
+    <Content Include="Content\js\bootstrap\bootstrap.min.js" />
+    <Content Include="Content\js\bootstrap\jquery.bootstrap-touchspin.js" />
+    <Content Include="Content\js\jquery.tmpl.js" />
+    <Content Include="Content\js\lib\handlebars-v1.3.0.js" />
+    <Content Include="Content\js\lib\handlebars-v1.3.0.min.js">
+      <DependentUpon>handlebars-v1.3.0.js</DependentUpon>
+    </Content>
+    <Content Include="Content\fonts\omnes\omnesmed-webfont.eot" />
+    <Content Include="Content\fonts\omnes\omnesmed-webfont.ttf" />
+    <Content Include="Content\fonts\omnes\omnesmed-webfont.woff" />
+    <Content Include="Content\fonts\omnes\omnesreg-webfont.eot" />
+    <Content Include="Content\fonts\omnes\omnesreg-webfont.ttf" />
+    <Content Include="Content\fonts\omnes\omnesreg-webfont.woff" />
+    <Content Include="Content\fonts\omnes\omnessem-webfont.eot" />
+    <Content Include="Content\fonts\omnes\omnessem-webfont.ttf" />
+    <Content Include="Content\fonts\omnes\omnessem-webfont.woff" />
+    <Content Include="Content\css\Site.less" />
+    <Content Include="Content\css\Site.css.map">
+      <DependentUpon>Site.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\sprite.less" />
+    <Content Include="Content\css\sprite.css.map">
+      <DependentUpon>sprite.css</DependentUpon>
+    </Content>
+    <Content Include="Content\js\lib\handlebars-v1.3.0.min.js.map">
+      <DependentUpon>handlebars-v1.3.0.min.js</DependentUpon>
+    </Content>
+    <Content Include="Content\js\bootstrap\bootstrap-switch.min.js.map">
+      <DependentUpon>bootstrap-switch.min.js</DependentUpon>
+    </Content>
+    <None Include="Content\js\lib\jquery-2.1.0-vsdoc.js" />
+    <Content Include="Content\js\lib\jquery-2.1.0.js" />
+    <Content Include="Content\js\lib\jquery-2.1.0.min.js">
+      <DependentUpon>jquery-2.1.0.js</DependentUpon>
+    </Content>
+    <Content Include="Content\js\lib\modernizr-2.7.2.js" />
+    <Content Include="Content\js\lib\jquery-2.1.0.min.js.map">
+      <DependentUpon>jquery-2.1.0.min.js</DependentUpon>
+    </Content>
+    <Content Include="Content\js\lib\modernizr-2.7.2.min.js.map">
+      <DependentUpon>modernizr-2.7.2.min.js</DependentUpon>
+    </Content>
+    <Content Include="Content\js\module.min.js.map">
+      <DependentUpon>module.min.js</DependentUpon>
+    </Content>
+    <None Include="Content\js\plugin\jquery.validate-vsdoc.js" />
+    <Content Include="Content\js\lib\modernizr-2.7.2.min.js">
+      <DependentUpon>modernizr-2.7.2.js</DependentUpon>
+    </Content>
+    <Content Include="Content\js\module.min.js">
+      <DependentUpon>module.js</DependentUpon>
+    </Content>
+    <Content Include="Content\js\plugin\jquery-ui-1.10.4.custom.js" />
+    <Content Include="Content\js\plugin\jquery-ui-1.10.4.custom.min.js" />
+    <Content Include="Content\js\plugin\jquery.mask.min.js" />
+    <Content Include="Content\js\plugin\jquery.validate.js" />
+    <Content Include="Content\js\plugin\jquery.validate.min.js">
+      <DependentUpon>jquery.validate.js</DependentUpon>
+    </Content>
+    <Content Include="Content\js\plugin\jquery.validate.unobtrusive.js" />
+    <Content Include="Content\js\plugin\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Content\js\plugin\respond.min.js" />
+    <Content Include="Content\js\module.js" />
+    <Content Include="Content\js\site.js" />
+    <Content Include="Content\js\site.min.js">
+      <DependentUpon>site.js</DependentUpon>
+    </Content>
+    <Content Include="Global.asax" />
+    <None Include="Properties\PublishProfiles\Publish.pubxml" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Hotel\Index.cshtml" />
+    <Content Include="Views\Hotel\SearchResult.cshtml" />
+    <Content Include="Views\Hotel\Booking.cshtml" />
+    <Content Include="Views\Flight\Index.cshtml" />
+    <Content Include="Views\Flight\MultiDestination.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Examples\Form.cshtml" />
+    <Content Include="Views\Examples\Index.cshtml" />
+    <Content Include="Views\Flight\Booking.cshtml" />
+    <Content Include="Views\Flight\SearchResult.cshtml" />
+    <Content Include="Views\Examples\Tooltips.cshtml" />
+    <Content Include="Content\js\plugin\jquery.validate.min.js.map">
+      <DependentUpon>jquery.validate.min.js</DependentUpon>
+    </Content>
+    <Content Include="Content\js\site.min.js.map">
+      <DependentUpon>site.min.js</DependentUpon>
+    </Content>
+    <Content Include="Views\Flight\Confirmation.cshtml" />
+    <Content Include="Views\Hotel\Confirmation.cshtml" />
+    <Content Include="Views\Packages\Index.cshtml" />
+    <Content Include="Views\Packages\HotelSearchResult.cshtml" />
+    <Content Include="Views\Packages\Detail.cshtml" />
+    <Content Include="Views\Packages\Booking.cshtml" />
+    <Content Include="Views\Packages\Confirmation.cshtml" />
+    <Content Include="Views\MultiDestination\Index.cshtml" />
+    <Content Include="Views\MultiDestination\SearchResult.cshtml" />
+    <Content Include="Views\MultiDestination\Booking.cshtml" />
+    <Content Include="Views\MultiDestination\Confirmation.cshtml" />
+    <Content Include="Views\Hotel\Detail.cshtml" />
+    <Content Include="Views\Packages\FlightSearchResult.cshtml" />
+    <Content Include="Views\Shared\_FooterCompact.cshtml" />
+    <Content Include="Views\Shared\_FooterFull.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Content\images\Iconography\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\fonts\fontawesome\fontawesome-webfont.eot" />
+    <Content Include="Content\fonts\fontawesome\fontawesome-webfont.ttf" />
+    <Content Include="Content\fonts\fontawesome\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\fontawesome\FontAwesome.otf" />
+    <Content Include="Content\fonts\glyphicons\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\glyphicons\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons\glyphicons-halflings-regular.woff" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49869</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://subviagens.dev.tesla.net.br</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

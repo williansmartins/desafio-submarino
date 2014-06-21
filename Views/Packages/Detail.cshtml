@@ -1,0 +1,864 @@
+﻿@{
+    ViewBag.Title = "/Packages/Detail";
+    ViewBag.BodyClass = "flux-collapsed";
+}
+
+<div class="container-fluid packages search-result top">
+    <!-- Busca -->
+    <form class="search clearfix package-search">
+        <div class="container-fluid">
+            <div class="checkin-checkout pull-left">
+                <div class="flight clearfix">
+                    <div class="wrapper-init">
+                        <div class="col destinys from">
+                            <input type="text" class="suggestions">
+                        </div>
+                        <div class="col destinys to">
+                            <input type="text" class="suggestions">
+                        </div>
+                    </div>
+                    <div class="col dates jrange">
+                        <div class="wrap-dates">
+                            <label>Voo</label>
+                            <div class="data date-init"></div>
+                            <i></i>
+                            <div class="data date-end"></div>
+                        </div>
+                        <div class="calendar"></div>
+                    </div>
+                </div>
+
+                <div class="accommodation">
+                    <div class="col hotel">
+                        <input type="text" class="suggestions">
+                    </div>
+                    <div class="col dates jrange" data-container=".container-how-to-select-dates" data-target-selector=".popover-how-to-select-dates" data-css-class="how-to-select-dates" data-placement="bottom" data-title="Escolha as datas para continuar">
+                        <div class="wrap-dates">
+                            <label>Hotel</label>
+                            <div class="data date-init">Entrada</div>
+                            <i></i>
+                            <div class="data date-end">Saída</div>
+                        </div>
+                        <div class="calendar"></div>
+                    </div>
+                    <div class="container-how-to-select-dates">
+                        <div class="popover-how-to-select-dates hidden">
+                            <p>Para ver o quarto e preços disponíveis, preencha a data de entrada e de saída.</p>
+                            <img src="/Content/images/how-to-select-dates.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="options hotel-option">
+                <button type="button" class="btn btn-md btn-text-cta btn-expand options options-button click">
+                    <i class="glyphicon glyphicon-icon-doorknob"></i>
+                    <span class="options-button"><span class="number">3</span> Quartos</span>
+                </button>
+                <div class="options-pop clearfix">
+                    <div class="top-fixed">
+                        <div class="add-room">
+                            <div class="border">
+                                <button type="button" class="btn btn-sm btn-text-icon"><span class="glyphicon glyphicon-plus-white"></span>Adicionar quarto</button>
+                            </div>
+                        </div>
+                        <table class="row-room">
+                            <tr>
+                                <td class="th-room" data-room="room-1">
+                                    <button type="button" class="btn">
+                                        <span class="text">Quarto 1</span>
+                                        <span class="glyphicon glyphicon-btn-close"></span>
+                                    </button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="scroll">
+                        <table class="room-people content-1">
+                            <tr>
+                                <td data-room="room-1">
+                                    <label class="spinner-wrapper">
+                                        Adulto
+                                        <input class="spinner spinner-simple" name="value" value="0">
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-room="room-1">
+                                    <label class="spinner-wrapper">
+                                        Criança
+                                        <input class="spinner spinner-simple spinner-child" name="childAge" value="0">
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr class="age hidden">
+                                <td data-room="room-1"></td>
+                            </tr>
+                        </table>
+                        <div class="options-flight">
+                            <div class="radio trip dark-theme">
+                                <div>
+                                    <input type="radio" checked="" value="roundTrip" name="typeTrip" id="roundTrip">
+                                    <label for="roundTrip">Ida e volta</label>
+                                </div>
+                                <div>
+                                    <input type="radio" value="onewWayTrip" name="typeTrip" id="onewWayTrip">
+                                    <label for="onewWayTrip">Somente ida</label>
+                                </div>
+                            </div>
+                            <ul class="flight-type">
+                                <li>
+                                    <div class="checkbox dark-theme">
+                                        <input type="checkbox" value="" id="classEconomy">
+                                        <label for="classEconomy">
+                                            Econômica
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox dark-theme">
+                                        <input type="checkbox" value="" id="classBusiness">
+                                        <label for="classBusiness">
+                                            Executiva
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox dark-theme">
+                                        <input type="checkbox" value="" id="classPremiumEconomy">
+                                        <label for="classPremiumEconomy">
+                                            Econômica Superior
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox dark-theme">
+                                        <input type="checkbox" value="" id="classMixed">
+                                        <label for="classMixed">
+                                            Mista
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-lg btn-default btn-search">Nova Busca</button>
+        </div>
+    </form>
+    <!-- / Busca -->
+    <!-- Passos -->
+    <ul class="steps hotel-steps clearfix">
+        <li class="bar-title">Monte seu pacote</li>
+        <li class="step-1"><i class="glyphicon glyphicon-checked"></i>Escolha seu Hotel</li>
+        <li><i class="selected">2</i>Escolha seu Quarto</li>
+        <li><i>3</i>Escolha seu Voo</li>
+    </ul>
+    <!-- / Passos -->
+    <div class="hotel-tooltip package">
+        <div class="alert alert-info fade booking-alert">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+            A última reserva deste hotel foi feita hoje às 16:51, nos Estados Unidos
+        </div>
+        <div class="alert alert-info fade browsing-alert">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+            Há 7 pessoas pesquisando este hotel agora.
+        </div>
+        <div class="container-trip-advisor-review">
+            <div class="container-trip-advisor-review">
+                <div class="title"><i class="glyphicon glyphicon-logo-tripadvisor"></i> TripAdvisor</div>
+                <div id="carouselTripAdvisor" class="carousel slide" data-ride="carousel">
+
+                    <ul class="carousel-inner">
+                        <li class="item active">
+                            The hotel is beautiful. The buffet-style restaurante is the best I have ever seen... they have a large...
+                        </li>
+                        <li class="item">
+                            The hotel is beautiful. The buffet-style restaurante is the best I have ever seen... they have a large...
+                        </li>
+                        <li class="item">
+                            The hotel is beautiful. The buffet-style restaurante is the best I have ever seen... they have a large...
+                        </li>
+                    </ul>
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselTripAdvisor" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselTripAdvisor" data-slide-to="1"></li>
+                        <li data-target="#carouselTripAdvisor" data-slide-to="2"></li>
+                    </ol>
+                    <button type="button" class="btn btn-sm btn-text-cta btn-block"><span class="glyphicon glyphicon-chevron-right"></span>Todas avaliações</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="marquee-hotel">
+        <div class="marquee-hotel-container"></div>
+    </div>
+
+    <div class="container-fluid detail top-package">
+        <div class="hotel-description-top">
+            <div class="row hotel-detail-wrapper">
+                <div class="first-box">
+                    <div class="alert-no-dates">
+                        <span class="glyphicon glyphicon-alert-date"></span>
+                        <p>Por favor, selecione as datas de entrada e saída acima</p>
+                        <p>Para ver os quartos e as tarifas disponíveis</p>
+                    </div>
+                    <h1>Promenade Casa Del Mar Hotel</h1>
+                    <div class="row">
+                        <div class="col-6">
+                            Rua Juanquao Silva 69-Centro<br />
+                            202411-11 Rio De Janeiro<br />
+                            RJ Brasil
+                        </div>
+                        <div class="col-6">
+                            <div class="rating">
+                                <span class="stars">
+                                    <span class="glyphicon glyphicon-star-on"></span>
+                                    <span class="glyphicon glyphicon-star-on"></span>
+                                    <span class="glyphicon glyphicon-star-on"></span>
+                                    <span class="glyphicon glyphicon-star-on"></span>
+                                    <span class="glyphicon glyphicon-star-off"></span>
+                                </span>
+                            </div>
+                            <a class="reviews" href="#">312 Guest Reviews</a>
+                        </div>
+                    </div>
+                    <div class="row summary">
+                        <div class="col-6">
+                            <p>The American Hotel is located in one of the major historical and cultural neighborhoods of Rio, being just 3.70 km from Santos Dumont Airport.</p>
+                            <p>The rooms are comfortable and equipped with air conditioning, minibar, cable TV and telephone for your convenience and containing WI-FI at their disposal.</p>
+                        </div>
+                        <div class="col-6">
+                            American Hotel is near the Arcos da Lapa, Postcard of the city where there are differences of commerce, bars, restaurants and easy access to the subway network, the Corcovado and Sugar Loaf.
+                        </div>
+                    </div>
+
+                </div>
+                <div class="aside-hotel-description">
+                    <div class="share big">
+                        <a href="#"><i class="glyphicon glyphicon-pin-map"></i>mapa</a>
+                        <a href="#"><i class="glyphicon glyphicon-print"></i>Imprimir</a>
+                        <a href="javascript:" class="popover-toggler" data-target-selector=".popover-send-email-confirmation" data-container=".container-send-email-confirmation" data-placement="left" data-title="Enviar oferta por email" data-width="300"><i class="glyphicon glyphicon-envelope"></i>Email</a>
+                        <a href="#"><i class="glyphicon glyphicon-share-blue"></i>Indicar</a>
+                    </div>
+                    <button type="button" class="btn btn-block btn-sm btn-tertiary">
+                        <span class="glyphicon glyphicon-check"></span>
+                        Recomendo este hotel
+                    </button>
+                    <button type="button" class="btn btn-block btn-sm btn-tertiary">
+                        <span class="glyphicon glyphicon-heart"></span>
+                        Quero conhecer este hotel
+                    </button>
+                    <img src="/Content/images/placeholder/praia.png" />
+                </div>
+            </div>
+        </div>
+        <div class="hotel-detail-wrapper">
+            <div class="select-room">
+                <h2>Escolha seu Quarto</h2>
+                <div class="select-room">
+                    <div class="row">
+                        <div class="col-10"></div>
+                        <div class="col-2"></div>
+                    </div>
+                </div>
+                <div class="wrap-fixed clearfix hotel-page">
+                    <div class="table-result pull-left">
+                        <div class="select-room">
+                            <ul class="room">
+                                <li>
+                                    <div class="room-detail">
+                                        <table>
+                                            <tr>
+                                                <td rowspan="2" width="140" class="room-pics-area">
+                                                    <div class="room-pics">
+                                                        <div class="room-pics-mask">
+                                                            <div class="room-pics-carousel">
+                                                                <div id="carousel-1" class="carousel slide" data-ride="carousel">
+                                                                    <!-- Wrapper for slides -->
+                                                                    <div class="carousel-inner">
+                                                                        <div class="item active">
+                                                                            <img src="http://lorempixel.com/300/180/">
+                                                                        </div>
+                                                                        <div class="item">
+                                                                            <img src="http://lorempixel.com/300/180/">
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- Controls -->
+                                                                    <a class="left carousel-control" href="#carousel-1" data-slide="prev">
+                                                                        <span class="glyphicon glyphicon-slider-left icon-prev"></span>
+                                                                    </a>
+                                                                    <a class="right carousel-control" href="#carousel-1" data-slide="next">
+                                                                        <span class="glyphicon glyphicon-slider-right icon-next"></span>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="limited-availability"></div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td width="160" class="room-title-and-price">
+                                                    <h3>Quarto Duplo Standard</h3>
+                                                    <div class="currency">R$ / Noite</div>
+                                                    <div class="value">985,00</div>
+                                                </td>
+                                                <td width="100">
+                                                    <div class="occupancy">
+                                                        <h4>Nº Máx de Ocupantes</h4>
+                                                        <span class="glyphicon glyphicon-adult-big"></span>
+                                                        <span class="glyphicon glyphicon-adult-big"></span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="cancellation">
+                                                        <p><span>Política de Cancelamento:</span>Você pode cancelar sua reserva sem multa até 10/04/2014.</p>
+                                                        <p>Após esta data em caso de não comparecimento, será cobrada uma multa de R$ 58. <a href="#">Veja mais</a></p>
+                                                    </div>
+                                                </td>
+                                                <td width="100">
+                                                    <div class="info">
+                                                        <span class="spanInfo" data-show-info=".info-detail"><i class="glyphicon glyphicon-icon-info"></i><b>Info</b></span>
+                                                    </div>
+                                                </td>
+                                                <td width="80">
+                                                    <div class="number-of-rooms">
+                                                        <h4>Quant. Quarto</h4>
+                                                        <label class="spinner-wrapper">
+                                                            <input class="spinner spinner-simple" name="value" value="0">
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="5" class="room-aditional">
+                                                    <div class="clearfix">
+                                                        <ul class="pull-left room-included">
+                                                            <li>Café-da-manhã Incluiso</li>
+                                                            <li>Estacionamento Grátis</li>
+                                                            <li>Wi-Fi no Quarto</li>
+                                                        </ul>
+                                                        <ul class="pull-right">
+                                                            <li>Taxa de 10% não inclusa</li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <div class="info-detail hidden">
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h3>About the Room</h3>
+                                                    <div class="content">
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sollicitudin fermentum semper. Curabitur egestas ultricies augue. Quisque at lacus diam. Morbi et ipsum et est tincidunt vestibulum vel vitae massa. Suspendisse fringilla tellus ac elit luctus, id blandit nisl laoreet. Ut vitae consectetur sem, in pharetra dui. Suspendisse commodo magna nec elit auctor consequat. Nam dictum, orci eu placerat euismod, arcu nunc elementum magna, tempus egestas turpis massa vitae sapien. Nulla at libero venenatis, posuere ante eu, egestas sem.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h3>Room Amenities</h3>
+                                                    <div class="content">
+                                                        <ul>
+                                                            <li>• AIR CONDITIONING</li>
+                                                            <li>• CLIMATE CONTROL</li>
+                                                            <li>• CRIBS / INFANT BEDS AVAILABLE</li>
+                                                            <li>• DESK</li>
+                                                            <li>• HDTV</li>
+                                                            <li>• IN-ROOM SAFE</li>
+                                                            <li>• PAY MOVIES</li>
+                                                            <li>• PREMIUM BEDDING</li>
+                                                            <li>• SHOWER / TUB COMBINATION</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="room-detail">
+                                        <table>
+                                            <tr>
+                                                <td rowspan="2" width="140" class="room-pics-area">
+                                                    <div class="room-pics">
+                                                        <div class="room-pics-mask">
+                                                            <div class="room-pics-carousel">
+                                                                <div id="carousel-2" class="carousel slide" data-ride="carousel">
+                                                                    <!-- Wrapper for slides -->
+                                                                    <div class="carousel-inner">
+                                                                        <div class="item active">
+                                                                            <img src="http://lorempixel.com/300/180/">
+                                                                        </div>
+                                                                        <div class="item">
+                                                                            <img src="http://lorempixel.com/300/180/">
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- Controls -->
+                                                                    <a class="left carousel-control" href="#carousel-2" data-slide="prev">
+                                                                        <span class="glyphicon glyphicon-slider-left icon-prev"></span>
+                                                                    </a>
+                                                                    <a class="right carousel-control" href="#carousel-2" data-slide="next">
+                                                                        <span class="glyphicon glyphicon-slider-right icon-next"></span>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="limited-availability"></div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td width="160" class="room-title-and-price">
+                                                    <h3>Quarto Duplo Standard</h3>
+                                                    <div class="currency">R$ / Noite</div>
+                                                    <div class="value">985,00</div>
+                                                </td>
+                                                <td width="100">
+                                                    <div class="occupancy">
+                                                        <h4>Nº Máx de Ocupantes</h4>
+                                                        <span class="glyphicon glyphicon-adult-big"></span>
+                                                        <span class="glyphicon glyphicon-adult-big"></span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="cancellation">
+                                                        <p><span>Política de Cancelamento:</span>Você pode cancelar sua reserva sem multa até 10/04/2014.</p>
+                                                        <p>Após esta data em caso de não comparecimento, será cobrada uma multa de R$ 58. <a href="#">Veja mais</a></p>
+                                                    </div>
+                                                </td>
+                                                <td width="100">
+                                                    <div class="info">
+                                                        <span class="spanInfo" data-show-info=".info-detail"><i class="glyphicon glyphicon-icon-info"></i><b>Info</b></span>
+                                                    </div>
+                                                </td>
+                                                <td width="80">
+                                                    <div class="number-of-rooms">
+                                                        <h4>Quant. Quarto</h4>
+                                                        <label class="spinner-wrapper">
+                                                            <input class="spinner spinner-simple" name="value" value="0">
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="5" class="room-aditional">
+                                                    <div class="clearfix">
+                                                        <ul class="pull-left room-included">
+                                                            <li>Café-da-manhã Incluiso</li>
+                                                            <li>Estacionamento Grátis</li>
+                                                            <li>Wi-Fi no Quarto</li>
+                                                        </ul>
+                                                        <ul class="pull-right">
+                                                            <li>Taxa de 10% não inclusa</li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <div class="info-detail hidden">
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h3>About the Room</h3>
+                                                    <div class="content">
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sollicitudin fermentum semper. Curabitur egestas ultricies augue. Quisque at lacus diam. Morbi et ipsum et est tincidunt vestibulum vel vitae massa. Suspendisse fringilla tellus ac elit luctus, id blandit nisl laoreet. Ut vitae consectetur sem, in pharetra dui. Suspendisse commodo magna nec elit auctor consequat. Nam dictum, orci eu placerat euismod, arcu nunc elementum magna, tempus egestas turpis massa vitae sapien. Nulla at libero venenatis, posuere ante eu, egestas sem.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h3>Room Amenities</h3>
+                                                    <div class="content">
+                                                        <ul>
+                                                            <li>• AIR CONDITIONING</li>
+                                                            <li>• CLIMATE CONTROL</li>
+                                                            <li>• CRIBS / INFANT BEDS AVAILABLE</li>
+                                                            <li>• DESK</li>
+                                                            <li>• HDTV</li>
+                                                            <li>• IN-ROOM SAFE</li>
+                                                            <li>• PAY MOVIES</li>
+                                                            <li>• PREMIUM BEDDING</li>
+                                                            <li>• SHOWER / TUB COMBINATION</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="price">
+                        <div class="valign">
+                            <div class="cell">
+                                <div class="fixed">
+                                    <span class="rooms">1x Quarto Duplo<br /> 2x Quarto twin</span>
+                                    <span class="period">R$ / Período</span>
+                                    <span class="val">2.577,00</span>
+
+                                    <span class="tax">A incluir taxas + encargos</span>
+                                    <button type="button" class="btn btn-sm btn-default" onclick="Site._selectRoom()">Reservar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div>
+                <h2>Facilidades & Políticas</h2>
+                <table class="amenities-and-policies">
+                    <tr>
+                        <th class="title-flow title-amenities">Facilidades</th>
+                        <th class="title-flow title-policies">Políticas do Hotel</th>
+                        <th class="title-flow">Pagamento</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="row amenities">
+                                <div class="col-6">
+                                    <h3>Entretenimento</h3>
+                                    <ul>
+                                        <li>• Piscina (para todas as idades)</li>
+                                    </ul>
+
+                                    <h3>Fitness</h3>
+                                    <ul>
+                                        <li>• Academia</li>
+                                        <li>• Spa</li>
+                                        <li>• Massagem</li>
+                                    </ul>
+                                    <h3>Quarto</h3>
+                                    <ul>
+                                        <li>• Área de Estar</li>
+                                        <li>• Sofá</li>
+                                        <li>• Mesa</li>
+                                        <li>• TV de Tela Plana</li>
+                                        <li>• Wi-Fi disponível no quarto (serviço cobrado)</li>
+                                    </ul>
+                                    <h3>Alimentação</h3>
+                                    <ul>
+                                        <li>• Bar</li>
+                                        <li>• Restaurante À la Carte,</li>
+                                        <li>• Restaurante Buffet</li>
+                                    </ul>
+                                </div>
+                                <div class="col-6">
+                                    <h3>Transporte</h3>
+                                    <ul>
+                                        <li>• Estacionamento Gratuito</li>
+                                    </ul>
+
+                                    <h3>Serviços</h3>
+                                    <ul>
+                                        <li>• Room Service</li>
+                                        <li>• Aluguel Carro</li>
+                                        <li>• Lavagem à seco</li>
+                                        <li>• Lavanderia</li>
+                                        <li>• Inrormações Turísticas</li>
+                                        <li>• Recepção 24 horas</li>
+                                        <li>• Centro de convenções</li>
+                                    </ul>
+
+                                    <h3>Conveniências</h3>
+                                    <ul>
+                                        <li>• Jornais</li>
+                                        <li>• Cofre</li>
+                                        <li>• Elevador</li>
+                                        <li>• Quartos para não-fumantes</li>
+                                        <li>• Acessível para deficientes físicos</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="policies">
+                            <div class="row">
+                                <div class="col-6 open">
+                                    Entrada
+                                    <span class="time">12:00</span>
+                                </div>
+                                <div class="col-6 open">
+                                    Saída
+                                    <span class="time">14:00</span>
+                                </div>
+                            </div>
+                            <h3>Cancelamento</h3>
+                            <p>A política de cancelamento varia de acordo com o tipo de quarto. Por favor verifique as <a href="#">condições do quarto</a> selecionado acima.</p>
+                            <h3>Crianças e camas extras</h3>
+                            <p>Toda criança com menos de 10 anos tem  hospedagem gratuita de acordo com a capacidade de camas no quarto. O número máximo de camas em um quarto é 1. Não há capacidade de berço para bebês nos quartos.</p>
+                            <h3>Animais de Estimação</h3>
+                            <p>Não é permitida a entrada de animais de estimação no hotel.</p>
+                        </td>
+                        <td class="payment">
+                            <h3>
+                                Cartões aceitos
+                            </h3>
+                            <ul>
+                                <li>
+                                    <img src="/Content/images/icon/icon-submarino-master.png" alt="">
+                                </li>
+                                <li>
+                                    <img src="/Content/images/icon/icon-submarino-aura.png" alt="">
+                                </li>
+                                <li>
+                                    <img src="/Content/images/icon/icon-visa.png" alt="">
+                                </li>
+                                <li>
+                                    <img src="/Content/images/icon/icon-mastercard.png" alt="">
+                                </li>
+                                <li>
+                                    <img src="/Content/images/icon/icon-amex.png" alt="">
+                                </li>
+                                <li>
+                                    <img src="/Content/images/icon/icon-diners-club.png" alt="">
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="aditional-info" colspan="3">
+                            <h3 class="title">Informações Adicionais</h3>
+                            <div class="row">
+                                <div class="col-6">
+                                    Durante a entrada é necessária a apresentação de um documento válido com foto de cada hóspede. Todos os hóspedes estrangeiros devem apresentar o passaporte válido e com visto de permanência no país.
+                                </div>
+                                <div class="col-6">
+                                    As tarifas não incluem um imposto de 17,42%. Este é constituído por uma taxa de serviço de 7,42% e um imposto de 10,00% sobre o preço publicado. Para mais informações, entre em contato com o hotel.
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="travelers-reviews">
+                <h2>Avaliações dos Viajantes</h2>
+                <div class="review row">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-3">
+                                <h3 class="main-comment">Nice Hotel Close to GIG Airport</h3>
+                                <span class="by">Por Marc em Nova York</span>
+                            </div>
+                            <div class="col-9">
+                                <p class="comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sagittis ultricies nisi vitae lobortis. Phasellus sed semper orci, in rhoncus erat. Donec blandit eleifend pretium. Sed pulvinar enim ut feugiat malesuada. Phasellus eget lectus ornare, iaculis mi id, fringilla urna. Etiam aliquet vestibulum elit non aliquam. Viva, ac volutpat nulla ravida quis nisi non consectetur sapien hendrerit.</p>
+                                <div class="trip">
+                                    <i class="glyphicon glyphicon-logo-tripadvisor"></i>
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                </div>
+                                <time class="posted">Postado em 09, Abril, 2014</time>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review row">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-3">
+                                <h3 class="main-comment">Nice Hotel Close to GIG Airport</h3>
+                                <span class="by">Por Marc em Nova York</span>
+                            </div>
+                            <div class="col-9">
+                                <p class="comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sagittis ultricies nisi vitae lobortis. Phasellus sed semper orci, in rhoncus erat. Donec blandit eleifend pretium. Sed pulvinar enim ut feugiat malesuada. Phasellus eget lectus ornare, iaculis mi id, fringilla urna. Etiam aliquet vestibulum elit non aliquam. Viva, ac volutpat nulla ravida quis nisi non consectetur sapien hendrerit.</p>
+                                <div class="trip">
+                                    <i class="glyphicon glyphicon-logo-tripadvisor"></i>
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                </div>
+                                <time class="posted">Postado em 09, Abril, 2014</time>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review row">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-3">
+                                <h3 class="main-comment">Nice Hotel Close to GIG Airport</h3>
+                                <span class="by">Por Marc em Nova York</span>
+                            </div>
+                            <div class="col-9">
+                                <p class="comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sagittis ultricies nisi vitae lobortis. Phasellus sed semper orci, in rhoncus erat. Donec blandit eleifend pretium. Sed pulvinar enim ut feugiat malesuada. Phasellus eget lectus ornare, iaculis mi id, fringilla urna. Etiam aliquet vestibulum elit non aliquam. Viva, ac volutpat nulla ravida quis nisi non consectetur sapien hendrerit.</p>
+                                <div class="trip">
+                                    <i class="glyphicon glyphicon-logo-tripadvisor"></i>
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                </div>
+                                <time class="posted">Postado em 09, Abril, 2014</time>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review row">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-3">
+                                <h3 class="main-comment">Nice Hotel Close to GIG Airport</h3>
+                                <span class="by">Por Marc em Nova York</span>
+                            </div>
+                            <div class="col-9">
+                                <p class="comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sagittis ultricies nisi vitae lobortis. Phasellus sed semper orci, in rhoncus erat. Donec blandit eleifend pretium. Sed pulvinar enim ut feugiat malesuada. Phasellus eget lectus ornare, iaculis mi id, fringilla urna. Etiam aliquet vestibulum elit non aliquam. Viva, ac volutpat nulla ravida quis nisi non consectetur sapien hendrerit.</p>
+                                <div class="trip">
+                                    <i class="glyphicon glyphicon-logo-tripadvisor"></i>
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                </div>
+                                <time class="posted">Postado em 09, Abril, 2014</time>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center back-room">
+                <a href="#"><i class="glyphicon glyphicon-arrow-circle-up"></i> Voltar para os tipos de Quartos</a>
+            </div>
+            <div class="similar-hotels">
+                <h2>Hotéis Similares</h2>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="similar-hotels-item">
+                            <div class="content">
+                                <h3>Hotel Pauso Real</h3>
+                                <img src="/Content/images/placeholder/praia.png">
+                                <div class="hover-review">The hotel is beautiful.</div>
+                            </div>
+                            <div class="footer">
+                                <div class="trip">
+                                    <i class="glyphicon glyphicon-logo-tripadvisor"></i>
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                    <i class="num">(328)</i>
+                                </div>
+                                <a href="" class="btn btn-sm btn-text-cta"><i class="glyphicon glyphicon-text-cta-click"></i>Ver Quartos</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="similar-hotels-item">
+                            <div class="content">
+                                <h3>Hotel Pauso Real</h3>
+                                <img src="/Content/images/placeholder/praia.png">
+                                <div class="hover-review">The hotel is beautiful.</div>
+                            </div>
+                            <div class="footer">
+                                <div class="trip">
+                                    <i class="glyphicon glyphicon-logo-tripadvisor"></i>
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                    <i class="num">(328)</i>
+                                </div>
+                                <a href="" class="btn btn-sm btn-text-cta"><i class="glyphicon glyphicon-text-cta-click"></i>Ver Quartos</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="similar-hotels-item">
+                            <div class="content">
+                                <h3>Hotel Pauso Real</h3>
+                                <img src="/Content/images/placeholder/praia.png">
+                                <div class="hover-review">The hotel is beautiful.</div>
+                            </div>
+                            <div class="footer">
+                                <div class="trip">
+                                    <i class="glyphicon glyphicon-logo-tripadvisor"></i>
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                    <i class="glyphicon glyphicon-tripadvisor"></i>
+                                    <i class="num">(328)</i>
+                                </div>
+                                <a href="" class="btn btn-sm btn-text-cta"><i class="glyphicon glyphicon-text-cta-click"></i>Ver Quartos</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container-send-email-confirmation">
+        <div class="popover-send-email-confirmation hidden">
+            <div class="form-box">
+                <form role="form">
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <div class="form-group required">
+                                <label class="sr-only" for="txtFromEmailAddress">De</label>
+                                <input type="text" class="form-control" id="txtFromEmailAddress" placeholder="De">
+                            </div>
+                        </div>
+                        <div class="col-sm-11">
+                            <div class="form-group required">
+                                <label class="sr-only" for="txtToEmailAddress">Para</label>
+                                <input type="text" class="form-control" id="txtToEmailAddress" placeholder="Para">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-21">
+                            <div class="form-group">
+                                <label class="sr-only" for="txtSubject">Assunto</label>
+                                <input type="text" class="form-control" id="txtSubject" placeholder="Assunto">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-21">
+                            <div class="form-group">
+                                <label class="sr-only" for="txtMessage">Mensagem</label>
+                                <textarea class="form-control" id="txtMessage" placeholder="Mensagem"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-21">
+                            <button type="button" class="btn btn-sm btn-default btn-block">Enviar Email</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+@Html.Partial("_FooterFull")
+
+<script id="option-room-button" type="text/x-handlebars-template">
+    <td class="th-room" data-room="room-{{number}}">
+        <button type="button" class="btn">
+            <span class="text">Quarto {{number-txt}}</span>
+            <span class="glyphicon glyphicon-btn-close"></span>
+        </button>
+    </td>
+</script>
+<script id="option-room-col" type="text/x-handlebars-template">
+    <td data-room="room-{{number}}">
+        <label class=" spinner-wrapper">
+            {{type}}
+            <input class="spinner spinner-simple {{classe}}" name="value" value="0">
+        </label>
+    </td>
+</script>
+<script id="option-child-age" type="text/x-handlebars-template">
+    <div class="spinner-wrapper spinner-box">
+        <input class="spinner spinner-age" name="value" placeholder="(1-11)">
+    </div>
+</script>

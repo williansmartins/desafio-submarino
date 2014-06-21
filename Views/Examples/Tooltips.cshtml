@@ -1,0 +1,358 @@
+﻿@{
+    ViewBag.Title = "/Examples/Tooltips";
+}
+
+<div class="container-fluid example-popover" style="width: 95%; max-width: none">
+    <h2>Style Guide - Tooltips & Alerts</h2>
+
+    <div class="row">
+        <div class="col-md-21">
+            <h2>How-to Tooltips</h2>
+            <div class="row">
+                <div class="col-md-5">
+                    <h3>How to Select Flights</h3>
+
+                    <button type="button" class="btn btn-sm btn-default center-block popover-toggler" data-target-selector=".popover-how-to-select-flights" data-container=".container-how-to-select-flights" data-css-class="how-to-select-flights" data-placement="bottom" data-title="Select Flights to Continue">Select Flights to Continue</button>
+                    <div class="container-how-to-select-flights">
+                        <div class="popover-how-to-select-flights hidden">
+                            <p>To continue the booking process, please select both an outbound and returning flight from the list of flights in this price.</p>
+                            <img src="/Content/images/how-to-select-flights.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <h3>How to Select Dates</h3>
+
+                    <button type="button" class="btn btn-sm btn-default center-block popover-toggler" data-container=".container-how-to-select-dates" data-target-selector=".popover-how-to-select-dates" data-css-class="how-to-select-dates" data-placement="bottom" data-title="Select Dates to Continue">Select Dates to Continue</button>
+                    <div class="container-how-to-select-dates">
+                        <div class="popover-how-to-select-dates hidden">
+                            <p>To see available rooms and prices, please enter your check-in and check-out dates</p>
+                            <img src="/Content/images/how-to-select-dates.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <h3>How to Add Insurance</h3>
+
+                    <button type="button" class="btn btn-sm btn-default center-block popover-toggler" data-container=".container-how-to-add-insurance" data-target-selector=".popover-how-to-add-insurance" data-css-class="how-to-add-insurance" data-placement="bottom" data-title="Add Insurance?">Add Insurance?</button>
+                    <div class="container-how-to-add-insurance">
+                        <div class="popover-how-to-add-insurance hidden">
+                            <p>Are you sure you don’t want to purchase insurance?</p>
+                            <img src="/Content/images/how-to-add-insurance.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h3>Selecting A seat</h3>
+
+                    <button type="button" class="btn btn-sm btn-default center-block popover-toggler" data-width="450" data-container=".container-how-to-select-a-seat" data-target-selector=".popover-how-to-select-a-seat" data-css-class="how-to-select-a-seat" data-placement="bottom" data-title="Selecting A seat">Selecting A seat</button>
+                    <div class="container-how-to-select-a-seat">
+                        <div class="container-how-to-select-a-seat">
+                            <div class="popover-how-to-select-a-seat hidden">
+                                <p>Ipsum dolor sit amet,consectetur adipiscing elit. Proin lacinia porttitor sapien sit amet lobortis. Quisque posuere porttitor diam in malesuada. Lorem ipsum sit dolor amet.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-21">
+            <h2>Informational Tooltips</h2>
+            <div class="row">
+                <div class="col-md-5">
+                    <h3>Required Documentation</h3>
+
+                    <button type="button" class="btn btn-sm btn-default center-block popover-toggler" data-container=".container-flight-requires-documentation" data-target-selector=".popover-flight-requires-documentation" data-css-class="flight-requires-documentation" data-placement="bottom" data-title="Flight Requires Documentation">Flight Requires Documentation</button>
+                    <div class="container-flight-requires-documentation">
+                        <div class="popover-flight-requires-documentation hidden">
+                            <p>Ipsum dolor sit amet,consectetur adipiscing elit. Proin lacinia porttitor sapien sit amet lobortis. Quisque posuere porttitor diam in malesuada. Lorem ipsum sit dolor amet.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <h3>Insurance Age</h3>
+
+                    <button type="button" class="btn btn-sm btn-default center-block popover-toggler" data-container=".container-important-insurance-notice" data-target-selector=".popover-important-insurance-notice" data-css-class="important-insurance-notice" data-placement="bottom" data-title="Important Insurance Notice">Important Insurance Notice</button>
+                    <div class="container-important-insurance-notice">
+                        <div class="popover-important-insurance-notice hidden">
+                            <p>Ipsum dolor sit amet,consectetur adipiscing elit. Proin lacinia porttitor sapien sit amet lobortis. Quisque posuere porttitor diam in malesuada. Lorem ipsum sit dolor amet.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <h3>Blank Form Field</h3>
+                    <button type="button" class="btn btn-sm btn-default center-block tooltip-toggler" data-toggle="tooltip" data-trigger="click" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
+                </div>
+                <div class="col-md-6">
+                    <h3>Installments</h3>
+
+                    <button type="button" class="btn btn-sm btn-default center-block popover-toggler" data-container=".container-installments-available" data-target-selector=".popover-installments-available" data-css-class="installments-available" data-placement="bottom" data-title="Installments Available">Installments Available</button>
+                    <div class="container-installments-available">
+                        <div class="popover-installments-available hidden">
+                            <ul class="clearfix">
+                                <li>
+                                    <img src="/Content/images/icon/icon-submarino-master.png" alt="" />
+                                    10x
+                                </li>
+                                <li>
+                                    <img src="/Content/images/icon/icon-submarino-aura.png" alt="" />
+                                    10x
+                                </li>
+                                <li>
+                                    <img src="/Content/images/icon/icon-visa.png" alt="" />
+                                    10x
+                                </li>
+                                <li>
+                                    <img src="/Content/images/icon/icon-mastercard.png" alt="" />
+                                    10x
+                                </li>
+                                <li>
+                                    <img src="/Content/images/icon/icon-amex.png" alt="" />
+                                    10x
+                                </li>
+                                <li>
+                                    <img src="/Content/images/icon/icon-diners-club.png" alt="" />
+                                    10x
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-21">
+            <h2>Actionable Tooltips</h2>
+            <div class="row">
+                <div class="col-md-5">
+                    <h3>Send SMS Confirmation</h3>
+
+                    <button type="button" class="btn btn-sm btn-default center-block popover-toggler" data-container=".container-send-sms-confirmation" data-target-selector=".popover-send-sms-confirmation" data-css-class="send-sms-confirmation" data-placement="bottom" data-title="Send Result">Send Result</button>
+                    <div class="container-send-sms-confirmation">
+                        <div class="popover-send-sms-confirmation hidden">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget vestibulum tellus. Quisque non sapien nisl.</p>
+
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Mobile Phone Number">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default btn-sm" type="button">Send</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <h3>Hover Seat</h3>
+                    <button type="button" class="btn btn-sm btn-default center-block popover-toggler" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="bottom">Hover Seat</button>
+                    <div class="container-hover-seat">
+                        <div class="popover-hover-seat hidden">
+                            <div class="seat-number">10F</div>
+                            <div class="seat-description">Standard Window Seat</div>
+                            <button type="button" class="btn btn-sm btn-default btn-block">Select This Seat</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <h3>Send e-mail Confirmation</h3>
+
+                    <button type="button" class="btn btn-sm btn-default center-block popover-toggler" data-container=".container-send-email-confirmation" data-target-selector=".popover-send-email-confirmation" data-css-class="send-email-confirmation" data-placement="bottom" data-title="Email Result">Email Result</button>
+                    <div class="popover-send-email-confirmation hidden">
+                        <div class="form-box">
+                            <form role="form">
+                                <div class="row">
+                                    <div class="col-sm-10">
+                                        <div class="form-group required">
+                                            <label class="sr-only" for="txtFromEmailAddress">From Email Address</label>
+                                            <input type="text" class="form-control" id="txtFromEmailAddress" placeholder="From Email Address">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-11">
+                                        <div class="form-group required">
+                                            <label class="sr-only" for="txtToEmailAddress">From Email Address</label>
+                                            <input type="text" class="form-control" id="txtToEmailAddress" placeholder="To Email Address">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-21">
+                                        <div class="form-group">
+                                            <label class="sr-only" for="txtSubject">From Email Address</label>
+                                            <input type="text" class="form-control" id="txtSubject" placeholder="Subject">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="form-box">
+                            <div class="row">
+                                <div class="col-sm-21">
+                                    <div class="form-group">
+                                        <label class="sr-only" for="txtMessage">From Email Address</label>
+                                        <textarea class="form-control" id="txtMessage" placeholder="Message"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-box">
+                            <div class="row">
+                                <div class="col-sm-21">
+                                    <button type="button" class="btn btn-sm btn-default btn-block">Send Email</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="container-send-email-confirmation">
+                        <div class="popover-send-email-confirmation hidden">
+                            <div class="form-box">
+                                <form role="form">
+                                    <div class="row">
+                                        <div class="col-sm-10">
+                                            <div class="form-group required">
+                                                <label class="sr-only" for="txtFromEmailAddress">From Email Address</label>
+                                                <input type="text" class="form-control" id="txtFromEmailAddress" placeholder="From Email Address">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-11">
+                                            <div class="form-group required">
+                                                <label class="sr-only" for="txtToEmailAddress">From Email Address</label>
+                                                <input type="text" class="form-control" id="txtToEmailAddress" placeholder="To Email Address">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-21">
+                                            <div class="form-group">
+                                                <label class="sr-only" for="txtSubject">From Email Address</label>
+                                                <input type="text" class="form-control" id="txtSubject" placeholder="Subject">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-21">
+                                            <div class="form-group">
+                                                <label class="sr-only" for="txtMessage">From Email Address</label>
+                                                <textarea class="form-control" id="txtMessage" placeholder="Message"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-21">
+                                            <button type="button" class="btn btn-sm btn-default btn-block">Send Email</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <h3>ANAC Punctuality</h3>
+
+                    <button type="button" class="btn btn-sm btn-default center-block popover-toggler" data-container=".container-anac-punctuality" data-target-selector=".popover-anac-punctuality" data-css-class="anac-punctuality" data-placement="bottom" data-title="Percentage of delays and cancellations by step of the journey.  ANAC Source">Percentage of delays and cancellations by step of the journey.  ANAC Source</button>
+
+                    <div class="container-anac-punctuality">
+                        <div class="popover-anac-punctuality hidden">
+                            <table class="table table-bordered">
+                                <tbody>
+                                    <tr>
+                                        <td width="33%">
+                                            <strong>Airline</strong>
+                                            Tam
+                                        </td>
+                                        <td width="33%">
+                                            <strong>Flight No.</strong>
+                                            5058
+                                        </td>
+                                        <td width="33%">
+                                            <strong>Steps Planned</strong>
+                                            27
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table table-bordered">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <strong>Origin Airport</strong>
+                                            Campinas (SP, Brasil)
+                                        </td>
+                                        <td>
+                                            <strong>Destination Airport</strong>
+                                            Rio de Janeiro - Galleon (RJ, Brasil)
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table table-bordered">
+                                <tbody>
+                                    <tr>
+                                        <td width="33%">
+                                            <strong>% of Cancellations</strong>
+                                            0
+                                        </td>
+                                        <td width="33%">
+                                            <strong>% of Delays Over 30 mins</strong>
+                                            7
+                                        </td>
+                                        <td width="33%">
+                                            <strong>% of Delays Over 60 mins</strong>
+                                            7
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="disclaimer">
+                                <h4>DISCLAIMER:</h4>
+                                <ul>
+                                    <li>I - the percentage of cancellations is calculated because the total planned stages;</li>
+                                    <li>II - the percentage of arrears is calculated based on the date and time set for the arrival at the destination of the flight stage and calculated ratio of total steps taken, less the already canceled stages;</li>
+                                    <li>III - the percentage of delays and cancellations of flights represent past performance, which may vary in the following months and</li>
+                                    <li>IV - the percentage of delays and cancellations of all phases of flight scheduled public air transport in Brazil are available at the National Civil Aviation Agency page - ANAC on the internet.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-21">
+            <h2>Alerts</h2>
+            <div class="row">
+                <div class="col-md-5">
+                    <h3>Booking Alert</h3>
+                    <div class="alert alert-info fade in booking-alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                        Most recent booking for this hotel was today at 16:51 from the United States
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    <h3>Browsing Alert</h3>
+                    <div class="alert alert-info fade in browsing-alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                        There are 7 people currently browsing this hotel
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h3>Assistance Alert</h3>
+                    <div class="alert alert-info fade in assistance-alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                        <strong>Do you require assistance?</strong>
+                        Best check yo self, you're not looking too good.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

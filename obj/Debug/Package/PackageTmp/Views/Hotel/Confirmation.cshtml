@@ -1,0 +1,523 @@
+﻿@{
+    ViewBag.Title = "/Hotel/Confirmation";
+    ViewBag.BodyClass = "flux-collapsed";
+}
+<section class="confirmation-checkout confirmation-checkout-hotel container-fluid top">
+    <!-- Modal -->
+    <div class="modal fade assentos" id="assentos">
+        <div class="modal-dialog container-fluid">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+
+                    <h4 class="modal-title">Selecione seu assento</h4>
+                </div>
+                <div class="modal-body">
+                    <button type="button" class="help popover-toggler" data-width="450" data-container=".container-how-to-select-a-seat" data-target-selector=".popover-how-to-select-a-seat" data-css-class="how-to-select-a-seat" data-placement="bottom" data-title="Como selecionar um assento">
+                        Como selecionar um assento <i class="glyphicon glyphicon-help"></i>
+                    </button>
+
+                    <div class="container-how-to-select-a-seat">
+                        <div class="popover-how-to-select-a-seat hidden">
+                            <p>Ipsum dolor sit amet,consectetur adipiscing elit. Proin lacinia porttitor sapien sit amet lobortis. Quisque posuere porttitor diam in malesuada. Lorem ipsum sit dolor amet.</p>
+                        </div>
+                    </div>
+
+                    <ul class="ida-volta clearfix">
+                        <li class="on ida">
+                            <div class="date">
+                                <span class="day">14</span>
+                                <span class="month">Abril</span>
+                            </div>
+                            <div class="info">
+                                <p class="hour">Ida  <span>02:30   7h 30 min</span></p>
+                                <p class="destiny">Sao Paulo (CCG) para Charlotte (CLT)</p>
+                            </div>
+                        </li>
+                        <li class="volta">
+                            <div class="date">
+                                <span class="day">14</span>
+                                <span class="month">Abril</span>
+                            </div>
+                            <div class="info">
+                                <p class="hour">Ida  <span>02:30   7h 30 min</span></p>
+                                <p class="destiny">Sao Paulo (CCG) para Charlotte (CLT)</p>
+                            </div>
+                        </li>
+                        <li class="ida">
+                            <div class="date">
+                                <span class="day">14</span>
+                                <span class="month">Abril</span>
+                            </div>
+                            <div class="info">
+                                <p class="hour">Ida  <span>02:30   7h 30 min</span></p>
+                                <p class="destiny">Sao Paulo (CCG) para Charlotte (CLT)</p>
+                            </div>
+                        </li>
+                        <li class="volta">
+                            <div class="date">
+                                <span class="day">14</span>
+                                <span class="month">Abril</span>
+                            </div>
+                            <div class="info">
+                                <p class="hour">Ida  <span>02:30   7h 30 min</span></p>
+                                <p class="destiny">Sao Paulo (CCG) para Charlotte (CLT)</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="airplane" id="airplane-seats">
+                        <button type="button" class="scroll">Rolar</button>
+
+                        <button type="button" class="scroll">Rolar</button>
+                        <div class="content">
+                            <ul class="airplane-seats-line">
+                                <li>
+                                    @*button[type="button"][data-seat="$$F"][class="seat popover-hover"][data-trigger="hover"][data-container=".container-hover-seat"][data-target-selector=".popover-hover-seat"][data-css-class="hover-seat"][data-placement="top"]{$$F}*@
+                                    <button type="button" data-seat-location="Janela" data-seat="01F" class="seat premium popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">01F</button><button type="button" data-seat-location="Janela" data-seat="02F" class="seat taken" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">02F</button><button type="button" data-seat-location="Janela" data-seat="03F" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">03F</button><button type="button" data-seat-location="Janela" data-seat="04F" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">04F</button><button type="button" data-seat-location="Janela" data-seat="05F" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">05F</button><button type="button" data-seat-location="Janela" data-seat="06F" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">06F</button><button type="button" data-seat-location="Janela" data-seat="07F" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">07F</button><button type="button" data-seat-location="Janela" data-seat="08F" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">08F</button><button type="button" data-seat-location="Janela" data-seat="09F" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">09F</button><button type="button" data-seat-location="Janela" data-seat="10F" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">10F</button><button type="button" data-seat-location="Janela" data-seat="11F" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">11F</button><button type="button" data-seat-location="Janela" data-seat="12F" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">12F</button><button type="button" data-seat-location="Janela" data-seat="13F" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">13F</button><button type="button" data-seat-location="Janela" data-seat="14F" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">14F</button><button type="button" data-seat-location="Janela" data-seat="15F" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">15F</button><button type="button" data-seat-location="Janela" data-seat="16F" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">16F</button><button type="button" data-seat-location="Janela" data-seat="17F" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">17F</button><button type="button" data-seat-location="Janela" data-seat="18F" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">18F</button>
+                                </li>
+                                <li>
+                                    <button type="button" data-seat-location="Corredor" data-seat="01E" class="seat premium popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">01E</button><button type="button" data-seat-location="Corredor" data-seat="02E" class="seat taken" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">02E</button><button type="button" data-seat-location="Corredor" data-seat="03E" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">03E</button><button type="button" data-seat-location="Corredor" data-seat="04E" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">04E</button><button type="button" data-seat-location="Corredor" data-seat="05E" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">05E</button><button type="button" data-seat-location="Corredor" data-seat="06E" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">06E</button><button type="button" data-seat-location="Corredor" data-seat="07E" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">07E</button><button type="button" data-seat-location="Corredor" data-seat="08E" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">08E</button><button type="button" data-seat-location="Corredor" data-seat="09E" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">09E</button><button type="button" data-seat-location="Corredor" data-seat="10E" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">10E</button><button type="button" data-seat-location="Corredor" data-seat="11E" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">11E</button><button type="button" data-seat-location="Corredor" data-seat="12E" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">12E</button><button type="button" data-seat-location="Corredor" data-seat="13E" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">13E</button><button type="button" data-seat-location="Corredor" data-seat="14E" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">14E</button><button type="button" data-seat-location="Corredor" data-seat="15E" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">15E</button><button type="button" data-seat-location="Corredor" data-seat="16E" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">16E</button><button type="button" data-seat-location="Corredor" data-seat="17E" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">17E</button><button type="button" data-seat-location="Corredor" data-seat="18E" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">18E</button>
+                                </li>
+                                <li>
+                                    <button type="button" data-seat-location="Corredor" data-seat="01D" class="seat premium popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">01D</button><button type="button" data-seat-location="Corredor" data-seat="02D" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">02D</button><button type="button" data-seat-location="Corredor" data-seat="03D" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">03D</button><button type="button" data-seat-location="Corredor" data-seat="04D" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">04D</button><button type="button" data-seat-location="Corredor" data-seat="05D" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">05D</button><button type="button" data-seat-location="Corredor" data-seat="06D" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">06D</button><button type="button" data-seat-location="Corredor" data-seat="07D" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">07D</button><button type="button" data-seat-location="Corredor" data-seat="08D" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">08D</button><button type="button" data-seat-location="Corredor" data-seat="09D" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">09D</button><button type="button" data-seat-location="Corredor" data-seat="10D" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">10D</button><button type="button" data-seat-location="Corredor" data-seat="11D" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">11D</button><button type="button" data-seat-location="Corredor" data-seat="12D" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">12D</button><button type="button" data-seat-location="Corredor" data-seat="13D" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">13D</button><button type="button" data-seat-location="Corredor" data-seat="14D" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">14D</button><button type="button" data-seat-location="Corredor" data-seat="15D" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">15D</button><button type="button" data-seat-location="Corredor" data-seat="16D" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">16D</button><button type="button" data-seat-location="Corredor" data-seat="17D" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">17D</button><button type="button" data-seat-location="Corredor" data-seat="18D" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">18D</button>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li class="seat-number">1</li>
+                                <li class="seat-number">2</li>
+                                <li class="seat-number">3</li>
+                                <li class="seat-number">4</li>
+                                <li class="seat-number">5</li>
+                                <li class="seat-number">6</li>
+                                <li class="seat-number">7</li>
+                                <li class="seat-number">8</li>
+                                <li class="seat-number">9</li>
+                                <li class="seat-number">10</li>
+                                <li class="seat-number">11</li>
+                                <li class="seat-number">12</li>
+                                <li class="seat-number">13</li>
+                                <li class="seat-number">14</li>
+                                <li class="seat-number">15</li>
+                                <li class="seat-number">16</li>
+                                <li class="seat-number">17</li>
+                                <li class="seat-number">18</li>
+                            </ul>
+                            <ul class="airplane-seats-line">
+                                <li>
+                                    <button type="button" data-seat-location="Corredor" data-seat="01C" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">01C</button><button type="button" data-seat-location="Corredor" data-seat="02C" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">02C</button><button type="button" data-seat-location="Corredor" data-seat="03C" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">03C</button><button type="button" data-seat-location="Corredor" data-seat="04C" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">04C</button><button type="button" data-seat-location="Corredor" data-seat="05C" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">05C</button><button type="button" data-seat-location="Corredor" data-seat="06C" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">06C</button><button type="button" data-seat-location="Corredor" data-seat="07C" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">07C</button><button type="button" data-seat-location="Corredor" data-seat="08C" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">08C</button><button type="button" data-seat-location="Corredor" data-seat="09C" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">09C</button><button type="button" data-seat-location="Corredor" data-seat="10C" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">10C</button><button type="button" data-seat-location="Corredor" data-seat="11C" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">11C</button><button type="button" data-seat-location="Corredor" data-seat="12C" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">12C</button><button type="button" data-seat-location="Corredor" data-seat="13C" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">13C</button><button type="button" data-seat-location="Corredor" data-seat="14C" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">14C</button><button type="button" data-seat-location="Corredor" data-seat="15C" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">15C</button><button type="button" data-seat-location="Corredor" data-seat="16C" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">16C</button><button type="button" data-seat-location="Corredor" data-seat="17C" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">17C</button><button type="button" data-seat-location="Corredor" data-seat="18C" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">18C</button>
+                                </li>
+                                <li>
+                                    <button type="button" data-seat-location="Corredor" data-seat="01B" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">01B</button><button type="button" data-seat-location="Corredor" data-seat="02B" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">02B</button><button type="button" data-seat-location="Corredor" data-seat="03B" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">03B</button><button type="button" data-seat-location="Corredor" data-seat="04B" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">04B</button><button type="button" data-seat-location="Corredor" data-seat="05B" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">05B</button><button type="button" data-seat-location="Corredor" data-seat="06B" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">06B</button><button type="button" data-seat-location="Corredor" data-seat="07B" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">07B</button><button type="button" data-seat-location="Corredor" data-seat="08B" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">08B</button><button type="button" data-seat-location="Corredor" data-seat="09B" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">09B</button><button type="button" data-seat-location="Corredor" data-seat="10B" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">10B</button><button type="button" data-seat-location="Corredor" data-seat="11B" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">11B</button><button type="button" data-seat-location="Corredor" data-seat="12B" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">12B</button><button type="button" data-seat-location="Corredor" data-seat="13B" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">13B</button><button type="button" data-seat-location="Corredor" data-seat="14B" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">14B</button><button type="button" data-seat-location="Corredor" data-seat="15B" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">15B</button><button type="button" data-seat-location="Corredor" data-seat="16B" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">16B</button><button type="button" data-seat-location="Corredor" data-seat="17B" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">17B</button><button type="button" data-seat-location="Corredor" data-seat="18B" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">18B</button>
+                                </li>
+                                <li>
+                                    <button type="button" data-seat-location="Janela" data-seat="01A" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">01A</button><button type="button" data-seat-location="Janela" data-seat="02A" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">02A</button><button type="button" data-seat-location="Janela" data-seat="03A" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">03A</button><button type="button" data-seat-location="Janela" data-seat="04A" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">04A</button><button type="button" data-seat-location="Janela" data-seat="05A" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">05A</button><button type="button" data-seat-location="Janela" data-seat="06A" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">06A</button><button type="button" data-seat-location="Janela" data-seat="07A" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">07A</button><button type="button" data-seat-location="Janela" data-seat="08A" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">08A</button><button type="button" data-seat-location="Janela" data-seat="09A" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">09A</button><button type="button" data-seat-location="Janela" data-seat="10A" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">10A</button><button type="button" data-seat-location="Janela" data-seat="11A" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">11A</button><button type="button" data-seat-location="Janela" data-seat="12A" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">12A</button><button type="button" data-seat-location="Janela" data-seat="13A" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">13A</button><button type="button" data-seat-location="Janela" data-seat="14A" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">14A</button><button type="button" data-seat-location="Janela" data-seat="15A" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">15A</button><button type="button" data-seat-location="Janela" data-seat="16A" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">16A</button><button type="button" data-seat-location="Janela" data-seat="17A" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">17A</button><button type="button" data-seat-location="Janela" data-seat="18A" class="seat popover-hover" data-container=".container-hover-seat" data-target-selector=".popover-hover-seat" data-css-class="hover-seat" data-placement="top">18A</button>
+                                </li>
+                            </ul>
+                            <div class="container-hover-seat">
+                                <div class="popover-hover-seat hidden">
+                                    <div class="seat-number">10F</div>
+                                    <div class="seat-description">Assento na janela</div>
+                                    <button type="button" class="btn btn-sm btn-default btn-block">Selecione Este Assento</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-seats-selecteds clearfix">
+                        <div class="seats-container">
+                            <div class="seats-container-inner">
+                                <div class="seat-item on">
+                                    <p class="name">Marc A.</p>
+                                    <p class="seat-number"><span class="position"></span><span class="location"></span></p>
+                                </div>
+                                <div class="seat-item">
+                                    <p class="name">Silvia</p>
+                                    <p class="seat-number"><span class="position">10F</span> <span class="location">Janela</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-sm btn-default">Reservar estes assentos</button>
+                    </div>
+                    <div class="legend">
+                        <h4 class="closed" data-behavior="slidetoggle" data-target=".legend > ul">Airbus A320-300 <i class="glyphicon glyphicon-arrow-opacity"></i></h4>
+                        <ul>
+                            <li><i class="glyphicon glyphicon-selected-seat"></i> Selecionado</li>
+                            <li><i class="glyphicon glyphicon-occupied-seat"></i> Ocupado</li>
+                            <li><i class="glyphicon glyphicon-available-seat"></i> Disponível</li>
+                            <li><i class="glyphicon glyphicon-special-seat"></i> Assento Especial</li>
+                            <li><i class="glyphicon glyphicon-emergency"></i> Saída de Emergência</li>
+                            <li><i class="glyphicon glyphicon-kitchen"></i> Cozinha</li>
+                            <li><i class="glyphicon glyphicon-bathroom"></i> Banheiro</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal - End -->
+    <!-- Banner Top -->
+    <div class="banner-top-checkout clearfix">
+        <p class="title-top">Obrigado!</p>
+        <p class="message">Você fez uma excelente escolha. Aproveite sua viagem!</p>
+        <!-- Confirmation Number -->
+        <div class="confirmation-box confirmation-hotel clearfix">
+            <p class="title">
+                Número de Confirmação
+            </p>
+            <div class="content">
+                <p class="number">AUXY34523</p>
+                <button type="button" class="popover-toggler" data-container=".container-send-sms-confirmation" data-target-selector=".popover-send-sms-confirmation" data-css-class="send-sms-confirmation" data-placement="bottom" data-title="Receba a confirmação por SMS">
+                    <span class="glyphicon glyphicon-baloon"></span>
+                    Receba o nº de confirmação por SMS
+                </button>
+                <div class="container-send-sms-confirmation">
+                    <div class="popover-send-sms-confirmation hidden">
+                        <p>Quer encontrar o seu número de confirmação de forma rápida? Insira seu celular e clique em enviar para receber um SMS com sua confirmação.</p>
+
+                        <div class="input-group">
+                            <input type="text" class="form-control" onkeyup="Site._validNumber(this)" placeholder="Celular">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default btn-sm" type="button">Enviar</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Confirmation Number - End -->
+    </div>
+    <!-- Banner Top - End -->
+    <div class="checkout-wrapper">
+        <div class="share big pull-right">
+            <a href="#"><i class="glyphicon glyphicon-arrow-download"></i>Indicar</a>
+            <a href="#"><i class="glyphicon glyphicon-print"></i>Imprimir</a>
+            <a href="javascript:" class="popover-toggler" data-target-selector=".popover-send-email-confirmation" data-container=".container-send-email-confirmation" data-placement="left" data-title="Enviar oferta por email" data-width="300"><i class="glyphicon glyphicon-envelope"></i>Email</a>
+            <a href="#"><i class="glyphicon glyphicon-share-blue"></i>Indicar</a>
+        </div>
+        <h1>Sua Compra</h1>
+        <p class="status">
+            <span>Confirmação: 2567389</span>
+            Emitido Quarta-feira, 10 de Abril, 2014
+        </p>
+        <!-- Hotel information -->
+        <table class="checkout-hotel-info">
+            <tr>
+                <th class="title-flow">
+                    <p class="flow">Entrada</p>
+                    <p class="date">Terça-feira, 14 Abril, 2014</p>
+                </th>
+                <th class="title-flow">
+                    <p class="flow">Saída</p>
+                    <p class="date">Quarta-feira, 22 Abril, 2014</p>
+                </th>
+            </tr>
+            <!-- Hotel -->
+            <tr>
+                <td class="hotel-info top" colspan="2">
+                    <img src="~/Content/images/banner/hotel-checkout-1.jpg" alt="Hotel Americano" class="hotel-img" />
+                    <div class="content-hotel-info">
+                        <h2>Hotel Americano</h2>
+                        <table class="table-info top">
+                            <tr>
+                                <td class="info-column">
+                                    <p class="address">Endereço</p>
+                                    <p>
+                                        Rua Juanquao Silva <br />
+                                        69-Centro <br />
+                                        202411-11 Rio De Janeiro <br />
+                                        RJ Brasil
+                                    </p>
+                                </td>
+                                <td class="info-column">
+                                    <p class="flow">Entrada</p>
+                                    <p class="date">14 Abril, 2014</p>
+                                    <p class="flow">Saída</p>
+                                    <p class="date">22 Abril, 2014</p>
+                                </td>
+                                <td class="info-column">
+                                    <table class="especifications">
+                                        <tr>
+                                            <th>Entrada</th>
+                                            <td>12:00</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Saída</th>
+                                            <td>18:00</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Hóspedes</th>
+                                            <td>5 hóspedes</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Noites</th>
+                                            <td>7 noites</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Quartos</th>
+                                            <td>2 quartos</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+            <!-- Hotel - End -->
+            <tr>
+                <td class="spacer" colspan="2"></td>
+            </tr>
+            <!-- Room -->
+            <tr>
+                <td class="room-info" colspan="2">
+                    <img src="~/Content/images/banner/hotel-checkout-2.jpg" alt="Quarto Duplo" class="hotel-img" />
+                    <div class="content-hotel-info">
+                        <h2>Quarto Duplo (Sem Refeição)</h2>
+                        <div class="warning">
+                            <strong>Importante:</strong> Você pode cancelar sua reserva sem multas até 10/04/14. Depois desta data ou em caso de de não comparecimento será cobrada uma multa de R$ 40
+                        </div>
+                        <table class="table-info">
+                            <tr>
+                                <td class="info-column">
+                                    <table class="especifications">
+                                        <tr>
+                                            <th>Adulto 1</th>
+                                            <td>John Smith</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Nasc</th>
+                                            <td>18/12/1963</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Sexo</th>
+                                            <td>Masculino</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td class="info-column">
+                                    <table class="especifications">
+                                        <tr>
+                                            <th>Adulto 2</th>
+                                            <td>John Smith</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Nasc</th>
+                                            <td>18/12/1963</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Sexo</th>
+                                            <td>Masculino</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+            <!-- Room - End -->
+            <!-- Room -->
+            <tr>
+                <td class="room-info" colspan="2">
+                    <img src="~/Content/images/banner/hotel-checkout-3.jpg" alt="Quarto Duplo" class="hotel-img" />
+                    <div class="content-hotel-info">
+                        <h2>Quarto Triplo (Com Café-da-manhã)</h2>
+                        <div class="warning">
+                            <strong>Importante:</strong> Você pode cancelar sua reserva sem multas até 10/04/14. Depois desta data ou em caso de de não comparecimento será cobrada uma multa de R$ 40
+                        </div>
+                        <table class="table-info">
+                            <tr>
+                                <td class="info-column">
+                                    <table class="especifications">
+                                        <tr>
+                                            <th>Adulto 1</th>
+                                            <td>John Smith</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Nasc</th>
+                                            <td>18/12/1963</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Sexo</th>
+                                            <td>Masculino</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td class="info-column">
+                                    <table class="especifications">
+                                        <tr>
+                                            <th>Adulto 2</th>
+                                            <td>John Smith</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Nasc</th>
+                                            <td>18/12/1963</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Sexo</th>
+                                            <td>Masculino</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td class="info-column">
+                                    <table class="especifications">
+                                        <tr>
+                                            <th>Adulto 3</th>
+                                            <td>John Smith</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Nasc</th>
+                                            <td>18/12/1963</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Sexo</th>
+                                            <td>Masculino</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+            <!-- Room - End -->
+        </table>
+        <!-- Hotel information -->
+        <table class="payment-information">
+            <tr>
+                <td class="credit-info">
+                    <h3>Informações do Titular (Cartão 1)</h3>
+                    <p class="name">Marc  Anderson</p>
+                    <p>
+                        555.456.328-11 <br />
+                        10025 345, RJ, Rio de Janeiro <br />
+                        Av. Atlantic 1886 <br />
+                        Brasil 10025 345 <br />
+                        #987-123-4284
+                    </p>
+                </td>
+                <td class="credit-info">
+                    <h3>FORMA DE PAGAMENTO (CARTÃO 1)</h3>
+                    <p class="name">Marc B.  Anderson</p>
+                    <p class="card">VISA XXXX XXXX XXXX 8911</p>
+                    <p>
+                        <strong>10X Parcelas</strong>
+                        Parcela 1 (R$): 459 <br />
+                        9 Parcelas (R$): 359.70 + 3.75% (Juros)
+                    </p>
+                </td>
+                <td class="summary" rowspan="2">
+                    <h4>
+                        Tarifas e taxas
+                        <span class="pull-right">valor</span>
+                    </h4>
+                    <table class="table-price">
+                        <tbody>
+                            <tr>
+                                <th>
+                                    <span>
+                                        Quarto Duplo<br />
+                                        Quarto 1
+                                    </span> (R$)
+                                </th>
+                                <td class="value">
+                                    399,00
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <span>
+                                        Quarto Triplo<br />
+                                        Quarto 2
+                                    </span> (R$)
+                                </th>
+                                <td class="value">
+                                    600,00
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table-price-final">
+                        <tbody>
+                            <tr>
+                                <th>
+                                    <span>Total</span> (R$)
+                                </th>
+                                <td class="value">
+                                    900,00
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="credit-info">
+                    <h3>Informações do Titular (Cartão 2)</h3>
+                    <p class="name">Marc  Anderson</p>
+                    <p>
+                        555.456.328-11 <br />
+                        10025 345, RJ, Rio de Janeiro <br />
+                        Av. Atlantic 1886 <br />
+                        Brasil 10025 345 <br />
+                        #987-123-4284
+                    </p>
+                </td>
+                <td class="credit-info">
+                    <h3>FORMA DE PAGAMENTO (CARTÃO 2)</h3>
+                    <p class="name">Marc B.  Anderson</p>
+                    <p class="card">VISA XXXX XXXX XXXX 8911</p>
+                    <p>
+                        <strong>10X Parcelas</strong>
+                        Parcela 1 (R$): 459 <br />
+                        9 Parcelas (R$): 359.70 + 3.75% (Juros)
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+
+<div class="container-send-email-confirmation">
+    <div class="popover-send-email-confirmation hidden">
+        <div class="form-box">
+            <form role="form">
+                <div class="row">
+                    <div class="col-sm-10">
+                        <div class="form-group required">
+                            <label class="sr-only" for="txtFromEmailAddress">De</label>
+                            <input type="text" class="form-control" id="txtFromEmailAddress" placeholder="De">
+                        </div>
+                    </div>
+                    <div class="col-sm-11">
+                        <div class="form-group required">
+                            <label class="sr-only" for="txtToEmailAddress">Para</label>
+                            <input type="text" class="form-control" id="txtToEmailAddress" placeholder="Para">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-21">
+                        <div class="form-group">
+                            <label class="sr-only" for="txtSubject">Assunto</label>
+                            <input type="text" class="form-control" id="txtSubject" placeholder="Assunto">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-21">
+                        <div class="form-group">
+                            <label class="sr-only" for="txtMessage">Mensagem</label>
+                            <textarea class="form-control" id="txtMessage" placeholder="Mensagem"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-21">
+                        <button type="button" class="btn btn-sm btn-default btn-block">Enviar Email</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,83 @@
+﻿@{
+    ViewBag.Title = "/Flight";
+}
+
+<div class="flight home">
+    <div class="promos-banner">
+        <div class="promos-banner-container"></div>
+    </div>
+    <div class="container-fluid top">
+        <div class="row">
+            <div class="booking-widget col-sm-8 col-offset-1">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#passagens" data-toggle="tab">Passagens</a></li>
+                    <li><a href="#hoteis" data-toggle="tab">Hotéis</a></li>
+                    <li><a href="#pacotes" data-toggle="tab">Pacotes</a></li>
+                    <li><a href="#carros" data-toggle="tab">Carros</a></li>
+                    <li><a href="#atracoes" data-toggle="tab">Atrações</a></li>
+                    <li><a href="#cruzeiros" data-toggle="tab">Cruzeiros</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="passagens">
+                        <div class="quadrante quadrante1">
+                            <div class="radio trip dark-theme steps">
+                                <div class="item">
+                                    <input id="ida-volta" type="radio" name="typeTrip" value="ida-volta" checked>
+                                    <label for="ida-volta">Ida e volta</label>
+                                </div>
+                                <div class="item">
+                                    <input id="somente-ida" type="radio" name="typeTrip" value="somente-ida">
+                                    <label for="somente-ida">Somente ida</label>
+                                </div>
+                                <div class="item">
+                                    <input id="varios-destinos" type="radio" name="typeTrip" value="varios-destinos">
+                                    <label for="varios-destinos">Vários destinos </label>
+                                </div>
+                            </div>
+                            <div class="menor-preco">
+                                <div class="checkbox">
+                                    <input type="checkbox" value="" id="cheapestPrice">
+                                    <label for="cheapestPrice">
+                                        Menor Preço
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="quadrante quadrante2">
+                            <img class="subindo" src="/Content/images/icon/icon-from.png"></img>
+                            <p class="de">
+                                de <span>Sao Paulo, Brasil</span>
+                            </p>
+                        </div>
+                        <div class="quadrante quadrante3">
+                            <img class="descendo" src="/Content/images/icon/icon-to.png"></img>
+                            <p class="para">
+                                para <span>Escolha o destino</span>
+                            </p>
+                        </div>
+                        <div class="quadrante quadrante4">
+                            <div class="quadrante-interno">
+                                <img class="calendario" src="/Content/images/icon/icon-to.png"></img>
+                                <p class="para">
+                                    para <span>Escolha o destino</span>
+                                </p>
+                            </div>
+                            <div class="quadrante-interno">
+                                <img class="calendario" src="/Content/images/icon/icon-to.png"></img>
+                                <p class="para">
+                                    para <span>Escolha o destino</span>
+                                </p>
+                            </div>                            
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="hoteis">...</div>
+                    <div class="tab-pane" id="pacotes">...</div>
+                    <div class="tab-pane" id="carros">...</div>
+                    <div class="tab-pane" id="atracoes">...</div>
+                    <div class="tab-pane" id="cruzeiros">...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@Html.Partial("_FooterFull")

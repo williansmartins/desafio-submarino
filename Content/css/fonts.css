@@ -1,0 +1,27 @@
+﻿@font-face {
+  font-family: 'Omnes';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/omnes/omnesreg-webfont.eot');
+  src: url('../fonts/omnes/omnesreg-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/omnes/omnesreg-webfont.woff') format('woff'), url('../fonts/omnes/omnesreg-webfont.ttf') format('truetype'), url('../fonts/omnes/omnesreg-webfont.svg#omnesregular') format('svg');
+}
+@font-face {
+  font-family: 'Omnes';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/omnes/omnesmed-webfont.eot');
+  src: url('../fonts/omnes/omnesmed-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/omnes/omnesmed-webfont.woff') format('woff'), url('../fonts/omnes/omnesmed-webfont.ttf') format('truetype'), url('../fonts/omnes/omnesmed-webfont.svg#omnesmedium') format('svg');
+}
+@font-face {
+  font-family: 'Omnes';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/omnes/omnessem-webfont.eot');
+  src: url('../fonts/omnes/omnessem-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/omnes/omnessem-webfont.woff') format('woff'), url('../fonts/omnes/omnessem-webfont.ttf') format('truetype'), url('../fonts/omnes/omnessem-webfont.svg#omnessemibold') format('svg');
+}
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('../fonts/glyphicons/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+/*# sourceMappingURL=fonts.css.map */
