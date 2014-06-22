@@ -19,7 +19,7 @@
                 </ul>
                 <div class="tab-content">
                     <div class="tab-pane active" id="passagens">
-                        <div class="quadrante1">
+                        <div class="quadrante quadrante1">
                             <div class="radio trip dark-theme steps">
                                 <div class="item">
                                     <input id="ida-volta" type="radio" name="typeTrip" value="ida-volta" checked>
@@ -43,72 +43,31 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="round-trip">
-                            <div class="form-box">
-                                <form role="form">
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <div class="form-group ">
-                                                <label for="txtRoundTripFrom">De</label>
-                                                <input type="text" class="form-control" id="txtRoundTripFrom" placeholder="Selecione origem">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <div class="form-group ">
-                                                <label for="txtRoundTripTo">Para</label>
-                                                <input type="text" class="form-control" id="txtRoundTripTo" placeholder="Selecione destino">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="form-group">
-                                                <label for="txtRoundTripDepart">Ida</label>
-                                                <input type="text" class="form-control" id="txtRoundTripDepart" placeholder="Escolha a data">
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="form-group">
-                                                <label for="txtRoundTripReturn">Volta</label>
-                                                <input type="text" class="form-control" id="txtRoundTripReturn" placeholder="Escolha a data">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-3">
-                                            <input class="spinner" id="txtRoundTripAdult" name="value">
-                                            <label for="txtRoundTripAdult">Adulto</label>
-                                        </div>
-                                        <div class="col-3">
-                                            <input class="spinner" id="txtRoundTripChildren" name="value">
-                                            <label for="txtRoundTripChildren">Criança</label>
-                                        </div>
-                                        <div class="col-3">
-                                            <input class="spinner" id="txtRoundTripInfants" name="value">
-                                            <label for="txtRoundTripInfants">Bebê</label>
-                                        </div>
-                                        <div class="col-3">
-                                            <label for="cbRoundClass" class="sr-only"></label>
-                                            <span class="custom-select">
-                                                <select id="cbRoundClass">
-                                                    <option>Econômica</option>
-                                                    <option>Executiva</option>
-                                                </select>
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <button type="button" class="btn btn-xlg btn-default btn-block">
-                                                <span class="glyphicon glyphicon-search"></span>
-                                                Pesquisar
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
+                        <div class="quadrante quadrante2">
+                            <img class="subindo" src="/Content/images/icon/icon-from.png"></img>
+                            <p class="de">
+                                de <span>Sao Paulo, Brasil</span>
+                            </p>
+                        </div>
+                        <div class="quadrante quadrante3">
+                            <img class="descendo" src="/Content/images/icon/icon-to.png"></img>
+                            <p class="para">
+                                para <span>Escolha o destino</span>
+                            </p>
+                        </div>
+                        <div class="quadrante quadrante4">
+                            <div class="quadrante-interno">
+                                <img class="calendario" src="/Content/images/icon/icon-to.png"></img>
+                                <p class="para">
+                                    para <span>Escolha o destino</span>
+                                </p>
                             </div>
+                            <div class="quadrante-interno">
+                                <img class="calendario" src="/Content/images/icon/icon-to.png"></img>
+                                <p class="para">
+                                    para <span>Escolha o destino</span>
+                                </p>
+                            </div>                            
                         </div>
                     </div>
                     <div class="tab-pane" id="hoteis">...</div>

@@ -921,12 +921,11 @@ fieldset[disabled] .btn.active {
 }
 .borderradius .radio.trip:after {
   position: absolute;
-  top: 32px;
-  left: 67px;
-  width: 275px;
+  top: 9px;
+  left: 41px;
+  width: 85px;
   border-top: 1px solid #c9d0d2;
   content: '';
-  z-index: 0;
 }
 .borderradius .radio.trip div {
   float: left;

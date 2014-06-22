@@ -25,6 +25,7 @@ Site._init = function () {
     Site._openRecentSearches();
     Site._animateHotelTooltips();
     Site._openRooms();
+    Site._scrollPage();
     Site._applyAutoComplete();
     $(window).resize(function () {
         Site._bookingAside();
@@ -158,6 +159,16 @@ Site._openRooms = function () {
     });
     $('button[data-click=room-detail-package]').on('click', function () {
         window.location = '/Packages/Detail'
+    });
+}
+Site._scrollPage = function () {
+    $('.scroll-quartos').on('click', function(e){
+        e.preventDefault();
+        $('html,body').animate({scrollTop: $('.hotel-detail-wrapper .select-room h2').offset().top-150},'slow');
+    });    
+    $('.scroll-quartos-packages').on('click', function(e){
+        e.preventDefault();
+        $('html,body').animate({scrollTop: $('.hotel-detail-wrapper .select-room h2').offset().top-200},'slow');
     });
 }
 Site._fixAsideButton = function () {
@@ -345,9 +356,10 @@ Site._compareHotel = function () {
 Site._fieldChange = function (obj, nextFieldId) {
     var maxlength = $(obj).attr('maxlength');
     var length = $(obj).val().length;
-
-    if (length == maxlength)
+      
+    if (length == maxlength){
         $('#' + nextFieldId).focus();
+    }
 }
 Site._validNumber = function (obj) {
     var valor = $(obj).val().replace(/[^0-9]+/g, '');

@@ -949,14 +949,41 @@ option[disabled] {
 .booking-widget .nav {
   display: none;
 }
-.booking-widget #passagens .quadrante1 {
+.booking-widget #passagens .quadrante {
   width: 100%;
-  height: 300px;
-  outline: solid 1px gray;
+  height: 90px;
+  outline: solid 1px #c9d0d2;
+  margin-top: 1px;
 }
-.booking-widget #passagens .round-trip {
-  width: 100px;
-  height: 100px;
+.booking-widget #passagens .quadrante img {
+  width: 22px;
+  height: 15px;
+  margin-right: 18px;
+  margin-top: 11px;
+  float: left;
+}
+.booking-widget #passagens .quadrante p {
+  float: left;
+  font-size: 12px;
+  font-family: "Omnes", sans-serif;
+  color: #58595b;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.booking-widget #passagens .quadrante p span {
+  font-weight: bold;
+  text-transform: none;
+  display: block;
+  font-size: 20px;
+  color: #28bbfd;
+}
+.booking-widget #passagens .quadrante2 {
+  padding-left: 17px;
+  padding-top: 20px;
+}
+.booking-widget #passagens .quadrante3 {
+  padding-left: 17px;
+  padding-top: 20px;
 }
 .booking-widget #passagens .steps {
   width: 420px;
@@ -964,6 +991,7 @@ option[disabled] {
   float: left;
   padding-left: 43px;
   padding-top: 23px;
+  border: none!important;
 }
 .booking-widget #passagens .steps .item {
   width: 33%;

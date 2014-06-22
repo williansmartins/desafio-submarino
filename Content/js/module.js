@@ -197,18 +197,23 @@ var MultipleDestination = {
         Site._applyAutoComplete();
     },
     AddFlight: function (isFlightBack) {
-        var isFlightBack = isFlightBack || false;
-        var sourceFlightStretch = $("#tmplFlightStretch").html();
-        var sourceFlight = $("#tmplFlight").html();
-        var templateFlightStretch = Handlebars.compile(sourceFlightStretch);
-        var templateFlight = Handlebars.compile(sourceFlight);
-        var context = { Index: $(".expanded-area .flight", this.container).size() + 1, Back: isFlightBack }
-        var htmlFlightStretch = templateFlightStretch(context);
-        var htmlFlight = templateFlight(context);
-        $(".multiple-destination tr", this.container).append(htmlFlightStretch);
-        $(htmlFlight).insertBefore($(".expanded-area footer", this.container));
-        Site._multiExpandedSearchResize();
-        this.BindClick();
+
+        var quantidade = $(".flight.clearfix").length;
+        if( quantidade < 6 ){
+            var isFlightBack = isFlightBack || false;
+            var sourceFlightStretch = $("#tmplFlightStretch").html();
+            var sourceFlight = $("#tmplFlight").html();
+            var templateFlightStretch = Handlebars.compile(sourceFlightStretch);
+            var templateFlight = Handlebars.compile(sourceFlight);
+            var context = { Index: $(".expanded-area .flight", this.container).size() + 1, Back: isFlightBack }
+            var htmlFlightStretch = templateFlightStretch(context);
+            var htmlFlight = templateFlight(context);
+            $(".multiple-destination tr", this.container).append(htmlFlightStretch);
+            $(htmlFlight).insertBefore($(".expanded-area footer", this.container));
+            Site._multiExpandedSearchResize();
+            this.BindClick();
+            quantidade ++;
+        }
     },
     DeleteFlight: function (flight) {
         var $flight = $(flight),
