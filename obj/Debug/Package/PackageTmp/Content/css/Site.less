@@ -7,7 +7,7 @@
 @import "theme.less";
 @import "module.less";
 
-@-ms-viewport{ width: auto !important; }
+@-ms-viewport{ width: auto !important; }                                 
 
 .recommended-flight {
     h2 {
@@ -18,7 +18,7 @@
     }
     .table-result {
         .hour {
-            padding: 20px;
+            padding: 20px; 
         }
     }
     .box-result {
@@ -5156,7 +5156,8 @@ html {
             }
 
             .hover-review {
-                display: none;
+                display: none;       
+                width: 288px;       
                 color: #fff;
                 font-size: 20px;
                 font-weight: 600;
@@ -5164,6 +5165,37 @@ html {
                 position: absolute;
                 top: 0;
                 left: 0;
+                
+                h3 {
+                    color: #fff;
+                    font-size: 20px;
+                    font-weight: 600;
+                    margin: 0px;
+                    left: 20px;
+                    font-family: Omnes;
+                    margin-bottom: 10px;
+                }
+
+                .descricao{
+                    font-size: 11px;
+                }
+
+                .valor{
+                    font-size: 20px;
+
+                    span{
+                        font-size: 10px;
+                    }
+                }
+                .rating{
+                    width: 90px;
+                    // outline: solid 1px red;
+                    height: 22px;
+                    position: relative;
+                    right: -14px;
+                    float: right;
+                    top: -24px;
+                }
             }
 
             img {
@@ -5171,30 +5203,34 @@ html {
                 height: auto;
             }
 
-            h3 {
-                color: #fff;
-                font-size: 20px;
-                font-weight: 600;
-                position: absolute;
-                top: 20px;
-                left: 20px;
-            }
         }
 
         .footer {
             background-color: #fff;
             padding: 15px;
+            
 
             .trip {
                 display: inline-block;
                 vertical-align: middle;
+                width: 150px;
+                
 
                 .glyphicon-logo-tripadvisor {
                     margin-right: 10px;
                 }
 
                 .glyphicon-tripadvisor {
-                    margin-left: -4px;
+                    margin-left: 0px;
+                }
+                p{
+                    float: left;
+                }
+                .num{
+                    float: left;
+                    color: #d0d0d0;
+                    font-size: 11px;
+                    padding-left: 5px;
                 }
             }
 

@@ -1035,6 +1035,13 @@ option[disabled] {
   width: 100%;
   height: 420px;
 }
+.marquee-hotel .marquee-hotel-container .galeria {
+  width: 820px;
+  height: 80px;
+  background: white;
+  position: relative;
+  top: -80px;
+}
 .marquee-hotel + .container-fluid.top {
   padding-top: 540px;
 }

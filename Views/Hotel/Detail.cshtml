@@ -80,7 +80,7 @@
         </div>
     </form>
 </div>
-<div class="hotel-tooltip hidden">
+<div class="hotel-tooltip">
     <div class="alert alert-info fade booking-alert">
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
         A última reserva deste hotel foi feita hoje às 16:51, nos Estados Unidos
@@ -160,6 +160,27 @@
                     </div>
                     <img src="~/Content/images/placeholder/marquee-5.jpg" alt="" class="image" />
                 </div>
+            </div>
+        </div>
+        <div class="galeria">
+            <div class="wrapper">
+                <a href="#" id="prev"><img src="~/Content/images/banner/thumbs/prev.jpg"></a>
+                <div id="" class="slideshow"
+                    data-cycle-fx="carousel"
+                    data-cycle-timeout="0"
+                    data-cycle-next="#next"
+                    data-cycle-prev="#prev"
+                    data-cycle-pager="#pager4"
+                    >
+                    <a href="~/Content/images/banner/big/Dubai.jpg" class="grouped_elements" rel="group1" ><img src="~/Content/images/banner/thumbs/peq-Dubai.jpg"></a>
+                    <a href="~/Content/images/banner/big/grecia.jpg" class="grouped_elements" rel="group1" ><img src="~/Content/images/banner/thumbs/peq-grecia.jpg"></a>
+                    <a href="~/Content/images/banner/big/MG.jpg" class="grouped_elements" rel="group1" ><img src="~/Content/images/banner/thumbs/peq-MG.jpg"></a>
+                    <a href="~/Content/images/banner/big/paraty.jpg" class="grouped_elements" rel="group1" ><img src="~/Content/images/banner/thumbs/peq-paraty.jpg"></a>
+                    <a href="~/Content/images/banner/big/Portugal.jpg" class="grouped_elements" rel="group1" ><img src="~/Content/images/banner/thumbs/peq-Portugal.jpg"></a>
+                    <a href="~/Content/images/banner/big/RiodeJaneiro.jpg" class="grouped_elements" rel="group1" ><img src="~/Content/images/banner/thumbs/peq-RiodeJaneiro.jpg"></a>
+                    <a href="~/Content/images/banner/big/saopaulo.jpg" class="grouped_elements" rel="group1" ><img src="~/Content/images/banner/thumbs/peq-saopaulo.jpg"></a>
+                </div>
+                <a href="#" id="next"><img src="~/Content/images/banner/thumbs/next.jpg"></a>
             </div>
         </div>
     </div>
@@ -695,19 +716,31 @@
                 <div class="col-4">
                     <div class="similar-hotels-item">
                         <div class="content">
-                            <h3>Hotel Pauso Real</h3>
-                            <img src="/Content/images/placeholder/praia.png">
-                            <div class="hover-review">The hotel is beautiful.</div>
+                            <img src="/Content/images/placeholder/piscina.jpg">
+                            <div class="hover-review">
+                                <h3>Rio’s Nice Hotel</h3>
+                                <p class="descricao">Hotel + Voo A partir de</p>
+                                <p class="valor">985,99 <span>R$</span></p>
+                                <div class="rating">
+                                    <span class="stars">
+                                        <span class="glyphicon glyphicon-star-on"></span>
+                                        <span class="glyphicon glyphicon-star-on"></span>
+                                        <span class="glyphicon glyphicon-star-on"></span>
+                                        <span class="glyphicon glyphicon-star-on"></span>
+                                        <span class="glyphicon glyphicon-star-off"></span>
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                         <div class="footer">
                             <div class="trip">
-                                <i class="glyphicon glyphicon-logo-tripadvisor"></i>
-                                <i class="glyphicon glyphicon-tripadvisor"></i>
-                                <i class="glyphicon glyphicon-tripadvisor"></i>
-                                <i class="glyphicon glyphicon-tripadvisor"></i>
-                                <i class="glyphicon glyphicon-tripadvisor"></i>
-                                <i class="glyphicon glyphicon-tripadvisor"></i>
-                                <i class="num">(328)</i>
+                                <p class="glyphicon glyphicon-logo-tripadvisor"></p>
+                                <p class="glyphicon glyphicon-tripadvisor"></p>
+                                <p class="glyphicon glyphicon-tripadvisor"></p>
+                                <p class="glyphicon glyphicon-tripadvisor"></p>
+                                <p class="glyphicon glyphicon-tripadvisor"></p>
+                                <p class="glyphicon glyphicon-tripadvisor"></p>
+                                <p class="num">(328)</p>
                             </div>
                             <a href="" class="btn btn-sm btn-text-cta"><i class="glyphicon glyphicon-text-cta-click"></i>Ver Quartos</a>
                         </div>
@@ -716,19 +749,31 @@
                 <div class="col-4">
                     <div class="similar-hotels-item">
                         <div class="content">
-                            <h3>Hotel Pauso Real</h3>
-                            <img src="/Content/images/placeholder/praia.png">
-                            <div class="hover-review">The hotel is beautiful.</div>
+                            <img src="/Content/images/placeholder/praia.jpg">
+                            <div class="hover-review">
+                                <h3>Hotel Pauso Real</h3>
+                                <p class="descricao">Hotel + Voo A partir de</p>
+                                <p class="valor">1.290,99 <span>R$</span></p>
+                                <div class="rating">
+                                    <span class="stars">
+                                        <span class="glyphicon glyphicon-star-on"></span>
+                                        <span class="glyphicon glyphicon-star-on"></span>
+                                        <span class="glyphicon glyphicon-star-off"></span>
+                                        <span class="glyphicon glyphicon-star-off"></span>
+                                        <span class="glyphicon glyphicon-star-off"></span>
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                         <div class="footer">
                             <div class="trip">
-                                <i class="glyphicon glyphicon-logo-tripadvisor"></i>
-                                <i class="glyphicon glyphicon-tripadvisor"></i>
-                                <i class="glyphicon glyphicon-tripadvisor"></i>
-                                <i class="glyphicon glyphicon-tripadvisor"></i>
-                                <i class="glyphicon glyphicon-tripadvisor"></i>
-                                <i class="glyphicon glyphicon-tripadvisor"></i>
-                                <i class="num">(328)</i>
+                                <p class="glyphicon glyphicon-logo-tripadvisor"></p>
+                                <p class="glyphicon glyphicon-tripadvisor"></p>
+                                <p class="glyphicon glyphicon-tripadvisor"></p>
+                                <p class="glyphicon glyphicon-tripadvisor"></p>
+                                <p class="glyphicon glyphicon-tripadvisor"></p>
+                                <p class="glyphicon glyphicon-tripadvisor"></p>
+                                <p class="num">(328)</p>
                             </div>
                             <a href="" class="btn btn-sm btn-text-cta"><i class="glyphicon glyphicon-text-cta-click"></i>Ver Quartos</a>
                         </div>
@@ -737,19 +782,31 @@
                 <div class="col-4">
                     <div class="similar-hotels-item">
                         <div class="content">
-                            <h3>Hotel Pauso Real</h3>
-                            <img src="/Content/images/placeholder/praia.png">
-                            <div class="hover-review">The hotel is beautiful.</div>
+                            <img src="/Content/images/placeholder/piscina2.jpg">
+                            <div class="hover-review">
+                                <h3>Hotel Americano</h3>
+                                <p class="descricao">Hotel + Voo A partir de</p>
+                                <p class="valor">1.085,99 <span>R$</span></p>
+                                <div class="rating">
+                                    <span class="stars">
+                                        <span class="glyphicon glyphicon-star-on"></span>
+                                        <span class="glyphicon glyphicon-star-on"></span>
+                                        <span class="glyphicon glyphicon-star-on"></span>
+                                        <span class="glyphicon glyphicon-star-off"></span>
+                                        <span class="glyphicon glyphicon-star-off"></span>
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                         <div class="footer">
                             <div class="trip">
-                                <i class="glyphicon glyphicon-logo-tripadvisor"></i>
-                                <i class="glyphicon glyphicon-tripadvisor"></i>
-                                <i class="glyphicon glyphicon-tripadvisor"></i>
-                                <i class="glyphicon glyphicon-tripadvisor"></i>
-                                <i class="glyphicon glyphicon-tripadvisor"></i>
-                                <i class="glyphicon glyphicon-tripadvisor"></i>
-                                <i class="num">(328)</i>
+                                <p class="glyphicon glyphicon-logo-tripadvisor"></p>
+                                <p class="glyphicon glyphicon-tripadvisor"></p>
+                                <p class="glyphicon glyphicon-tripadvisor"></p>
+                                <p class="glyphicon glyphicon-tripadvisor"></p>
+                                <p class="glyphicon glyphicon-tripadvisor"></p>
+                                <p class="glyphicon glyphicon-tripadvisor"></p>
+                                <p class="num">(328)</p>
                             </div>
                             <a href="" class="btn btn-sm btn-text-cta"><i class="glyphicon glyphicon-text-cta-click"></i>Ver Quartos</a>
                         </div>

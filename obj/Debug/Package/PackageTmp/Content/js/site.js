@@ -26,6 +26,7 @@ Site._init = function () {
     Site._animateHotelTooltips();
     Site._openRooms();
     Site._scrollPage();
+    Site._galeries();
     Site._applyAutoComplete();
     $(window).resize(function () {
         Site._bookingAside();
@@ -170,6 +171,13 @@ Site._scrollPage = function () {
         e.preventDefault();
         $('html,body').animate({scrollTop: $('.hotel-detail-wrapper .select-room h2').offset().top-200},'slow');
     });
+}
+Site._galeries = function () {
+    $( '.slideshow' ).cycle({
+        manualSpeed: 100,
+        slides:  '> a'
+    });
+    $("a.grouped_elements").fancybox();
 }
 Site._fixAsideButton = function () {
     if ($('.aside-details .btn-black[data-aside=top]').length > 0) {

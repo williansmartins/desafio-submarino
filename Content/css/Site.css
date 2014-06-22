@@ -2580,6 +2580,44 @@ option[disabled] {
   width: 100%;
   height: 420px;
 }
+.marquee-hotel .marquee-hotel-container .detail {
+  display: none;
+}
+.marquee-hotel .marquee-hotel-container .galeria {
+  width: 820px;
+  height: 80px;
+  background: #fafafa;
+  position: relative;
+  top: -80px;
+}
+.marquee-hotel .marquee-hotel-container .galeria .wrapper {
+  width: 610px!important;
+  min-width: 610px!important;
+  height: 40px;
+  float: right;
+  margin-top: 20px;
+}
+.marquee-hotel .marquee-hotel-container .galeria .wrapper .slideshow {
+  width: 550px;
+  height: 40px;
+  float: left;
+}
+.marquee-hotel .marquee-hotel-container .galeria .wrapper .slideshow a {
+  margin: 0 4px;
+  height: 40px;
+  width: 70px;
+}
+.marquee-hotel .marquee-hotel-container .galeria .wrapper .slideshow a img {
+  width: 70px;
+  height: 40px;
+}
+.marquee-hotel .marquee-hotel-container .galeria .wrapper a {
+  width: 10px;
+  height: 20px;
+  display: block;
+  float: left;
+  margin: 9px;
+}
 .marquee-hotel + .container-fluid.top {
   padding-top: 540px;
 }
@@ -7187,6 +7225,7 @@ html {
 }
 .similar-hotels .similar-hotels-item .content .hover-review {
   display: none;
+  width: 288px;
   color: #fff;
   font-size: 20px;
   font-weight: 600;
@@ -7195,17 +7234,35 @@ html {
   top: 0;
   left: 0;
 }
-.similar-hotels .similar-hotels-item .content img {
-  width: 100%;
-  height: auto;
-}
-.similar-hotels .similar-hotels-item .content h3 {
+.similar-hotels .similar-hotels-item .content .hover-review h3 {
   color: #fff;
   font-size: 20px;
   font-weight: 600;
-  position: absolute;
-  top: 20px;
+  margin: 0px;
   left: 20px;
+  font-family: Omnes;
+  margin-bottom: 10px;
+}
+.similar-hotels .similar-hotels-item .content .hover-review .descricao {
+  font-size: 11px;
+}
+.similar-hotels .similar-hotels-item .content .hover-review .valor {
+  font-size: 20px;
+}
+.similar-hotels .similar-hotels-item .content .hover-review .valor span {
+  font-size: 10px;
+}
+.similar-hotels .similar-hotels-item .content .hover-review .rating {
+  width: 90px;
+  height: 22px;
+  position: relative;
+  right: -14px;
+  float: right;
+  top: -24px;
+}
+.similar-hotels .similar-hotels-item .content img {
+  width: 100%;
+  height: auto;
 }
 .similar-hotels .similar-hotels-item .footer {
   background-color: #fff;
@@ -7214,12 +7271,22 @@ html {
 .similar-hotels .similar-hotels-item .footer .trip {
   display: inline-block;
   vertical-align: middle;
+  width: 150px;
 }
 .similar-hotels .similar-hotels-item .footer .trip .glyphicon-logo-tripadvisor {
   margin-right: 10px;
 }
 .similar-hotels .similar-hotels-item .footer .trip .glyphicon-tripadvisor {
-  margin-left: -4px;
+  margin-left: 0px;
+}
+.similar-hotels .similar-hotels-item .footer .trip p {
+  float: left;
+}
+.similar-hotels .similar-hotels-item .footer .trip .num {
+  float: left;
+  color: #d0d0d0;
+  font-size: 11px;
+  padding-left: 5px;
 }
 .similar-hotels .similar-hotels-item .footer a {
   float: right;
