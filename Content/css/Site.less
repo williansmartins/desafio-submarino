@@ -4531,6 +4531,7 @@ html {
 .detail {
     .hotel-description-top {
         background: url(../images/bg/hotel-detail.gif) center top repeat-y;
+        border-top: solid 1px #f0f1f2;
 
         .first-box {
             width: 635px;
@@ -4538,7 +4539,7 @@ html {
             background-color: #fff;
             padding: 0 30px 0 15px;
             float: left;
-            border-right: 1px solid @grey-border;
+            border-right: 1px solid #f0f1f2;
         }
 
         .aside-hotel-description {
@@ -5250,14 +5251,20 @@ html {
     border-bottom: 1px solid @grey-lighter;
     padding: 27px 0;
 
+    .links-extras{
+        width: 940px;
+        margin: 0 auto;
+    }
+
     li {
         text-align: center;
         font-size: 13px;
         line-height: 26px;
-        border-left: 1px solid @grey-lighter;
+        border-right: 1px solid @grey-lighter;
 
         &:first-child {
-            border-left: none;
+            border-left: 1px solid @grey-lighter;
+            // border-left: none;
         }
     }
 
@@ -5306,12 +5313,17 @@ html {
 .footer-top {
     padding: 85px 0 50px;
     border-bottom: 1px solid #f1f1f1;
+    width: 940px;
+    margin: 0 auto;
 }
 .footer-link {
     font-size: 11px;
     line-height: 1em;
     color: @grey-pale;
+    width: 940px;
+    margin: 0 auto;
     margin-bottom: 5px;
+    
     a {
         color: @grey-pale;
     }
@@ -5336,6 +5348,12 @@ html {
     background-color: #ffffff;
     padding: 70px 0 50px;
     color: @grey-pale;
+
+    .container-fluid{
+        width: 940px;
+        margin: 0 auto;
+    }
+
     a {
         color: @grey-pale;
         word-break: break-word;

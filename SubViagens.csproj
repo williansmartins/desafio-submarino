@@ -168,6 +168,10 @@
     <Content Include="Content\css\jquery-ui\jquery-ui-1.10.4.custom.min.css">
       <DependentUpon>jquery-ui-1.10.4.custom.css</DependentUpon>
     </Content>
+    <Content Include="Content\css\lib\jquery.fancybox.css" />
+    <Content Include="Content\css\lib\jquery.fancybox.min.css">
+      <DependentUpon>jquery.fancybox.css</DependentUpon>
+    </Content>
     <Content Include="Content\css\lib\mixins.css">
       <DependentUpon>mixins.less</DependentUpon>
     </Content>
@@ -268,6 +272,20 @@
     <Content Include="Content\fonts\omnes\omnesreg-webfont.svg" />
     <Content Include="Content\fonts\omnes\omnessem-webfont.svg" />
     <Content Include="Content\images\banner\banner-submarino.jpg" />
+    <Content Include="Content\images\banner\big\1.jpg" />
+    <Content Include="Content\images\banner\big\2.jpg" />
+    <Content Include="Content\images\banner\big\3.jpg" />
+    <Content Include="Content\images\banner\big\4.jpg" />
+    <Content Include="Content\images\banner\big\5.jpg" />
+    <Content Include="Content\images\banner\big\6.jpg" />
+    <Content Include="Content\images\banner\big\7.jpg" />
+    <Content Include="Content\images\banner\big\Dubai.jpg" />
+    <Content Include="Content\images\banner\big\grecia.jpg" />
+    <Content Include="Content\images\banner\big\MG.jpg" />
+    <Content Include="Content\images\banner\big\paraty.jpg" />
+    <Content Include="Content\images\banner\big\Portugal.jpg" />
+    <Content Include="Content\images\banner\big\RiodeJaneiro.jpg" />
+    <Content Include="Content\images\banner\big\saopaulo.jpg" />
     <Content Include="Content\images\banner\highlight-hotel-1.jpg" />
     <Content Include="Content\images\banner\highlight-hotel-2.jpg" />
     <Content Include="Content\images\banner\highlight-hotel-3.jpg" />
@@ -277,6 +295,22 @@
     <Content Include="Content\images\banner\hotel-top-carousel.jpg" />
     <Content Include="Content\images\banner\multidestination-checkout-2.png" />
     <Content Include="Content\images\banner\rio-de-janeiro.jpg" />
+    <Content Include="Content\images\banner\thumbs\next.jpg" />
+    <Content Include="Content\images\banner\thumbs\peq-Dubai.jpg" />
+    <Content Include="Content\images\banner\thumbs\peq-grecia.jpg" />
+    <Content Include="Content\images\banner\thumbs\peq-MG.jpg" />
+    <Content Include="Content\images\banner\thumbs\peq-paraty.jpg" />
+    <Content Include="Content\images\banner\thumbs\peq-Portugal.jpg" />
+    <Content Include="Content\images\banner\thumbs\peq-RiodeJaneiro.jpg" />
+    <Content Include="Content\images\banner\thumbs\peq-saopaulo.jpg" />
+    <Content Include="Content\images\banner\thumbs\prev.jpg" />
+    <Content Include="Content\images\banner\thumbs\thumb1.jpg" />
+    <Content Include="Content\images\banner\thumbs\thumb2.jpg" />
+    <Content Include="Content\images\banner\thumbs\thumb3.jpg" />
+    <Content Include="Content\images\banner\thumbs\thumb4.jpg" />
+    <Content Include="Content\images\banner\thumbs\thumb5.jpg" />
+    <Content Include="Content\images\banner\thumbs\thumb6.jpg" />
+    <Content Include="Content\images\banner\thumbs\thumb7.jpg" />
     <Content Include="Content\images\bg\bg-arrow-table-back.png" />
     <Content Include="Content\images\bg\bg-arrow-table.png" />
     <Content Include="Content\images\bg\business-class-seats.png" />
@@ -296,6 +330,12 @@
     <Content Include="Content\images\bg\wavy.gif" />
     <Content Include="Content\images\credit-card-small.png" />
     <Content Include="Content\images\credit-card.png" />
+    <Content Include="Content\images\fancy\blank.gif" />
+    <Content Include="Content\images\fancy\fancybox_loading%402x.gif" />
+    <Content Include="Content\images\fancy\fancybox_loading.gif" />
+    <Content Include="Content\images\fancy\fancybox_overlay.png" />
+    <Content Include="Content\images\fancy\fancybox_sprite%402x.png" />
+    <Content Include="Content\images\fancy\fancybox_sprite.png" />
     <Content Include="Content\images\how-to-add-insurance.png" />
     <Content Include="Content\images\how-to-select-dates.png" />
     <Content Include="Content\images\how-to-select-flights.png" />
@@ -464,6 +504,9 @@
     <Content Include="Content\images\placeholder\marquee-4.jpg" />
     <Content Include="Content\images\placeholder\marquee-5.jpg" />
     <Content Include="Content\images\placeholder\marquee-hotel.png" />
+    <Content Include="Content\images\placeholder\piscina.jpg" />
+    <Content Include="Content\images\placeholder\piscina2.jpg" />
+    <Content Include="Content\images\placeholder\praia.jpg" />
     <Content Include="Content\images\placeholder\praia.png" />
     <Content Include="Content\images\seats.png" />
     <Content Include="Content\images\security-certification.png" />
@@ -512,6 +555,8 @@
     <Content Include="Content\js\lib\jquery-2.1.0.min.js">
       <DependentUpon>jquery-2.1.0.js</DependentUpon>
     </Content>
+    <Content Include="Content\js\lib\jquery.cycle2.js" />
+    <Content Include="Content\js\lib\jquery.fancybox.js" />
     <Content Include="Content\js\lib\modernizr-2.7.2.js" />
     <Content Include="Content\js\lib\jquery-2.1.0.min.js.map">
       <DependentUpon>jquery-2.1.0.min.js</DependentUpon>

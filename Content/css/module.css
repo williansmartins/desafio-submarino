@@ -1039,11 +1039,13 @@ option[disabled] {
   display: none;
 }
 .marquee-hotel .marquee-hotel-container .galeria {
-  width: 820px;
+  width: 832px;
   height: 80px;
   background: #fafafa;
   position: relative;
   top: -80px;
+  left: 50%;
+  margin-left: -683px;
 }
 .marquee-hotel .marquee-hotel-container .galeria .wrapper {
   width: 610px!important;
