@@ -6,15 +6,13 @@ using System.Web.Mvc;
 
 namespace SubViagens.Controllers
 {
-    public class HomeController : Controller
+    public class LinksController : Controller
     {
         //
-        // GET: /Home/
+        // GET: /Links/
 
         public ActionResult Index()
         {
-            ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
-
             return View();
         }
 

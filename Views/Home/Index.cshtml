@@ -1,31 +1,84 @@
 ﻿@{
     ViewBag.Title = "Home";
 }
-<div class="container-fluid  top">
+
+<div class="marquee-hotel">
+    <div class="marquee-hotel-container">
+        <div class="marquee still" data-behavior="marquee">
+            <div class="current transition">
+                <div class="detail"></div>
+                <div class="tab transition">
+                    <button type="button" class="btn transition"></button>
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <div class="ticket-dots">
+                        <div class="tab-crop transition"></div>
+                        <div class="first">
+                            <span class="dot dot1"></span><span class="dot dot2"></span><span class="dot dot3"></span><span class="dot dot4"></span><span class="dot dot5"></span><span class="dot dot6"></span><span class="dot dot7"></span><span class="dot dot8"></span><span class="dot dot9"></span><span class="dot dot10"></span><span class="dot dot11"></span><span class="dot dot12"></span><span class="dot dot13"></span><span class="dot dot14"></span><span class="dot dot15"></span><span class="dot dot16"></span><span class="dot dot17"></span><span class="dot dot18"></span><span class="dot dot19"></span><span class="dot dot20"></span>
+                        </div>
+                        <div class="last">
+                            <span class="dot dot1"></span><span class="dot dot2"></span><span class="dot dot3"></span><span class="dot dot4"></span><span class="dot dot5"></span><span class="dot dot6"></span><span class="dot dot7"></span><span class="dot dot8"></span><span class="dot dot9"></span><span class="dot dot10"></span><span class="dot dot11"></span><span class="dot dot12"></span><span class="dot dot13"></span><span class="dot dot14"></span><span class="dot dot15"></span><span class="dot dot16"></span><span class="dot dot17"></span><span class="dot dot18"></span><span class="dot dot19"></span><span class="dot dot20"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="itens">
+                <div class="item">
+                    <div class="detail">
+                        <h2>São Paulo</h2>
+                    </div>
+                    <img src="~/Content/images/placeholder/marquee-1.jpg" alt="" class="image" />
+                </div>
+                <div class="item">
+                    <div class="detail">
+                        <h2>Rio de Janeiro</h2>
+                    </div>
+                    <img src="~/Content/images/placeholder/marquee-2.jpg" alt="" class="image" />
+                </div>
+                <div class="item">
+                    <div class="detail">
+                        <h2>Porto Alegre</h2>
+                    </div>
+                    <img src="~/Content/images/placeholder/marquee-3.jpg" alt="" class="image" />
+                </div>
+                <div class="item">
+                    <div class="detail">
+                        <h2>Fortaleza</h2>
+                    </div>
+                    <img src="~/Content/images/placeholder/marquee-4.jpg" alt="" class="image" />
+                </div>
+                <div class="item">
+                    <div class="detail">
+                        <h2>Salvador</h2>
+                    </div>
+                    <img src="~/Content/images/placeholder/marquee-5.jpg" alt="" class="image" />
+                </div>
+            </div>
+        </div>
+        <div class="galeria">
+            <div class="wrapper">
+                <a href="#" id="prev"><img src="~/Content/images/banner/thumbs/prev.jpg"></a>
+                <div id="" class="slideshow"
+                     data-cycle-fx="carousel"
+                     data-cycle-timeout="0"
+                     data-cycle-next="#next"
+                     data-cycle-prev="#prev"
+                     data-cycle-pager="#pager4">
+                    <a href="~/Content/images/banner/big/Dubai.jpg" class="grouped_elements" rel="group1"><img src="~/Content/images/banner/thumbs/peq-Dubai.jpg"></a>
+                    <a href="~/Content/images/banner/big/grecia.jpg" class="grouped_elements" rel="group1"><img src="~/Content/images/banner/thumbs/peq-grecia.jpg"></a>
+                    <a href="~/Content/images/banner/big/MG.jpg" class="grouped_elements" rel="group1"><img src="~/Content/images/banner/thumbs/peq-MG.jpg"></a>
+                    <a href="~/Content/images/banner/big/paraty.jpg" class="grouped_elements" rel="group1"><img src="~/Content/images/banner/thumbs/peq-paraty.jpg"></a>
+                    <a href="~/Content/images/banner/big/Portugal.jpg" class="grouped_elements" rel="group1"><img src="~/Content/images/banner/thumbs/peq-Portugal.jpg"></a>
+                    <a href="~/Content/images/banner/big/RiodeJaneiro.jpg" class="grouped_elements" rel="group1"><img src="~/Content/images/banner/thumbs/peq-RiodeJaneiro.jpg"></a>
+                    <a href="~/Content/images/banner/big/saopaulo.jpg" class="grouped_elements" rel="group1"><img src="~/Content/images/banner/thumbs/peq-saopaulo.jpg"></a>
+                </div>
+                <a href="#" id="next"><img src="~/Content/images/banner/thumbs/next.jpg"></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
     <div class="row">
-        <ul>
-            <li><a href="/Examples/" class="btn btn-link">/Examples</a></li>
-            <li><a href="/Examples/Form" class="btn btn-link">/Examples/Form</a></li>
-            <li><a href="/Examples/Tooltips" class="btn btn-link">/Examples/Tooltips</a></li>
-            <li><a href="/Flight" class="btn btn-link">/Flight</a></li>
-            <li><a href="/Flight/SearchResult" class="btn btn-link">/Flight/SearchResult</a></li>
-            <li><a href="/Flight/Booking" class="btn btn-link">/Flight/Booking</a></li>
-            <li><a href="/Flight/Confirmation" class="btn btn-link">/Flight/Confirmation</a></li>
-            <li><a href="/Hotel" class="btn btn-link">/Hotel</a></li>
-            <li><a href="/Hotel/SearchResult" class="btn btn-link">/Hotel/SearchResult</a></li>
-            <li><a href="/Hotel/Detail" class="btn btn-link">/Hotel/Detail</a></li>
-            <li><a href="/Hotel/Booking" class="btn btn-link">/Hotel/Booking</a></li>
-            <li><a href="/Hotel/Confirmation" class="btn btn-link">/Hotel/Confirmation</a></li>
-            <li><a href="/MultiDestination" class="btn btn-link">/MultiDestination</a></li>
-            <li><a href="/MultiDestination/SearchResult" class="btn btn-link">/MultiDestination/SearchResult</a></li>
-            <li><a href="/MultiDestination/Booking" class="btn btn-link">/MultiDestination/Booking</a></li>
-            <li><a href="/MultiDestination/Confirmation" class="btn btn-link">/MultiDestination/Confirmation</a></li>
-            <li><a href="/Packages/" class="btn btn-link">/Packages</a></li>
-            <li><a href="/Packages/HotelSearchResult" class="btn btn-link">/Packages/HotelSearchResult</a></li>
-            <li><a href="/Packages/FlightSearchResult" class="btn btn-link">/Packages/FlightSearchResult</a></li>
-            <li><a href="/Packages/Detail" class="btn btn-link">/Packages/Detail</a></li>
-            <li><a href="/Packages/Booking" class="btn btn-link">/Packages/Booking</a></li>
-            <li><a href="/Packages/Confirmation" class="btn btn-link">/Packages/Confirmation</a></li>
-        </ul>
+        <h1>home</h1>
     </div>
 </div>

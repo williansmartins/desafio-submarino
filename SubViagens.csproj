@@ -140,6 +140,7 @@
     <Compile Include="Controllers\ExamplesController.cs" />
     <Compile Include="Controllers\FlightController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LinksController.cs" />
     <Compile Include="Controllers\MultiDestinationController.cs" />
     <Compile Include="Controllers\HotelController.cs" />
     <Compile Include="Controllers\PackagesController.cs" />
@@ -635,6 +636,7 @@
     <Content Include="Views\Packages\FlightSearchResult.cshtml" />
     <Content Include="Views\Shared\_FooterCompact.cshtml" />
     <Content Include="Views\Shared\_FooterFull.cshtml" />
+    <Content Include="Views\Links\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -667,7 +669,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>49869</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>

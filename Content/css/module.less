@@ -2,7 +2,7 @@
 @import "lib/mixins.less";
 
    
-           
+
 /*#region Forms */
 input[type=text],
 input[type=email],
@@ -206,9 +206,11 @@ option[disabled] {
     .scroll-list {
         position: relative;
         overflow-y: auto;
-        &.scroll-package{
+
+        &.scroll-package {
             padding-top: 40px;
         }
+
         &.clone {
             position: absolute;
             visibility: hidden;
@@ -217,6 +219,7 @@ option[disabled] {
         .btn-black {
             border-top: 1px solid #fff;
         }
+
         .btn-black[data-aside=top] {
             position: absolute;
             top: 0;
@@ -1120,27 +1123,27 @@ option[disabled] {
     width: 522px;
     margin-top: 20px;
 
-    .nav{
+    .nav {
        display: none;
     }
 
-    #passagens{
-        .quadrante{
+    #passagens {
+        .quadrante {
             width: 100%;  
             height: 90px;          
             outline: solid 1px #c9d0d2;
             margin-top: 1px;
             
-            img{
+            img {
                 width: 22px;
                 height: 15px;
                 // outline: solid 1px red;
                 margin-right: 18px;
                 margin-top: 11px;
                 float: left;
-
             }
-            p{
+
+            p {
                 // outline: solid 1px orange;
                 float: left;
                 font-size: 12px;
@@ -1149,7 +1152,7 @@ option[disabled] {
                 text-transform: uppercase;
                 font-weight: bold;
 
-                span{
+                span {
                     font-weight: bold;
                     text-transform: none;
                     display: block;
@@ -1159,31 +1162,32 @@ option[disabled] {
             }
         }      
 
-        .quadrante2{
+        .quadrante2 {
             padding-left: 17px;
             padding-top: 20px;
         }  
-        .quadrante3{
+
+        .quadrante3 {
             padding-left: 17px;
             padding-top: 20px;
         } 
       
-        .steps{
+        .steps {
             // outline: 1px solid orange;
             width: 420px;
             height: 90px;
             float: left;
             padding-left: 43px;
             padding-top: 23px;
-            border: none!important;
+            border: none !important;
             
-            .item{
+            .item {
                 width: 33%;
                 height: 100%;
             }
         }
 
-        .menor-preco{
+        .menor-preco {
             width: 100px;
             height: 90px; 
             float: left; 
@@ -1191,8 +1195,6 @@ option[disabled] {
             padding-left: 13px;
         }
     }
-    
-
 }
 
 
@@ -1206,7 +1208,11 @@ option[disabled] {
         top: 131px;
 
         & + .container-fluid.top {
-            padding-top: 420px;
+            background-color: #eceeef;
+            margin-top: 420px;
+            padding-top: 0px;
+            z-index: 1;
+            position: relative;
         }
     }
 
@@ -1222,7 +1228,7 @@ option[disabled] {
 }
 
 .marquee-hotel {
-    position: absolute;
+    position: fixed;
     top: 120px;
     right: 0;
     left: 0;
@@ -1234,7 +1240,7 @@ option[disabled] {
         width: 100%;
         height: 420px;
 
-        .detail{
+        .detail {
             display: none;
         }
 
@@ -1243,36 +1249,37 @@ option[disabled] {
             height: 80px;
             background: #fafafa;
             position: relative;
-            top: -80px;
+            top: -80px; 
             left: 50%;
             margin-left: -683px;
 
-            .wrapper{
-                width: 610px!important;
-                min-width: 610px!important;
+            .wrapper {
+                width: 610px !important;
+                min-width: 610px !important;
                 height: 40px;
                 // outline: solid 1px red;
                 float: right;
                 margin-top: 20px;
 
-                .slideshow{
+                .slideshow {
                     // outline: solid 1px green;
                     width: 550px;
                     height: 40px;
                     float: left;
 
-                    a{
+                    a {
                         margin: 0 4px;
                         height: 40px;
                         width: 70px;
-                        img{
+
+                        img {
                             width: 70px;
                             height: 40px;
                         }
                     }
                 }
 
-                a{
+                a {
                     width: 10px;
                     height: 20px;
                     // outline: solid 1px orange;
@@ -1280,20 +1287,20 @@ option[disabled] {
                     float: left;
                     margin: 9px;
 
-                    #prev{
-
+                    #prev {
                     }
-                    #next{
 
+                    #next {
                     }
                 }
             }
-
         }
     }
-
+    
     & + .container-fluid.top {
-        padding-top: 540px;
+        background-color: #eceeef;
+        margin-top: 540px;
+        padding-top: 0px;
     }
 }
 
@@ -1394,7 +1401,7 @@ option[disabled] {
     font-weight: bold;
     font-size: 12px;
 
-    .bootstrap-touchspin  {
+    .bootstrap-touchspin {
         position: absolute;
         top: 0;
         left: 0;
@@ -1403,6 +1410,7 @@ option[disabled] {
         box-shadow: none;
         font-size: 18px;
         width: 103px;
+
         input {
             width: 50%;
             height: 50px;
@@ -1416,12 +1424,14 @@ option[disabled] {
                 border: none;
             }
         }
+
         .input-group-btn-vertical {
             position: relative;
             white-space: nowrap;
             width: 20px;
             vertical-align: middle;
             display: table-cell;
+
             > .btn {
                 display: block;
                 float: none;
@@ -1434,13 +1444,16 @@ option[disabled] {
                 border: 1px solid @grey-border;
                 background-color: #fff;
             }
+
             .bootstrap-touchspin-up {
                 .border-radius(10px 10px 0px 0px);
             }
+
             .bootstrap-touchspin-down {
                 border-top: none;
                 .border-radius(0px 0px 10px 10px);
             }
+
             i {
                 position: absolute;
                 top: 7px;
@@ -1455,11 +1468,12 @@ option[disabled] {
     &.spinner-box {
         padding: 0;
         width: 100px;
+
         .bootstrap-touchspin {
 
             input {
                 margin-left: 0;
-                margin-top:6px;
+                margin-top: 6px;
                 padding: 0 5px;
                 width: 65px;
                 height: 40px;
@@ -1504,6 +1518,7 @@ option[disabled] {
             -webkit-transition: background-position ease-in-out 0.3s;
             transition: background-position ease-in-out 0.3s;
         }
+
         height: 420px;
         width: 100%;
         position: relative;
@@ -1519,6 +1534,7 @@ option[disabled] {
                 -webkit-transition: width ease-in-out 0.3s;
                 transition: width ease-in-out 0.3s;
             }
+
             position: absolute;
             top: 0;
             right: 0;
@@ -1527,6 +1543,8 @@ option[disabled] {
             background-position: right center;
             background-repeat: no-repeat;
             cursor: pointer;
+            border-left: 1px solid #FFF;
+            z-index: 1;
         }
 
         .detail {
@@ -1542,6 +1560,7 @@ option[disabled] {
                 -webkit-transition: background-position ease-in-out 0.3s;
                 transition: background-position ease-in-out 0.3s;
             }
+
             width: 100px;
             height: 100px;
             border-radius: 50px;
@@ -1553,19 +1572,198 @@ option[disabled] {
             margin-top: -50px;
             color: #FFF;
             text-align: left;
+            border: 1px solid #FFF;
+
             &:focus {
                 outline: none;
             }
+
+            z-index: 2;
+        }
+
             .glyphicon-chevron-right {
                 &:before {
                     content: "";
                 }
+
                 background-image: url(../images/icon/icon-arrow-white-right.png);
                 width: 39px;
                 height: 54px;
+            margin-top: -27px;
+            position: absolute;
+            top: 50%;
+            left: -15px;
+            z-index: 4;
+        }
+
+        .ticket-dots {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 70px;
+
+            .tab-crop {
+                &.transition {
+                    -moz-transition: background-position ease-in-out 0.3s;
+                    -o-transition: background-position ease-in-out 0.3s;
+                    -webkit-transition: background-position ease-in-out 0.3s;
+                    transition: background-position ease-in-out 0.3s;
+                }
+
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                width: 70px;
+                z-index: 3;
+                background-position: -1345px center;
+            }
+
+            .last {
+                position: absolute;
+                top: 258px;
+
+                .dot1 {
+                    background-position: -1345px -264px;
+                }
+
+                .dot2 {
+                    background-position: -1345px -276px;
+                }
+
+                .dot3 {
+                    background-position: -1345px -288px;
+                }
+
+                .dot4 {
+                    background-position: -1345px -300px;
+            }
+
+                .dot5 {
+                    background-position: -1345px -312px;
+        }
+
+                .dot6 {
+                    background-position: -1345px -324px;
+    }
+
+                .dot7 {
+                    background-position: -1345px -332px;
+                }
+
+                .dot8 {
+                    background-position: -1345px -348px;
+                }
+
+                .dot10 {
+                    background-position: -1345px -360px;
+                }
+
+                .dot11 {
+                    background-position: -1345px -372px;
+                }
+
+                .dot12 {
+                    background-position: -1345px -384px;
+                }
+
+                .dot13 {
+                    background-position: -1345px -396px;
+                }
+
+                .dot14 {
+                    background-position: -1345px -408px;
+                }
+            }
+
+            .dot {
+                &.transition {
+                    -moz-transition: background-position ease-in-out 0.3s;
+                    -o-transition: background-position ease-in-out 0.3s;
+                    -webkit-transition: background-position ease-in-out 0.3s;
+                    transition: background-position ease-in-out 0.3s;
+                }
+
+                display: block;
+                position: absolute;
+                border: 1px solid #FFF;
+                width: 10px;
+                height: 10px;
+                left: -5px;
+                top: 6px;
+                border-radius: 5px;
+                background-position: -1345px center;
+                z-index: 2;
+            }
+
+            .dot1 {
+                top: 6px;
+                background-position: -1345px -6px;
+            }
+
+            .dot2 {
+                top: 18px;
+                background-position: -1345px -18px;
+            }
+
+            .dot3 {
+                top: 30px;
+                background-position: -1345px -30px;
+            }
+
+            .dot4 {
+                top: 42px;
+                background-position: -1345px -42px;
+            }
+
+            .dot5 {
+                top: 54px;
+                background-position: -1345px -54px;
+            }
+
+            .dot6 {
+                top: 66px;
+                background-position: -1345px -66px;
+            }
+
+            .dot7 {
+                top: 78px;
+                background-position: -1345px -78px;
+            }
+
+            .dot8 {
+                top: 90px;
+                background-position: -1345px -90px;
+            }
+
+            .dot10 {
+                top: 102px;
+                background-position: -1345px -102px;
+            }
+
+            .dot11 {
+                top: 114px;
+                background-position: -1345px -114px;
+            }
+
+            .dot12 {
+                top: 126px;
+                background-position: -1345px -126px;
+            }
+
+            .dot13 {
+                top: 138px;
+                background-position: -1345px -138px;
+            }
+
+            .dot14 {
+                top: 150px;
+                background-position: -1345px -150px;
             }
         }
     }
+
     &.moved {
         .current {
             &.transition {
@@ -1574,8 +1772,10 @@ option[disabled] {
                 -webkit-transition: background-position linear 1s;
                 transition: background-position linear 1s;
             }
+
             background-position: -1366px center;
         }
+
         .tab {
             &.transition {
                 -moz-transition: width linear 1s;
@@ -1583,8 +1783,11 @@ option[disabled] {
                 -webkit-transition: width linear 1s;
                 transition: width linear 1s;
             }
+
             width: 1366px;
+            border: none;
         }
+
         button {
             &.transition {
                 -moz-transition: background-position linear 1s;
@@ -1592,21 +1795,31 @@ option[disabled] {
                 -webkit-transition: background-position linear 1s;
                 transition: background-position linear 1s;
             }
+
             background-position: 29px center;
+            border: none;
+        }
+        .dot,
+        .tab-crop,
             .glyphicon {
                 opacity: 0;
             }
         }
-    }
+
     &.still:hover {
         .current.transition {
-            //background-position: -20px center;
         }
+
         .tab.transition {
             width: 40px;
         }
+
         button.transition {
             background-position: -1295px center;
+        }
+
+        .tab-crop.transition {
+            background-position: -1325px center;
         }
     }
 

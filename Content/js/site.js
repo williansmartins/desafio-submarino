@@ -173,6 +173,13 @@ Site._scrollPage = function () {
     });
 }
 Site._galeries = function () {
+    $( '.galeria' ).hide();
+
+    $( '.marquee-hotel-container, .hotel-tooltip' ).hover(function() {
+        $( '.galeria' ).stop();
+        $( '.galeria' ).fadeToggle( "slow", "linear" );
+    });
+
     $( '.slideshow' ).cycle({
         manualSpeed: 100,
         slides:  '> a'
