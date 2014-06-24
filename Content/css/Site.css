@@ -1,4 +1,4 @@
-﻿@import "fonts.css";
+@import "fonts.css";
 @import "sprite.css";
 /* VERDES */
 /* AZUIS */
@@ -747,7 +747,7 @@ fieldset[disabled] .btn.active {
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffe8e8e8', endColorstr='#fff5f5f5', GradientType=0);
 }
-/*# sourceMappingURL=Site.css.map */
+/*# sourceMappingURL=bootstrap-theme.css.map */
 .theme-dropdown .dropdown-menu {
   position: static;
   display: block;
@@ -2569,7 +2569,11 @@ option[disabled] {
 }
 .collapsed .container-fluid.top-package,
 .flux-collapsed .container-fluid.top-package {
-  padding-top: 478px;
+  margin-top: 478px;
+  padding-top: 0px;
+  z-index: 1;
+  position: relative;
+  background-color: #eceeef;
 }
 .marquee-hotel {
   position: fixed;
@@ -3072,6 +3076,16 @@ option[disabled] {
   background-position: -1325px center;
 }
 /*#endregion */
+.hider {
+  display: none;
+}
+.home {
+  padding-top: 550px;
+}
+.home h1 {
+  font-size: 60px;
+  color: #2c77ba;
+}
 @-ms-viewport {
   width: auto !important;
 }

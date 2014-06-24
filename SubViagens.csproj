@@ -150,6 +150,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\css\home.css">
+      <DependentUpon>home.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\home.min.css">
+      <DependentUpon>home.css</DependentUpon>
+    </Content>
     <Content Include="Content\css\jquery-ui\jquery-ui-theme.css">
       <DependentUpon>jquery-ui-theme.less</DependentUpon>
     </Content>
@@ -259,6 +265,10 @@
     <Content Include="Content\css\jquery-ui\jquery-ui-theme.less" />
     <Content Include="Content\css\jquery-ui\jquery-ui-theme.css.map">
       <DependentUpon>jquery-ui-theme.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\home.less" />
+    <Content Include="Content\css\home.css.map">
+      <DependentUpon>home.css</DependentUpon>
     </Content>
     <None Include="Content\css\module.less" />
     <Content Include="Content\css\module.css">
@@ -669,11 +679,11 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>False</UseIIS>
+          <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>49869</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://subviagens.dev.tesla.net.br</IISUrl>
+          <IISUrl>http://subviagens.dev.tesla.net.br/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
