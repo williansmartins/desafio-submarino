@@ -27,10 +27,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/18/2014 19:15:48</publishTime>
     </File>
     <File Include="bin/SubViagens.dll">
-      <publishTime>06/24/2014 12:33:31</publishTime>
+      <publishTime>06/24/2014 19:15:33</publishTime>
     </File>
     <File Include="bin/SubViagens.pdb">
-      <publishTime>06/24/2014 12:33:31</publishTime>
+      <publishTime>06/24/2014 19:15:33</publishTime>
     </File>
     <File Include="bin/System.Net.Http.Formatting.dll">
       <publishTime>06/18/2014 19:04:35</publishTime>
@@ -99,10 +99,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/18/2014 19:05:01</publishTime>
     </File>
     <File Include="Content/css/fonts.css">
-      <publishTime>06/24/2014 12:41:37</publishTime>
+      <publishTime>06/24/2014 19:15:35</publishTime>
     </File>
     <File Include="Content/css/fonts.css.map">
-      <publishTime>06/24/2014 12:41:36</publishTime>
+      <publishTime>06/24/2014 19:15:35</publishTime>
     </File>
     <File Include="Content/css/fonts.less">
       <publishTime>06/18/2014 19:04:58</publishTime>
@@ -111,16 +111,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/18/2014 19:04:58</publishTime>
     </File>
     <File Include="Content/css/home.css">
-      <publishTime>06/24/2014 12:42:18</publishTime>
+      <publishTime>06/24/2014 19:15:35</publishTime>
     </File>
     <File Include="Content/css/home.css.map">
-      <publishTime>06/24/2014 12:42:18</publishTime>
+      <publishTime>06/24/2014 19:15:35</publishTime>
     </File>
     <File Include="Content/css/home.less">
-      <publishTime>06/24/2014 12:42:18</publishTime>
+      <publishTime>06/24/2014 14:43:45</publishTime>
     </File>
     <File Include="Content/css/home.min.css">
-      <publishTime>06/24/2014 12:42:18</publishTime>
+      <publishTime>06/24/2014 14:43:39</publishTime>
     </File>
     <File Include="Content/css/jquery-ui/images/animated-overlay.gif">
       <publishTime>06/18/2014 19:05:02</publishTime>
@@ -189,10 +189,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/23/2014 10:58:46</publishTime>
     </File>
     <File Include="Content/css/lib/mixins.css">
-      <publishTime>06/24/2014 12:41:36</publishTime>
+      <publishTime>06/24/2014 19:15:35</publishTime>
     </File>
     <File Include="Content/css/lib/mixins.css.map">
-      <publishTime>06/24/2014 12:41:36</publishTime>
+      <publishTime>06/24/2014 19:15:35</publishTime>
     </File>
     <File Include="Content/css/lib/mixins.less">
       <publishTime>06/18/2014 19:05:04</publishTime>
@@ -201,10 +201,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/18/2014 19:05:04</publishTime>
     </File>
     <File Include="Content/css/lib/variables.css">
-      <publishTime>06/24/2014 12:41:37</publishTime>
+      <publishTime>06/24/2014 19:15:35</publishTime>
     </File>
     <File Include="Content/css/lib/variables.css.map">
-      <publishTime>06/24/2014 12:41:37</publishTime>
+      <publishTime>06/24/2014 19:15:35</publishTime>
     </File>
     <File Include="Content/css/lib/variables.less">
       <publishTime>06/18/2014 19:05:04</publishTime>
@@ -213,31 +213,31 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/18/2014 19:05:04</publishTime>
     </File>
     <File Include="Content/css/module.css">
-      <publishTime>06/24/2014 12:41:37</publishTime>
+      <publishTime>06/24/2014 19:15:35</publishTime>
     </File>
     <File Include="Content/css/module.css.map">
-      <publishTime>06/24/2014 12:41:37</publishTime>
+      <publishTime>06/24/2014 19:15:35</publishTime>
     </File>
     <File Include="Content/css/module.min.css">
-      <publishTime>06/24/2014 11:39:04</publishTime>
+      <publishTime>06/24/2014 15:55:45</publishTime>
     </File>
     <File Include="Content/css/Site.css">
-      <publishTime>06/24/2014 12:41:38</publishTime>
+      <publishTime>06/24/2014 19:15:37</publishTime>
     </File>
     <File Include="Content/css/Site.css.map">
-      <publishTime>06/24/2014 12:41:38</publishTime>
+      <publishTime>06/24/2014 19:15:37</publishTime>
     </File>
     <File Include="Content/css/Site.less">
-      <publishTime>06/24/2014 12:09:24</publishTime>
+      <publishTime>06/24/2014 19:15:06</publishTime>
     </File>
     <File Include="Content/css/Site.min.css">
-      <publishTime>06/24/2014 12:41:38</publishTime>
+      <publishTime>06/24/2014 19:15:37</publishTime>
     </File>
     <File Include="Content/css/sprite.css">
-      <publishTime>06/24/2014 12:41:36</publishTime>
+      <publishTime>06/24/2014 19:15:35</publishTime>
     </File>
     <File Include="Content/css/sprite.css.map">
-      <publishTime>06/24/2014 12:41:36</publishTime>
+      <publishTime>06/24/2014 19:15:35</publishTime>
     </File>
     <File Include="Content/css/sprite.less">
       <publishTime>06/22/2014 18:34:40</publishTime>
@@ -1094,8 +1094,20 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/js/lib/jquery.cycle2.js">
       <publishTime>06/22/2014 15:13:43</publishTime>
     </File>
+    <File Include="Content/js/lib/jquery.cycle2.min.js">
+      <publishTime>06/23/2014 10:59:45</publishTime>
+    </File>
+    <File Include="Content/js/lib/jquery.cycle2.min.js.map">
+      <publishTime>06/23/2014 10:59:45</publishTime>
+    </File>
     <File Include="Content/js/lib/jquery.fancybox.js">
       <publishTime>06/14/2013 02:12:28</publishTime>
+    </File>
+    <File Include="Content/js/lib/jquery.fancybox.min.js">
+      <publishTime>06/23/2014 10:59:46</publishTime>
+    </File>
+    <File Include="Content/js/lib/jquery.fancybox.min.js.map">
+      <publishTime>06/23/2014 10:59:46</publishTime>
     </File>
     <File Include="Content/js/lib/modernizr-2.7.2.js">
       <publishTime>06/18/2014 19:05:44</publishTime>
@@ -1143,7 +1155,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/18/2014 19:05:45</publishTime>
     </File>
     <File Include="Content/js/site.js">
-      <publishTime>06/24/2014 12:53:11</publishTime>
+      <publishTime>06/24/2014 15:51:47</publishTime>
     </File>
     <File Include="Content/js/site.min.js">
       <publishTime>06/21/2014 18:21:01</publishTime>
@@ -1158,7 +1170,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/18/2014 19:04:56</publishTime>
     </File>
     <File Include="Scripts/_references.js">
-      <publishTime>06/24/2014 12:22:47</publishTime>
+      <publishTime>06/24/2014 14:45:20</publishTime>
     </File>
     <File Include="Views/Examples/Form.cshtml">
       <publishTime>06/18/2014 19:05:46</publishTime>
@@ -1185,7 +1197,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/18/2014 19:05:47</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>06/24/2014 12:03:49</publishTime>
+      <publishTime>06/24/2014 18:11:58</publishTime>
     </File>
     <File Include="Views/Hotel/Booking.cshtml">
       <publishTime>06/21/2014 16:06:48</publishTime>
@@ -1194,7 +1206,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/18/2014 19:05:48</publishTime>
     </File>
     <File Include="Views/Hotel/Detail.cshtml">
-      <publishTime>06/24/2014 11:39:04</publishTime>
+      <publishTime>06/24/2014 15:11:16</publishTime>
     </File>
     <File Include="Views/Hotel/Index.cshtml">
       <publishTime>06/18/2014 19:05:48</publishTime>
@@ -1224,7 +1236,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/18/2014 19:05:48</publishTime>
     </File>
     <File Include="Views/Packages/Detail.cshtml">
-      <publishTime>06/21/2014 18:53:41</publishTime>
+      <publishTime>06/24/2014 15:44:35</publishTime>
     </File>
     <File Include="Views/Packages/FlightSearchResult.cshtml">
       <publishTime>06/18/2014 19:05:48</publishTime>
@@ -1254,7 +1266,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/18/2014 19:05:46</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>06/20/2014 14:28:24</publishTime>
+      <publishTime>06/24/2014 15:55:23</publishTime>
     </File>
   </ItemGroup>
 </Project>

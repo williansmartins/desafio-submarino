@@ -359,7 +359,7 @@ var Marquee = {
         });
         $(".detail", $current).html(Marquee.itens[item].html);
         if (isFirstLoad) {
-            $(".tab, .tab button", $current).css({
+            $(".tab, .tab button, .tab .tab-crop, .tab .dot", $current).css({
                 "background-image": "url(" + Marquee.itens[nextItem].image + ")"
             });
             return
@@ -369,10 +369,10 @@ var Marquee = {
         $Marquee.removeClass("moved").addClass("still");
 
         setTimeout(function () {
-            $(".tab, .tab button", $current).css({
+            $(".tab, .tab button, .tab .tab-crop, .tab .dot", $current).css({
                 "background-image": "url(" + Marquee.itens[nextItem].image + ")"
             });
-            $(".current, .tab, .tab button", $Marquee).addClass("transition");
+            $(".current, .tab, .tab button, .tab .tab-crop, .tab .dot", $Marquee).addClass("transition");
 
         }, 100);
 

@@ -1,4 +1,4 @@
-@import "fonts.css";
+﻿@import "fonts.css";
 @import "sprite.css";
 /* VERDES */
 /* AZUIS */
@@ -747,7 +747,7 @@ fieldset[disabled] .btn.active {
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffe8e8e8', endColorstr='#fff5f5f5', GradientType=0);
 }
-/*# sourceMappingURL=bootstrap-theme.css.map */
+/*# sourceMappingURL=Site.css.map */
 .theme-dropdown .dropdown-menu {
   position: static;
   display: block;
@@ -3082,9 +3082,108 @@ option[disabled] {
 .home {
   padding-top: 550px;
 }
-.home h1 {
-  font-size: 60px;
-  color: #2c77ba;
+.home .home-detail-wrapper .destinations,
+.home .home-detail-wrapper .popular-destinations {
+  width: 960px;
+  margin: 0 auto;
+  padding-top: 50px;
+  height: 430px;
+  font-weight: 500;
+}
+.home .home-detail-wrapper .destinations .title,
+.home .home-detail-wrapper .popular-destinations .title {
+  font-size: 11px;
+  color: #a2a4a3;
+  margin: 0px;
+  margin-left: 37px;
+  font-weight: inherit;
+}
+.home .home-detail-wrapper .destinations .subtitle,
+.home .home-detail-wrapper .popular-destinations .subtitle {
+  font-size: 34px;
+  color: #58595b;
+  margin: 0px;
+  margin-top: 8px;
+  margin-bottom: 38px;
+  margin-left: 37px;
+  font-weight: inherit;
+}
+.home .home-detail-wrapper .destinations .boxes,
+.home .home-detail-wrapper .popular-destinations .boxes {
+  width: 100%;
+  height: 240px;
+  margin-bottom: 18px;
+  -webkit-box-shadow: 1px 1px 2px #e5e7e8;
+  -moz-box-shadow: 1px 1px 2px #e5e7e8;
+  box-shadow: 1px 1px 2px #e5e7e8;
+}
+.home .home-detail-wrapper .destinations .boxes .box,
+.home .home-detail-wrapper .popular-destinations .boxes .box {
+  width: 240px;
+  height: 100%;
+  background: red;
+  color: white;
+  float: left;
+  padding-top: 157px;
+  padding-left: 21px;
+  font-family: "Omnes";
+}
+.home .home-detail-wrapper .destinations .boxes .box .country,
+.home .home-detail-wrapper .popular-destinations .boxes .box .country {
+  color: inherit;
+  font-family: inherit;
+  font-size: 24px;
+  font-weight: inherit;
+}
+.home .home-detail-wrapper .destinations .boxes .box .details,
+.home .home-detail-wrapper .popular-destinations .boxes .box .details {
+  color: inherit;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-family: inherit;
+  font-weight: inherit;
+}
+.home .home-detail-wrapper .destinations .boxes .box .value,
+.home .home-detail-wrapper .popular-destinations .boxes .box .value {
+  color: inherit;
+  font-size: 20px;
+  font-family: inherit;
+  font-weight: inherit;
+}
+.home .home-detail-wrapper .destinations .boxes .box.box1,
+.home .home-detail-wrapper .popular-destinations .boxes .box.box1 {
+  background: url(../images/home/destin1.jpg);
+}
+.home .home-detail-wrapper .destinations .boxes .box.box2,
+.home .home-detail-wrapper .popular-destinations .boxes .box.box2 {
+  background: url(../images/home/destin2.jpg);
+}
+.home .home-detail-wrapper .destinations .boxes .box.box3,
+.home .home-detail-wrapper .popular-destinations .boxes .box.box3 {
+  background: url(../images/home/destin3.jpg);
+}
+.home .home-detail-wrapper .destinations .boxes .box.box4,
+.home .home-detail-wrapper .popular-destinations .boxes .box.box4 {
+  background: url(../images/home/destin4.jpg);
+}
+.home .home-detail-wrapper .destinations .boxes .box.box5,
+.home .home-detail-wrapper .popular-destinations .boxes .box.box5 {
+  background: url(../images/home/destin1.jpg);
+}
+.home .home-detail-wrapper .destinations .boxes .box.box6,
+.home .home-detail-wrapper .popular-destinations .boxes .box.box6 {
+  background: url(../images/home/destin2.jpg);
+}
+.home .home-detail-wrapper .destinations .boxes .box.box7,
+.home .home-detail-wrapper .popular-destinations .boxes .box.box7 {
+  background: url(../images/home/destin3.jpg);
+}
+.home .home-detail-wrapper .destinations .boxes .box.box8,
+.home .home-detail-wrapper .popular-destinations .boxes .box.box8 {
+  background: url(../images/home/destin4.jpg);
+}
+.home .home-detail-wrapper .popular-destinations {
+  height: 840px;
 }
 @-ms-viewport {
   width: auto !important;
@@ -4589,6 +4688,9 @@ option[disabled] {
 }
 .no-results p {
   overflow: hidden;
+}
+.main-aside {
+  z-index: 2;
 }
 .main-aside .expanded {
   position: relative;
@@ -7497,7 +7599,7 @@ html {
   z-index: 1;
 }
 .main-footer.compact .container-fluid {
-  padding-left: 20%;
+  padding-left: 10%;
 }
 .main-footer ul {
   margin: 0;

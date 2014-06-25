@@ -2536,7 +2536,7 @@ option[disabled] {
   float: left;
   padding-left: 43px;
   padding-top: 23px;
-  border: none!important;
+  border: none !important;
 }
 .booking-widget #passagens .steps .item {
   width: 33%;
@@ -2557,7 +2557,11 @@ option[disabled] {
 }
 .collapsed .marquee-hotel + .container-fluid.top,
 .flux-collapsed .marquee-hotel + .container-fluid.top {
-  padding-top: 420px;
+  background-color: #eceeef;
+  margin-top: 420px;
+  padding-top: 0px;
+  z-index: 1;
+  position: relative;
 }
 .collapsed .packages .marquee-hotel,
 .flux-collapsed .packages .marquee-hotel {
@@ -2565,10 +2569,14 @@ option[disabled] {
 }
 .collapsed .container-fluid.top-package,
 .flux-collapsed .container-fluid.top-package {
-  padding-top: 478px;
+  margin-top: 478px;
+  padding-top: 0px;
+  z-index: 1;
+  position: relative;
+  background-color: #eceeef;
 }
 .marquee-hotel {
-  position: absolute;
+  position: fixed;
   top: 120px;
   right: 0;
   left: 0;
@@ -2584,15 +2592,17 @@ option[disabled] {
   display: none;
 }
 .marquee-hotel .marquee-hotel-container .galeria {
-  width: 820px;
+  width: 832px;
   height: 80px;
   background: #fafafa;
   position: relative;
   top: -80px;
+  left: 50%;
+  margin-left: -683px;
 }
 .marquee-hotel .marquee-hotel-container .galeria .wrapper {
-  width: 610px!important;
-  min-width: 610px!important;
+  width: 610px !important;
+  min-width: 610px !important;
   height: 40px;
   float: right;
   margin-top: 20px;
@@ -2619,7 +2629,9 @@ option[disabled] {
   margin: 9px;
 }
 .marquee-hotel + .container-fluid.top {
-  padding-top: 540px;
+  background-color: #eceeef;
+  margin-top: 540px;
+  padding-top: 0px;
 }
 /*#endregion */
 .container-popover-medium {
@@ -2834,6 +2846,8 @@ option[disabled] {
   background-position: right center;
   background-repeat: no-repeat;
   cursor: pointer;
+  border-left: 1px solid #FFF;
+  z-index: 1;
 }
 .marquee > .current .tab.transition {
   -moz-transition: width ease-in-out 0.3s;
@@ -2858,6 +2872,8 @@ option[disabled] {
   margin-top: -50px;
   color: #FFF;
   text-align: left;
+  border: 1px solid #FFF;
+  z-index: 2;
 }
 .marquee > .current button.transition {
   -moz-transition: background-position ease-in-out 0.3s;
@@ -2868,13 +2884,153 @@ option[disabled] {
 .marquee > .current button:focus {
   outline: none;
 }
-.marquee > .current button .glyphicon-chevron-right {
+.marquee > .current .glyphicon-chevron-right {
   background-image: url(../images/icon/icon-arrow-white-right.png);
   width: 39px;
   height: 54px;
+  margin-top: -27px;
+  position: absolute;
+  top: 50%;
+  left: -15px;
+  z-index: 4;
 }
-.marquee > .current button .glyphicon-chevron-right:before {
+.marquee > .current .glyphicon-chevron-right:before {
   content: "";
+}
+.marquee > .current .ticket-dots {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 70px;
+}
+.marquee > .current .ticket-dots .tab-crop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 70px;
+  z-index: 3;
+  background-position: -1345px center;
+}
+.marquee > .current .ticket-dots .tab-crop.transition {
+  -moz-transition: background-position ease-in-out 0.3s;
+  -o-transition: background-position ease-in-out 0.3s;
+  -webkit-transition: background-position ease-in-out 0.3s;
+  transition: background-position ease-in-out 0.3s;
+}
+.marquee > .current .ticket-dots .last {
+  position: absolute;
+  top: 258px;
+}
+.marquee > .current .ticket-dots .last .dot1 {
+  background-position: -1345px -264px;
+}
+.marquee > .current .ticket-dots .last .dot2 {
+  background-position: -1345px -276px;
+}
+.marquee > .current .ticket-dots .last .dot3 {
+  background-position: -1345px -288px;
+}
+.marquee > .current .ticket-dots .last .dot4 {
+  background-position: -1345px -300px;
+}
+.marquee > .current .ticket-dots .last .dot5 {
+  background-position: -1345px -312px;
+}
+.marquee > .current .ticket-dots .last .dot6 {
+  background-position: -1345px -324px;
+}
+.marquee > .current .ticket-dots .last .dot7 {
+  background-position: -1345px -332px;
+}
+.marquee > .current .ticket-dots .last .dot8 {
+  background-position: -1345px -348px;
+}
+.marquee > .current .ticket-dots .last .dot10 {
+  background-position: -1345px -360px;
+}
+.marquee > .current .ticket-dots .last .dot11 {
+  background-position: -1345px -372px;
+}
+.marquee > .current .ticket-dots .last .dot12 {
+  background-position: -1345px -384px;
+}
+.marquee > .current .ticket-dots .last .dot13 {
+  background-position: -1345px -396px;
+}
+.marquee > .current .ticket-dots .last .dot14 {
+  background-position: -1345px -408px;
+}
+.marquee > .current .ticket-dots .dot {
+  display: block;
+  position: absolute;
+  border: 1px solid #FFF;
+  width: 10px;
+  height: 10px;
+  left: -5px;
+  top: 6px;
+  border-radius: 5px;
+  background-position: -1345px center;
+  z-index: 2;
+}
+.marquee > .current .ticket-dots .dot.transition {
+  -moz-transition: background-position ease-in-out 0.3s;
+  -o-transition: background-position ease-in-out 0.3s;
+  -webkit-transition: background-position ease-in-out 0.3s;
+  transition: background-position ease-in-out 0.3s;
+}
+.marquee > .current .ticket-dots .dot1 {
+  top: 6px;
+  background-position: -1345px -6px;
+}
+.marquee > .current .ticket-dots .dot2 {
+  top: 18px;
+  background-position: -1345px -18px;
+}
+.marquee > .current .ticket-dots .dot3 {
+  top: 30px;
+  background-position: -1345px -30px;
+}
+.marquee > .current .ticket-dots .dot4 {
+  top: 42px;
+  background-position: -1345px -42px;
+}
+.marquee > .current .ticket-dots .dot5 {
+  top: 54px;
+  background-position: -1345px -54px;
+}
+.marquee > .current .ticket-dots .dot6 {
+  top: 66px;
+  background-position: -1345px -66px;
+}
+.marquee > .current .ticket-dots .dot7 {
+  top: 78px;
+  background-position: -1345px -78px;
+}
+.marquee > .current .ticket-dots .dot8 {
+  top: 90px;
+  background-position: -1345px -90px;
+}
+.marquee > .current .ticket-dots .dot10 {
+  top: 102px;
+  background-position: -1345px -102px;
+}
+.marquee > .current .ticket-dots .dot11 {
+  top: 114px;
+  background-position: -1345px -114px;
+}
+.marquee > .current .ticket-dots .dot12 {
+  top: 126px;
+  background-position: -1345px -126px;
+}
+.marquee > .current .ticket-dots .dot13 {
+  top: 138px;
+  background-position: -1345px -138px;
+}
+.marquee > .current .ticket-dots .dot14 {
+  top: 150px;
+  background-position: -1345px -150px;
 }
 .marquee.moved .current {
   background-position: -1366px center;
@@ -2887,6 +3043,7 @@ option[disabled] {
 }
 .marquee.moved .tab {
   width: 1366px;
+  border: none;
 }
 .marquee.moved .tab.transition {
   -moz-transition: width linear 1s;
@@ -2896,6 +3053,7 @@ option[disabled] {
 }
 .marquee.moved button {
   background-position: 29px center;
+  border: none;
 }
 .marquee.moved button.transition {
   -moz-transition: background-position linear 1s;
@@ -2903,7 +3061,9 @@ option[disabled] {
   -webkit-transition: background-position linear 1s;
   transition: background-position linear 1s;
 }
-.marquee.moved button .glyphicon {
+.marquee.moved .dot,
+.marquee.moved .tab-crop,
+.marquee.moved .glyphicon {
   opacity: 0;
 }
 .marquee.still:hover .tab.transition {
@@ -2912,7 +3072,20 @@ option[disabled] {
 .marquee.still:hover button.transition {
   background-position: -1295px center;
 }
+.marquee.still:hover .tab-crop.transition {
+  background-position: -1325px center;
+}
 /*#endregion */
+.hider {
+  display: none;
+}
+.home {
+  padding-top: 550px;
+}
+.home h1 {
+  font-size: 60px;
+  color: #2c77ba;
+}
 @-ms-viewport {
   width: auto !important;
 }
@@ -4416,6 +4589,9 @@ option[disabled] {
 }
 .no-results p {
   overflow: hidden;
+}
+.main-aside {
+  z-index: 2;
 }
 .main-aside .expanded {
   position: relative;
@@ -6715,6 +6891,7 @@ html {
 /*#endregion */
 .detail .hotel-description-top {
   background: url(../images/bg/hotel-detail.gif) center top repeat-y;
+  border-top: solid 1px #f0f1f2;
 }
 .detail .hotel-description-top .first-box {
   width: 635px;
@@ -6722,7 +6899,7 @@ html {
   background-color: #fff;
   padding: 0 30px 0 15px;
   float: left;
-  border-right: 1px solid #c9d0d2;
+  border-right: 1px solid #f0f1f2;
 }
 .detail .hotel-description-top .aside-hotel-description {
   width: 335px;
@@ -7299,14 +7476,18 @@ html {
   border-bottom: 1px solid #ebeef0;
   padding: 27px 0;
 }
+.destination-menu .links-extras {
+  width: 940px;
+  margin: 0 auto;
+}
 .destination-menu li {
   text-align: center;
   font-size: 13px;
   line-height: 26px;
-  border-left: 1px solid #ebeef0;
+  border-right: 1px solid #ebeef0;
 }
 .destination-menu li:first-child {
-  border-left: none;
+  border-left: 1px solid #ebeef0;
 }
 .destination-menu a {
   text-decoration: underline;
@@ -7315,9 +7496,11 @@ html {
   border-top: 1px solid #e0e2e3;
   background-color: #fafafa;
   min-width: 970px;
+  position: relative;
+  z-index: 1;
 }
 .main-footer.compact .container-fluid {
-  padding-left: 20%;
+  padding-left: 10%;
 }
 .main-footer ul {
   margin: 0;
@@ -7348,11 +7531,15 @@ html {
 .footer-top {
   padding: 85px 0 50px;
   border-bottom: 1px solid #f1f1f1;
+  width: 940px;
+  margin: 0 auto;
 }
 .footer-link {
   font-size: 11px;
   line-height: 1em;
   color: #999999;
+  width: 940px;
+  margin: 0 auto;
   margin-bottom: 5px;
 }
 .footer-link a {
@@ -7378,6 +7565,10 @@ html {
   background-color: #ffffff;
   padding: 70px 0 50px;
   color: #999999;
+}
+.footer-bottom .container-fluid {
+  width: 940px;
+  margin: 0 auto;
 }
 .footer-bottom a {
   color: #999999;

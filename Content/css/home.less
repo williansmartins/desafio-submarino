@@ -2,9 +2,103 @@
     display: none;
 }
 .home{
-    padding-top: 550px;
-    h1{
-        font-size: 60px;    
-        color: #2c77ba;        
-    }
+	padding-top: 550px;
+	
+	.home-detail-wrapper{
+		.destinations, .popular-destinations{
+			width:960px;
+			margin: 0 auto;
+			padding-top: 50px;
+			height: 430px;
+			font-weight: 500;
+			.title{
+			    font-size: 11px;    
+			    color: #a2a4a3;   
+			    margin: 0px;    
+			    margin-left: 37px; 
+				font-weight: inherit;
+			}
+			.subtitle{
+			    font-size: 34px;    
+			    color: #58595b; 
+			    margin: 0px;
+				margin-top: 8px; 
+				margin-bottom: 38px;    
+				margin-left: 37px;  
+				font-weight: inherit;
+			}
+
+			.boxes{
+				width:100%;
+				height: 240px;
+				margin-bottom: 18px;
+
+
+				.box-shadow(1px 1px 2px #e5e7e8);	
+
+				.box{
+					width: 240px;
+					height: 100%;
+					background: red;
+					color: white;
+					float: left;
+					padding-top: 157px;
+					padding-left: 21px;
+					font-family: "Omnes";
+
+					.country{
+						color: inherit;
+						font-family: inherit;
+						font-size: 24px;
+						font-weight: inherit;
+					}
+					.details{
+						color: inherit;
+						text-transform: uppercase;
+						font-size: 11px;
+						font-family: inherit;
+						font-weight: inherit;
+					}
+					.value{
+						color: inherit;
+						font-size: 20px;
+						font-family: inherit;
+						font-weight: inherit;
+					}
+					&.box1{
+						background: url(../images/home/destin1.jpg);
+					}
+					&.box2{
+						background: url(../images/home/destin2.jpg);
+					}
+					&.box3{
+						background: url(../images/home/destin3.jpg);
+					}
+					&.box4{
+						background: url(../images/home/destin4.jpg);
+					}
+					&.box5{
+						background: url(../images/home/destin1.jpg);
+					}
+					&.box6{
+						background: url(../images/home/destin2.jpg);
+					}
+					&.box7{
+						background: url(../images/home/destin3.jpg);
+					}
+					&.box8{
+						background: url(../images/home/destin4.jpg);
+					}
+				}
+			}
+			
+		}
+		.popular-destinations{
+			height: 840px;
+			.box{
+				padding-top: 140px;
+			}
+		}
+	
+}
 }

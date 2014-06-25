@@ -1024,7 +1024,11 @@ option[disabled] {
 }
 .collapsed .container-fluid.top-package,
 .flux-collapsed .container-fluid.top-package {
-  padding-top: 478px;
+  margin-top: 478px;
+  padding-top: 0px;
+  z-index: 1;
+  position: relative;
+  background-color: #eceeef;
 }
 .marquee-hotel {
   position: fixed;

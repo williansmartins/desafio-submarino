@@ -567,7 +567,9 @@
       <DependentUpon>jquery-2.1.0.js</DependentUpon>
     </Content>
     <Content Include="Content\js\lib\jquery.cycle2.js" />
+    <Content Include="Content\js\lib\jquery.cycle2.min.js" />
     <Content Include="Content\js\lib\jquery.fancybox.js" />
+    <Content Include="Content\js\lib\jquery.fancybox.min.js" />
     <Content Include="Content\js\lib\modernizr-2.7.2.js" />
     <Content Include="Content\js\lib\jquery-2.1.0.min.js.map">
       <DependentUpon>jquery-2.1.0.min.js</DependentUpon>
@@ -578,6 +580,8 @@
     <Content Include="Content\js\module.min.js.map">
       <DependentUpon>module.min.js</DependentUpon>
     </Content>
+    <Content Include="Content\js\lib\jquery.cycle2.min.js.map" />
+    <Content Include="Content\js\lib\jquery.fancybox.min.js.map" />
     <None Include="Content\js\plugin\jquery.validate-vsdoc.js" />
     <Content Include="Content\js\lib\modernizr-2.7.2.min.js">
       <DependentUpon>modernizr-2.7.2.js</DependentUpon>

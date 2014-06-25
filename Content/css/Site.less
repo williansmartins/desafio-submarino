@@ -8,7 +8,7 @@
 @import "module.less";
 @import "home.less";
 
-@-ms-viewport{ width: auto !important; }                                      
+@-ms-viewport{ width: auto !important; }                                 
 
 .recommended-flight {
     h2 {
@@ -17,7 +17,7 @@
         color: @grey-mid;
         text-transform: uppercase;
     }
-    .table-result {    
+    .table-result {
         .hour {
             padding: 20px; 
         }
@@ -1723,6 +1723,9 @@
     }
 }
 
+.main-aside{
+    z-index: 2;
+}
 .main-aside .expanded {
     position: relative;
     margin: 20px -20px 0;
@@ -5264,26 +5267,26 @@ html {
         border-right: 1px solid @grey-lighter;
 
         &:first-child {
-            border-left: 1px solid @grey-lighter;
-            // border-left: none;
+            border-left: 1px solid @grey-lighter; 
+            // border-left: none;  
         }
-    }
+    }  
 
     a {
-        text-decoration: underline;
-    }
+        text-decoration: underline; 
+    }   
 }
-
-
+               
+ 
 .main-footer {
     border-top: 1px solid #e0e2e3;
-    background-color: #fafafa;
+    background-color: #fafafa; 
     min-width: 970px;
     position: relative;
     z-index: 1;
     &.compact {
         .container-fluid {
-             padding-left: 20%;
+             padding-left: 10%;
         }        
     }
     ul{

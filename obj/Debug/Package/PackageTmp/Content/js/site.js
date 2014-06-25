@@ -173,6 +173,18 @@ Site._scrollPage = function () {
     });
 }
 Site._galeries = function () {
+    $( '.galeria' ).hide();
+
+    $( '.marquee-hotel-container, .hotel-tooltip' ).mousemove(function( event ) {
+        $( '.galeria' ).stop();
+        $( '.galeria' ).fadeIn( "slow", "linear" );
+    });
+
+    $( '.marquee-hotel-container, .hotel-tooltip' ).on( "mouseleave", function() {
+        $( '.galeria' ).stop();
+        $( '.galeria' ).fadeOut( "slow", "linear" );
+    });
+
     $( '.slideshow' ).cycle({
         manualSpeed: 100,
         slides:  '> a'
@@ -759,7 +771,7 @@ Site._stepsPackage = function () {
         var stepHeight = $('.steps.hotel-steps').height();
         var topDiff = $('.main-menu-wrapper').height() + $('.search').height();
         var top = $(window).scrollTop() + topDiff;
-        var max = parseInt($('.container-fluid.detail').css('padding-top').replace(/[^-\d\.]/g, '')) + topDiff - stepHeight;
+        var max = parseInt($('.container-fluid.detail').css('margin-top').replace(/[^-\d\.]/g, '')) + topDiff - stepHeight;
         if (top < max) {
             $('.steps.hotel-steps').css('top', top);
         } else {
