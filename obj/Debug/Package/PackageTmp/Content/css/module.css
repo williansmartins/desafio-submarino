@@ -2,6 +2,7 @@
 /* AZUIS */
 /* CINZAS */
 /* Vermelhos */
+/* Tamanhos */
 /*#region Forms */
 input[type=text],
 input[type=email],
@@ -1352,14 +1353,7 @@ option[disabled] {
 .marquee > .current .glyphicon-chevron-right:before {
   content: "";
 }
-.marquee > .current .ticket-dots {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 70px;
-}
-.marquee > .current .ticket-dots .tab-crop {
+.marquee > .current .tab-crop {
   position: absolute;
   top: 0;
   left: 0;
@@ -1368,11 +1362,18 @@ option[disabled] {
   z-index: 3;
   background-position: -1345px center;
 }
-.marquee > .current .ticket-dots .tab-crop.transition {
+.marquee > .current .tab-crop.transition {
   -moz-transition: background-position ease-in-out 0.3s;
   -o-transition: background-position ease-in-out 0.3s;
   -webkit-transition: background-position ease-in-out 0.3s;
   transition: background-position ease-in-out 0.3s;
+}
+.marquee > .current .ticket-dots {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 70px;
 }
 .marquee > .current .ticket-dots .last {
   position: absolute;
@@ -1487,34 +1488,39 @@ option[disabled] {
   top: 150px;
   background-position: -1345px -150px;
 }
-.marquee.moved .current {
-  background-position: -1366px center;
-}
-.marquee.moved .current.transition {
-  -moz-transition: background-position linear 1s;
-  -o-transition: background-position linear 1s;
-  -webkit-transition: background-position linear 1s;
-  transition: background-position linear 1s;
-}
-.marquee.moved .tab {
-  width: 1366px;
-  border: none;
-}
-.marquee.moved .tab.transition {
-  -moz-transition: width linear 1s;
-  -o-transition: width linear 1s;
-  -webkit-transition: width linear 1s;
-  transition: width linear 1s;
-}
-.marquee.moved button {
-  background-position: 29px center;
-  border: none;
-}
+.marquee.moved .current.transition,
 .marquee.moved button.transition {
   -moz-transition: background-position linear 1s;
   -o-transition: background-position linear 1s;
   -webkit-transition: background-position linear 1s;
   transition: background-position linear 1s;
+}
+.marquee.moved .current {
+  background-position: -1366px center;
+}
+.marquee.moved .tab {
+  width: 1390px;
+  border: none;
+}
+.marquee.moved .tab.transition {
+  -moz-transition: all linear 1s;
+  -o-transition: all linear 1s;
+  -webkit-transition: all linear 1s;
+  transition: all linear 1s;
+}
+.marquee.moved button {
+  background-position: 29px center !important;
+  border: none;
+}
+.marquee.moved .tab-crop {
+  background-position: 0 center !important;
+  border: none;
+}
+.marquee.moved .tab-crop.transition {
+  -moz-transition: background-position linear 1s, opacity linear 0.3s;
+  -o-transition: background-position linear 1s, opacity linear 0.3s;
+  -webkit-transition: background-position linear 1s, opacity linear 0.3s;
+  transition: background-position linear 1s, opacity linear 0.3s;
 }
 .marquee.moved .dot,
 .marquee.moved .tab-crop,

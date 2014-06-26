@@ -4,6 +4,7 @@
 /* AZUIS */
 /* CINZAS */
 /* Vermelhos */
+/* Tamanhos */
 /*#region base */
 html,
 body,
@@ -2897,14 +2898,7 @@ option[disabled] {
 .marquee > .current .glyphicon-chevron-right:before {
   content: "";
 }
-.marquee > .current .ticket-dots {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 70px;
-}
-.marquee > .current .ticket-dots .tab-crop {
+.marquee > .current .tab-crop {
   position: absolute;
   top: 0;
   left: 0;
@@ -2913,11 +2907,18 @@ option[disabled] {
   z-index: 3;
   background-position: -1345px center;
 }
-.marquee > .current .ticket-dots .tab-crop.transition {
+.marquee > .current .tab-crop.transition {
   -moz-transition: background-position ease-in-out 0.3s;
   -o-transition: background-position ease-in-out 0.3s;
   -webkit-transition: background-position ease-in-out 0.3s;
   transition: background-position ease-in-out 0.3s;
+}
+.marquee > .current .ticket-dots {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 70px;
 }
 .marquee > .current .ticket-dots .last {
   position: absolute;
@@ -3032,34 +3033,39 @@ option[disabled] {
   top: 150px;
   background-position: -1345px -150px;
 }
-.marquee.moved .current {
-  background-position: -1366px center;
-}
-.marquee.moved .current.transition {
-  -moz-transition: background-position linear 1s;
-  -o-transition: background-position linear 1s;
-  -webkit-transition: background-position linear 1s;
-  transition: background-position linear 1s;
-}
-.marquee.moved .tab {
-  width: 1366px;
-  border: none;
-}
-.marquee.moved .tab.transition {
-  -moz-transition: width linear 1s;
-  -o-transition: width linear 1s;
-  -webkit-transition: width linear 1s;
-  transition: width linear 1s;
-}
-.marquee.moved button {
-  background-position: 29px center;
-  border: none;
-}
+.marquee.moved .current.transition,
 .marquee.moved button.transition {
   -moz-transition: background-position linear 1s;
   -o-transition: background-position linear 1s;
   -webkit-transition: background-position linear 1s;
   transition: background-position linear 1s;
+}
+.marquee.moved .current {
+  background-position: -1366px center;
+}
+.marquee.moved .tab {
+  width: 1390px;
+  border: none;
+}
+.marquee.moved .tab.transition {
+  -moz-transition: all linear 1s;
+  -o-transition: all linear 1s;
+  -webkit-transition: all linear 1s;
+  transition: all linear 1s;
+}
+.marquee.moved button {
+  background-position: 29px center !important;
+  border: none;
+}
+.marquee.moved .tab-crop {
+  background-position: 0 center !important;
+  border: none;
+}
+.marquee.moved .tab-crop.transition {
+  -moz-transition: background-position linear 1s, opacity linear 0.3s;
+  -o-transition: background-position linear 1s, opacity linear 0.3s;
+  -webkit-transition: background-position linear 1s, opacity linear 0.3s;
+  transition: background-position linear 1s, opacity linear 0.3s;
 }
 .marquee.moved .dot,
 .marquee.moved .tab-crop,
@@ -3079,27 +3085,14 @@ option[disabled] {
 .hider {
   display: none;
 }
-.home {
-  padding-top: 550px;
-}
-.home .home-detail-wrapper .destinations,
-.home .home-detail-wrapper .popular-destinations {
-  width: 960px;
-  margin: 0 auto;
-  padding-top: 50px;
-  height: 430px;
-  font-weight: 500;
-}
-.home .home-detail-wrapper .destinations .title,
-.home .home-detail-wrapper .popular-destinations .title {
+.general-title {
   font-size: 11px;
   color: #a2a4a3;
   margin: 0px;
   margin-left: 37px;
   font-weight: inherit;
 }
-.home .home-detail-wrapper .destinations .subtitle,
-.home .home-detail-wrapper .popular-destinations .subtitle {
+.general-subtitle {
   font-size: 34px;
   color: #58595b;
   margin: 0px;
@@ -3108,8 +3101,22 @@ option[disabled] {
   margin-left: 37px;
   font-weight: inherit;
 }
-.home .home-detail-wrapper .destinations .boxes,
-.home .home-detail-wrapper .popular-destinations .boxes {
+.home.marquee-hotel {
+  position: absolute;
+}
+.home.container-fluid {
+  padding-top: 523px;
+}
+.home.container-fluid .home-detail-wrapper .destinations,
+.home.container-fluid .home-detail-wrapper .popular-destinations {
+  width: 960px;
+  margin: 0 auto;
+  padding-top: 50px;
+  height: 430px;
+  font-weight: 500;
+}
+.home.container-fluid .home-detail-wrapper .destinations .boxes,
+.home.container-fluid .home-detail-wrapper .popular-destinations .boxes {
   width: 100%;
   height: 240px;
   margin-bottom: 18px;
@@ -3117,8 +3124,8 @@ option[disabled] {
   -moz-box-shadow: 1px 1px 2px #e5e7e8;
   box-shadow: 1px 1px 2px #e5e7e8;
 }
-.home .home-detail-wrapper .destinations .boxes .box,
-.home .home-detail-wrapper .popular-destinations .boxes .box {
+.home.container-fluid .home-detail-wrapper .destinations .boxes .box,
+.home.container-fluid .home-detail-wrapper .popular-destinations .boxes .box {
   width: 240px;
   height: 100%;
   background: red;
@@ -3128,62 +3135,295 @@ option[disabled] {
   padding-left: 21px;
   font-family: "Omnes";
 }
-.home .home-detail-wrapper .destinations .boxes .box .country,
-.home .home-detail-wrapper .popular-destinations .boxes .box .country {
+.home.container-fluid .home-detail-wrapper .destinations .boxes .box .country,
+.home.container-fluid .home-detail-wrapper .popular-destinations .boxes .box .country {
   color: inherit;
   font-family: inherit;
   font-size: 24px;
   font-weight: inherit;
 }
-.home .home-detail-wrapper .destinations .boxes .box .details,
-.home .home-detail-wrapper .popular-destinations .boxes .box .details {
+.home.container-fluid .home-detail-wrapper .destinations .boxes .box .details,
+.home.container-fluid .home-detail-wrapper .popular-destinations .boxes .box .details {
   color: inherit;
   text-transform: uppercase;
   font-size: 11px;
   font-family: inherit;
   font-weight: inherit;
 }
-.home .home-detail-wrapper .destinations .boxes .box .value,
-.home .home-detail-wrapper .popular-destinations .boxes .box .value {
+.home.container-fluid .home-detail-wrapper .destinations .boxes .box .value,
+.home.container-fluid .home-detail-wrapper .popular-destinations .boxes .box .value {
   color: inherit;
   font-size: 20px;
   font-family: inherit;
   font-weight: inherit;
 }
-.home .home-detail-wrapper .destinations .boxes .box.box1,
-.home .home-detail-wrapper .popular-destinations .boxes .box.box1 {
+.home.container-fluid .home-detail-wrapper .destinations .boxes .box.box1,
+.home.container-fluid .home-detail-wrapper .popular-destinations .boxes .box.box1 {
   background: url(../images/home/destin1.jpg);
 }
-.home .home-detail-wrapper .destinations .boxes .box.box2,
-.home .home-detail-wrapper .popular-destinations .boxes .box.box2 {
+.home.container-fluid .home-detail-wrapper .destinations .boxes .box.box2,
+.home.container-fluid .home-detail-wrapper .popular-destinations .boxes .box.box2 {
   background: url(../images/home/destin2.jpg);
 }
-.home .home-detail-wrapper .destinations .boxes .box.box3,
-.home .home-detail-wrapper .popular-destinations .boxes .box.box3 {
+.home.container-fluid .home-detail-wrapper .destinations .boxes .box.box3,
+.home.container-fluid .home-detail-wrapper .popular-destinations .boxes .box.box3 {
   background: url(../images/home/destin3.jpg);
 }
-.home .home-detail-wrapper .destinations .boxes .box.box4,
-.home .home-detail-wrapper .popular-destinations .boxes .box.box4 {
+.home.container-fluid .home-detail-wrapper .destinations .boxes .box.box4,
+.home.container-fluid .home-detail-wrapper .popular-destinations .boxes .box.box4 {
   background: url(../images/home/destin4.jpg);
 }
-.home .home-detail-wrapper .destinations .boxes .box.box5,
-.home .home-detail-wrapper .popular-destinations .boxes .box.box5 {
+.home.container-fluid .home-detail-wrapper .destinations .boxes .box.box5,
+.home.container-fluid .home-detail-wrapper .popular-destinations .boxes .box.box5 {
   background: url(../images/home/destin1.jpg);
 }
-.home .home-detail-wrapper .destinations .boxes .box.box6,
-.home .home-detail-wrapper .popular-destinations .boxes .box.box6 {
+.home.container-fluid .home-detail-wrapper .destinations .boxes .box.box6,
+.home.container-fluid .home-detail-wrapper .popular-destinations .boxes .box.box6 {
   background: url(../images/home/destin2.jpg);
 }
-.home .home-detail-wrapper .destinations .boxes .box.box7,
-.home .home-detail-wrapper .popular-destinations .boxes .box.box7 {
+.home.container-fluid .home-detail-wrapper .destinations .boxes .box.box7,
+.home.container-fluid .home-detail-wrapper .popular-destinations .boxes .box.box7 {
   background: url(../images/home/destin3.jpg);
 }
-.home .home-detail-wrapper .destinations .boxes .box.box8,
-.home .home-detail-wrapper .popular-destinations .boxes .box.box8 {
+.home.container-fluid .home-detail-wrapper .destinations .boxes .box.box8,
+.home.container-fluid .home-detail-wrapper .popular-destinations .boxes .box.box8 {
   background: url(../images/home/destin4.jpg);
 }
-.home .home-detail-wrapper .popular-destinations {
-  height: 840px;
+.home.container-fluid .home-detail-wrapper .popular-destinations {
+  height: 613px;
+  background: #e2e6e7;
+}
+.home.container-fluid .home-detail-wrapper .popular-destinations .box {
+  padding-top: 140px;
+}
+.home.container-fluid .home-detail-wrapper .popular-destinations .box .details {
+  margin-top: 10px;
+}
+.home.container-fluid .home-detail-wrapper .fly-me-out {
+  width: 100%;
+  height: 920px;
+}
+.home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out {
+  width: 960px;
+  height: 800px;
+  margin: 0 auto;
+}
+.home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .top {
+  width: 100%;
+  height: 110px;
+}
+.home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom {
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 640px;
+}
+.home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom .initial {
+  color: #999999;
+  font-size: 11px;
+  font-weight: 500;
+}
+.home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom .destin {
+  color: #262a36;
+  font-size: 30px;
+  margin-top: 7px;
+  font-weight: 500;
+}
+.home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom .detail {
+  margin-top: 45px;
+  border-top: solid 1px #dbdedf;
+  font-weight: 500;
+  font-size: 11px;
+  padding-top: 10px;
+  color: #999999;
+}
+.home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom .link {
+  color: #58595b;
+  font-weight: 500;
+  margin-top: 470px;
+  margin-left: 14px;
+  background: url(../images/icon/icon-arrow-right.png) no-repeat;
+  text-indent: 24px;
+  font-size: 11px;
+}
+.home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom .best-deals {
+  width: 239px;
+  height: 100%;
+  float: left;
+  background: url(../images/home/background-best-deals.jpg);
+  padding-top: 18px;
+  padding-left: 23px;
+}
+.home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom .image {
+  float: left;
+  width: 299px;
+}
+.home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom .bar {
+  width: 282px;
+  float: left;
+  height: 100%;
+}
+.home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom .bar .destin-name {
+  display: block;
+  width: 100%;
+  height: 60px;
+  background: white;
+  border-bottom: solid 1px #dbdedf;
+  border-left: solid 1px #dbdedf;
+  padding-left: 35px;
+  padding-top: 6px;
+}
+.home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom .bar .destin-name:after {
+  background: url(../images/icon/icon-point.png) no-repeat;
+  width: 8px;
+  height: 8px;
+  position: relative;
+  top: 11px;
+  left: 244px;
+  content: ' ';
+  display: block;
+}
+.home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom .bar .destin-name .date {
+  color: #999999;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom .bar .destin-name .name {
+  color: #58595b;
+  font-size: 30px;
+  font-weight: 500;
+  font-size: 20px;
+  margin-top: 3px;
+}
+.home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom .bar .destin-name.top {
+  height: 100px;
+  padding-top: 22px;
+  border-left: none;
+  background: #ffffff url(../images/icon/home-detail1.png) no-repeat;
+}
+.home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom .bar .destin-name.top .name {
+  margin-top: 7px;
+  color: #262a36;
+  font-size: 30px;
+}
+.home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom .bar .destin-name.top:after {
+  background: url(../images/icon/icon-point.png) no-repeat;
+  width: 8px;
+  height: 8px;
+  position: relative;
+  top: 31px;
+  left: 244px;
+  content: ' ';
+  display: block;
+}
+.home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom .bar.value {
+  width: 140px;
+}
+.home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom .bar.value .top {
+  background: white;
+  border-left: solid 1px #dbdedf;
+}
+.home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom .bar.value .top:after {
+  background: url(../images/icon/icon-point-cuted.png) no-repeat;
+  width: 8px;
+  height: 8px;
+  position: relative;
+  top: 31px!important;
+  left: 244px;
+  content: ' ';
+  display: block;
+}
+.home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom .bar.value .destin-name:after {
+  background: url(../images/icon/icon-point-cuted.png) no-repeat;
+  width: 8px;
+  height: 8px;
+  position: relative;
+  top: 11px;
+  left: 101px;
+  content: ' ';
+  display: block;
+}
+.home.container-fluid .home-detail-wrapper .banner {
+  width: 100%;
+  height: 160px;
+  background: #eef1f2;
+  outline: solid 1px #dadddf;
+}
+.home.container-fluid .home-detail-wrapper .banner .content {
+  width: 728px;
+  height: 90px;
+  margin: 0 auto;
+  padding-top: 35px;
+}
+.home.container-fluid .home-detail-wrapper .lowest {
+  width: 1280px;
+  height: 660px;
+  background: url(../images/home/background-airplane.jpg);
+  margin: 0 auto;
+}
+.home.container-fluid .home-detail-wrapper .lowest .subtitle {
+  color: #414042;
+  font-size: 15px;
+  width: 425px;
+  margin: 0 auto;
+  padding-top: 188px;
+  text-align: center;
+  font-weight: 500;
+}
+.home.container-fluid .home-detail-wrapper .lowest .tell-more {
+  width: 105px;
+  color: white;
+  font-size: 11px;
+  margin: 0 auto;
+  padding-top: 24px;
+  background: url(../images/home/bullet.png) no-repeat;
+  background-position: 0px 24px;
+  text-indent: 23px;
+  display: block;
+  cursor: pointer;
+}
+.home.container-fluid .home-detail-wrapper .lowest .wrapper-bottom {
+  width: 924px;
+  height: 110px;
+  margin: 0 auto;
+  margin-top: 251px;
+  font-weight: 500;
+}
+.home.container-fluid .home-detail-wrapper .lowest .wrapper-bottom .why {
+  width: 300px;
+  height: 100px;
+  float: left;
+}
+.home.container-fluid .home-detail-wrapper .lowest .wrapper-bottom .why .submarine {
+  width: 75px;
+  height: 40px;
+}
+.home.container-fluid .home-detail-wrapper .lowest .wrapper-bottom .why p {
+  color: white;
+  padding-top: 13px;
+  font-size: 11px;
+  font-weight: inherit;
+}
+.home.container-fluid .home-detail-wrapper .lowest .wrapper-bottom .why .purchase {
+  color: white;
+  font-size: 25px;
+  padding-top: 6px;
+  font-weight: inherit;
+}
+.home.container-fluid .home-detail-wrapper .lowest .wrapper-bottom ul {
+  float: left;
+  width: 600px;
+}
+.home.container-fluid .home-detail-wrapper .lowest .wrapper-bottom ul li {
+  float: left;
+  width: 60px;
+  color: white;
+  font-size: 10px;
+  font-weight: inherit;
+  margin: 16px;
+}
+.home.container-fluid .home-detail-wrapper .lowest .wrapper-bottom ul li p {
+  text-align: center;
 }
 @-ms-viewport {
   width: auto !important;
@@ -6373,7 +6613,8 @@ html {
   display: block;
 }
 .main-menu .menu-item:hover > a {
-  background-color: #38c4ff;
+  color: #38c4ff;
+  background-color: #fafafa;
 }
 .main-menu .menu-item.logo-prev {
   border: none;
@@ -6429,7 +6670,7 @@ html {
   border-left: 1px solid #ededed;
 }
 .main-menu .submenu.flight-menu li {
-  width: 25%;
+  width: 20%;
 }
 .main-menu .submenu.package-menu li,
 .main-menu .submenu.hotel-menu li {

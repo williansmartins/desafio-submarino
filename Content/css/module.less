@@ -1601,14 +1601,8 @@ option[disabled] {
             z-index: 4;
         }
 
-        .ticket-dots {
-            position: absolute;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            width: 70px;
-
-            .tab-crop {
+		
+		.tab-crop {
                 &.transition {
                     -moz-transition: background-position ease-in-out 0.3s;
                     -o-transition: background-position ease-in-out 0.3s;
@@ -1624,6 +1618,15 @@ option[disabled] {
                 z-index: 3;
                 background-position: -1345px center;
             }
+		
+        .ticket-dots {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 70px;
+
+            
 
             .last {
                 position: absolute;
@@ -1770,40 +1773,51 @@ option[disabled] {
     }
 
     &.moved {
-        .current {
+
+        .current,        
+        button
+        {
             &.transition {
                 -moz-transition: background-position linear 1s;
                 -o-transition: background-position linear 1s;
                 -webkit-transition: background-position linear 1s;
                 transition: background-position linear 1s;
             }
+        }
 
+        .current {        
             background-position: -1366px center;
         }
 
         .tab {
             &.transition {
-                -moz-transition: width linear 1s;
-                -o-transition: width linear 1s;
-                -webkit-transition: width linear 1s;
-                transition: width linear 1s;
+                -moz-transition: all linear 1s;
+                -o-transition: all linear 1s;
+                -webkit-transition: all linear 1s;
+                transition: all linear 1s;
             }
 
-            width: 1366px;
+            width: 1390px;
             border: none;
         }
 
         button {
-            &.transition {
-                -moz-transition: background-position linear 1s;
-                -o-transition: background-position linear 1s;
-                -webkit-transition: background-position linear 1s;
-                transition: background-position linear 1s;
-            }
-
-            background-position: 29px center;
+            background-position: 29px center !important;
             border: none;
         }
+
+        .tab-crop {
+            &.transition {
+                -moz-transition: background-position linear 1s, opacity linear 0.3s;
+                -o-transition: background-position linear 1s, opacity linear 0.3s;
+                -webkit-transition: background-position linear 1s, opacity linear 0.3s;
+                transition: background-position linear 1s, opacity linear 0.3s;
+            }
+
+            background-position: 0 center !important;
+            border: none;
+        }
+
         .dot,
         .tab-crop,
             .glyphicon {

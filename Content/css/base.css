@@ -1,89 +1,211 @@
-﻿/* VERDES */
+﻿/*#region base */
+/* VERDES */
 /* AZUIS */
 /* CINZAS */
 /* Vermelhos */
-.filter {
-  background-color: #ffffff;
-  padding: 20px 8.33%;
+/* Tamanhos */
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  font: inherit;
 }
-/* FLIGHT */
-.recommended-flight {
-  height: 100px;
-}
-.recommended-flight .info {
-  background-color: #d71326;
-  height: 160px;
-  width: 74%;
-}
-.recommended-flight .price {
-  background-color: #ffffff;
-  height: 160px;
-  width: 26%;
-}
-/* FORM */
-.form-box {
-  border-left: 1px solid #c9d0d2;
-  border-top: 1px solid #c9d0d2;
-}
-.form-box .row {
-  border-bottom: 1px solid #c9d0d2;
-}
-.form-box .form-control {
-  background-color: #ffffff;
-  border: none;
-  border-right: 1px solid #c9d0d2;
-  border-radius: 0;
-  color: #333333;
+html,
+button,
+input,
+select,
+textarea {
+  color: #58595b;
   font-size: 13px;
-  height: 78px;
-  padding: 29px 10px;
+  font-family: 'Omnes', "Helvetica Neue", Arial, "sans-serif";
 }
-.form-box .form-control:focus {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-}
-.form-box .form-control::-moz-placeholder {
-  color: #7da5b8;
-}
-.form-box .form-control:-ms-input-placeholder {
-  color: #7da5b8;
-}
-.form-box .form-control::-webkit-input-placeholder {
-  color: #7da5b8;
-}
-.form-box .form-group {
+body {
   position: relative;
+  font-size: 13px;
+  line-height: 1.4em;
+}
+::-moz-selection {
+  background: #4dbdf1;
+  color: #FFF;
+  text-shadow: none;
+}
+::selection {
+  background: #4dbdf1;
+  color: #FFF;
+  text-shadow: none;
+}
+b,
+strong {
+  font-weight: bold;
+}
+button {
+  display: inline-block;
+  overflow: visible;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  outline: none;
+  border: none;
+  background: transparent;
+  line-height: 1.4em;
+  cursor: pointer;
+}
+/*#endregion */
+/*#region links */
+a {
+  color: #28bbfd;
+}
+a:hover {
+  color: #28bbfd;
+}
+a:focus,
+a:hover,
+a:active {
+  outline: none;
+}
+/*#endregion */
+/*#region Typography */
+blockquote {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: none;
+}
+ins {
+  background: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+pre,
+code,
+kbd,
+samp {
+  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+}
+pre {
+  white-space: pre-wrap;
+  white-space: pre;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+}
+i,
+em {
+  font-style: italic;
+}
+h1,
+h2,
+h3,
+h4,
+h4,
+h6 {
+  font-family: 'Omnes';
+}
+p {
   margin: 0;
 }
-.form-box .form-group.required:before {
-  color: #7da5b8;
-  content: '*';
-  position: absolute;
-  top: 10px;
-  left: 10px;
+/*#endregion */
+/*#region Helper Classes */
+.ir {
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
 }
-.form-box .has-error .form-group:before {
-  color: #ed1a3b;
+.ir:before {
+  display: block;
+  width: 0;
+  height: 100%;
+  content: "";
 }
-.form-box .has-error .form-control {
-  color: #ed1a3b;
-  -webkit-box-shadow: 0px 0px 0px 2px #ed1a3b;
-  -moz-box-shadow: 0px 0px 0px 2px #ed1a3b;
-  box-shadow: 0px 0px 0px 2px #ed1a3b;
+/*#endregion */
+/*#region lists */
+ul li,
+ol li {
+  list-style: none;
 }
-.form-box .has-error .form-control::-moz-placeholder {
-  color: #ed1a3b;
+dd {
+  margin: 0;
 }
-.form-box .has-error .form-control:-ms-input-placeholder {
-  color: #ed1a3b;
+/*#endregion */
+/*#region Embedded content */
+img {
+  -ms-interpolation-mode: bicubic;
+  vertical-align: middle;
 }
-.form-box .has-error .form-control::-webkit-input-placeholder {
-  color: #ed1a3b;
-}
-/*# sourceMappingURL=module.css.map */
-.filter-container {
-  background: #F00;
-}
-/*# sourceMappingURL=module.css.map */
-/*# sourceMappingURL=module.css.map */
+/*#endregion */
+/*# sourceMappingURL=base.css.map */
