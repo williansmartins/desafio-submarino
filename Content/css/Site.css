@@ -4,7 +4,7 @@
 /* AZUIS */
 /* CINZAS */
 /* Vermelhos */
-/* Tamanhos */
+/* GERAIS */
 /*#region base */
 html,
 body,
@@ -3089,8 +3089,9 @@ option[disabled] {
   font-size: 11px;
   color: #a2a4a3;
   margin: 0px;
-  margin-left: 37px;
-  font-weight: inherit;
+  margin-left: 27px;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 .general-subtitle {
   font-size: 34px;
@@ -3098,14 +3099,15 @@ option[disabled] {
   margin: 0px;
   margin-top: 8px;
   margin-bottom: 38px;
-  margin-left: 37px;
-  font-weight: inherit;
+  margin-left: 27px;
+  font-weight: 500;
 }
 .home.marquee-hotel {
   position: absolute;
 }
 .home.container-fluid {
   padding-top: 523px;
+  background-color: #e2e6e7;
 }
 .home.container-fluid .home-detail-wrapper .destinations,
 .home.container-fluid .home-detail-wrapper .popular-destinations {
@@ -3120,12 +3122,12 @@ option[disabled] {
   width: 100%;
   height: 240px;
   margin-bottom: 18px;
-  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
 }
 .home.container-fluid .home-detail-wrapper .destinations .boxes .box,
 .home.container-fluid .home-detail-wrapper .popular-destinations .boxes .box {
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
   width: 240px;
-  height: 100%;
+  height: 240px;
   background: red;
   color: white;
   float: left;
@@ -3187,19 +3189,27 @@ option[disabled] {
 .home.container-fluid .home-detail-wrapper .popular-destinations .boxes .box.box8 {
   background: url(../images/home/destin4.jpg);
 }
+.home.container-fluid .home-detail-wrapper .destinations {
+  border-bottom: solid 1px #dbdedf;
+}
 .home.container-fluid .home-detail-wrapper .popular-destinations {
-  height: 613px;
+  height: 670px;
   background: #e2e6e7;
 }
-.home.container-fluid .home-detail-wrapper .popular-destinations .box {
+.home.container-fluid .home-detail-wrapper .popular-destinations .boxes {
+  height: 480px;
+}
+.home.container-fluid .home-detail-wrapper .popular-destinations .boxes .box {
   padding-top: 140px;
 }
-.home.container-fluid .home-detail-wrapper .popular-destinations .box .details {
+.home.container-fluid .home-detail-wrapper .popular-destinations .boxes .box .details {
   margin-top: 10px;
 }
 .home.container-fluid .home-detail-wrapper .fly-me-out {
   width: 100%;
-  height: 920px;
+  height: 872px;
+  padding-top: 50px;
+  background-color: #eef1f2;
 }
 .home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out {
   width: 960px;
@@ -3208,7 +3218,30 @@ option[disabled] {
 }
 .home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .top {
   width: 100%;
-  height: 110px;
+  height: 128px;
+  position: relative;
+}
+.home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .top .slider {
+  width: 300px;
+  position: absolute;
+  right: 0px;
+  top: 10px;
+}
+.home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .top .general-subtitle {
+  border-bottom: dotted 2px #28bbfd;
+  padding-bottom: 7px;
+  width: 280px;
+  background: url(../images/icon/icon-text-cta-normal.png) no-repeat;
+  background-position: 265px 0px;
+}
+.home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .top .description {
+  width: 419px;
+  margin-left: 27px;
+  position: absolute;
+  top: 60px;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: Arial;
 }
 .home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom {
   box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
@@ -3321,6 +3354,9 @@ option[disabled] {
   float: left;
   height: 100%;
 }
+.home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom .bar .top {
+  position: initial;
+}
 .home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom .bar .destin-name {
   display: block;
   width: 100%;
@@ -3405,7 +3441,7 @@ option[disabled] {
   width: 100%;
   height: 160px;
   background: #eef1f2;
-  outline: solid 1px #dadddf;
+  border-top: solid 1px #dadddf;
 }
 .home.container-fluid .home-detail-wrapper .banner .content {
   width: 728px;
@@ -3416,7 +3452,7 @@ option[disabled] {
 .home.container-fluid .home-detail-wrapper .lowest {
   width: 1280px;
   height: 660px;
-  background: url(../images/home/background-airplane.jpg);
+  background: #e2e6e7 url(../images/home/background-airplane.jpg);
   margin: 0 auto;
 }
 .home.container-fluid .home-detail-wrapper .lowest .subtitle {
