@@ -3120,9 +3120,7 @@ option[disabled] {
   width: 100%;
   height: 240px;
   margin-bottom: 18px;
-  -webkit-box-shadow: 1px 1px 2px #e5e7e8;
-  -moz-box-shadow: 1px 1px 2px #e5e7e8;
-  box-shadow: 1px 1px 2px #e5e7e8;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
 }
 .home.container-fluid .home-detail-wrapper .destinations .boxes .box,
 .home.container-fluid .home-detail-wrapper .popular-destinations .boxes .box {
@@ -3229,7 +3227,7 @@ option[disabled] {
   font-weight: 500;
 }
 .home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom .detail {
-  margin-top: 45px;
+  margin-top: 38px;
   border-top: solid 1px #dbdedf;
   font-weight: 500;
   font-size: 11px;
@@ -3239,11 +3237,12 @@ option[disabled] {
 .home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom .link {
   color: #58595b;
   font-weight: 500;
-  margin-top: 470px;
+  margin-top: 467px;
   margin-left: 14px;
   background: url(../images/icon/icon-arrow-right.png) no-repeat;
   text-indent: 24px;
   font-size: 11px;
+  display: block;
 }
 .home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom .best-deals {
   width: 239px;
@@ -3253,9 +3252,69 @@ option[disabled] {
   padding-top: 18px;
   padding-left: 23px;
 }
+.home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom .best-deals .destin-name {
+  color: #262a36;
+  font-size: 30px;
+  font-weight: 500;
+  margin-top: 7px;
+}
 .home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom .image {
   float: left;
   width: 299px;
+  position: relative;
+  color: white;
+}
+.home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom .image img {
+  position: absolute;
+  top: 0px;
+}
+.home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom .image .texts {
+  position: absolute;
+}
+.home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom .image button {
+  width: 280px;
+  height: 80px;
+  position: absolute;
+  margin-top: 8px;
+  left: 11px;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
+}
+.home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom .image .description1 {
+  font-size: 11px;
+  font-weight: 500;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 133px;
+  text-align: center;
+}
+.home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom .image .destin {
+  font-size: 35px;
+  font-weight: 500;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 15px;
+  text-align: center;
+  color: white;
+}
+.home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom .image .description2 {
+  font-size: 14px;
+  font-weight: 500;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 53px;
+  text-align: center;
+}
+.home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom .image .link {
+  font-weight: 500;
+  background: url(../images/icon/icon-arrow-whiter-right-2.png) no-repeat;
+  font-size: 11px;
+  text-align: center;
+  width: 187px;
+  margin: 0 auto;
+  margin-top: 318px;
+  padding-left: 14px;
+  color: white;
+  display: block;
 }
 .home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom .bar {
   width: 282px;
@@ -3278,7 +3337,7 @@ option[disabled] {
   height: 8px;
   position: relative;
   top: 11px;
-  left: 244px;
+  left: 243px;
   content: ' ';
   display: block;
 }
@@ -3311,7 +3370,17 @@ option[disabled] {
   width: 8px;
   height: 8px;
   position: relative;
-  top: 31px;
+  top: 22px;
+  left: 244px;
+  content: ' ';
+  display: block;
+}
+.home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom .bar .destin-name.top:before {
+  background: url(../images/icon/icon-point.png) no-repeat;
+  width: 8px;
+  height: 8px;
+  position: relative;
+  top: -26px;
   left: 244px;
   content: ' ';
   display: block;
@@ -3319,29 +3388,18 @@ option[disabled] {
 .home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom .bar.value {
   width: 140px;
 }
+.home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom .bar.value .destin-name {
+  padding-left: 18px;
+}
 .home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom .bar.value .top {
   background: white;
   border-left: solid 1px #dbdedf;
 }
 .home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom .bar.value .top:after {
-  background: url(../images/icon/icon-point-cuted.png) no-repeat;
-  width: 8px;
-  height: 8px;
-  position: relative;
-  top: 31px!important;
-  left: 244px;
-  content: ' ';
-  display: block;
+  display: none;
 }
 .home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom .bar.value .destin-name:after {
-  background: url(../images/icon/icon-point-cuted.png) no-repeat;
-  width: 8px;
-  height: 8px;
-  position: relative;
-  top: 11px;
-  left: 101px;
-  content: ' ';
-  display: block;
+  display: none;
 }
 .home.container-fluid .home-detail-wrapper .banner {
   width: 100%;

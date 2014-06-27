@@ -41,7 +41,7 @@
 					margin-bottom: 18px;
 
 
-					.box-shadow(1px 1px 2px #e5e7e8);	
+					box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);	
 
 					.box{
 						width: 240px;
@@ -141,26 +141,28 @@
 							margin-top: 7px;
 							font-weight: @font-strong;
 
-						}
+						}						
+
 						.detail {
-							margin-top: 45px;
+							margin-top: 38px;
 							border-top: solid 1px @border-intern;
 							font-weight: @font-strong;
 							font-size: @size-initial;
 							padding-top: 10px;
 							color: @grey-pale;
 
-						}
+						}					 
 						.link{
 							color:@grey-mid;
 							font-weight: @font-strong;
-							margin-top: 470px;
+							margin-top: 467px;
 							margin-left: 14px;
 							background: url(../images/icon/icon-arrow-right.png) no-repeat;
 							text-indent: 24px;
-							font-size: 11px;
+                            font-size: 11px; 
+                            display: block;
+                        }
 
-						}
 						.best-deals{
 							width: 239px;
 							height: 100%;
@@ -168,10 +170,76 @@
 							background: url(../images/home/background-best-deals.jpg);
 							padding-top: 18px;
 							padding-left: 23px;
+
+							.destin-name{
+								color: #262a36;
+								font-size: 30px;
+								font-weight: 500;
+								margin-top: 7px;
+							}
 						}
 						.image{
 							float: left;
 							width: 299px;
+							position: relative;
+							color: white; 
+
+							img{
+								position: absolute;    
+								top: 0px; 
+							}       
+                            .texts{
+                                position: absolute;
+                            }
+							button{
+								width: 280px;
+								height: 80px;
+								position: absolute;
+								margin-top: 8px;
+								left: 11px;
+								box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
+                                
+							}
+
+							.description1{
+								font-size: 11px;
+								font-weight: @font-strong;
+								width: 100%;
+								margin: 0 auto;
+								padding-top: 133px;
+								text-align: center;
+							}
+							.destin{
+								font-size: 35px;
+								font-weight: @font-strong;
+								width: 100%;
+								margin: 0 auto;
+								padding-top: 15px;
+								text-align: center;
+								color: white;
+							}
+							.description2{
+								font-size: 14px;
+								font-weight: @font-strong;
+								width: 80%;
+								margin: 0 auto;
+								padding-top: 53px;
+								text-align: center;
+
+							}
+							.link{
+								font-weight: @font-strong;
+								background: url(../images/icon/icon-arrow-whiter-right-2.png) no-repeat;
+								font-size: 11px;
+								text-align: center;
+								width: 187px;
+								margin: 0 auto;
+								margin-top: 318px;
+								padding-left: 14px;
+								color: white;
+								display: block;
+							}
+
 						}
 						.bar{
 							width: 282px;
@@ -188,14 +256,13 @@
 								padding-left: 35px;
 								padding-top: 6px;
 
-
 								&:after {
 									background:  url(../images/icon/icon-point.png) no-repeat;
 									width: 8px;
 									height: 8px;
 									position: relative;
 									top: 11px;
-                                    left: 244px;
+                                    left: 243px;
                                     content: ' '; 
                                     display: block;
 						        }
@@ -228,46 +295,63 @@
 									}
 
                                     &:after {
-									    background:  url(../images/icon/icon-point.png) no-repeat; 
+									    background:  url(../images/icon/icon-point.png) no-repeat;  
 									    width: 8px;
 									    height: 8px;
 									    position: relative;
-									    top: 31px;
+									    top: 22px;
                                         left: 244px;
                                         content: ' ';
-                                        display: block;
+                                        display: block; 
 						            }
+
+                                    &:before {
+									    background:  url(../images/icon/icon-point.png) no-repeat;  
+									    width: 8px;
+									    height: 8px;
+									    position: relative;
+									    top: -26px;
+										left: 244px;
+                                        content: ' ';
+                                        display: block; 
+						            }						            
 
 								}
 								
 							}
 							&.value{
 								width: 140px;
+
+								.destin-name{
+									padding-left: 18px;
+								}
 								.top{
 									background: white;
                                     border-left: solid 1px #dbdedf;
 
 									&:after {
-									    background:  url(../images/icon/icon-point-cuted.png) no-repeat;
-									    width: 8px;
-									    height: 8px;
-									    position: relative;
-									    top: 31px!important;
-                                        left: 244px;
-                                        content: ' ';
-                                        display: block;
+									    // background:  url(../images/icon/icon-point-cuted.png) no-repeat;      
+									    // width: 8px;
+									    // height: 8px;
+									    // position: relative;
+									    // top: 31px!important;
+             							//left: 244px;
+             							//content: ' ';
+             							//display: block;
+             							display: none;
 						            }
 								}
 
 								.destin-name:after{
-									background:  url(../images/icon/icon-point-cuted.png) no-repeat;
-									width: 8px;
-									height: 8px;
-									position: relative;
-									top: 11px;
-                                    left: 101px;
-                                    content: ' '; 
-                                    display: block;
+									// background:  url(../images/icon/icon-point-cuted.png) no-repeat;
+									// width: 8px;
+									// height: 8px;
+									// position: relative;
+									// top: 11px;
+									// left: 101px;
+									// content: ' '; 
+									// display: block;
+             						display: none;
 								} 
 							}
 						}
