@@ -680,84 +680,57 @@ Site._applyAutoComplete = function () {
     
 }
 Site._animateDestins = function () {
+    var dadosDoJson;
+    var totalDeItens;
+    var destins = [];
+    var dates = [];
+    var values = [];
+    var images = [];
 
-    //
+    //buscar json e transformar em vetor
+    $.getJSON("/Content/js/destin.json", function(data){
+        dadosDoJson = data;
+        totalDeItens = Object.keys(dadosDoJson.destins.date).length;
 
-    var dates = [
-        "DEPARTING AUGUST 14 TO",
-        "DEPARTING AUGUST 10 TO",
-        "DEPARTING AUGUST 12 TO",
-        "DEPARTING AUGUST 5 TO",
-        "DEPARTING AUGUST 10 TO",
-        "DEPARTING AUGUST 9 TO",
-        "DEPARTING AUGUST 14 TO",
-        "DEPARTING AUGUST 12 TO",
-        "DEPARTING AUGUST 12 TO",
-        "DEPARTING AUGUST 9 TO - ooo"
-    ];
-
-    var destins = [
-        "Rome",
-        "New York",
-        "Miami",
-        "Amsterdam",
-        "Venice",
-        "Paris",
-        "Chicago",
-        "Milan",
-        "Los Angels",
-        "Madrid"
-    ];
-
-    var values = [
-        "1727",
-        "1234",
-        "1443",
-        "1727",
-        "1727",
-        "1727",
-        "1902",
-        "1682",
-        "1369",
-        "1660"
-    ];
-
-    var images = [
-        "lateral-destin1.jpg",
-        "lateral-destin2.jpg",
-        "lateral-destin3.jpg",
-        "lateral-destin4.jpg",
-        "lateral-destin5.jpg",
-        "lateral-destin6.jpg",
-        "lateral-destin7.jpg",
-        "lateral-destin8.jpg",
-        "lateral-destin9.jpg",
-        "lateral-destin10.jpg"
-    ];
-
-
-    var item = 3;
-
-    function preencherDestinos(){
-
-        for (var i=0; i < destins.length; i++){
-            $(".departing [data-item='" + (1+i) + "'] .name").html(destins[i]); 
-            $(".departing [data-item='" + (1+i) + "'] .date").html(dates[i]);   
-            $(".value [data-item='" + (1+i) + "'] .name").html(values[i]);  
+        //capturando dados do json - Nome
+        destinsObjeto = dadosDoJson.destins.name;
+        for (var prop in destinsObjeto) {
+            destins.push(destinsObjeto[prop]);
         }
-    }
+        
+        //capturando dados do json - Data
+        datesObjeto = dadosDoJson.destins.date;
+        for (var prop in datesObjeto) {
+            dates.push(datesObjeto[prop]);
+        }   
 
+        //capturando dados do json - Valor
+        valuesObjeto = dadosDoJson.destins.value;
+        for (var prop in valuesObjeto) {
+            values.push(valuesObjeto[prop]);
+        }  
+
+        //capturando dados do json - Valor
+        imagesObjeto = dadosDoJson.destins.image;
+        for (var prop in imagesObjeto) {
+            images.push(imagesObjeto[prop]);
+        }
+        
+        preencherDestinos();
+
+    });
+
+    //bind do click do destino
     $(".bar .destin-name").on("click", function(){
         selecionar(this);
     });
 
-    function redistribuir(item){
-        for (var i=0; i < destins.length; i++){
-            if(item==10){
-                item = 1;
-            }
-            caixas[i] = eval("string"+item);
-            item++;
+    function preencherDestinos(){
+        for (var i=0; i < totalDeItens; i++){
+            $(".departing [data-item='" + (i+1) + "'] .name").html(destins[i]); 
+            $(".departing [data-item='" + (i+1) + "'] .date").html(dates[i]);   
+            $(".value [data-item='" + (i+1) + "'] .name").html(values[i]);  
+            $(".bottom .image img").attr("src", "Content/images/home/"+images[0] );
         }
     }
 
@@ -769,19 +742,17 @@ Site._animateDestins = function () {
         var item = $(t).attr("data-item");
         var numero = parseInt(item);
 
-        console.info("numero: " + numero);
-
         //trocar textos da lateral
-        var numeroAntigo = destins[item-1];
+        var destinoAntigo = destins[item-1];
         $(".texts .destin").fadeOut( "slow", function() {
-            $(".texts .destin").html( numeroAntigo );
+            $(".texts .destin").html( destinoAntigo );
         });
         
-
-        //trocar a imagem
+        //trocar a imagem        
+        var imagemAntiga = images[item-1];
         var image = $(".bottom .image img");
         image.fadeOut( "slow", function() {
-            image.attr("src", "Content/images/home/"+images[numero-1] );
+            image.attr("src", "Content/images/home/"+imagemAntiga );
             $(".texts .destin").show();
             
         });
@@ -793,12 +764,13 @@ Site._animateDestins = function () {
             opacity: "0"
         }, 500, function() {
             p.stop();
-            // console.info("animacao1");
             
             //trocar textos 
             destins = destins.concat(destins.splice(0,item-1));
             dates = dates.concat(dates.splice(0,item-1));
             values = values.concat(values.splice(0,item-1));
+            images = images.concat(images.splice(0,item-1));
+            
 
             //preencher novamente os destinos
             preencherDestinos();
@@ -813,7 +785,6 @@ Site._animateDestins = function () {
                 opacity: "1"
             }, 500, function() {
                 $(this).stop();
-                // console.info("fim");
             });
         }); 
     }
@@ -1205,7 +1176,7 @@ $(window).on('load', function () {
                         })
                         // executa a função
                         .trigger('fixed')
-                        // evento que define um box fixo sem movimento no restante da página							
+                        // evento que define um box fixo sem movimento no restante da página                            
                         .on('scroll moveOne', function () {
                             // atualiza informações do item que ficará fixo na tela
                             self.scroll.moveOne.update.call(self.scroll.moveOne);

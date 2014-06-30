@@ -1,0 +1,57 @@
+.recent-searches-widget
+{
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+
+  .widget-title
+  {
+	font-size: 10px;
+	color: #57e2fa;
+	text-transform: uppercase;
+  }
+
+  .searches
+  {
+	position: relative;
+	z-index: 2;
+	height: 90px;
+	ul
+  {
+	  margin: 0;
+	  padding: 10px 0;
+	  border-top: 1px solid #fff;
+	  border-bottom: 1px solid #fff;
+	  position: absolute;
+	  z-index: 40;
+	  width: 900px;
+	}
+	li
+	{
+	  display: inline-block;
+	  vertical-align: top;
+	  font-size: 10px;
+	  color: #FFF;
+	  margin: 0;
+	  text-transform: uppercase;
+	  padding: 0 15px;
+	  border-left: 1px solid #FFF;
+
+	  &:first-child
+	  {
+		border-left: none;
+		padding-left: 0;
+	  }
+
+	  .ico-separator
+	  {
+		display: inline-block;
+		vertical-align: middle;
+		width: 13px;
+		height: 11px;
+		margin: 0 10px;
+		background: url(../images/widgets/recent-searches/separator.png) left center no-repeat;
+	  }
+	}
+  }
+}

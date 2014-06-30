@@ -1,0 +1,50 @@
+{"destins": {
+    "date": {
+        "1":  "DEPARTING AUGUST 14 TO",
+        "2":  "DEPARTING AUGUST 10 TO",
+        "3":  "DEPARTING AUGUST 12 TO",
+        "4":  "DEPARTING AUGUST 5 TO",
+        "5":  "DEPARTING AUGUST 10 TO",
+        "6":  "DEPARTING AUGUST 9 TO",
+        "7":  "DEPARTING AUGUST 14 TO",
+        "8":  "DEPARTING AUGUST 12 TO",
+        "9":  "DEPARTING AUGUST 12 TO",
+        "10": "DEPARTING AUGUST 9 TO"
+    },
+    "name": { 
+        "1": "New York",
+        "2": "Rome",
+        "3": "Miami",
+        "4": "Amsterdam",
+        "5": "Venice",
+        "6": "Paris",
+        "7": "Chicago",
+        "8": "Milan",
+        "9": "Los Angels",
+        "10": "Madrid"
+    },
+    "image": { 
+        "1": "NewYork.jpg",
+        "2": "Rome.jpg",
+        "3": "Miami.jpg",
+        "4": "Amsterdam.jpg",
+        "5": "Venice.jpg",
+        "6": "Paris.jpg",
+        "7": "Chicago.jpg",
+        "8": "Milan.jpg",
+        "9": "LosAngels.jpg",
+        "10": "Madrid.jpg"
+    },
+    "value": { 
+        "1": "1727",
+        "2": "1234",
+        "3": "1443",
+        "4": "1727",
+        "5": "1727",
+        "6": "1727",
+        "7": "1902",
+        "8": "1682",
+        "9": "1369",
+        "10": "1660"
+    }
+}} 

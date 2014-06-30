@@ -346,14 +346,13 @@
   border-left: solid 1px #dbdedf;
   padding-left: 35px;
   padding-top: 6px;
-  overflow: hidden;
 }
 .home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom .bar .destin-name:after {
   background: url(../images/icon/icon-point.png) no-repeat;
   width: 8px;
   height: 8px;
   position: relative;
-  top: 11px;
+  top: -3px;
   left: 243px;
   content: ' ';
   display: block;
@@ -361,6 +360,8 @@
 .home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom .bar .destin-name .mask {
   width: 100%;
   height: 100%;
+  overflow: hidden;
+  cursor: pointer;
 }
 .home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom .bar .destin-name .mask p {
   margin-top: 1px;
@@ -394,7 +395,7 @@
   width: 8px;
   height: 8px;
   position: relative;
-  top: 22px;
+  top: -11px;
   left: 244px;
   content: ' ';
   display: block;
@@ -507,3 +508,4 @@
 .home.container-fluid .home-detail-wrapper .lowest .wrapper-bottom ul li p {
   text-align: center;
 }
+/*# sourceMappingURL=home.css.map */

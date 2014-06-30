@@ -418,7 +418,7 @@ var HomeBookingWidget = {
 		var scrollDistance = widgetHeight - viewportH;
 
 		if ( $(window).scrollTop() > scrollDistance ) {
-			$('.marquee-home,.home-detail-wrapper,.main-footer').css('position', 'absolute');
+			$('.marquee-home').css('position', 'absolute');
 		} else {
 			$('.marquee-home').css('position', 'fixed');
 		}

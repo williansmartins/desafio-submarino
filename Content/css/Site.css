@@ -1337,7 +1337,7 @@ fieldset[disabled] .btn.active {
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffe8e8e8', endColorstr='#fff5f5f5', GradientType=0);
 }
-/*# sourceMappingURL=bootstrap-theme.css.map */
+/*# sourceMappingURL=Site.css.map */
 .theme-dropdown .dropdown-menu {
   position: static;
   display: block;
@@ -4044,7 +4044,7 @@ option[disabled] {
   width: 8px;
   height: 8px;
   position: relative;
-  top: 11px;
+  top: -3px;
   left: 243px;
   content: ' ';
   display: block;
@@ -4087,7 +4087,7 @@ option[disabled] {
   width: 8px;
   height: 8px;
   position: relative;
-  top: 22px;
+  top: -11px;
   left: 244px;
   content: ' ';
   display: block;
@@ -4200,11 +4200,6 @@ option[disabled] {
 .home.container-fluid .home-detail-wrapper .lowest .wrapper-bottom ul li p {
   text-align: center;
 }
-/* VERDES */
-/* AZUIS */
-/* CINZAS */
-/* Vermelhos */
-/* GERAIS */
 .marquee-home {
   position: absolute;
   top: 120px;
@@ -4283,7 +4278,7 @@ option[disabled] {
   display: inline-block;
   vertical-align: top;
   height: 16px;
-  background: url(../images/icon/icon-arrow-transparent-right.png) no-repeat;
+  background: url(modules/images/icon/icon-arrow-transparent-right.png) no-repeat;
 }
 .marquee-home .marquee-home-container .detail.rio .recent-searches-widget {
   margin-top: 80px;
@@ -4293,7 +4288,7 @@ option[disabled] {
   top: 180px;
 }
 .justkidding {
-  background: url(../images/widget-fake.png) no-repeat;
+  background: url(modules/images/widget-fake.png) no-repeat;
   position: relative;
   left: 205px;
   height: 493px;
@@ -4343,7 +4338,7 @@ option[disabled] {
   width: 13px;
   height: 11px;
   margin: 0 10px;
-  background: url(../images/widgets/recent-searches/separator.png) left center no-repeat;
+  background: url(modules/images/widgets/recent-searches/separator.png) left center no-repeat;
 }
 @-ms-viewport {
   width: auto !important;
@@ -8883,3 +8878,4 @@ html {
   -moz-box-shadow: inset 0px 2px 0px #00aeef;
   box-shadow: inset 0px 2px 0px #00aeef;
 }
+/*# sourceMappingURL=Site.css.map */

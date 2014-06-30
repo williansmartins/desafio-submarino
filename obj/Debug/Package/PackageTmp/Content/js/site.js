@@ -28,6 +28,7 @@ Site._init = function () {
     Site._scrollPage();
     Site._galeries();
     Site._applyAutoComplete();
+    Site._animateDestins();
     $(window).resize(function () {
         Site._bookingAside();
         Site._stickBookingAside();
@@ -678,6 +679,116 @@ Site._applyAutoComplete = function () {
     })
     
 }
+Site._animateDestins = function () {
+    var dadosDoJson;
+    var totalDeItens;
+    var destins = [];
+    var dates = [];
+    var values = [];
+    var images = [];
+
+    //buscar json e transformar em vetor
+    $.getJSON("/Content/js/destin.json", function(data){
+        dadosDoJson = data;
+        totalDeItens = Object.keys(dadosDoJson.destins.date).length;
+
+        //capturando dados do json - Nome
+        destinsObjeto = dadosDoJson.destins.name;
+        for (var prop in destinsObjeto) {
+            destins.push(destinsObjeto[prop]);
+        }
+        
+        //capturando dados do json - Data
+        datesObjeto = dadosDoJson.destins.date;
+        for (var prop in datesObjeto) {
+            dates.push(datesObjeto[prop]);
+        }   
+
+        //capturando dados do json - Valor
+        valuesObjeto = dadosDoJson.destins.value;
+        for (var prop in valuesObjeto) {
+            values.push(valuesObjeto[prop]);
+        }  
+
+        //capturando dados do json - Valor
+        imagesObjeto = dadosDoJson.destins.image;
+        for (var prop in imagesObjeto) {
+            images.push(imagesObjeto[prop]);
+        }
+        
+        preencherDestinos();
+
+    });
+
+    //bind do click do destino
+    $(".bar .destin-name").on("click", function(){
+        selecionar(this);
+    });
+
+    function preencherDestinos(){
+        for (var i=0; i < totalDeItens; i++){
+            $(".departing [data-item='" + (i+1) + "'] .name").html(destins[i]); 
+            $(".departing [data-item='" + (i+1) + "'] .date").html(dates[i]);   
+            $(".value [data-item='" + (i+1) + "'] .name").html(values[i]);  
+            $(".bottom .image img").attr("src", "Content/images/home/"+images[0] );
+        }
+    }
+
+    function selecionar(t){
+        //selecionar os itens a serem alterados
+        var p = $(".departing p, .bar .destin-name p");
+
+        //pegar o numero do item selecionado
+        var item = $(t).attr("data-item");
+        var numero = parseInt(item);
+
+        //trocar textos da lateral
+        var destinoAntigo = destins[item-1];
+        $(".texts .destin").fadeOut( "slow", function() {
+            $(".texts .destin").html( destinoAntigo );
+        });
+        
+        //trocar a imagem        
+        var imagemAntiga = images[item-1];
+        var image = $(".bottom .image img");
+        image.fadeOut( "slow", function() {
+            image.attr("src", "Content/images/home/"+imagemAntiga );
+            $(".texts .destin").show();
+            
+        });
+        image.fadeIn();
+
+        //animar escondendo textos
+        p.animate({
+            marginTop: "-50px",
+            opacity: "0"
+        }, 500, function() {
+            p.stop();
+            
+            //trocar textos 
+            destins = destins.concat(destins.splice(0,item-1));
+            dates = dates.concat(dates.splice(0,item-1));
+            values = values.concat(values.splice(0,item-1));
+            images = images.concat(images.splice(0,item-1));
+            
+
+            //preencher novamente os destinos
+            preencherDestinos();
+
+            //trocar a posição dos textos
+            p.css("margin-top","50px");
+
+            //animar mostrando textos
+            $(".destin-name.top .name").animate({marginTop: "7px"});
+            p.animate({
+                marginTop: "0",
+                opacity: "1"
+            }, 500, function() {
+                $(this).stop();
+            });
+        }); 
+    }
+}
 Site._getAutoComplete = function () {
      json = ["ActionScript", "AppleScript", "Asp", "BASIC", "C", "C++", "Clojure", "COBOL", "ColdFusion", "Erlang", "Fortran", "Groovy", "Haskell", "Java", "JavaScript", "Lisp", "Perl", "PHP", "Python", "Ruby", "Scala", "Scheme"];
      return json;
@@ -1065,7 +1176,7 @@ $(window).on('load', function () {
                         })
                         // executa a função
                         .trigger('fixed')
-                        // evento que define um box fixo sem movimento no restante da página							
+                        // evento que define um box fixo sem movimento no restante da página                            
                         .on('scroll moveOne', function () {
                             // atualiza informações do item que ficará fixo na tela
                             self.scroll.moveOne.update.call(self.scroll.moveOne);

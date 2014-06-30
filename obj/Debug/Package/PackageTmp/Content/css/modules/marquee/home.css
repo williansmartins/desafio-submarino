@@ -15,6 +15,9 @@
   max-width: 1366px;
   height: 590px;
 }
+.marquee-home .marquee-home-container .ticket-dots .last {
+  top: 348px;
+}
 .marquee-home .marquee-home-container .current,
 .marquee-home .marquee-home-container .tab-crop {
   -webkit-background-size: 1000% 100%;
@@ -27,9 +30,12 @@
 .marquee-home .marquee-home-container .detail {
   width: 100%;
 }
+.marquee-home .marquee-home-container .detail.rio {
+  top: 190px;
+}
 .marquee-home .marquee-home-container .detail.rio .info {
-  margin-left: 45%;
-  width: 300px;
+  margin-left: 48%;
+  width: 420px;
 }
 .marquee-home .marquee-home-container .detail.rio .small-text {
   font-size: 12px;
@@ -77,15 +83,18 @@
   height: 16px;
   background: url(../images/icon/icon-arrow-transparent-right.png) no-repeat;
 }
+.marquee-home .marquee-home-container .detail.rio .recent-searches-widget {
+  margin-top: 80px;
+}
 .booking-flight-widget {
   position: absolute;
   top: 180px;
 }
 .justkidding {
+  background: url(../images/widget-fake.png) no-repeat;
   position: relative;
-  left: 0;
-  height: 900px;
-  width: 300px;
-  background-color: red;
+  left: 205px;
+  height: 493px;
+  width: 480px;
 }
 /*# sourceMappingURL=home.css.map */
