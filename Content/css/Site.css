@@ -1,6 +1,4 @@
-﻿@import "fonts.css";
-@import "sprite.css";
-/* VERDES */
+﻿/* VERDES */
 /* AZUIS */
 /* CINZAS */
 /* Vermelhos */
@@ -210,6 +208,597 @@ img {
   vertical-align: middle;
 }
 /*#endregion */
+@font-face {
+  font-family: 'Omnes';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/omnes/omnesreg-webfont.eot');
+  src: url('../fonts/omnes/omnesreg-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/omnes/omnesreg-webfont.woff') format('woff'), url('../fonts/omnes/omnesreg-webfont.ttf') format('truetype'), url('../fonts/omnes/omnesreg-webfont.svg#omnesregular') format('svg');
+}
+@font-face {
+  font-family: 'Omnes';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/omnes/omnesmed-webfont.eot');
+  src: url('../fonts/omnes/omnesmed-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/omnes/omnesmed-webfont.woff') format('woff'), url('../fonts/omnes/omnesmed-webfont.ttf') format('truetype'), url('../fonts/omnes/omnesmed-webfont.svg#omnesmedium') format('svg');
+}
+@font-face {
+  font-family: 'Omnes';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/omnes/omnessem-webfont.eot');
+  src: url('../fonts/omnes/omnessem-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/omnes/omnessem-webfont.woff') format('woff'), url('../fonts/omnes/omnessem-webfont.ttf') format('truetype'), url('../fonts/omnes/omnessem-webfont.svg#omnessemibold') format('svg');
+}
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('../fonts/glyphicons/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+.glyphicon-phone-white {
+  width: 8px;
+  height: 10px;
+  background: url(../images/icon/icon-phone-white.png);
+}
+.glyphicon-facebook-green {
+  width: 7px;
+  height: 11px;
+  background: url(../images/icon/icon-facebook-green.png);
+}
+.glyphicon-google-plus-green {
+  width: 16px;
+  height: 14px;
+  background: url(../images/icon/icon-google-plus-green.png);
+}
+.glyphicon-twitter-green {
+  width: 14px;
+  height: 12px;
+  background: url(../images/icon/icon-twitter-green.png);
+}
+.glyphicon-minus-white {
+  width: 10px;
+  height: 10px;
+  background: url(../images/icon/icon-minus-white.png) center center no-repeat;
+}
+.glyphicon-minus {
+  width: 10px;
+  height: 10px;
+  background: url(../images/icon/icon-minus.png) center center no-repeat;
+}
+.glyphicon-minus:before {
+  content: '';
+}
+.glyphicon-arrow-blue-left {
+  width: 7px;
+  height: 10px;
+  background: url(../images/icon/icon-arrow-blue-left-normal.png) 0 0 no-repeat;
+}
+.glyphicon-arrow-blue-right {
+  width: 7px;
+  height: 10px;
+  background: url(../images/icon/icon-arrow-blue-right-normal.png) 0 0 no-repeat;
+}
+.glyphicon-arrow-navigation {
+  width: 7px;
+  height: 10px;
+  background: url(../images/icon/icon-arrow-navigation-normal.png) 0 0 no-repeat;
+}
+.glyphicon-ticket {
+  width: 36px;
+  height: 25px;
+  background: url(../images/icon/icon-ticket.png) right bottom no-repeat;
+}
+a:hover .glyphicon-ticket {
+  background-image: url(../images/icon/icon-ticket-hover.png);
+}
+.glyphicon-planet {
+  width: 36px;
+  height: 25px;
+  background: url(../images/icon/icon-planet.png) right bottom no-repeat;
+}
+a:hover .glyphicon-planet {
+  background-image: url(../images/icon/icon-planet-hover.png);
+}
+.glyphicon-map {
+  width: 22px;
+  height: 36px;
+  background: url(../images/icon/icon-map.png) right bottom no-repeat;
+}
+.glyphicon-plus-white {
+  width: 10px;
+  height: 10px;
+  background: url(../images/icon/icon-plus-white.png) center center no-repeat;
+}
+.glyphicon-plus {
+  width: 10px;
+  height: 10px;
+  background: url(../images/icon/icon-plus.png) center center no-repeat;
+}
+.glyphicon-plus:before {
+  content: '';
+}
+.glyphicon-house {
+  width: 14px;
+  height: 11px;
+  background: url(../images/icon/icon-house.png) center center no-repeat;
+}
+a:hover .glyphicon-map {
+  background-image: url(../images/icon/icon-map-hover.png);
+}
+.glyphicon-directions {
+  width: 29px;
+  height: 29px;
+  background: url(../images/icon/icon-directions.png) center bottom no-repeat;
+}
+a:hover .glyphicon-directions {
+  background-image: url(../images/icon/icon-directions-hover.png);
+}
+.glyphicon-airplane {
+  width: 51px;
+  height: 19px;
+  background: url(../images/icon/icon-airplane.png) center top no-repeat;
+}
+.glyphicon-airplane-white {
+  width: 23px;
+  height: 23px;
+  background: url(../images/icon/icon-airplane-white.png) center center no-repeat;
+}
+.glyphicon-airplane-white[data-flight-back="true"] {
+  background-position: center bottom;
+  vertical-align: sub;
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+a:hover .glyphicon-airplane {
+  background-image: url(../images/icon/icon-airplane-hover.png);
+}
+.glyphicon-luggage {
+  width: 32px;
+  height: 29px;
+  background: url(../images/icon/icon-luggage.png) right top no-repeat;
+}
+a:hover .glyphicon-luggage {
+  background-image: url(../images/icon/icon-luggage-hover.png);
+}
+.glyphicon-doorknob {
+  width: 33px;
+  height: 32px;
+  background: url(../images/icon/icon-doorknob.png) right top no-repeat;
+}
+a:hover .glyphicon-doorknob {
+  background-image: url(../images/icon/icon-doorknob-hover.png);
+}
+.glyphicon-football {
+  width: 55px;
+  height: 34px;
+  background: url(../images/icon/icon-football.png) right top no-repeat;
+}
+a:hover .glyphicon-football {
+  background-image: url(../images/icon/icon-football-hover.png);
+}
+.glyphicon-calendar-sheet {
+  width: 32px;
+  height: 28px;
+  background: url(../images/icon/icon-calendar-sheet.png) right top no-repeat;
+}
+a:hover .glyphicon-calendar-sheet {
+  background-image: url(../images/icon/icon-calendar-sheet-hover.png);
+}
+.glyphicon-family {
+  width: 35px;
+  height: 34px;
+  background: url(../images/icon/icon-family.png) right bottom no-repeat;
+}
+a:hover .glyphicon-family {
+  background-image: url(../images/icon/icon-family-hover.png);
+}
+.glyphicon-compass {
+  width: 31px;
+  height: 37px;
+  background: url(../images/icon/icon-compass.png) left bottom no-repeat;
+}
+a:hover .glyphicon-compass {
+  background-image: url(../images/icon/icon-compass-hover.png);
+}
+.glyphicon-arrow-opacity {
+  width: 10px;
+  height: 7px;
+  background: url(../images/icon/icon-arrow-opacity-up.png) left bottom no-repeat;
+}
+.closed .glyphicon-arrow-opacity {
+  background-image: url(../images/icon/icon-arrow-opacity-down.png);
+}
+.glyphicon-airplane-blue {
+  width: 21px;
+  height: 18px;
+  background: url(../images/icon/icon-airplane-blue.png) left bottom no-repeat;
+}
+.glyphicon-airplane-green {
+  width: 21px;
+  height: 18px;
+  background: url(../images/icon/icon-airplane-green.png) left bottom no-repeat;
+}
+.glyphicon-user-yellow {
+  width: 27px;
+  height: 27px;
+  background: url(../images/icon/icon-user-yellow.png) left bottom no-repeat;
+}
+.glyphicon-contact-yellow {
+  width: 27px;
+  height: 27px;
+  background: url(../images/icon/icon-contact-yellow.png) left bottom no-repeat;
+}
+.glyphicon-payment-yellow {
+  width: 27px;
+  height: 27px;
+  background: url(../images/icon/icon-payment-yellow.png) left bottom no-repeat;
+}
+.glyphicon-exclamation-blue {
+  width: 20px;
+  height: 20px;
+  background: url(../images/icon/icon-exclamation-blue.png) left bottom no-repeat;
+}
+.glyphicon-airplane-plus-grey {
+  width: 21px;
+  height: 18px;
+  background: url(../images/icon/icon-airplane-plus-grey.png) left bottom no-repeat;
+}
+.btn:active .glyphicon-airplane-plus-grey {
+  background-image: url(../images/icon/icon-airplane-plus-blue.png);
+}
+.glyphicon-phone-plus-grey {
+  width: 20px;
+  height: 19px;
+  background: url(../images/icon/icon-phone-plus-grey.png) left bottom no-repeat;
+}
+.glyphicon-icon-moon {
+  width: 27px;
+  height: 27px;
+  background: url(../images/icon/icon-moon.png) no-repeat;
+}
+.icon-filter-arrow {
+  width: 10px;
+  height: 10px;
+  background-image: url(../images/icon/icon-filter-arrow-normal.png);
+  background-position: center 3px;
+  background-repeat: no-repeat;
+}
+.icon-filter-arrow:before {
+  content: " ";
+}
+.selected .icon-filter-arrow {
+  background-image: url(../images/icon/icon-filter-arrow-active.png);
+}
+.icon-back:before {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url(../images/icon/icon-arrow-up-white.png) no-repeat center center;
+  content: "";
+  vertical-align: middle;
+}
+.glyphicon-submarino-master {
+  width: 39px;
+  height: 26px;
+  background: url(../images/icon/icon-submarino-master.png) left bottom no-repeat;
+}
+.glyphicon-submarino-aura {
+  width: 40px;
+  height: 26px;
+  background: url(../images/icon/icon-submarino-aura.png) left bottom no-repeat;
+}
+.glyphicon-mastercard {
+  width: 41px;
+  height: 26px;
+  background: url(../images/icon/icon-mastercard.png) left bottom no-repeat;
+}
+.glyphicon-diners-club {
+  width: 35px;
+  height: 26px;
+  background: url(../images/icon/icon-diners-club.png) left bottom no-repeat;
+}
+.glyphicon-amex {
+  width: 40px;
+  height: 27px;
+  background: url(../images/icon/icon-amex.png) center bottom no-repeat;
+}
+.glyphicon-visa {
+  width: 44px;
+  height: 26px;
+  background: url(../images/icon/icon-visa.png) left bottom no-repeat;
+}
+.glyphicon-submarino-master-2 {
+  width: 47px;
+  height: 31px;
+  background: url(../images/icon/icon-submarino-master-2.png) left bottom no-repeat;
+}
+.glyphicon-submarino-aura-2 {
+  width: 46px;
+  height: 31px;
+  background: url(../images/icon/icon-submarino-aura-2.png) left bottom no-repeat;
+}
+.glyphicon-mastercard-2 {
+  width: 39px;
+  height: 31px;
+  background: url(../images/icon/icon-mastercard-2.png) left bottom no-repeat;
+}
+.glyphicon-diners-club-2 {
+  width: 37px;
+  height: 31px;
+  background: url(../images/icon/icon-diners-club-2.png) left bottom no-repeat;
+}
+.glyphicon-amex-2 {
+  width: 33px;
+  height: 31px;
+  background: url(../images/icon/icon-amex-2.png) center bottom no-repeat;
+}
+.glyphicon-visa-2 {
+  width: 34px;
+  height: 31px;
+  background: url(../images/icon/icon-visa-2.png) left bottom no-repeat;
+}
+.glyphicon-itau {
+  width: 30px;
+  height: 31px;
+  background: url(../images/icon/icon-itau.png) left bottom no-repeat;
+}
+.glyphicon-bradesco {
+  width: 30px;
+  height: 31px;
+  background: url(../images/icon/icon-bradesco.png) left bottom no-repeat;
+}
+.glyphicon-ssl-seal {
+  width: 60px;
+  height: 40px;
+  background: url(../images/icon/icon-ssl-seal.png) left bottom no-repeat;
+}
+.glyphicon-card-remove {
+  width: 24px;
+  height: 13px;
+  background: url(../images/icon/icon-card-remove.png) left bottom no-repeat;
+}
+.glyphicon-star-on {
+  width: 14px;
+  height: 14px;
+  background: url(../images/icon/icon-star-on.png) left bottom no-repeat;
+}
+.glyphicon-star-off {
+  width: 14px;
+  height: 14px;
+  background: url(../images/icon/icon-star-off.png) left bottom no-repeat;
+}
+.glyphicon-share-blue {
+  width: 24px;
+  height: 12px;
+  background: url(../images/icon/icon-share-blue.png) center no-repeat;
+}
+.glyphicon-icon-info {
+  width: 2px;
+  height: 9px;
+  background: url(../images/icon/icon-info-white.png) center 3px no-repeat;
+}
+.glyphicon-icon-options {
+  width: 21px;
+  height: 14px;
+  background: url(../images/icon/icon-options.png) center 0px no-repeat;
+}
+.glyphicon-icon-doorknob {
+  width: 20px;
+  height: 20px;
+  background: url(../images/icon/icon-doorknob-straight.png) center 0px no-repeat;
+}
+.glyphicon-airplane-change {
+  width: 27px;
+  height: 17px;
+  background: url(../images/icon/icon-airplane-change.png) no-repeat;
+}
+.glyphicon-arrow-blue-dark-right {
+  width: 6px;
+  height: 10px;
+  background: url(../images/icon/icon-arrow-blue-dark-right.png) center center no-repeat;
+}
+.glyphicon-arrow-circle-up {
+  width: 24px;
+  height: 24px;
+  background: url(../images/icon/icon-arrow-circle-up.png) center center no-repeat;
+}
+.glyphicon-baloon {
+  width: 19px;
+  height: 17px;
+  background: url(../images/icon/icon-baloon.png) center center no-repeat;
+}
+.glyphicon-arrow-download {
+  width: 16px;
+  height: 13px;
+  background: url(../images/icon/icon-arrow-download.png) center center no-repeat;
+}
+.glyphicon-tripadvisor {
+  width: 15px;
+  height: 14px;
+  background: url(../images/icon/icon-tripadvisor.png) center no-repeat;
+}
+.glyphicon-logo-tripadvisor {
+  width: 30px;
+  height: 18px;
+  background: url(../images/icon/icon-logo-tripadvisor.png) center no-repeat;
+}
+.glyphicon-recommended-hotel {
+  width: 13px;
+  height: 19px;
+  background: url(../images/icon/icon-recommended-hotel.png) center no-repeat;
+}
+.glyphicon-reset {
+  width: 18px;
+  height: 14px;
+  background: url(../images/icon/icon-reset.png) center no-repeat;
+}
+.glyphicon-maps {
+  width: 14px;
+  height: 16px;
+  background: url(../images/icon/icon-maps.png) center no-repeat;
+}
+.glyphicon-adult {
+  width: 14px;
+  height: 29px;
+  background: url(../images/icon/icon-adult.png) center no-repeat;
+}
+.glyphicon-adult-big {
+  width: 14px;
+  height: 34px;
+  background: url(../images/icon/icon-adult-big.png) center no-repeat;
+}
+.glyphicon-children {
+  width: 9px;
+  height: 21px;
+  background: url(../images/icon/icon-children.png) center no-repeat;
+}
+.glyphicon-slider-left,
+.glyphicon-slider-right {
+  width: 24px;
+  height: 24px;
+  background: url(../images/icon/icon-arrow-slider-left.png) center no-repeat;
+}
+.glyphicon-slider-right {
+  background-image: url(../images/icon/icon-arrow-slider-right.png);
+}
+.glyphicon-pin-map {
+  width: 16px;
+  height: 19px;
+  background: url(../images/icon/icon-pin-map.png) center no-repeat;
+}
+.glyphicon-alert-date {
+  width: 28px;
+  height: 24px;
+  background: url(../images/icon/icon-alert-date.png) center no-repeat;
+}
+.glyphicon-icon-cancel {
+  width: 16px;
+  height: 16px;
+  background: url(../images/icon/icon-cancel.png) center no-repeat;
+}
+.glyphicon-no-results {
+  width: 59px;
+  height: 41px;
+  background: url(../images/icon/icon-no-results.png) center no-repeat;
+}
+.glyphicon-btn-close {
+  width: 10px;
+  height: 10px;
+  background: url(../images/icon/icon-close.png) no-repeat;
+}
+.glyphicon-close-modal {
+  width: 10px;
+  height: 10px;
+  background: url(../images/icon/icon-close.png) no-repeat;
+}
+.glyphicon-hotel-match {
+  width: 36px;
+  height: 43px;
+  background: url(../images/icon/icon-hotel-match.png) no-repeat;
+}
+.glyphicon-hotel-nomatch {
+  width: 36px;
+  height: 43px;
+  background: url(../images/icon/icon-hotel-nomatch.png) no-repeat;
+}
+.glyphicon-center-city {
+  width: 36px;
+  height: 43px;
+  background: url(../images/icon/icon-center-city.png) no-repeat;
+}
+.glyphicon-station {
+  width: 36px;
+  height: 43px;
+  background: url(../images/icon/icon-station.png) no-repeat;
+}
+.glyphicon-airport {
+  width: 36px;
+  height: 43px;
+  background: url(../images/icon/icon-airport.png) no-repeat;
+}
+.glyphicon-checked {
+  width: 24px;
+  height: 24px;
+  background: url(../images/icon/icon-checked-blue.png) center no-repeat;
+}
+.glyphicon-sorry {
+  width: 93px;
+  height: 44px;
+  background: url(../images/icon/icon-sorry.png) center no-repeat;
+}
+.glyphicon-package {
+  width: 73px;
+  height: 33px;
+  background: url(../images/icon/icon-package.png) center no-repeat;
+}
+.glyphicon-selected-seat {
+  width: 34px;
+  height: 30px;
+  background: url(../images/icon/icon-seat-selected.png) no-repeat;
+}
+.glyphicon-occupied-seat {
+  width: 34px;
+  height: 30px;
+  background: url(../images/icon/icon-seat-occupied.png) no-repeat;
+}
+.glyphicon-available-seat {
+  width: 34px;
+  height: 30px;
+  background: url(../images/icon/icon-available-seat.png) no-repeat;
+}
+.glyphicon-special-seat {
+  width: 34px;
+  height: 30px;
+  background: url(../images/icon/icon-special-seat.png) no-repeat;
+}
+.glyphicon-emergency {
+  width: 34px;
+  height: 30px;
+  background: url(../images/icon/icon-emergency-exit.png) no-repeat;
+}
+.glyphicon-kitchen {
+  width: 34px;
+  height: 30px;
+  background: url(../images/icon/icon-kitchen.png) no-repeat;
+}
+.glyphicon-bathroom {
+  width: 34px;
+  height: 30px;
+  background: url(../images/icon/icon-bathroom.png) no-repeat;
+}
+.glyphicon-help {
+  width: 20px;
+  height: 20px;
+  background: url(../images/icon/icon-help.png) no-repeat;
+}
+.glyphicon-text-cta-click {
+  width: 20px;
+  height: 20px;
+  background: url(../images/icon/icon-text-cta-click.png) no-repeat;
+}
+.glyphicon-checked-black {
+  width: 25px;
+  height: 25px;
+  background: url(../images/icon/icon-checked-black.png) no-repeat;
+}
+.glyphicon-nav-vertical-bottom {
+  width: 24px;
+  height: 24px;
+  background: url(../images/icon/icon-nav-vertical-bottom.png) no-repeat;
+}
+.glyphicon-nav-vertical-top {
+  width: 24px;
+  height: 24px;
+  background: url(../images/icon/icon-nav-vertical-top.png) no-repeat;
+}
+.glyphicon-nav-vertical-top.inactive {
+  background-image: url(../images/icon/icon-nav-vertical-top-inactive.png);
+}
+.glyphicon-nav-vertical-bottom.inactive {
+  background-image: url(../images/icon/icon-nav-vertical-bottom-inactive.png);
+}
 body {
   background-color: #eceeef;
   color: #333333;
@@ -748,7 +1337,7 @@ fieldset[disabled] .btn.active {
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffe8e8e8', endColorstr='#fff5f5f5', GradientType=0);
 }
-/*# sourceMappingURL=Site.css.map */
+/*# sourceMappingURL=bootstrap-theme.css.map */
 .theme-dropdown .dropdown-menu {
   position: static;
   display: block;
@@ -1975,7 +2564,7 @@ option[disabled] {
   left: 0;
   right: 0;
   background: #eceeef;
-  z-index: 2010;
+  z-index: 2;
 }
 .flow-navigation .pager {
   margin: 0;
@@ -3033,6 +3622,30 @@ option[disabled] {
   top: 150px;
   background-position: -1345px -150px;
 }
+.marquee > .current .ticket-dots .dot15 {
+  top: 162px;
+  background-position: -1345px -162px;
+}
+.marquee > .current .ticket-dots .dot16 {
+  top: 174px;
+  background-position: -1345px -174px;
+}
+.marquee > .current .ticket-dots .dot17 {
+  top: 186px;
+  background-position: -1345px -186px;
+}
+.marquee > .current .ticket-dots .dot18 {
+  top: 198px;
+  background-position: -1345px -198px;
+}
+.marquee > .current .ticket-dots .dot19 {
+  top: 210px;
+  background-position: -1345px -210px;
+}
+.marquee > .current .ticket-dots .dot20 {
+  top: 222px;
+  background-position: -1345px -222px;
+}
 .marquee.moved .current.transition,
 .marquee.moved button.transition {
   -moz-transition: background-position linear 1s;
@@ -3106,7 +3719,7 @@ option[disabled] {
   position: absolute;
 }
 .home.container-fluid {
-  padding-top: 523px;
+  padding-top: 684px;
   background-color: #e2e6e7;
 }
 .home.container-fluid .home-detail-wrapper .destinations,
@@ -3131,9 +3744,68 @@ option[disabled] {
   background: red;
   color: white;
   float: left;
+  overflow: hidden;
+  position: relative;
   padding-top: 157px;
   padding-left: 21px;
   font-family: "Omnes";
+  transition: all ease-out 0.5s;
+  z-index: 2;
+}
+.home.container-fluid .home-detail-wrapper .destinations .boxes .box .overlay,
+.home.container-fluid .home-detail-wrapper .popular-destinations .boxes .box .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 4;
+}
+.home.container-fluid .home-detail-wrapper .destinations .boxes .box .info,
+.home.container-fluid .home-detail-wrapper .popular-destinations .boxes .box .info {
+  position: relative;
+  z-index: 10;
+  transition: all ease-out 0.5s;
+}
+.home.container-fluid .home-detail-wrapper .destinations .boxes .box:hover,
+.home.container-fluid .home-detail-wrapper .popular-destinations .boxes .box:hover {
+  padding-top: 17px;
+}
+.home.container-fluid .home-detail-wrapper .destinations .boxes .box:hover .overlay,
+.home.container-fluid .home-detail-wrapper .popular-destinations .boxes .box:hover .overlay {
+  opacity: 0.6;
+  transition: all ease-out 0.5s;
+}
+.home.container-fluid .home-detail-wrapper .destinations .boxes .box:hover .city,
+.home.container-fluid .home-detail-wrapper .popular-destinations .boxes .box:hover .city {
+  display: none;
+}
+.home.container-fluid .home-detail-wrapper .destinations .boxes .box:hover .hover-box,
+.home.container-fluid .home-detail-wrapper .popular-destinations .boxes .box:hover .hover-box {
+  opacity: 1;
+}
+.home.container-fluid .home-detail-wrapper .destinations .boxes .box .hover-box,
+.home.container-fluid .home-detail-wrapper .popular-destinations .boxes .box .hover-box {
+  background-color: #fff;
+  padding: 10px;
+  margin-top: 50px;
+  margin-left: -10px;
+  width: 220px;
+  color: #666;
+  transition: all ease-out 0.5s;
+  opacity: 0;
+}
+.home.container-fluid .home-detail-wrapper .destinations .boxes .box .hover-box a,
+.home.container-fluid .home-detail-wrapper .popular-destinations .boxes .box .hover-box a {
+  font-size: 12px;
+  color: #666666;
+  text-transform: uppercase;
+  display: block;
+  margin-top: 10px;
+  padding-left: 20px;
+  background: url(../images/icon/icon-arrow-right.png) left center no-repeat;
 }
 .home.container-fluid .home-detail-wrapper .destinations .boxes .box .country,
 .home.container-fluid .home-detail-wrapper .popular-destinations .boxes .box .country {
@@ -3377,13 +4049,22 @@ option[disabled] {
   content: ' ';
   display: block;
 }
-.home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom .bar .destin-name .date {
+.home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom .bar .destin-name .mask {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: pointer;
+}
+.home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom .bar .destin-name .mask p {
+  margin-top: 1px;
+}
+.home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom .bar .destin-name .mask .date {
   color: #999999;
   font-size: 11px;
   font-weight: 500;
   text-transform: uppercase;
 }
-.home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom .bar .destin-name .name {
+.home.container-fluid .home-detail-wrapper .fly-me-out .wrapper-fly-me-out .bottom .bar .destin-name .mask .name {
   color: #58595b;
   font-size: 30px;
   font-weight: 500;
@@ -3518,6 +4199,151 @@ option[disabled] {
 }
 .home.container-fluid .home-detail-wrapper .lowest .wrapper-bottom ul li p {
   text-align: center;
+}
+/* VERDES */
+/* AZUIS */
+/* CINZAS */
+/* Vermelhos */
+/* GERAIS */
+.marquee-home {
+  position: absolute;
+  top: 120px;
+  right: 0;
+  left: 0;
+}
+.marquee-home .marquee-home-container {
+  margin: 0 auto;
+  min-width: 980px;
+  max-width: 1366px;
+  height: 590px;
+}
+.marquee-home .marquee-home-container .ticket-dots .last {
+  top: 348px;
+}
+.marquee-home .marquee-home-container .current,
+.marquee-home .marquee-home-container .tab-crop {
+  -webkit-background-size: 1000% 100%;
+  background-size: 100% 100%;
+}
+.marquee-home .marquee-home-container .marquee,
+.marquee-home .marquee-home-container .current {
+  height: 100%;
+}
+.marquee-home .marquee-home-container .detail {
+  width: 100%;
+}
+.marquee-home .marquee-home-container .detail.rio {
+  top: 190px;
+}
+.marquee-home .marquee-home-container .detail.rio .info {
+  margin-left: 48%;
+  width: 420px;
+}
+.marquee-home .marquee-home-container .detail.rio .small-text {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.marquee-home .marquee-home-container .detail.rio .main-call .small-text,
+.marquee-home .marquee-home-container .detail.rio .main-call h2 {
+  color: #fff;
+}
+.marquee-home .marquee-home-container .detail.rio .main-call h2 {
+  font-size: 40px;
+  margin-top: 0;
+}
+.marquee-home .marquee-home-container .detail.rio .details .left,
+.marquee-home .marquee-home-container .detail.rio .details .right {
+  display: inline-block;
+  vertical-align: middle;
+}
+.marquee-home .marquee-home-container .detail.rio .details .left .small-text,
+.marquee-home .marquee-home-container .detail.rio .details .left h3 {
+  color: #fff;
+}
+.marquee-home .marquee-home-container .detail.rio .details .left h3 {
+  font-size: 40px;
+  margin-top: 0;
+  line-height: 40px;
+}
+.marquee-home .marquee-home-container .detail.rio .details .right {
+  margin: 20px 0 0 40px;
+}
+.marquee-home .marquee-home-container .detail.rio .details .right .btn-text-cta {
+  position: static;
+  margin-top: 0;
+  color: #FFF;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.marquee-home .marquee-home-container .detail.rio .details .right .btn-text-cta .glyphicon-chevron-right {
+  position: static;
+  margin-top: 0px;
+  padding-right: 10px;
+  width: 16px;
+  display: inline-block;
+  vertical-align: top;
+  height: 16px;
+  background: url(../images/icon/icon-arrow-transparent-right.png) no-repeat;
+}
+.marquee-home .marquee-home-container .detail.rio .recent-searches-widget {
+  margin-top: 80px;
+}
+.booking-flight-widget {
+  position: absolute;
+  top: 180px;
+}
+.justkidding {
+  background: url(../images/widget-fake.png) no-repeat;
+  position: relative;
+  left: 205px;
+  height: 493px;
+  width: 480px;
+}
+.recent-searches-widget {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.recent-searches-widget .widget-title {
+  font-size: 10px;
+  color: #57e2fa;
+  text-transform: uppercase;
+}
+.recent-searches-widget .searches {
+  position: relative;
+  z-index: 2;
+  height: 90px;
+}
+.recent-searches-widget .searches ul {
+  margin: 0;
+  padding: 10px 0;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  position: absolute;
+  z-index: 40;
+  width: 900px;
+}
+.recent-searches-widget .searches li {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 10px;
+  color: #FFF;
+  margin: 0;
+  text-transform: uppercase;
+  padding: 0 15px;
+  border-left: 1px solid #FFF;
+}
+.recent-searches-widget .searches li:first-child {
+  border-left: none;
+  padding-left: 0;
+}
+.recent-searches-widget .searches li .ico-separator {
+  display: inline-block;
+  vertical-align: middle;
+  width: 13px;
+  height: 11px;
+  margin: 0 10px;
+  background: url(../images/widgets/recent-searches/separator.png) left center no-repeat;
 }
 @-ms-viewport {
   width: auto !important;
@@ -4376,7 +5202,8 @@ option[disabled] {
 }
 .info-ticket .ticket i {
   margin: 0 20px 0 10px;
-  width: 5%: top:2px;
+  width: 5%;
+  top: 2px;
 }
 .share {
   text-align: center;
@@ -4566,7 +5393,7 @@ option[disabled] {
   opacity: 0.3;
 }
 .box-hotel .cell label {
-  font-size: bold 11px "Omnes";
+  font: bold 11px "Omnes";
   text-transform: none;
   top: -3px;
   position: relative;
@@ -8056,4 +8883,3 @@ html {
   -moz-box-shadow: inset 0px 2px 0px #00aeef;
   box-shadow: inset 0px 2px 0px #00aeef;
 }
-/*# sourceMappingURL=Site.css.map */

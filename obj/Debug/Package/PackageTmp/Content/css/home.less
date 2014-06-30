@@ -5,8 +5,9 @@
     font-size: 11px;    
     color: #a2a4a3;
     margin: 0px;    
-    margin-left: 37px; 
-	font-weight: inherit;
+    margin-left: 27px; 
+	font-weight: 500;
+	text-transform: uppercase;
 }
 .general-subtitle{
     font-size: 34px;    
@@ -14,11 +15,12 @@
     margin: 0px;
 	margin-top: 8px; 
 	margin-bottom: 38px;    
-	margin-left: 37px;  
-	font-weight: inherit;
+	margin-left: 27px;  
+	font-weight: 500;
 }
 
 .home{
+    
 
 	&.marquee-hotel{
 		position: absolute;
@@ -26,6 +28,7 @@
 	
 	&.container-fluid{
 		padding-top: 523px;
+        background-color: @background-normal;
 
 		.home-detail-wrapper{
 			.destinations, .popular-destinations{
@@ -41,11 +44,11 @@
 					margin-bottom: 18px;
 
 
-					box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);	
 
 					.box{
+						box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);	
 						width: 240px;
-						height: 100%;
+						height: 240px;
 						background: red;
 						color: white;
 						float: left;
@@ -100,21 +103,32 @@
 				}
 				
 			}
-			.popular-destinations{
-				height: 613px;
+			.destinations{
+				border-bottom: solid 1px @border-intern;    
+			}
+
+			.popular-destinations{ 
+				height: 670px;
 				background: #e2e6e7;
 
-				.box{
-					padding-top: 140px;
+				.boxes{
+					height: 480px; 
+					
+					.box{
+						padding-top: 140px;
 
-					.details{
-						margin-top: 10px;
+						.details{
+							margin-top: 10px; 
+						}
 					}
 				}
 			}
 			.fly-me-out{
 				width: 100%;
-				height: 920px;
+				height: 872px;
+                padding-top: 50px;
+                background-color: @background-dark; 
+
 				.wrapper-fly-me-out{
 					width: 960px;
 					height: 800px;
@@ -122,7 +136,31 @@
 
 					.top{
 						width: 100%;
-						height: 110px;
+						height: 128px;
+						position: relative;
+
+						.slider{  
+							width: 300px;
+							position: absolute;
+							right: 0px;
+							top: 10px;
+						}
+						.general-subtitle{
+							border-bottom: dotted 2px @blue; 
+							padding-bottom: 7px;
+							width: 280px;
+							background: url(../images/icon/icon-text-cta-normal.png) no-repeat;     
+							background-position: 265px 0px;
+						}
+						.description{
+							width: 419px;
+							margin-left: 27px;
+							position: absolute;
+							top: 60px;
+							font-size: 12px;
+							font-weight: 500;
+							font-family: Arial;
+						}
 					}
 
 					.bottom{
@@ -142,7 +180,6 @@
 							font-weight: @font-strong;
 
 						}						
-
 						.detail {
 							margin-top: 38px;
 							border-top: solid 1px @border-intern;
@@ -150,7 +187,6 @@
 							font-size: @size-initial;
 							padding-top: 10px;
 							color: @grey-pale;
-
 						}					 
 						.link{
 							color:@grey-mid;
@@ -246,6 +282,9 @@
 							float: left;
 							height: 100%;
 
+							.top{
+								position: initial;
+							}
 							.destin-name{
 								display: block;
 								width: 100%;
@@ -255,6 +294,7 @@
 								border-left: solid 1px #dbdedf;
 								padding-left: 35px;
 								padding-top: 6px;
+								overflow: hidden;
 
 								&:after {
 									background:  url(../images/icon/icon-point.png) no-repeat;
@@ -266,20 +306,28 @@
                                     content: ' '; 
                                     display: block;
 						        }
-								
-								.date{
-									color: @grey-pale;
-									font-size: @size-initial;
-									font-weight: @font-strong;
-									text-transform: uppercase;
-								}
+								.mask{
+									width: 100%;
+									height: 100%;
 
-								.name{
-									color:@grey-mid;	
-									font-size: @size-down;
-									font-weight: @font-strong;
-									font-size: 20px;
-									margin-top: 3px;
+									p{
+										margin-top: 1px;
+									}
+									
+									.date{
+										color: @grey-pale;
+										font-size: @size-initial;
+										font-weight: @font-strong;
+										text-transform: uppercase;
+									}
+
+									.name{
+										color:@grey-mid;	
+										font-size: @size-down;
+										font-weight: @font-strong;
+										font-size: 20px;
+										margin-top: 3px;
+									}
 								}
 
 								&.top{
@@ -327,7 +375,7 @@
 								}
 								.top{
 									background: white;
-                                    border-left: solid 1px #dbdedf;
+                                    border-left: solid 1px #dbdedf; 
 
 									&:after {
 									    // background:  url(../images/icon/icon-point-cuted.png) no-repeat;      
@@ -362,7 +410,7 @@
 				width: 100%;
 				height: 160px;
 				background: #eef1f2;
-				outline: solid 1px #dadddf;  
+				border-top: solid 1px #dadddf;  
 				.content{
 					width: 728px;
 					height: 90px;
@@ -373,7 +421,7 @@
 			.lowest{
 				width: 1280px;
 				height: 660px;
-				background: url(../images/home/background-airplane.jpg);
+				background: @background-normal url(../images/home/background-airplane.jpg); 
 				margin: 0 auto;
 
 				.subtitle{

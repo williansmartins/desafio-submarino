@@ -2,20 +2,23 @@
 @import "lib/mixins.less";
 
 @import "base.less";
-@import "fonts.css";
-@import "sprite.css";
+@import "fonts.less";
+@import "sprite.less";
 @import "theme.less";
 @import "module.less";
 @import "home.less";
 
+@import "modules/marquee/home";
+
+
 @-ms-viewport{ width: auto !important; }                                 
 
 .recommended-flight {
-    h2 {
+    h2 { 
         font-size: 12px;
         font-weight: 600;
         color: @grey-mid;
-        text-transform: uppercase;
+        text-transform: uppercase;  
     }
     .table-result {
         .hour {
@@ -986,7 +989,7 @@
 
         i {
             margin: 0 20px 0 10px;
-            width: 5%: top:2px;
+            width: 5%; top:2px;
         }
     }
 }
@@ -1208,7 +1211,7 @@
 
     .cell {
         label {
-            font-size: bold 11px "Omnes";
+            font: bold 11px "Omnes";
             text-transform: none;
             top: -3px;
             position: relative;
@@ -5268,7 +5271,7 @@ html {
         border-right: 1px solid @grey-lighter; 
 
         &:first-child {                                       
-            border-left: 1px solid @grey-lighter; 
+            border-left: 1px solid @grey-lighter;  
             // border-left: none;  
         }
     }   

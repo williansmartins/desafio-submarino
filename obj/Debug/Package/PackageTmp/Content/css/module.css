@@ -2,7 +2,7 @@
 /* AZUIS */
 /* CINZAS */
 /* Vermelhos */
-/* Tamanhos */
+/* GERAIS */
 /*#region Forms */
 input[type=text],
 input[type=email],
@@ -430,7 +430,7 @@ option[disabled] {
   left: 0;
   right: 0;
   background: #eceeef;
-  z-index: 2010;
+  z-index: 2;
 }
 .flow-navigation .pager {
   margin: 0;

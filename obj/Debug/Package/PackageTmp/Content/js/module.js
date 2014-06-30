@@ -14,6 +14,11 @@
         Marquee.Init(element);
     });
 
+	$("[data-behavior='homeBookingWidget']").each(function (index, element) {
+		HomeBookingWidget.init( $(this) );
+	});
+
+
     $(".switch").each(function (index, Element) {
         var $Element = $(Element),
             $toggleSwitchComponet = $Element.closest(".toggle-switch");
@@ -23,7 +28,6 @@
         $("button", $toggleSwitchComponet).eq(0).click(function () {
             $Element.bootstrapSwitch('state', false);
         });
-
 
         $("button", $toggleSwitchComponet).eq(1).click(function () {
             $Element.bootstrapSwitch('state', true);
@@ -390,4 +394,44 @@ var Marquee = {
            Marquee.ApplyItem(nextItem);
         }, 1500);
     }
-}
+};
+
+
+var HomeBookingWidget = {
+	el: null,
+
+	init: function ( el ) {
+		HomeBookingWidget.el = el;
+		this.render();
+	},
+
+	render: function () {
+
+		var viewportH = $(window).height();
+
+		var widgetTop = HomeBookingWidget.el.offset().top,
+			contentTop = $('.home-detail-wrapper').offset().top,
+			footerTop = $('.main-footer').offset().top;
+
+		var widgetHeight = HomeBookingWidget.el.height() + widgetTop + 20;
+
+		var scrollDistance = widgetHeight - viewportH;
+
+		if ( $(window).scrollTop() > scrollDistance ) {
+			$('.marquee-home,.home-detail-wrapper,.main-footer').css('position', 'absolute');
+		} else {
+			$('.marquee-home').css('position', 'fixed');
+		}
+
+
+//		console.log(scrollDistance);
+
+		/*console.log('VIEWPORT HEIGHT', viewportH);
+		console.log('ELEMENTS OFFSET', widgetTop);
+		console.log('ELEMENTS HEIGHT', widgetHeight);*/
+	}
+};
+
+$(window).on('scroll', function () {
+	HomeBookingWidget.render();
+});

@@ -28,6 +28,7 @@ Site._init = function () {
     Site._scrollPage();
     Site._galeries();
     Site._applyAutoComplete();
+    Site._animateDestins();
     $(window).resize(function () {
         Site._bookingAside();
         Site._stickBookingAside();
@@ -677,6 +678,145 @@ Site._applyAutoComplete = function () {
         $(this).autocomplete({ source: Site._getAutoComplete(), appendTo: $(item) });
     })
     
+}
+Site._animateDestins = function () {
+
+    //
+
+    var dates = [
+        "DEPARTING AUGUST 14 TO",
+        "DEPARTING AUGUST 10 TO",
+        "DEPARTING AUGUST 12 TO",
+        "DEPARTING AUGUST 5 TO",
+        "DEPARTING AUGUST 10 TO",
+        "DEPARTING AUGUST 9 TO",
+        "DEPARTING AUGUST 14 TO",
+        "DEPARTING AUGUST 12 TO",
+        "DEPARTING AUGUST 12 TO",
+        "DEPARTING AUGUST 9 TO - ooo"
+    ];
+
+    var destins = [
+        "Rome",
+        "New York",
+        "Miami",
+        "Amsterdam",
+        "Venice",
+        "Paris",
+        "Chicago",
+        "Milan",
+        "Los Angels",
+        "Madrid"
+    ];
+
+    var values = [
+        "1727",
+        "1234",
+        "1443",
+        "1727",
+        "1727",
+        "1727",
+        "1902",
+        "1682",
+        "1369",
+        "1660"
+    ];
+
+    var images = [
+        "lateral-destin1.jpg",
+        "lateral-destin2.jpg",
+        "lateral-destin3.jpg",
+        "lateral-destin4.jpg",
+        "lateral-destin5.jpg",
+        "lateral-destin6.jpg",
+        "lateral-destin7.jpg",
+        "lateral-destin8.jpg",
+        "lateral-destin9.jpg",
+        "lateral-destin10.jpg"
+    ];
+
+
+    var item = 3;
+
+    function preencherDestinos(){
+
+        for (var i=0; i < destins.length; i++){
+            $(".departing [data-item='" + (1+i) + "'] .name").html(destins[i]); 
+            $(".departing [data-item='" + (1+i) + "'] .date").html(dates[i]);   
+            $(".value [data-item='" + (1+i) + "'] .name").html(values[i]);  
+        }
+    }
+
+    $(".bar .destin-name").on("click", function(){
+        selecionar(this);
+    });
+
+    function redistribuir(item){
+        for (var i=0; i < destins.length; i++){
+            if(item==10){
+                item = 1;
+            }
+            caixas[i] = eval("string"+item);
+            item++;
+        }
+    }
+
+    function selecionar(t){
+        //selecionar os itens a serem alterados
+        var p = $(".departing p, .bar .destin-name p");
+
+        //pegar o numero do item selecionado
+        var item = $(t).attr("data-item");
+        var numero = parseInt(item);
+
+        console.info("numero: " + numero);
+
+        //trocar textos da lateral
+        var numeroAntigo = destins[item-1];
+        $(".texts .destin").fadeOut( "slow", function() {
+            $(".texts .destin").html( numeroAntigo );
+        });
+        
+
+        //trocar a imagem
+        var image = $(".bottom .image img");
+        image.fadeOut( "slow", function() {
+            image.attr("src", "Content/images/home/"+images[numero-1] );
+            $(".texts .destin").show();
+            
+        });
+        image.fadeIn();
+
+        //animar escondendo textos
+        p.animate({
+            marginTop: "-50px",
+            opacity: "0"
+        }, 500, function() {
+            p.stop();
+            // console.info("animacao1");
+            
+            //trocar textos 
+            destins = destins.concat(destins.splice(0,item-1));
+            dates = dates.concat(dates.splice(0,item-1));
+            values = values.concat(values.splice(0,item-1));
+
+            //preencher novamente os destinos
+            preencherDestinos();
+
+            //trocar a posição dos textos
+            p.css("margin-top","50px");
+
+            //animar mostrando textos
+            $(".destin-name.top .name").animate({marginTop: "7px"});
+            p.animate({
+                marginTop: "0",
+                opacity: "1"
+            }, 500, function() {
+                $(this).stop();
+                // console.info("fim");
+            });
+        }); 
+    }
 }
 Site._getAutoComplete = function () {
      json = ["ActionScript", "AppleScript", "Asp", "BASIC", "C", "C++", "Clojure", "COBOL", "ColdFusion", "Erlang", "Fortran", "Groovy", "Haskell", "Java", "JavaScript", "Lisp", "Perl", "PHP", "Python", "Ruby", "Scala", "Scheme"];

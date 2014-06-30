@@ -1,8 +1,8 @@
-﻿/* VERDES */
+/* VERDES */
 /* AZUIS */
 /* CINZAS */
 /* Vermelhos */
-/* Tamanhos */
+/* GERAIS */
 /*#region Forms */
 input[type=text],
 input[type=email],
@@ -430,7 +430,7 @@ option[disabled] {
   left: 0;
   right: 0;
   background: #eceeef;
-  z-index: 2010;
+  z-index: 2;
 }
 .flow-navigation .pager {
   margin: 0;
@@ -1488,6 +1488,30 @@ option[disabled] {
   top: 150px;
   background-position: -1345px -150px;
 }
+.marquee > .current .ticket-dots .dot15 {
+  top: 162px;
+  background-position: -1345px -162px;
+}
+.marquee > .current .ticket-dots .dot16 {
+  top: 174px;
+  background-position: -1345px -174px;
+}
+.marquee > .current .ticket-dots .dot17 {
+  top: 186px;
+  background-position: -1345px -186px;
+}
+.marquee > .current .ticket-dots .dot18 {
+  top: 198px;
+  background-position: -1345px -198px;
+}
+.marquee > .current .ticket-dots .dot19 {
+  top: 210px;
+  background-position: -1345px -210px;
+}
+.marquee > .current .ticket-dots .dot20 {
+  top: 222px;
+  background-position: -1345px -222px;
+}
 .marquee.moved .current.transition,
 .marquee.moved button.transition {
   -moz-transition: background-position linear 1s;
@@ -1537,4 +1561,3 @@ option[disabled] {
   background-position: -1325px center;
 }
 /*#endregion */
-/*# sourceMappingURL=module.css.map */

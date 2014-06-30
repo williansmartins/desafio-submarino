@@ -220,6 +220,13 @@
     <Content Include="Content\css\fonts.min.css">
       <DependentUpon>fonts.css</DependentUpon>
     </Content>
+    <Content Include="Content\css\modules\marquee\home.css" />
+    <Content Include="Content\css\modules\marquee\home.min.css" />
+    <Content Include="Content\css\modules\marquee\hotel.css" />
+    <Content Include="Content\css\modules\marquee\hotel.min.css" />
+    <Content Include="Content\css\modules\marquee\marquee-base.css" />
+    <Content Include="Content\css\modules\marquee\marquee-base.min.css" />
+    <Content Include="Content\css\modules\recent-searches\base.css" />
     <Content Include="Content\css\Site.css">
       <DependentUpon>Site.less</DependentUpon>
     </Content>
@@ -282,6 +289,8 @@
     <Content Include="Content\fonts\omnes\omnesmed-webfont.svg" />
     <Content Include="Content\fonts\omnes\omnesreg-webfont.svg" />
     <Content Include="Content\fonts\omnes\omnessem-webfont.svg" />
+    <Content Include="Content\images\banner\banner-home-test-2.jpg" />
+    <Content Include="Content\images\banner\banner-home-test.jpg" />
     <Content Include="Content\images\banner\banner-submarino.jpg" />
     <Content Include="Content\images\banner\big\1.jpg" />
     <Content Include="Content\images\banner\big\2.jpg" />
@@ -549,6 +558,8 @@
     <Content Include="Content\images\submarino-viagens-logo.png" />
     <Content Include="Content\images\tam-lg.png" />
     <Content Include="Content\images\tam.png" />
+    <Content Include="Content\images\widget-fake.png" />
+    <Content Include="Content\images\widgets\recent-searches\separator.png" />
     <Content Include="Content\js\booking.js" />
     <Content Include="Content\js\bootstrap\bootstrap-switch.js" />
     <Content Include="Content\js\bootstrap\bootstrap-switch.min.js">
@@ -584,6 +595,13 @@
     <Content Include="Content\js\bootstrap\bootstrap-switch.min.js.map">
       <DependentUpon>bootstrap-switch.min.js</DependentUpon>
     </Content>
+    <Content Include="Content\css\modules\marquee\home.css.map" />
+    <Content Include="Content\css\modules\marquee\home.less" />
+    <Content Include="Content\css\modules\marquee\hotel.css.map" />
+    <Content Include="Content\css\modules\marquee\hotel.less" />
+    <Content Include="Content\css\modules\marquee\marquee-base.css.map" />
+    <Content Include="Content\css\modules\marquee\marquee-base.less" />
+    <Content Include="Content\css\modules\recent-searches\base.less" />
     <None Include="Content\js\lib\jquery-2.1.0-vsdoc.js" />
     <Content Include="Content\js\lib\jquery-2.1.0.js" />
     <Content Include="Content\js\lib\jquery-2.1.0.min.js">

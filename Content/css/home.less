@@ -1,6 +1,9 @@
+@import 'lib/variables.less';
+
 .hider{
     display: none;
 }
+
 .general-title{
     font-size: 11px;    
     color: #a2a4a3;
@@ -27,7 +30,7 @@
 	}
 	
 	&.container-fluid{
-		padding-top: 523px;
+		padding-top: 684px;
         background-color: @background-normal;
 
 		.home-detail-wrapper{
@@ -52,10 +55,74 @@
 						background: red;
 						color: white;
 						float: left;
+					  	overflow: hidden;
+					  	position: relative;
 						padding-top: 157px;
 						padding-left: 21px;
 						font-family: "Omnes";
+					  	transition: all ease-out 0.5s;
+					  z-index: 2;
 
+					  	.overlay
+						{
+						  width: 100%;
+						  height: 100%;
+						  background-color: #000000;
+						  opacity: 0;
+						  position: absolute;
+						  left: 0;
+						  top: 0;
+						  z-index: 4;
+						}
+
+					  	.info
+						{
+						  position: relative;
+						  z-index: 10;
+						  transition: all ease-out 0.5s;
+						}
+
+						&:hover
+						{
+						  padding-top: 17px;
+						  	.overlay
+							{
+							  opacity: 0.6;
+							  transition: all ease-out 0.5s;
+							}
+							.city
+							{
+							  display: none;
+							}
+
+							.hover-box
+							{
+							  opacity: 1;
+							}
+
+						}
+
+					  .hover-box
+					  {
+						background-color: #fff;
+						padding: 10px;
+						margin-top: 50px;
+						margin-left: -10px;
+						width: 220px;
+						color: #666;
+						transition: all ease-out 0.5s;
+						opacity: 0;
+						a
+						{
+						  font-size: 12px;
+						  color: #666666;
+						  text-transform: uppercase;
+						  display: block;
+						  margin-top: 10px;
+						  padding-left: 20px;
+						  background: url(../images/icon/icon-arrow-right.png) left center no-repeat;
+						}
+					  }
 						.country{
 							color: inherit;
 							font-family: inherit;
@@ -68,6 +135,7 @@
 							font-size: 11px;
 							font-family: inherit;
 							font-weight: inherit;
+
 						}
 						.value{
 							color: inherit;
@@ -104,10 +172,10 @@
 				
 			}
 			.destinations{
-				border-bottom: solid 1px @border-intern;
+				border-bottom: solid 1px @border-intern;    
 			}
 
-			.popular-destinations{
+			.popular-destinations{ 
 				height: 670px;
 				background: #e2e6e7;
 
@@ -118,7 +186,7 @@
 						padding-top: 140px;
 
 						.details{
-							margin-top: 10px;
+							margin-top: 10px; 
 						}
 					}
 				}
@@ -305,20 +373,30 @@
                                     content: ' '; 
                                     display: block;
 						        }
-								
-								.date{
-									color: @grey-pale;
-									font-size: @size-initial;
-									font-weight: @font-strong;
-									text-transform: uppercase;
-								}
+								.mask{
+									width: 100%;
+									height: 100%;
+									overflow: hidden;
+									cursor: pointer;
 
-								.name{
-									color:@grey-mid;	
-									font-size: @size-down;
-									font-weight: @font-strong;
-									font-size: 20px;
-									margin-top: 3px;
+									p{
+										margin-top: 1px;
+									}
+									
+									.date{
+										color: @grey-pale;
+										font-size: @size-initial;
+										font-weight: @font-strong;
+										text-transform: uppercase;
+									}
+
+									.name{
+										color:@grey-mid;	
+										font-size: @size-down;
+										font-weight: @font-strong;
+										font-size: 20px;
+										margin-top: 3px;
+									}
 								}
 
 								&.top{

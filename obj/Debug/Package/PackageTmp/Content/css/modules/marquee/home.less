@@ -1,0 +1,121 @@
+@import 'marquee-base';
+
+.marquee-home
+{
+	position: absolute;
+  	top: 120px;
+  	right: 0;
+  	left: 0;
+
+	.marquee-home-container
+	{
+		margin: 0 auto;
+		min-width: 980px;
+		max-width: 1366px;
+		height: 590px;
+
+		.current,
+		.tab-crop
+		{
+			-webkit-background-size: 1000% 100%;
+			background-size: 100% 100%;
+		}
+		.marquee,
+		.current { height: 100%; }
+
+		.detail
+		{
+		  	width: 100%;
+			&.rio
+			{
+			  	.info
+				{
+				  margin-left: 45%;
+				  width: 300px;
+				}
+				.small-text
+				{
+					font-size: 12px;
+					text-transform: uppercase;
+				}
+
+				.main-call
+				{
+					.small-text,
+					h2 { color: #fff; }
+
+					h2
+					{
+						font-size: 40px;
+						margin-top: 0;
+					}
+				}
+
+				.details
+				{
+					.left,
+					.right
+					{
+					  display: inline-block;
+					  vertical-align: middle;
+					}
+
+					.left
+					{
+						.small-text,
+
+						h3 { color: #fff; }
+						h3
+						{
+							font-size: 40px;
+							margin-top: 0;
+							line-height: 40px;
+						}
+					}
+				  	.right
+				  	{
+					  	margin: 20px 0 0 40px;
+						.btn-text-cta
+						{
+						  	position: static;
+						  	margin-top: 0;
+							color: #FFF;
+						  	font-size: 12px;
+						  	text-transform: uppercase;
+
+						  	.glyphicon-chevron-right
+							{
+								position: static;
+								margin-top: 0px;
+							  	padding-right: 10px;
+								width: 16px;
+								display: inline-block;
+								vertical-align: top;
+								height: 16px;
+								background: url(../images/icon/icon-arrow-transparent-right.png) no-repeat;
+						  	}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+// TODO: REMOVE THIS LATER
+
+.booking-flight-widget
+{
+  position: absolute;
+  top: 180px;
+}
+
+.justkidding 
+{
+  position: relative;
+  left: 0;
+  height: 900px;
+  width: 300px;
+  background-color: red;
+}
